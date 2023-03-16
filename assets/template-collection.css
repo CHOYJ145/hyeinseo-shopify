@@ -11,7 +11,7 @@
   }
 }
 
-.collection .loading-overlay {
+/* .collection .loading-overlay {
   top: 0;
   right: 0;
   bottom: 0;
@@ -32,7 +32,7 @@
 .collection.loading .loading-overlay {
   display: block;
 }
-
+ */
 .collection--empty .title-wrapper {
   margin-top: 10rem;
   margin-bottom: 15rem;

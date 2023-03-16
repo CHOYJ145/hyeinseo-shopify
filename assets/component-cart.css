@@ -21,9 +21,6 @@ cart-items.is-empty .title-wrapper-with-link,
   padding: 3rem 0 1rem;
 }
 
-.cart__empty-text {
-  margin: 4.5rem 0 2rem;
-}
 
 .cart__contents > * + * {
   margin-top: 2.5rem;
@@ -46,9 +43,7 @@ cart-items.is-empty .title-wrapper-with-link,
     padding: 7rem 0 1rem;
   }
 
-  .cart__empty-text {
-    margin: 0 0 3rem;
-  }
+
 }
 
 cart-items {
@@ -190,12 +185,13 @@ cart-items {
 }
 
 .cart__checkout-button {
-  max-width: 36rem;
+  margin : 0;
+  padding: 0;
+  background:transparent;
+  border:none;
 }
 
-.cart__ctas {
-  text-align: center;
-}
+
 
 @media screen and (min-width: 750px) {
   .cart-note {
