@@ -433,6 +433,74 @@ h5,
   word-break: break-word;
 }
 
+/* font 적용  */
+/* @font-face {
+    font-family: 'DyatypePro_Regular';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/DiatypePre-Regular.otf?v=1676088358') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABCDiaType_Ultra_Trial';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Ultra-Trial.otf?v=1676088358') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansKR_Medium';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/NotoSansKR-Medium.otf?v=1676088359') format('otf');
+    font-weight: medium;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'ABCDiaType_Ultra_Trial';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff2?v=1676859042') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff?v=1676859035') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DyatypePro_Regular';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff2?v=1676859042') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff?v=1676859042') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansKR_Medium';
+    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/notosanskr-medium.woff2?v=1676859042') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/1427/1204/files/notosanskr-medium.woff?v=1676859042') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body *{
+  font-family : 'DyatypePro_Regular', 'NotoSansKR_Medium';
+  letter-spacing :0;
+  line-height: 1;
+  font-size : 1.2rem;
+}
+
+.font-bold {
+  font-family : 'ABCDiaType_Ultra_Trial';
+}
+
+a {
+    color : black;
+    text-decoration : none;
+}
+  
+a:hover, 
+a:focus{
+  text-decoration : none;
+}
+
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
