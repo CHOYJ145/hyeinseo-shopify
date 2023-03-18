@@ -6,6 +6,9 @@ function menuBtn(e) {
         // document.querySelector('header').classList.remove('header--white');
     } else {
         document.querySelector('.menu-btn--mo span').innerText = 'Menu';
+        document.querySelector('.header__2depth').classList.remove('on');
+        document.querySelector('.header__2depth--shop').classList.remove('on');
+        document.querySelector('.header__2depth--explore').classList.remove('on');
         // document.querySelector('header').classList.add('header--white');
     }
 }
