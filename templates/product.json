@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -21,11 +26,6 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "description": {
-          "type": "description",
           "settings": {
           }
         },
@@ -39,9 +39,9 @@
       "block_order": [
         "title",
         "price",
+        "description",
         "variant_picker",
         "quantity_selector",
-        "description",
         "buy_buttons"
       ],
       "settings": {
