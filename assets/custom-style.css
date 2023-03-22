@@ -797,10 +797,6 @@ button.swiper-pagination-bullet {
     .custom .list-menu {
         display: block;
     }
-
-    .custom .list-menu li + li {
-        margin-top: 6px;
-    }
 }
 
 .header__menu-item {
