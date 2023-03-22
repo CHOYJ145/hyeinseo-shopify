@@ -758,6 +758,12 @@ button.swiper-pagination-bullet {
         position: static;
         z-index: 2;
     }
+
+    .logo-white,
+    .logo-black {
+        width: 113px;
+    }
+
 }
 
 .custom .list-menu {
@@ -885,7 +891,7 @@ button.swiper-pagination-bullet {
     left: 0;
     width: 100%;
     background: #fff;
-    padding: calc(22px + 4px) 6px 4px;
+    padding: 21px 6px 4px;
 }
 
 .header__2depth.on {
@@ -920,7 +926,7 @@ button.swiper-pagination-bullet {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
-    margin-top: 4px;
+    /*margin-top: 4px;*/
 }
 
 /*.header__2depth-col ul li + li {*/
