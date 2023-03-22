@@ -384,44 +384,6 @@ html.no-js .no-js-hidden {
 }
 
 /* font 적용  */
-/* @font-face {
-    font-family: 'DyatypePro_Regular';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/DiatypePre-Regular.otf?v=1676088358') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ABCDiaType_Ultra_Trial';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Ultra-Trial.otf?v=1676088358') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'NotoSansKR_Medium';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/NotoSansKR-Medium.otf?v=1676088359') format('otf');
-    font-weight: medium;
-    font-style: normal;
-} */
-
-@font-face {
-    font-family: 'ABCDiaType_Ultra_Trial';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff2?v=1676859042') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff?v=1676859035') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'DyatypePro_Regular';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff2?v=1676859042') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff?v=1676859042') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: 'NotoSansKR_Medium';
     src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/notosanskr-medium.woff2?v=1676859042') format('woff2'),
@@ -432,31 +394,29 @@ html.no-js .no-js-hidden {
 
 @font-face {
   font-family: 'ABC Diatype Regular';
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.woff2?v=1679462574") format("woff2"), /* chrome、firefox */
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.woff?v=1679462574") format("woff"), /* chrome、firefox */
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.ttf?v=1679462574") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular_a24e2a25-4535-442b-b835-a8d26d9d0c7b.woff2?v=1679465577") format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular_dea3a8a0-7e69-4df7-b3bb-0034bf732ffb.woff?v=1679465577") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABC Diatype Ultra';
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.woff2?v=1679462538") format("woff2"), /* chrome、firefox */
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.woff?v=1679462538") format("woff"), /* chrome、firefox */
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.ttf?v=1679462538") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatypeUltra_65a45f44-4199-44c2-8917-09fff476284f.woff2?v=1679465453') format('woff2'),
+  url('https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatypeUltra_56cc8159-3fd8-42c9-a3f8-1907aaf36565.woff?v=1679465453') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body *{
-  font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium' !important;
+  font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium';
   letter-spacing :0;
   line-height: 1;
   font-size : 14px;
 }
 
 .font-bold {
-  font-family : 'ABC Diatype Ultra' !important;
+  font-family : 'ABC Diatype Ultra';
 }
 
 a {
