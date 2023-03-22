@@ -384,44 +384,6 @@ html.no-js .no-js-hidden {
 }
 
 /* font 적용  */
-/* @font-face {
-    font-family: 'DyatypePro_Regular';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/DiatypePre-Regular.otf?v=1676088358') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ABCDiaType_Ultra_Trial';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Ultra-Trial.otf?v=1676088358') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'NotoSansKR_Medium';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/NotoSansKR-Medium.otf?v=1676088359') format('otf');
-    font-weight: medium;
-    font-style: normal;
-} */
-
-@font-face {
-    font-family: 'ABCDiaType_Ultra_Trial';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff2?v=1676859042') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/1427/1204/files/abcdiatype-ultra-trial.woff?v=1676859035') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'DyatypePro_Regular';
-    src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff2?v=1676859042') format('woff2'),
-         url('https://cdn.shopify.com/s/files/1/1427/1204/files/diatypepre-regular.woff?v=1676859042') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: 'NotoSansKR_Medium';
     src: url('https://cdn.shopify.com/s/files/1/1427/1204/files/notosanskr-medium.woff2?v=1676859042') format('woff2'),
@@ -449,14 +411,14 @@ html.no-js .no-js-hidden {
 }
 
 body *{
-  font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium' !important;
+  font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium';
   letter-spacing :0;
   line-height: 1;
   font-size : 14px;
 }
 
 .font-bold {
-  font-family : 'ABC Diatype Ultra' !important;
+  font-family : 'ABC Diatype Ultra';
 }
 
 a {
