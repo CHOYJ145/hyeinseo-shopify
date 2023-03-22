@@ -384,13 +384,21 @@
     <div class="header__2depth">
       <div class="header__2depth-inner header__2depth--shop">
         <div class="header__2depth-col">
+          
           <ul>
-            <li>
+            {% for collection in collections %}
+              <li>
+                <a href="{{ collection.handle }}">
+                {{ collection.title }}
+                </a>
+              </li>
+            {% endfor %}
+<!--             <li>
               <a href="/collections/all-1">All</a>
             </li>
             <li>
               <a href="/collections/outerwear">Outerwear</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
