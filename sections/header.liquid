@@ -308,77 +308,13 @@
               </span>
         </li>
         <li>
-              <span class="header__menu-item list-menu__item link link--text focus-inset">
-                <span>Search</span>
-              </span>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="header__2depth">
-      <div class="header__2depth-inner header__2depth--shop">
-        <div class="header__2depth-col">
-          <ul>
-            <li>
-              <a href="/collections/all-1">All</a>
-            </li>
-            <li>
-              <a href="/collections/outerwear">Outerwear</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="header__2depth-inner header__2depth--explore">
-        <div class="header__2depth-col">
-          <div>Collection</div>
-          <ul>
-            <li>
-              <a href="#none">All</a>
-            </li>
-          </ul>
-        </div>
-        <div class="header__2depth-col">
-          <div>Information</div>
-          <ul>
-            <li>
-              <a href="#none">Contact</a>
-            </li>
-            <li>
-              <a href="#none">Stockist</a>
-            </li>
-            <li>
-              <a href="#none">Privacy policy</a>
-            </li>
-            <li>
-              <a href="#none">Returns & exchanges</a>
-            </li>
-            <li>
-              <a href="#none">Shipping</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="logo" class="">
-      <a href="{{ routes.root_url }}">
-        <img class="logo-white" src="https://cdn.shopify.com/s/files/1/1427/1204/files/hyeinseo_logotype_white.png?v=1677027150" alt="">
-        <img class="logo-black" src="https://cdn.shopify.com/s/files/1/1427/1204/files/hyeinseo_logotype_black.png?v=1677027150" alt="">
-      </a>
-    </div>
-
-    <div class="header__icons header-util">
-      <!-- <details-modal class="header__search">
+              <details-modal class="header__search">
         <details>
-          <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          <summary class="focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
-              </svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-close">
-              </svg>
+              <span class="modal__toggle-open" aria-hidden="true" focusable="false" role="presentation">
+                Search
+              </span>
             </span>
           </summary>
           <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
@@ -440,7 +376,74 @@
             </div>
           </div>
         </details>
-      </details-modal> -->
+      </details-modal>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__2depth">
+      <div class="header__2depth-inner header__2depth--shop">
+        <div class="header__2depth-col">
+          
+          <ul>
+            {% for collection in collections %}
+              <li>
+                <a href="/collections/{{ collection.handle }}">
+                {{ collection.title }}
+                </a>
+              </li>
+            {% endfor %}
+<!--             <li>
+              <a href="/collections/all-1">All</a>
+            </li>
+            <li>
+              <a href="/collections/outerwear">Outerwear</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="header__2depth-inner header__2depth--explore">
+        <div class="header__2depth-col">
+          <div>Collection</div>
+          <ul>
+            <li>
+              <a href="#none">All</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__2depth-col">
+          <div>Information</div>
+          <ul>
+            <li>
+              <a href="#none">Contact</a>
+            </li>
+            <li>
+              <a href="#none">Stockist</a>
+            </li>
+            <li>
+              <a href="#none">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#none">Returns & exchanges</a>
+            </li>
+            <li>
+              <a href="#none">Shipping</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="logo" class="">
+      <a href="{{ routes.root_url }}">
+        <img class="logo-white" src="https://cdn.shopify.com/s/files/1/1427/1204/files/hyeinseo_logotype_white.png?v=1677027150" alt="">
+        <img class="logo-black" src="https://cdn.shopify.com/s/files/1/1427/1204/files/hyeinseo_logotype_black.png?v=1677027150" alt="">
+      </a>
+    </div>
+
+    <div class="header__icons header-util">
+      
 
         <span class="header__menu-item header__menu-item--mo list-menu__item link link--text focus-inset menu-btn--mo" onclick="menuBtn()">
           <span>Menu</span>
