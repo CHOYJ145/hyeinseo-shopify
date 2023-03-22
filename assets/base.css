@@ -411,8 +411,16 @@ html.no-js .no-js-hidden {
 body *{
   font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium';
   letter-spacing :0;
-  line-height: 1;
   font-size : 14px;
+  line-height: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  body *{
+    font-size : 16px;
+    line-height: 21px;
+  }
+
 }
 
 .font-bold {

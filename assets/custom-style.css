@@ -1524,7 +1524,8 @@ button.swiper-pagination-bullet {
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
-    font-size: 23px;
+    font-size: 31px;
+    line-height: 29px;
     color: #fff;
 }
 
@@ -1574,7 +1575,8 @@ button.swiper-pagination-bullet {
     .article-title--m {
         padding: 5px 5px 6px;
         display: block;
-        font-size: 31px;
+        font-size: 23px;
+        line-height: 25px;
         color: #fff;
     }
 }
