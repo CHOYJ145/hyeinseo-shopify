@@ -24,6 +24,9 @@
     endif
   -%}
     <a href="{{ article.url }}">
+      <div class="article-title--m font-bold">
+        {{ article.title | truncate: 50 | escape }}
+      </div>
       <img
               srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
@@ -41,8 +44,5 @@
               height="{{ article.image.height }}"
               data-title="{{ article.title | truncate: 50 | escape }}"
       >
-      <div class="article-title--m font-bold">
-        {{ article.title | truncate: 50 | escape }}
-      </div>
     </a>
 {%- endif -%}

@@ -923,9 +923,9 @@ button.swiper-pagination-bullet {
     margin-top: 4px;
 }
 
-.header__2depth-col ul li + li {
-    margin-top: 4px;
-}
+/*.header__2depth-col ul li + li {*/
+/*    margin-top: 4px;*/
+/*}*/
 
 .chk .header__menu-item span {
     color: #CECED0;
