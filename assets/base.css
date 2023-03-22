@@ -415,16 +415,23 @@ body *{
   line-height: 16px;
 }
 
+.font-bold {
+  font-family : 'ABC Diatype Ultra';
+  font-size: 31px;
+  line-height: 29px;
+}
+
 @media screen and (max-width: 768px) {
   body *{
     font-size : 16px;
     line-height: 21px;
   }
 
-}
-
-.font-bold {
-  font-family : 'ABC Diatype Ultra';
+  .font-bold {
+    font-family : 'ABC Diatype Ultra';
+    font-size: 23px;
+    line-height: 25px;
+  }
 }
 
 a {

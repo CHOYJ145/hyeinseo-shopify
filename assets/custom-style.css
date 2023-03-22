@@ -1089,7 +1089,6 @@ button.swiper-pagination-bullet {
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
-    font-size: 23px;
 }
 
 .hero-title--white {
@@ -1102,7 +1101,6 @@ button.swiper-pagination-bullet {
         top: 50%;
         left: 5px;
         transform: translateY(-50%);
-        font-size: 17px;
     }
 
     .hero-col {
@@ -1524,8 +1522,6 @@ button.swiper-pagination-bullet {
     top: 50%;
     left: 6px;
     transform: translateY(-50%);
-    font-size: 31px;
-    line-height: 29px;
     color: #fff;
 }
 
@@ -1575,8 +1571,6 @@ button.swiper-pagination-bullet {
     .article-title--m {
         padding: 5px 5px 6px;
         display: block;
-        font-size: 23px;
-        line-height: 25px;
         color: #fff;
     }
 }
@@ -1585,7 +1579,6 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 50%;
     left: 6px;
-    font-size: 23px;
     color: #000;
 }
 
