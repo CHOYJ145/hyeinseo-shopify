@@ -430,15 +430,33 @@ html.no-js .no-js-hidden {
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'ABC Diatype Regular';
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.woff2?v=1679462574") format("woff2"), /* chrome、firefox */
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.woff?v=1679462574") format("woff"), /* chrome、firefox */
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Regular.ttf?v=1679462574") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABC Diatype Ultra';
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.woff2?v=1679462538") format("woff2"), /* chrome、firefox */
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.woff?v=1679462538") format("woff"), /* chrome、firefox */
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABC_Diatype_Ultra.ttf?v=1679462538") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: normal;
+}
+
 body *{
-  font-family : 'DyatypePro_Regular', 'NotoSansKR_Medium';
+  font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium' !important;
   letter-spacing :0;
   line-height: 1;
-  font-size : 1.2rem;
+  font-size : 14px;
 }
 
 .font-bold {
-  font-family : 'ABCDiaType_Ultra_Trial';
+  font-family : 'ABC Diatype Ultra' !important;
 }
 
 a {
