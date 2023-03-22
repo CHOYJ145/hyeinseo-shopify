@@ -414,7 +414,7 @@ body *{
   font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium';
   letter-spacing :0;
   line-height: 1;
-/*   font-size : 14px; */
+  font-size : 14px;
 }
 
 .font-bold {
