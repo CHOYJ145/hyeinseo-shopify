@@ -1552,3 +1552,64 @@ button.swiper-pagination-bullet {
     width: 100%;
     height: auto;
 }
+
+.article-title--m {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .custom .article-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 32px;
+    }
+
+    .custom .article-item {
+        display: block;
+        max-width: 950px;
+        width: 100%;
+    }
+
+    .article-title--m {
+        padding: 5px 5px 6px;
+        display: block;
+        font-size: 23px;
+        color: #fff;
+    }
+}
+
+.collection-title {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    font-size: 23px;
+    color: #000;
+}
+
+.credit-desc {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 6px;
+    background: #fff;
+}
+
+.credit-desc.on {
+    display: block;
+}
+
+.collection-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.credit-button {
+    margin: 30px 6px 0;
+    cursor: pointer;
+}

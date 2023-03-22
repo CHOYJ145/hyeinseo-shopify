@@ -41,5 +41,8 @@
               height="{{ article.image.height }}"
               data-title="{{ article.title | truncate: 50 | escape }}"
       >
+      <div class="article-title--m font-bold">
+        {{ article.title | truncate: 50 | escape }}
+      </div>
     </a>
 {%- endif -%}
