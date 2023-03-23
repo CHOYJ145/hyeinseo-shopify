@@ -1702,6 +1702,17 @@ button.swiper-pagination-bullet {
     color: #000;
 }
 
+@media screen and (max-width: 768px) {
+    .collection-title {
+        position: static;
+        height: calc(100vh - 21px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+    }
+}
+
 .credit-desc {
     display: none;
     position: fixed;
@@ -1723,6 +1734,12 @@ button.swiper-pagination-bullet {
     background-color: rgba(255,255,255, 0.5);
 }
 
+@media screen and (max-width: 768px) {
+    .credit-dim {
+        background-color: rgba(255,255,255, 1);
+    }
+}
+
 .credit-desc.on {
     display: block;
 }
@@ -1737,6 +1754,17 @@ button.swiper-pagination-bullet {
 .credit-button {
     margin: 26px 6px 0;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .collection-imgs {
+        padding: 0 4px;
+    }
+
+    .credit-button {
+        margin: 0 5px 0;
+        cursor: pointer;
+    }
 }
 
 .credit-close-btn {
