@@ -32,7 +32,7 @@ $('.depth-btn--shop span').hover(function (){
     $('.header__inline-menu').addClass('on');
     $('.header__2depth--shop').addClass('on');
     $('.header__2depth--explore').removeClass('on');
-    $('.header__2depth').slideDown(150);
+    $('.header__2depth').addClass('on');
 });
 
 $('.depth-btn--explore span').hover(function (){
@@ -40,14 +40,15 @@ $('.depth-btn--explore span').hover(function (){
     $('.header__inline-menu').addClass('on');
     $('.header__2depth--explore').addClass('on');
     $('.header__2depth--shop').removeClass('on');
-    $('.header__2depth').slideDown(150);
+    $('.header__2depth').addClass('on');
 });
 
 $('header').mouseleave(function(){
     $('.header__inline-menu').removeClass('on');
     $('.header__2depth--shop').removeClass('on');
-    $('.header__2depth').slideUp(150);
-    setTimeout(function () {
+    // $('.header__2depth').slideUp(200);
+    $('.header__2depth').removeClass('on');
+    // setTimeout(function () {
         $('header').removeClass('open');
-    }, 130);
+    // }, 190);
 });

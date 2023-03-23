@@ -899,12 +899,13 @@ button.swiper-pagination-bullet {
     display: none;
     position: absolute;
     z-index: 0;
-    top: 26px;
+    top: 21px;
     left: 0;
     width: 100%;
+    /*height: auto;*/
     background: #fff;
     padding: 0 6px 4px;
-    transition: height 150ms ease;
+    /*transition: height 150ms ease;*/
 }
 
 .theme-black .header__2depth {
@@ -1149,7 +1150,7 @@ button.swiper-pagination-bullet {
 }
 
 .hero-item--test2.test-3 .test4,
-.hero-item--test2.test-4 .tes3 {
+.hero-item--test2.test-4 .test3 {
     opacity: 0;
 }
 
