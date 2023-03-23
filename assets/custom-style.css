@@ -1651,6 +1651,7 @@ button.swiper-pagination-bullet {
 
 .article-item a {
     display: block;
+    margin-bottom: -35px;
 }
 
 .article-item img {
@@ -1674,6 +1675,7 @@ button.swiper-pagination-bullet {
         display: block;
         max-width: 950px;
         width: 100%;
+        padding: 0 4px;
     }
 
     .article-title--m {
@@ -1681,7 +1683,7 @@ button.swiper-pagination-bullet {
         top: 0;
         left: 0;
         width: 100%;
-        padding: 2px 5px;
+        padding: 2px 1px;
         display: block;
         color: #fff;
         background: #000;
