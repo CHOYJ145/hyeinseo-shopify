@@ -415,7 +415,8 @@ body *{
   line-height: 16px;
 }
 
-.font-bold {
+.font-bold,
+.font-bold * {
   font-family : 'ABC Diatype Ultra';
   font-size: 31px;
   line-height: 29px;
@@ -427,7 +428,8 @@ body *{
     line-height: 21px;
   }
 
-  .font-bold {
+  .font-bold,
+  .font-bold * {
     font-family : 'ABC Diatype Ultra';
     font-size: 23px;
     line-height: 25px;

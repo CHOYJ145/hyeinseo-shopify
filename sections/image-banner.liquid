@@ -1,19 +1,37 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 <div class="swiper main-hero">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <div class="hero-item" style="background-image: url('https://choyeonjeong.com/assets/1.jpg')">
-        <div class="hero-title font-bold hero-title--white">
-          SS 23 Paris Showroom
+      <div class="hero-item">
+        <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/assets/1.jpg')">
+
+        </div>
+        <div class="hero-dim" style="background-image: url('https://choyeonjeong.com/assets/2.jpg')">
+
+        </div>
+        <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/d-3.png?v=1679277526')">
+
+        </div>
+        <div class="hero-title-wrap">
+          <div class="hero-title-item font-bold hero-title--white">
+            SS 23 Paris Showroom
+          </div>
+          <div class="hero-title-item font-bold hero-title--white">
+            <a class="test" href="#none">test</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="#none">test</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="swiper-slide">
       <div class="hero-item" style="background-image: url('https://choyeonjeong.com/assets/2.jpg')">
-        <div class="hero-title font-bold hero-title--white">
-          FW 22 TEST Collection
+        <div class="hero-title-wrap">
+          <div class="hero-title-item font-bold hero-title--white">
+            SS 23 Paris Showroom
+          </div>
+          <div class="hero-title-item font-bold hero-title--white">
+            <a href="#none">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#none">Shop now</a>
+          </div>
         </div>
       </div>
     </div>
@@ -21,16 +39,15 @@
       <div class="hero-col">
         <div class="hero-item" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/466.jpg?v=1679438180')">
           <div class="hero-title font-bold hero-title--white">
-            FW 22 TEST Collection
+            Accessories
           </div>
         </div>
         <div class="hero-item" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/468.jpg?v=1679438164')">
           <div class="hero-title font-bold hero-title--white">
-            FW 22 TEST Collection
+            FW&nbsp;&nbsp;&nbsp;22 TEST TEST test test
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -41,17 +58,26 @@
     direction: "vertical",
     mousewheel: true,
     loop: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        translate: [0, 0, 0],
-      },
-      next: {
-        translate: [0, "100%", 0],
-      },
-    },
+    effect: "fade",
+  });
+
+  document.querySelector('.test').addEventListener('mouseenter', () => {
+    document.querySelector('.hero-dim').classList.add('on');
+  });
+
+  document.querySelector('.test').addEventListener('mouseleave', () => {
+    document.querySelector('.hero-dim').classList.remove('on');
+  });
+
+  document.querySelector('.test2').addEventListener('mouseenter', () => {
+    document.querySelector('.hero-dim2').classList.add('on');
+  });
+
+  document.querySelector('.test2').addEventListener('mouseleave', () => {
+    document.querySelector('.hero-dim2').classList.remove('on');
   });
 </script>
+
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
