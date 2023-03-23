@@ -904,6 +904,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     background: #fff;
     padding: 0 6px 4px;
+    transition: height 150ms ease;
 }
 
 .theme-black .header__2depth {
