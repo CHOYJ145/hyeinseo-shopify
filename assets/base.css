@@ -410,7 +410,7 @@ html.no-js .no-js-hidden {
 
 body *{
   font-family : 'ABC Diatype Regular', 'NotoSansKR_Medium';
-  letter-spacing :0;
+  letter-spacing: 0;
   font-size : 14px;
   line-height: 16px;
 }

@@ -3,14 +3,14 @@
 <div class="swiper main-hero">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <div class="hero-item">
-        <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/assets/1.jpg')">
+      <div class="hero-item hero-item--test">
+        <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/main.jpg')">
 
         </div>
-        <div class="hero-dim" style="background-image: url('https://choyeonjeong.com/assets/2.jpg')">
+        <div class="hero-dim" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/1.jpg')">
 
         </div>
-        <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/d-3.png?v=1679277526')">
+        <div class="hero-dim2" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/2.jpg')">
 
         </div>
         <div class="hero-title-wrap">
@@ -61,20 +61,34 @@
     effect: "fade",
   });
 
+  $(document).ready(function(){
+    document.querySelector('.custom').classList.add('theme-main');
+    document.querySelector('.header').classList.remove('header--black');
+    document.querySelector('.header').classList.add('header--white');
+  });
+
   document.querySelector('.test').addEventListener('mouseenter', () => {
     document.querySelector('.hero-dim').classList.add('on');
+    document.querySelector('.hero-item--test').classList.add('test-1');
+    document.querySelector('header').style.opacity = 0 ;
   });
 
   document.querySelector('.test').addEventListener('mouseleave', () => {
     document.querySelector('.hero-dim').classList.remove('on');
+    document.querySelector('.hero-item--test').classList.remove('test-1');
+    document.querySelector('header').style.opacity = 1 ;
   });
 
   document.querySelector('.test2').addEventListener('mouseenter', () => {
     document.querySelector('.hero-dim2').classList.add('on');
+    document.querySelector('.hero-item--test').classList.add('test-2');
+    document.querySelector('header').style.opacity = 0 ;
   });
 
   document.querySelector('.test2').addEventListener('mouseleave', () => {
     document.querySelector('.hero-dim2').classList.remove('on');
+    document.querySelector('.hero-item--test').classList.remove('test-2');
+    document.querySelector('header').style.opacity = 1 ;
   });
 </script>
 

@@ -484,25 +484,30 @@
                     {{ block.shopify_attributes }}
                   >
                     {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                          {% comment %}TODO: 마크업{% endcomment %}
-                        {%- for value in option.values -%}
-                          <input
-                            type="radio"
-                            id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                            name="{{ option.name }}"
-                            value="{{ value | escape }}"
-                            form="{{ product_form_id }}"
-                            {% if option.selected_value == value %}
-                              checked
-                            {% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%}
-                      </fieldset>
+                        <div class="option-wrap">
+                            <fieldset class="js product-form__input">
+                                <div class="option-label">
+                                    <legend class="form__label">{{ option.name }}</legend>
+                                </div>
+                                <div class="option-list">
+                                    {%- for value in option.values -%}
+                                        <input
+                                                type="radio"
+                                                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                                name="{{ option.name }}"
+                                                value="{{ value | escape }}"
+                                                form="{{ product_form_id }}"
+                                                {% if option.selected_value == value %}
+                                                    checked
+                                                {% endif %}
+                                        >
+                                        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                            {{ value }}
+                                        </label>
+                                    {%- endfor -%}
+                                </div>
+                            </fieldset>
+                        </div>
                     {%- endfor -%}
                     <script type="application/json">
                       {{ product.variants | json }}

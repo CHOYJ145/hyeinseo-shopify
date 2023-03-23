@@ -124,7 +124,7 @@
   </symbol>
 </svg>
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %} header--white">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %} header--black">
     <div id="logo" class="">
       <a href="{{ routes.root_url }}">
         <img class="logo-white" src="https://cdn.shopify.com/s/files/1/1427/1204/files/hyeinseo_logotype_white.png?v=1677027150" alt="">
@@ -135,12 +135,12 @@
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           <li>
-              <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn" onclick="depthBtn('shop')">
+              <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn depth-btn--shop">
                 <span>Shop</span>
               </span>
           </li>
           <li>
-              <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn" onclick="depthBtn('explore')">
+              <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn depth-btn--explore">
                 <span>Explore</span>
               </span>
           </li>
@@ -245,7 +245,7 @@
             <div>Collection</div>
             <ul>
               <li>
-                <a href="#none">All</a>
+                <a href="/blogs/collection">All</a>
               </li>
             </ul>
           </div>

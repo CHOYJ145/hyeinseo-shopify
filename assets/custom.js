@@ -25,5 +25,30 @@ function depthBtn(e) {
         document.querySelector('.header__2depth--shop').classList.remove('on');
         document.querySelector('.header__2depth--explore').classList.add('on');
     }
-
 }
+
+$('.depth-btn--shop').hover(function (){
+    // $('header').removeClass('header--white');
+    // $('header').addClass('header--black');
+    $('.header__inline-menu').addClass('on');
+    $('.header__2depth').addClass('on');
+    $('.header__2depth--shop').addClass('on');
+    $('.header__2depth--explore').removeClass('on');
+});
+
+$('.depth-btn--explore').hover(function (){
+    // $('header').removeClass('header--white');
+    // $('header').addClass('header--black');
+    $('.header__inline-menu').addClass('on');
+    $('.header__2depth').addClass('on');
+    $('.header__2depth--explore').addClass('on');
+    $('.header__2depth--shop').removeClass('on');
+});
+
+$('header').mouseleave(function(){
+    // $('header').addClass('header--white');
+    // $('header').removeClass('header--black');
+    $('.header__inline-menu').removeClass('on');
+    $('.header__2depth').removeClass('on');
+    $('.header__2depth--shop').removeClass('on');
+});

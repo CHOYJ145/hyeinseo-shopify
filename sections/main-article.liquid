@@ -8,7 +8,7 @@
           {% render block %}
         </div>
       {%- when 'featured_image'-%}
-        {%- if article.image -%}
+        {% comment %}{%- if article.image -%}
           <div class="article-template__hero-container" {{ block.shopify_attributes }}>
             <div class="article-template__hero-{{ block.settings.image_height }} media"
               itemprop="image"
@@ -30,7 +30,7 @@
                 alt="{{ article.image.alt | escape }}">
             </div>
           </div>
-        {%- endif -%}
+        {%- endif -%}{% endcomment %}
 
         {%- when 'title'-%}
           <div class="credit-button">Credits</div>
@@ -199,8 +199,6 @@
   {%- endif -%}
 </article>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="{{ 'theme-article.js' | asset_url }}" defer="defer"></script>
 
 <script type="application/ld+json">

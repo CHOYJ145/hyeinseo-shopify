@@ -1,4 +1,10 @@
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
+//     document.querySelector('.custom').classList.add('theme-black');
+//     document.querySelector('.header').classList.remove('header--black');
+//     document.querySelector('.header').classList.add('header--white');
+// });
+
+$(document).ready(function(){
     document.querySelector('.custom').classList.add('theme-black');
     document.querySelector('.header').classList.remove('header--black');
     document.querySelector('.header').classList.add('header--white');
