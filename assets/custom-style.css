@@ -772,7 +772,7 @@ button.swiper-pagination-bullet {
         position: relative;
         z-index: 99999;
         bottom: 0;
-        left: 6px;
+        left: 5px;
     }
 
     .logo-white,
@@ -782,7 +782,7 @@ button.swiper-pagination-bullet {
 
     .custom .header .header-inner {
         position: relative;
-        padding: 5px 6px;
+        padding: 4px 4px;
     }
 
     .header-util {
