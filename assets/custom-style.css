@@ -816,7 +816,7 @@ button.swiper-pagination-bullet {
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 5px 6px;
+        padding: 2px 4px;
     }
 
     .panel-close-btn {
