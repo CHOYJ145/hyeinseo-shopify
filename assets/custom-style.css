@@ -816,12 +816,12 @@ button.swiper-pagination-bullet {
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 2px 5px;
+        padding: 3px 5px;
     }
 
     .panel-close-btn {
         position: absolute;
-        top: 2px;
+        top: 3px;
         right: 5px;
         cursor: pointer;
     }
@@ -1706,13 +1706,13 @@ button.swiper-pagination-bullet {
     }
 
     .credit-button {
-        margin: 2px 5px 0;
+        margin: 3px 5px 0;
         cursor: pointer;
     }
 
     .credit-close-btn {
         position: absolute;
-        top: 2px;
+        top: 3px;
         right: 5px;
         appearance: none;
         background: none;
