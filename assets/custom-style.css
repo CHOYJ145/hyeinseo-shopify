@@ -782,7 +782,7 @@ button.swiper-pagination-bullet {
 
     .custom .header .header-inner {
         position: relative;
-        padding: 1px 4px;
+        padding: 1px 5px;
     }
 
     .header-util {
@@ -816,7 +816,7 @@ button.swiper-pagination-bullet {
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 1px 4px;
+        padding: 1px 5px;
     }
 
     .panel-close-btn {
@@ -1668,7 +1668,7 @@ button.swiper-pagination-bullet {
     }
 
     .credit-desc {
-        padding: 1px 4px;
+        padding: 1px 5px;
     }
 }
 
@@ -1706,14 +1706,14 @@ button.swiper-pagination-bullet {
     }
 
     .credit-button {
-        margin: 1px 4px 0;
+        margin: 1px 5px 0;
         cursor: pointer;
     }
 
     .credit-close-btn {
         position: absolute;
         top: 1px;
-        right: 4px;
+        right: 5px;
         appearance: none;
         background: none;
         border: 0;
