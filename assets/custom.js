@@ -1,11 +1,30 @@
 function menuBtn(e) {
     $('.panel').addClass('on');
+    // $('.header').removeClass('header--white');
+    // $('.header').addClass('header--black');
+    $('body').css({
+        'overflow' : 'hidden'
+    });
 }
 
 function menuCloseBtn(e) {
     $('.panel').removeClass('on');
+    // $('.header').addClass('header--white');
+    // $('.header').removeClass('header--black');
+    $('body').css({
+        'overflow' : 'visible'
+    });
+    $('.m-depth-wrap').hide();
+    $('.m-nav-title').removeClass('on');
 }
 
+function setSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('load', () => {
+    setSize();
+});
 function depthBtn(e) {
     if (e == 'shop') {
         document.querySelector('.header__2depth').classList.add('on');
