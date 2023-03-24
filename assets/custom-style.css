@@ -821,8 +821,8 @@ button.swiper-pagination-bullet {
 
     .panel-close-btn {
         position: absolute;
-        top: 5px;
-        right: 6px;
+        top: 2px;
+        right: 4px;
         cursor: pointer;
     }
 }
