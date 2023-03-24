@@ -816,12 +816,12 @@ button.swiper-pagination-bullet {
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 2px 4px;
+        padding: 1px 4px;
     }
 
     .panel-close-btn {
         position: absolute;
-        top: 2px;
+        top: 1px;
         right: 4px;
         cursor: pointer;
     }
@@ -848,7 +848,7 @@ button.swiper-pagination-bullet {
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 2px 5px 34px;
+        padding: 1px 5px 34px;
         background: #fff;
     }
 
@@ -977,7 +977,7 @@ button.swiper-pagination-bullet {
         position: fixed;
         width: 100%;
         height: 100vh;
-        padding: 2px 4px 5px;
+        padding: 1px 4px 5px;
     }
 
     .header__2depth-inner {
@@ -1666,6 +1666,10 @@ button.swiper-pagination-bullet {
     .credit-dim {
         background-color: rgba(255, 255, 255, 1);
     }
+
+    .credit-desc {
+        padding: 1px 4px;
+    }
 }
 
 .credit-desc.on {
@@ -1684,17 +1688,6 @@ button.swiper-pagination-bullet {
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .collection-imgs {
-        padding: 0 4px;
-    }
-
-    .credit-button {
-        margin: 0 5px 0;
-        cursor: pointer;
-    }
-}
-
 .credit-close-btn {
     position: absolute;
     top: 5px;
@@ -1703,6 +1696,29 @@ button.swiper-pagination-bullet {
     background: none;
     border: 0;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .collection-imgs {
+        padding: 0 4px;
+    }
+
+    .credit-button {
+        margin: 1px 4px 0;
+        cursor: pointer;
+    }
+
+    .credit-close-btn {
+        position: absolute;
+        top: 1px;
+        right: 4px;
+        appearance: none;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+
 }
 
 .custom .product__info-wrapper .option-wrap .product-form__input {
