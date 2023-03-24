@@ -1717,6 +1717,7 @@ button.swiper-pagination-bullet {
         background: none;
         border: 0;
         cursor: pointer;
+        padding: 0;
     }
 
 }
