@@ -70,7 +70,7 @@
 </noscript>
 
 <modal-opener class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
-  <span class="product__media-icon motion-reduce quick-add-hidden" aria-hidden="true">
+  {% comment %}<span class="product__media-icon motion-reduce quick-add-hidden" aria-hidden="true">
     {%- liquid
       case media.media_type
       when 'video' or 'external_video'
@@ -81,7 +81,7 @@
         render 'icon-zoom'
       endcase
     -%}
-  </span>
+  </span>{% endcomment %}
 
   <div class="product__media media media--transparent gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
     {{ media.preview_image | image_url: width: 1946 | image_tag:
@@ -91,11 +91,11 @@
       alt: media.preview_image.alt | escape
     }}
   </div>
-  <button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
+  {% comment %}<button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
     <span class="visually-hidden">
       {{ 'products.product.media.open_media' | t: index: position }}
     </span>
-  </button>
+  </button>{% endcomment %}
 </modal-opener>
 
 {%- if media.media_type != 'image' -%}
