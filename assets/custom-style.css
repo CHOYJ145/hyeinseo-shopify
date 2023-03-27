@@ -2091,6 +2091,7 @@ button.swiper-pagination-bullet {
 
 .product--stacked .product__info-container--sticky {
     position: relative !important;
+    top: 22px !important;
 }
 
 @media screen and (max-width: 1024px) {
