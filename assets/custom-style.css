@@ -2074,6 +2074,7 @@ button.swiper-pagination-bullet {
 }
 
 .guide-row {
+    padding: 1px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 1px dotted #000;
