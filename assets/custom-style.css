@@ -2124,7 +2124,7 @@ button.swiper-pagination-bullet {
     .product__info-container--sticky.sticky {
         position: fixed !important;
         z-index: 10;
-        top: 0;
+        top: 0 !important;
         left: 0;
         padding: 0 5px;
         width: 100%;
