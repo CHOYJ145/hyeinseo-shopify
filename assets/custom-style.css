@@ -1885,6 +1885,12 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 768px) {
+    .product__info-wrapper * {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 21px;
+    }
+
     .hero-title-wrap {
         position: absolute;
         top: 50%;
