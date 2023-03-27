@@ -1326,18 +1326,37 @@
         // },
     });
 
-    window.onscroll = function() {myFunction()};
+    window.addEventListener('resize', function(){
+        console.log('resize event!');
 
-    var header = document.querySelector(".product__info-container--sticky");
-    var sticky = header.offsetTop;
+        if (window.innerWidth <= 800) {
+            window.onscroll = function() {myFunction()};
 
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
+            var header = document.querySelector(".product__info-container--sticky");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        }else{}
+    });
+
+    // window.onscroll = function() {myFunction()};
+    //
+    // var header = document.querySelector(".product__info-container--sticky");
+    // var sticky = header.offsetTop;
+    //
+    // function myFunction() {
+    //     if (window.pageYOffset > sticky) {
+    //         header.classList.add("sticky");
+    //     } else {
+    //         header.classList.remove("sticky");
+    //     }
+    // }
 </script>
 
 {% schema %}

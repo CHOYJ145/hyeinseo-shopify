@@ -2036,7 +2036,7 @@ button.swiper-pagination-bullet {
 }
 
 .product__text {
-    margin-top: 10px;
+    margin-top: 36px;
     margin-bottom: 18px;
 }
 
@@ -2089,6 +2089,10 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
+.product--stacked .product__info-container--sticky {
+    position: relative !important;
+}
+
 @media screen and (max-width: 1024px) {
     .product-visual-list {
         display: none;
@@ -2117,7 +2121,7 @@ button.swiper-pagination-bullet {
     }
 
     .product__info-container--sticky.sticky {
-        position: fixed;
+        position: fixed !important;
         z-index: 10;
         top: 0;
         left: 0;
@@ -2135,4 +2139,12 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     margin-top: 28px;
     margin-bottom: 0;
+}
+
+.testImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    width: 100%;
 }
