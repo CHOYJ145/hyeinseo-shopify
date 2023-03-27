@@ -82,9 +82,9 @@ $('.desc-label').on('click', function () {
         $('.desc-label').removeClass('on');
         $('.desc-cont').slideUp();
         $(this).addClass('on');
-        $(this).siblings('.desc-cont').slideDown();
+        $(this).siblings('.desc-cont').slideDown(200);
     } else {
         $(this).removeClass('on');
-        $(this).siblings('.desc-cont').slideUp();
+        $(this).siblings('.desc-cont').slideUp(200);
     }
 });

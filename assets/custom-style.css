@@ -2062,7 +2062,7 @@ button.swiper-pagination-bullet {
 }
 
 .desc-label.on i:before {
-    content: '-';
+    content: '–';
 }
 
 .desc-cont {
