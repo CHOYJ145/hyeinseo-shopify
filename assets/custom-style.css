@@ -1462,7 +1462,7 @@ button.swiper-pagination-bullet {
 }
 
 .detail-page .product__title {
-    margin-bottom: 3px;
+    margin-bottom: 0;
 }
 
 .product__title h1 {
