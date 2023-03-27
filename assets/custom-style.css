@@ -2070,13 +2070,13 @@ button.swiper-pagination-bullet {
 }
 
 .guide-table {
-    border-top: 1px dashed #000;
+    border-top: 1px dotted #000;
 }
 
 .guide-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dotted #000;
 }
 
 .guide-row--ex {
