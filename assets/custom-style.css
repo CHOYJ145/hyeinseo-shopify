@@ -2115,6 +2115,20 @@ button.swiper-pagination-bullet {
         background: #fff;
         border-radius: 0;
     }
+
+    .product__info-container--sticky.sticky {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        padding: 0 5px;
+        width: 100%;
+        background: #fff;
+    }
+
+    .detail-page .product-wrap {
+        padding-left: 0;
+    }
 }
 
 .product-recommendations__heading.product-recommendations-title {
