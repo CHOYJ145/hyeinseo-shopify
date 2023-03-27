@@ -2134,7 +2134,15 @@ button.swiper-pagination-bullet {
         border-radius: 0;
     }
 
-    .product__info-container--sticky.sticky {
+    .product--stacked .product__info-container--sticky {
+        top: 3px !important;
+    }
+
+    .detail-page .price-item.price-item--ex {
+        top: 3px;
+    }
+
+    .product--stacked .product__info-container--sticky.sticky {
         position: fixed !important;
         z-index: 10;
         top: 0 !important;
