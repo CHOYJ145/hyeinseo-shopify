@@ -1469,12 +1469,18 @@ button.swiper-pagination-bullet {
     font-size: inherit;
 }
 
-.detail-page .price-item {
+.detail-page .price-item.price-item--ex {
     margin: 0;
+    position: relative;
+    top: 22px;
 }
 
 .detail-page .product .price__container {
     margin-bottom: 0;
+}
+
+.detail-page .price-item .price {
+    font-size: initial;
 }
 
 .detail-page .product variant-radios {
@@ -2036,7 +2042,7 @@ button.swiper-pagination-bullet {
 }
 
 .product__text {
-    margin-top: 29px;
+    margin-top: 39px;
     margin-bottom: 18px;
 }
 
