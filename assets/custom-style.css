@@ -1522,7 +1522,7 @@ button.swiper-pagination-bullet {
 .detail-page .product-form__buttons .button {
     display: block;
     margin-bottom: 0;
-    padding: 2px 2px 1px;
+    padding: 2px 0 1px;
     font-size: inherit;
     letter-spacing: 0;
     line-height: normal;
