@@ -76,3 +76,15 @@ $('.m-nav-title').on('click', function () {
         $(this).siblings('.m-depth-wrap').slideUp();
     }
 });
+
+$('.desc-label').on('click', function () {
+    if (!$(this).hasClass('on')) {
+        $('.desc-label').removeClass('on');
+        $('.desc-cont').slideUp();
+        $(this).addClass('on');
+        $(this).siblings('.desc-cont').slideDown();
+    } else {
+        $(this).removeClass('on');
+        $(this).siblings('.desc-cont').slideUp();
+    }
+});

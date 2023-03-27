@@ -126,7 +126,7 @@
                 {%- endfor -%}
             </ul>
 
-            {% comment %}<div class="swiperTest">
+            <div class="swiperTest">
                 <ul
                         id="Slider-Gallery-{{ section.id }}"
                         class="contains-media list-unstyled swiper-wrapper"
@@ -189,7 +189,8 @@
                         {%- endunless -%}
                     {%- endfor -%}
                 </ul>
-            </div>{% endcomment %}
+                <div class="swiper-scrollbar"></div>
+            </div>
 
           {% comment %}<div class="slider-buttons no-js-hidden quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
             <button
@@ -654,7 +655,7 @@
                 </div>
               </noscript>
             {%- when 'buy_buttons' -%}
-              <div {{ block.shopify_attributes }}>
+              <div {{ block.shopify_attributes }} class="product-form-wrap">
                 <product-form class="product-form">
                   <div class="product-form__error-message-wrapper" role="alert" hidden>
                     <svg
@@ -1250,18 +1251,22 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-    // var swiper = new Swiper(".swiperTest", {
-    //     // effect: "fade",
-    //     // centeredSlides: true,
-    //     // autoplay: {
-    //     //     delay: 1000,
-    //     //     disableOnInteraction: false,
-    //     // },
-    //     // pagination: {
-    //     //     el: ".swiper-pagination",
-    //     //     type: "progressbar",
-    //     // },
-    // });
+    var swiper = new Swiper(".swiperTest", {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        // effect: "fade",
+        // centeredSlides: true,
+        // autoplay: {
+        //     delay: 1000,
+        //     disableOnInteraction: false,
+        // },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     type: "progressbar",
+        // },
+    });
 </script>
 
 {% schema %}

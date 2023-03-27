@@ -1539,7 +1539,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 768px) {
     .detail-page .product-wrap {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .detail-page .product__media-wrapper,
@@ -1549,7 +1549,7 @@ button.swiper-pagination-bullet {
 
     .detail-page .product__info-wrapper,
     .product--large:not(.product--no-media) .product__info-wrapper {
-        padding: 0 !important;
+        padding: 0 5px !important;
         width: 100% !important;
     }
 
@@ -2015,4 +2015,96 @@ button.swiper-pagination-bullet {
 .product-visual-list .product-visual {
     width: 100% !important;
     max-width: none !important;
+}
+
+.grid.grid--custom {
+    column-gap: 5px !important;
+}
+
+.product__info-wrapper .product-form-wrap {
+    margin: 0;
+}
+
+.product__info-wrapper .product-form {
+    margin: 0 !important;
+}
+
+.product__text {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.desc-list {
+    margin-top: 2px;
+}
+
+.desc-label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.desc-label i {
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+    font-style: normal;
+}
+
+.desc-label i:before {
+    content: '+';
+}
+
+.desc-label.on i:before {
+    content: '-';
+}
+
+.desc-cont {
+    display: none;
+}
+
+.guide-table {
+    border-top: 1px dashed #000;
+}
+
+.guide-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px dashed #000;
+}
+
+.swiperTest {
+    display: none;
+    width: 100vw;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .product-visual-list {
+        display: none;
+    }
+
+    .swiperTest {
+        margin: auto;
+        display: block;
+        padding:  0 4px;
+    }
+
+    .swiperTest .swiper-scrollbar {
+        left: 50%;
+        bottom: 20px !important;
+        width: 70px !important;
+        background: #000;
+        border-radius: 0;
+        transform: translateX(-50%);
+        height: 1px;
+    }
+
+    .swiperTest .swiper-scrollbar-drag {
+        display: block !important;
+        background: #fff;
+        border-radius: 0;
+    }
+
+
 }
