@@ -49,7 +49,7 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
 {%- for media in card_product.media -%}
-  {{ media  | image_url: width: 165 }}
+  {{ media  | image_url: width: 165 }}ll
             {%- liquid
               if section.settings.hide_variants and media_to_render contains media.id
                 assign variant_image = true
