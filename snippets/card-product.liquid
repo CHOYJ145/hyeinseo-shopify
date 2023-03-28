@@ -48,7 +48,19 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-  {{ card_product.media }}
+{%- for media in product.media -%}
+            {%- liquid
+              if section.settings.hide_variants and media_to_render contains media.id
+                assign variant_image = true
+              else
+                assign variant_image = false
+              endif
+
+              unless media.id == product.selected_or_first_available_variant.featured_media.id
+                render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+              endunless
+            -%}
+          {%- endfor -%}
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent ">
