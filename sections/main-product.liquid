@@ -392,20 +392,18 @@
               </p>
 
               <div>
-              {%- when 'title' -%}
-                  <div class="product__title" {{ block.shopify_attributes }}>
-                      <h1>{{ product.title | escape }}</h1>
-                      <a href="{{ product.url }}" class="product__title">
-                          <h2 class="h1">
-                              {{ product.title | escape }}
-                          </h2>
-                      </a>
-                  </div>
-              </div>
-
-              {%- when 'price' -%}
-                  <div class="no-js-hidden price-item price-item--ex" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                      {%- render 'price', product: product, use_variant: true, show_badges: true -%}
+                  {%- when 'title' -%}
+                      <div class="product__title" {{ block.shopify_attributes }}>
+                          <h1>{{ product.title | escape }}</h1>
+                          <a href="{{ product.url }}" class="product__title">
+                              <h2 class="h1">
+                                  {{ product.title | escape }}
+                              </h2>
+                          </a>
+                      </div>
+                  {%- when 'price' -%}
+                  <div class="no-js-hidden price-item" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                      {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                   </div>
                   {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                       {% comment %}<div class="product__tax caption rte">
@@ -424,6 +422,7 @@
                           {{ form | payment_terms }}
                       {%- endform -%}
                   </div>
+              </div>
 
             {%- when 'description' -%}
               {%- if product.description != blank -%}
@@ -756,7 +755,7 @@
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
-                          <svg
+{% comment %}                           <svg
                             aria-hidden="true"
                             focusable="false"
                             role="presentation"
@@ -765,7 +764,7 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg>
+                          </svg> {% endcomment %}
                         </div>
                       </button>
                       {% comment %}{%- if block.settings.show_dynamic_checkout -%}
