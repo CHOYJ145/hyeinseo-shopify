@@ -31,6 +31,18 @@
 
 
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
+
+    <div>
+      <ul>
+        <li>
+          <span id="collection-grid-overview">Overview</span>
+          <span id="collection-grid-thumbnail">Thumbnail</span>
+        </li>
+        <li>
+          Filter
+        </li>
+      </ul>
+    </div>
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     <div id="facet-wrap">
