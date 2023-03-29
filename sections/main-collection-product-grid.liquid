@@ -11,7 +11,7 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-
+ <script src="{{ 'collection-thumb-overview.js' | asset_url }}" defer="defer"></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -31,6 +31,18 @@
 
 
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
+
+    <div>
+      <ul>
+        <li class="collection-grid-style">
+          <span id="collection-grid-overview">Overview</span>
+          <span id="collection-grid-thumbnail">Thumbnail</span>
+        </li>
+        <li>
+          Filter
+        </li>
+      </ul>
+    </div>
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     <div id="facet-wrap">
@@ -113,7 +125,7 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li class="grid__item">
-                  {% render 'card-product',
+                  {% render 'card-product-overview',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,

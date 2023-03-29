@@ -19,6 +19,13 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
+<style>
+li.grid__item{
+  display: flex;
+}
+</style>
+
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -31,6 +38,7 @@
       assign ratio = 1
     endif
   -%}
+{%- for images in card_product.images -%}
   <div class="card-wrapper product-card-wrapper">
     <div
       class="
@@ -48,69 +56,36 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-{%- for images in card_product.images -%}
-  {{ images  | image_url: width: 165 }}ll
-            {%- liquid
-              if section.settings.hide_variants and media_to_render contains media.id
-                assign variant_image = true
-              else
-                assign variant_image = false
-              endif
 
-              unless media.id == product.selected_or_first_available_variant.featured_media.id
-                render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
-              endunless
-            -%}
-          {%- endfor -%}
-        {%- if card_product.featured_media -%}
+        {%- if images -%}
           <div class="card__media">
             <div class="media media--transparent ">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
-                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+                  {%- if images.width >= 165 -%}{{ images | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if images.width >= 360 -%}{{ images | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if images.width >= 533 -%}{{ images | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if images.width >= 720 -%}{{ images | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if images.width >= 940 -%}{{ images | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if images.width >= 1066 -%}{{ images | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ images | image_url }} {{ images.width }}w
                 "
-                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                src="{{ images | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ card_product.featured_media.alt | escape }}"
+                alt="{{ images.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
-                width="{{ card_product.featured_media.width }}"
-                height="{{ card_product.featured_media.height }}"
+                width="{{ images.width }}"
+                height="{{ images.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-
-              {%- if card_product.media[1] != nil and show_secondary_image -%}
-                <img
-                  srcset="
-                    {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
-                  "
-                  src="{{ card_product.media[1] | image_url: width: 533 }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                  alt=""
-                  class="motion-reduce"
-                  loading="lazy"
-                  width="{{ card_product.media[1].width }}"
-                  height="{{ card_product.media[1].height }}"
-                >
-              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
+
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -376,4 +351,5 @@
       </div>
     </div>
   </div>
+{%- endfor -%}
 {%- endif -%}
