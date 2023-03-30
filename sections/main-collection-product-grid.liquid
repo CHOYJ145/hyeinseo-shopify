@@ -35,10 +35,11 @@
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
+      {% assign overviewGrid = overview.dataset.overview | default: false %}
       {{ overview }}
       <ul>
         <li class="collection-grid-style">
-          {% if overview == 'true' %}
+          {% if overviewGrid == 'true' %}
             <span id="collection-grid-thumbnail">Thumbnail</span>
           {% else %}
             <span id="collection-grid-overview">Overview</span>
