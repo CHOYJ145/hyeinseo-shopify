@@ -380,14 +380,14 @@ if (window.location.href.indexOf("price-ascending") > -1) {
   if (collectionGridOverview) {
     collectionGridOverview.addEventListener('click', () => {
       updateUrlOverviewParam(true);
-      // window.location.reload();
+      window.location.reload();
     });
   }
 
   if (collectionGridThumbnail) {
     collectionGridThumbnail.addEventListener('click', () => {
       updateUrlOverviewParam(false);
-      // window.location.reload();
+      window.location.reload();
     });
   }
 </script>
