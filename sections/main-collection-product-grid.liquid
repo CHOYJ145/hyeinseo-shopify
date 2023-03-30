@@ -36,6 +36,7 @@
 
     <div id="overview-value" data-overview="{{ overview }}">
       {% assign dataset = overview | parsejson %}
+      {{ dataset }}
       {% assign overviewGrid = dataset.overview | default: false %}
       dd{{ overview }}
       ff{{ overviewGrid }}
