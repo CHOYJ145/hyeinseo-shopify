@@ -31,15 +31,10 @@
   const urlStr = window.location.href;
   const url = new URL(urlStr);
   const urlParams = url.searchParams;
-  const overview = urlParams.get('overview');
+  const overviewParams = urlParams.get('overview');
+  const overview = overview != null ? true : false;
   
-  if (overview != null){
-    console.log("tri")
-    {% assign overview = true %} 
-  }else{
-    console.log("gi")
-    {% assign overview = false %}
-  }
+ {% assign overviewGrid = overview %}
   
   console.log(overview)
 </script>
