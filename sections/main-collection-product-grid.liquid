@@ -33,7 +33,7 @@
   const urlParams = url.searchParams;
   const overview = urlParams.get('overview');
   
-  if (overview == "true"){
+  if (overview != null){
     console.log("tri")
     {% assign overview = true %} 
   }else{
