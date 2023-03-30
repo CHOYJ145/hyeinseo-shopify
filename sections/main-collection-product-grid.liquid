@@ -36,6 +36,7 @@
 
       {% assign overview = request.params['overview'] %}
       {% assign object = entities.cr21d_object[overview] %}
+      {{ object.cr21d_name }}
       {{ object }}
       {% if overview %}
         <p>Current category: {{ object }}</p>
