@@ -34,6 +34,8 @@
   const overview = urlParams.get('overview');
   if (overview==true){
     {% assign overview = true %} 
+  }else{
+    {% assign overview = false %}
   }
   
   console.log(overview)
