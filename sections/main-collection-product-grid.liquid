@@ -35,6 +35,7 @@
       {{ page_url }}
 
       {% assign overview = request.GET.overview %}
+      {{ overview }}
       {% if overview %}
         <p>Current category: {{ overview }}</p>
       {% else %}
