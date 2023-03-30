@@ -36,10 +36,10 @@
 
     <div id="overview-value" data-overview="{{ overview }}">
       {% assign overviewGrid = overview.dataset.overview | default: false %}
-      {{ overview }}
+      {{ overviewGrid }}
       <ul>
         <li class="collection-grid-style">
-          {% if overviewGrid == 'true' %}
+          {% if overviewGrid %}
             <span id="collection-grid-thumbnail">Thumbnail</span>
           {% else %}
             <span id="collection-grid-overview">Overview</span>
