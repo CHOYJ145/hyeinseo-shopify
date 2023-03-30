@@ -35,7 +35,8 @@
       {{ page_url }}
 
       {% assign overview = request.params['overview'] %}cc
-      {{ overview }}
+      {% assign object = entities.cr21d_object[overview] %}
+      {{ object }}
       {% if overview %}
         <p>Current category: {{ overview }}</p>
       {% else %}
