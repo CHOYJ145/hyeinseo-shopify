@@ -32,7 +32,9 @@
   const url = new URL(urlStr);
   const urlParams = url.searchParams;
   const overview = urlParams.get('overview');
-  if (overview=="true"){
+  
+  if (overview == "true"){
+    console.log(overview)
     {% assign overview = true %} 
   }else{
     {% assign overview = false %}
