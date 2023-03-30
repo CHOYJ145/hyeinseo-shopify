@@ -25,44 +25,7 @@
     }
   }
 {%- endstyle -%}
-{% assign overview = false %}
-<script type="module">
-  // url 파라미터에서 overview 값 가져와 그리드 변경해주기
-  const url = new URL(window.location.href);
-  const urlParams = url.searchParams;
-  const overviewParams = urlParams.get('overview');
-  const overview = overviewParams != null ? true : false;
 
-  const overviewValue = document.getElementById('overview-value');
-  overviewValue.setAttribute('data-overview', overview);
-
-  // overview, thumbnail 버튼 이벤트
-  const collectionGridOverview = document.getElementById('collection-grid-overview');
-  const collectionGridThumbnail = document.getElementById('collection-grid-thumbnail');
-
-  function updateUrlOverviewParam(value) {
-    if (value) {
-      urlParams.set('overview', 'true');
-    } else {
-      urlParams.delete('overview');
-    }
-    window.history.pushState(null, null, url.toString());
-  }
-
-  if (collectionGridOverview) {
-    collectionGridOverview.addEventListener('click', () => {
-      updateUrlOverviewParam(true);
-      // window.location.reload();
-    });
-  }
-
-  if (collectionGridThumbnail) {
-    collectionGridThumbnail.addEventListener('click', () => {
-      updateUrlOverviewParam(false);
-      // window.location.reload();
-    });
-  }
-</script>
 
 <div class="section-{{ section.id }}-padding">
 
@@ -389,3 +352,42 @@ if (window.location.href.indexOf("price-ascending") > -1) {
   ]
 }
 {% endschema %}
+
+{% assign overview = false %}
+<script type="module">
+  // url 파라미터에서 overview 값 가져와 그리드 변경해주기
+  const url = new URL(window.location.href);
+  const urlParams = url.searchParams;
+  const overviewParams = urlParams.get('overview');
+  const overview = overviewParams != null ? true : false;
+
+  const overviewValue = document.getElementById('overview-value');
+  overviewValue.setAttribute('data-overview', overview);
+
+  // overview, thumbnail 버튼 이벤트
+  const collectionGridOverview = document.getElementById('collection-grid-overview');
+  const collectionGridThumbnail = document.getElementById('collection-grid-thumbnail');
+
+  function updateUrlOverviewParam(value) {
+    if (value) {
+      urlParams.set('overview', 'true');
+    } else {
+      urlParams.delete('overview');
+    }
+    window.history.pushState(null, null, url.toString());
+  }
+
+  if (collectionGridOverview) {
+    collectionGridOverview.addEventListener('click', () => {
+      updateUrlOverviewParam(true);
+      // window.location.reload();
+    });
+  }
+
+  if (collectionGridThumbnail) {
+    collectionGridThumbnail.addEventListener('click', () => {
+      updateUrlOverviewParam(false);
+      // window.location.reload();
+    });
+  }
+</script>
