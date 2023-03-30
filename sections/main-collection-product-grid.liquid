@@ -28,15 +28,11 @@
 
 
 <div class="section-{{ section.id }}-padding">
-
-  {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-
-
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
-      {% assign dataset = overview | parsejson %}
-      {{ dataset }}
+      {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
+      {{ page_url }}
       {% assign overviewGrid = dataset.overview | default: false %}
       dd{{ overview }}
       ff{{ overviewGrid }}
