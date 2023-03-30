@@ -31,7 +31,7 @@
   const url = new URL(window.location.href);
   const urlParams = url.searchParams;
   const overviewParams = urlParams.get('overview');
-  const overview = overview != null ? true : false;
+  const overview = overviewParams != null ? true : false;
 
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
