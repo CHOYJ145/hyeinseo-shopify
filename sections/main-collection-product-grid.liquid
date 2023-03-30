@@ -35,7 +35,8 @@
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
-      {% assign overviewGrid = overview.dataset.overview | default: false %}
+      {% assign dataset = overview | parsejson %}
+      {% assign overviewGrid = dataset.overview | default: false %}
       dd{{ overview }}
       ff{{ overviewGrid }}
       <ul>
