@@ -37,7 +37,7 @@
     <div id="overview-value" data-overview="{{ overview }}">
       {{ overview-value }}
       ddd
-      {% assign overviewGrid = overview-value.dataset.overview | default: false %}
+      {% assign overviewGrid = overview.dataset.overview | default: false %}
         {{ overviewGrid }}
       <ul>
         <li class="collection-grid-style">
