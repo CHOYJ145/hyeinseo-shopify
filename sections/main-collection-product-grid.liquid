@@ -33,16 +33,16 @@
     <div id="overview-value" data-overview="{{ overview }}">
       {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
       {{ page_url }}
-    {% capture current_url %}{{ request.url }}{% endcapture %}
-{{ request.path }}
-      {% if overview %}
-        <p>Current category: {{ object }}</p>
+      
+      {% assign overviewGrid = false %}
+      {% if page_url contains "overview=true" %}
+        {% assign overviewGrid = true %}
+        <p>Current category: {{ page_url }}</p>
       {% else %}
         <p>No overview selected.</p>
       {% endif %}
       {% assign overviewGrid = dataset.overview | default: false %}
-      dd{{ overview }}
-      ff{{ overviewGrid }}
+
       <ul>
         <li class="collection-grid-style">
           {% if overviewGrid %}
