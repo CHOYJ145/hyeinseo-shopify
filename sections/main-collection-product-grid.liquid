@@ -37,9 +37,6 @@
       {% assign overviewGrid = false %}
       {% if page_url contains "overview=true" %}
         {% assign overviewGrid = true %}
-        <p>Current category: {{ page_url }}</p>
-      {% else %}
-        <p>No overview selected.</p>
       {% endif %}
 
       <ul>
@@ -138,7 +135,7 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li class="grid__item">
-                  {% if overviewGrid == 'true' %}
+                  {% if overviewGrid %}
                     {% render 'card-product-overview',
                       card_product: product,
                       media_aspect_ratio: section.settings.image_ratio,
