@@ -37,16 +37,16 @@
             "show_dynamic_checkout": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "72145d1f-8574-4be9-bba4-f3ca22e3e235": {
           "type": "text",
           "settings": {
             "text": "test {{ product.metafields.custom.description.value }}",
             "text_style": "body"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
           }
         }
       },
@@ -57,8 +57,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "72145d1f-8574-4be9-bba4-f3ca22e3e235"
+        "72145d1f-8574-4be9-bba4-f3ca22e3e235",
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
