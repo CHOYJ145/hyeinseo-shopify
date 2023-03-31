@@ -26,23 +26,33 @@
   }
 {%- endstyle -%}
 
+
 <div class="section-{{ section.id }}-padding">
-  {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-
-
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
-    <div>
+    <div id="overview-value" data-overview="{{ overview }}">
+      {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
+      {{ page_url }}
+      
+      {% assign overviewGrid = false %}
+      {% if page_url contains "overview=true" %}
+        {% assign overviewGrid = true %}
+      {% endif %}
+
       <ul>
         <li class="collection-grid-style">
-          <span id="collection-grid-overview">Overview</span>
-          <span id="collection-grid-thumbnail">Thumbnail</span>
+          {% if overviewGrid %}
+            <span id="collection-grid-thumbnail">Thumbnail</span>
+          {% else %}
+            <span id="collection-grid-overview">Overview</span>
+          {% endif %}
         </li>
         <li>
           Filter
         </li>
       </ul>
     </div>
+    
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     <div id="facet-wrap">
@@ -117,25 +127,43 @@
             <div class="loading-overlay gradient"></div>
 
             <ul id="product-grid" data-id="{{ section.id }}" class="
+              {% if overviewGrid %}
+              grid product-grid
+              {% else %}
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-              grid--{{ section.settings.columns_desktop }}-col-desktop">
+              grid--{{ section.settings.columns_desktop }}-col-desktop
+              {% endif %}">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li class="grid__item">
-                  {% render 'card-product-overview',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-
-                  %}
+                  {% if overviewGrid %}
+                    {% render 'card-product-overview',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+  
+                    %}
+                  {% else %}
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+  
+                    %}
+                  {% endif %}
                 </li>
               {%- endfor -%}
             </ul>
@@ -331,3 +359,42 @@ if (window.location.href.indexOf("price-ascending") > -1) {
   ]
 }
 {% endschema %}
+
+{% assign overview = false %}
+<script type="module">
+  // url 파라미터에서 overview 값 가져와 그리드 변경해주기
+  const url = new URL(window.location.href);
+  const urlParams = url.searchParams;
+  const overviewParams = urlParams.get('overview');
+  const overview = overviewParams != null ? true : false;
+
+  const overviewValue = document.getElementById('overview-value');
+  overviewValue.setAttribute('data-overview', overview);
+
+  // overview, thumbnail 버튼 이벤트
+  const collectionGridOverview = document.getElementById('collection-grid-overview');
+  const collectionGridThumbnail = document.getElementById('collection-grid-thumbnail');
+
+  function updateUrlOverviewParam(value) {
+    if (value) {
+      urlParams.set('overview', 'true');
+    } else {
+      urlParams.delete('overview');
+    }
+    window.history.pushState(null, null, url.toString());
+  }
+
+  if (collectionGridOverview) {
+    collectionGridOverview.addEventListener('click', () => {
+      updateUrlOverviewParam(true);
+      window.location.reload();
+    });
+  }
+
+  if (collectionGridThumbnail) {
+    collectionGridThumbnail.addEventListener('click', () => {
+      updateUrlOverviewParam(false);
+      window.location.reload();
+    });
+  }
+</script>
