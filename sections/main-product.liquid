@@ -60,7 +60,7 @@
       >
   cnjknospojaopjaspojop
 
-        {% assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last %}
+        {% assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last | downcase %}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
