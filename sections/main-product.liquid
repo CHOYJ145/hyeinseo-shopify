@@ -109,7 +109,7 @@
                 {%- endif -%}
                 {%- for media in product.media -%}
                   {% assign image_alt_option = product.media.alt | split:"--" | last | downcase %}
-                      {{ image_alt_option }}
+                     ffffff {{ image_alt_option }}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}"
