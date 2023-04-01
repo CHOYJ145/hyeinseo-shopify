@@ -59,7 +59,9 @@
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
   cnjknospojaopjaspojop
-  {{ product.selected_or_first_available_variant.featured_image.alt }}
+
+  {% assign alt_array = product.selected_or_first_available_variant.featured_image.alt | split:"--" %}
+{{ alt_array.second }}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
