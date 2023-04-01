@@ -58,6 +58,7 @@
         aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
+  {{ product.selected_or_first_available_variant }}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -95,7 +96,6 @@
                         assign media_width = 0.45
                     endif
                 -%}
-                {{ product.selected_or_first_available_variant }}
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     <li
