@@ -46,16 +46,15 @@
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
+      {%- for images in card_product.images -%}
+        {%- if images -%}
       <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-      
           <div class="card__media">
             <div class="media media--transparent ">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-              {%- for images in card_product.images -%}
-                {%- if images -%}
               <img
                 srcset="
                   {%- if images.width >= 165 -%}{{ images | image_url: width: 165 }} 165w,{%- endif -%}
@@ -77,11 +76,9 @@
                 height="{{ images.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-                  {%- endif -%}
-{%- endfor -%}
             </div>
           </div>
-        
+
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -119,6 +116,9 @@
           </div>
         </div>
       </div>
+
+{%- endif -%}
+{%- endfor -%}
       <div class="card__content">
         <div class="card__information">
           <h3
