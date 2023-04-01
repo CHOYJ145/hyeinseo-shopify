@@ -95,15 +95,12 @@
                         assign media_width = 0.45
                     endif
                 -%}
+                {% assign selected_color = '' %}
                 {%- for option in product.options_with_values -%}
-                  {{ option.name }}
-                  {{ option.selected_value }}
-                  {% if option.selected_value == value %}
-                                                    checked
-                                                {% endif %}
-                  {% endfor %}
-                  
-                {%- assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last | downcase -%}
+                  {% if option.name == 'Color' or option.name == 'color'%}
+                    {% assign selected_color = option.selected_value | downcase %}
+                  {% endif %}
+                {% endfor %}
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     <li
@@ -117,6 +114,7 @@
                 {%- endif -%}
                 {%- for media in product.media -%}
                   {% assign image_alt_option = media.alt | split:"--" | last | downcase %}
+                    {% if image_alt_option == selected_color  %}
                   {{ selected_option }}
                      ffffff {{ image_alt_option }}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
@@ -135,6 +133,7 @@
                             -%}
                         </li>
                     {%- endunless -%}
+                  {% endif %}
                 {%- endfor -%}
             </ul>
 
