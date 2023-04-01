@@ -33,7 +33,7 @@
       assign ratio = 1
     endif
   -%}
-{%- for images in card_product.images -%}
+
   <div class="card-wrapper product-card-wrapper">
     <div
       class="
@@ -51,7 +51,7 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-
+  {%- for images in card_product.images -%}
         {%- if images -%}
           <div class="card__media">
             <div class="media media--transparent ">
@@ -80,7 +80,7 @@
             </div>
           </div>
         {%- endif -%}
-
+{%- endfor -%}
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -346,5 +346,5 @@
       </div>
     </div>
   </div>
-{%- endfor -%}
+
 {%- endif -%}
