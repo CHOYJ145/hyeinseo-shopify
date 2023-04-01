@@ -60,8 +60,8 @@
       >
   cnjknospojaopjaspojop
 
-  {% assign alt_array = product.selected_or_first_available_variant.featured_image.alt | split:"--" | second %}
-  {{ product.selected_or_first_available_variant.featured_image.alt | split:"--" | second }}
+  {% assign alt_array = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last %}
+  {{ product.selected_or_first_available_variant.featured_image.alt | split:"--" | last }}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
