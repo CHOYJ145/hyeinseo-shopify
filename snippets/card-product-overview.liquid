@@ -36,7 +36,6 @@
   <div class="card-wrapper product-card-wrapper ">
     <div
       class="
-        card-set-overveiw
         card
         card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
@@ -47,6 +46,7 @@
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
+    <div class="overview-image-grid">
       {%- for images in card_product.images -%}
         {%- if images -%}
       <div
@@ -117,9 +117,9 @@
           </div>
         </div>
       </div>
-
-                  {%- endif -%}
-{%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+    </div>
       <div class="card__content">
         <div class="card__information">
           <h3

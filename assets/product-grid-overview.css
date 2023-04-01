@@ -2,7 +2,6 @@
   flex-direction: column;
 }
 
-.card-set-overveiw{
+.overview-image-grid{
   display: flex;
-  flex-direction:row !important;
 }
