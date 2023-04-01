@@ -65,7 +65,7 @@
                 assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
               endfor
             -%}
-            ffffffffffff
+            <span id="dddddd">{{ product.selected_or_first_available_variant }}</span>
             {%- for media in product.media -%}
               {%- if media_to_render contains media.id and media.id != product.selected_or_first_available_variant.featured_media.id -%}
                 <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
