@@ -1,3 +1,7 @@
 .gird.grid-col {
   flex-direction: column;
 }
+
+*{
+  background: pink;
+}
