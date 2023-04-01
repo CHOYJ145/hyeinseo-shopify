@@ -4,4 +4,5 @@
 
 .card-set-overveiw{
   display: flex;
+  flex-direction:row;
 }
