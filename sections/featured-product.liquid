@@ -41,6 +41,7 @@
     onload="this.media='all'"
   >
 {%- endif -%}
+
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
@@ -64,8 +65,8 @@
                 assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
               endfor
             -%}
-            <span id="dddddd">{{ product.selected_or_first_available_variant }}</span>
             {%- for media in product.media -%}
+              vvv
               {%- if media_to_render contains media.id and media.id != product.selected_or_first_available_variant.featured_media.id -%}
                 <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
                   {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false, media_width: 0.5 %}
@@ -106,6 +107,7 @@
                 </p>
               {%- when 'title' -%}
                 <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+              dddddkwn;lekj;owknd;ockma;ocso;
                   {%- if product.title != blank -%}
                     {{ product.title | escape }}
                   {%- else -%}
@@ -443,7 +445,6 @@
           </a>
         </div>
       </div>
-                            ssssssss
       {%- if section.settings.media_position == 'right' -%}
         <div class="grid__item product__media-wrapper small-hide">
           <media-gallery
