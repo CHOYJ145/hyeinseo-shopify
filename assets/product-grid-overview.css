@@ -1,3 +1,7 @@
 .grid.grid-col {
   flex-direction: column;
 }
+
+.card-overview{
+  display: flex;
+}
