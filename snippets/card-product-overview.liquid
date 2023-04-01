@@ -52,8 +52,8 @@
       >
       {%- for images in card_product.images -%}
         {%- if images -%}
-          <div>
-            <div class="media media--transparent ">
+          <div class="card__media">
+            <div>
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
