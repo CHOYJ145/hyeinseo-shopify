@@ -58,8 +58,6 @@
         aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
-  cnjknospojaopjaspojop
-
         {% assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last | downcase %}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
@@ -110,6 +108,8 @@
                     </li>
                 {%- endif -%}
                 {%- for media in product.media -%}
+                  {% assign image_alt_option = product.media.alt | split:"--" | last | downcase %}
+                    {% if image_alt_option == selected_option %}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}"
@@ -126,6 +126,7 @@
                             -%}
                         </li>
                     {%- endunless -%}
+                  {% endif %}
                 {%- endfor -%}
             </ul>
 
