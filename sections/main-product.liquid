@@ -58,6 +58,7 @@
         aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
+        {% assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last | downcase %}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -107,6 +108,8 @@
                     </li>
                 {%- endif -%}
                 {%- for media in product.media -%}
+                  {% assign image_alt_option = media.alt | split:"--" | last | downcase %}
+                    {% if image_alt_option == selected_option %}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}"
@@ -123,6 +126,7 @@
                             -%}
                         </li>
                     {%- endunless -%}
+                  {% endif %}
                 {%- endfor -%}
             </ul>
 
@@ -755,7 +759,7 @@
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
-{% comment %}                           <svg
+                        <svg
                             aria-hidden="true"
                             focusable="false"
                             role="presentation"
@@ -764,7 +768,7 @@
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg> {% endcomment %}
+                          </svg>
                         </div>
                       </button>
                       {% comment %}{%- if block.settings.show_dynamic_checkout -%}
