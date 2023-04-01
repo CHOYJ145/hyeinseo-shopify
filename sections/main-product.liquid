@@ -114,7 +114,7 @@
                     </li>
                 {%- endif -%}
                 {%- for media in product.media -%}
-                  {% assign image_alt_option = media.alt | split:"--" | last | downcase %}
+                  {% assign image_alt_option = media.alt | split:"--" | last | downcase | replace:"-"," " %}
                     {% if image_alt_option == selected_color  %}
                   {{ selected_color }}
                      ffffff {{ image_alt_option }}
