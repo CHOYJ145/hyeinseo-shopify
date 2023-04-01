@@ -705,8 +705,6 @@
                       form="{{ product_form_id }}"
                     >
                       {%- for variant in product.variants -%}
-                        {{  product.selected_or_first_available_variant }}
-                        ddddsgdsgd
                         <option
                           {% if variant == product.selected_or_first_available_variant %}
                             selected="selected"
