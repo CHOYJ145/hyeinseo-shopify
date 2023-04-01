@@ -98,7 +98,7 @@
                 {% assign selected_color = '' %}
                 {%- for option in product.options_with_values -%}
                   {% if option.name == 'Color' or option.name == 'color'%}
-                    {% assign selected_color = option.selected_value | downcase %}
+                    {% assign selected_color = option.selected_value | downcase | replace:" ", "-" %}
                   {% endif %}
                 {% endfor %}
                 {{ selected_color }}
