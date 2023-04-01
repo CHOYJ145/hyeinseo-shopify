@@ -1032,5 +1032,3 @@ if (document.readyState !== 'loading') {
     selectVariantByClickingImage._selectVariant(),
   );
 }
-
-console.log('ddd')
