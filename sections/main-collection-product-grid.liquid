@@ -139,7 +139,7 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                   {% if overviewGrid %}
-                    <li>
+                    <li class="grid__item">
                     {% render 'card-product-overview',
                       card_product: product,
                       media_aspect_ratio: section.settings.image_ratio,
