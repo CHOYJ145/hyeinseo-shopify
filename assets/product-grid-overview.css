@@ -1,0 +1,7 @@
+.grid.grid-col {
+  flex-direction: column;
+}
+
+.overview-image-grid{
+  display: flex;
+}
