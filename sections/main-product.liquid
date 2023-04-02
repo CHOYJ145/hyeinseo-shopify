@@ -95,6 +95,7 @@
                         assign media_width = 0.45
                     endif
                 -%}
+                    sss  {{ product.selected_or_first_available_variant.featured_media }}
                 {% assign selected_color = '' %}
                 {%- for option in product.options_with_values -%}
                   {% if option.name == 'Color' or option.name == 'color'%}
