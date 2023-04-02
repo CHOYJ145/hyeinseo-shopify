@@ -95,13 +95,13 @@
                         assign media_width = 0.45
                     endif
                 -%}
-                    sss  {{ product.selected_or_first_available_variant.featured_media }}
                 {% assign selected_color = '' %}
                 {%- for option in product.options_with_values -%}
                   {% if option.name == 'Color' or option.name == 'color'%}
                     {% assign selected_color = option.selected_value | downcase %}
                   {% endif %}
                 {% endfor %}
+                {{ selected_color }}
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     <li
@@ -116,24 +116,22 @@
                 {%- for media in product.media -%}
                   {% assign image_alt_option = media.alt | split:"--" | last | downcase | replace:"-"," " %}
                     {% if image_alt_option == selected_color  %}
-                  {{ selected_color }} {{ image_alt_option }}
+                  {{ selected_color }}
+                     ffffff {{ image_alt_option }}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}"
                                 class="product__media-item grid__item product-visual {% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
                                 data-media-id="{{ section.id }}-{{ media.id }}"
                         >
-                            {% render 'product-thumbnail', 
-                            media: media,
-                            media_count: media_count, 
-                            position: media_position, 
-                            desktop_layout: section.settings.gallery_layout, 
-                            mobile_layout: section.settings.mobile_thumbnails, 
-                            loop: section.settings.enable_video_looping, 
-                            modal_id: section.id, 
-                            xr_button: true, 
-                            media_width: media_width, 
-                            lazy_load: false %}
+                            {%- liquid
+                                assign media_position = media_position | default: 0 | plus: 1
+                                assign lazy_load = false
+                                if media_position > 1
+                                    assign lazy_load = true
+                                endif
+                                render 'product-thumbnail', media: media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                            -%}
                         </li>
                     {%- endunless -%}
                   {% endif %}
@@ -762,6 +760,7 @@
                         {% endif %}
                       >
                         <span>
+                    {{ product.selected_or_first_available_variant.available }}
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
