@@ -108,7 +108,7 @@
                     </li>
                 {%- endif -%}
                 {%- for media in product.media -%}
-                  {% assign image_alt_option = product.media.alt | split:"--" | last | downcase %}
+                  {% assign image_alt_option = media.alt | split:"--" | last | downcase %}
                      ffffff {{ image_alt_option }}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
