@@ -58,6 +58,7 @@
         aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
+        {% assign selected_option = product.selected_or_first_available_variant.featured_image.alt | split:"--" | last | downcase %}
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -95,13 +96,6 @@
                         assign media_width = 0.45
                     endif
                 -%}
-                {% assign selected_color = '' %}
-                {%- for option in product.options_with_values -%}
-                  {% if option.name == 'Color' or option.name == 'color'%}
-                    {% assign selected_color = option.selected_value | downcase %}
-                  {% endif %}
-                {% endfor %}
-                {{ selected_color }}
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     <li
@@ -112,15 +106,10 @@
                         {%- assign media_position = 1 -%}
                         {% render 'product-thumbnail', media: featured_media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
                     </li>
-                  ddspjf'pjg'pdjsgp
                 {%- endif -%}
                 {%- for media in product.media -%}
-                  {% assign image_alt_option = media.alt | split:"--" | last | downcase | replace:"-"," " %}
-                    {% if image_alt_option == selected_color  %}
-                  {{ selected_color }}
+                  {% assign image_alt_option = product.media.alt | split:"--" | last | downcase %}
                      ffffff {{ image_alt_option }}
-
-                      {{ product.selected_or_first_available_variant.featured_media }}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}"
@@ -137,7 +126,6 @@
                             -%}
                         </li>
                     {%- endunless -%}
-                  {% endif %}
                 {%- endfor -%}
             </ul>
 
@@ -763,7 +751,6 @@
                         {% endif %}
                       >
                         <span>
-                    {{ product.selected_or_first_available_variant.available }}
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
