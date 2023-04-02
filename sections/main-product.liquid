@@ -101,7 +101,6 @@
                     {% assign selected_color = option.selected_value | downcase %}
                   {% endif %}
                 {% endfor %}
-                {{ selected_color }}
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     <li
