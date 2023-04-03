@@ -44,7 +44,6 @@
 {%- endcapture -%}
 
 <noscript>
-  
   {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
     <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
     <div class="product__media media gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
@@ -83,7 +82,7 @@
       endcase
     -%}
   </span>{% endcomment %}
-{{ media.preview_image.alt | escape }}
+
   {% comment %}<div class="product__media media media--transparent gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">{% endcomment %}
   <div class="product__media media media--transparent gradient global-media-settings product__media--test" style="">
     {{ media.preview_image | image_url: width: 1946 | image_tag:
