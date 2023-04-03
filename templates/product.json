@@ -23,7 +23,7 @@
         "72145d1f-8574-4be9-bba4-f3ca22e3e235": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.description.value }}{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products_display.value }}",
+            "text": "{{ product.metafields.custom.description.value }}",
             "text_style": "body"
           }
         },
