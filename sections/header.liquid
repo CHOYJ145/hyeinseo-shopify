@@ -136,19 +136,13 @@
         <ul class="list-menu list-menu--inline" role="list">
           <li>
               <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn depth-btn--shop">
-                <span>Shop 
+                <span>Shop
                   <span>
-                    <ul>
-                      {%- assign sorted_collection = collections | sort: 'updated_at' -%}
-                      {% for sorted_item in sorted_collection %}
-                        <li>
-                          <a href="/collections/{{ sorted_item.handle }}">
-                            {{ sorted_item.title }}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
+                    {% for collection in product.collections %}
+                      <span class="path-item">{{ collection.title }}</span>
+                    {% endfor %}
                   </span>
+
                 </span>
               </span>
           </li>
@@ -230,16 +224,17 @@
       <div class="header__2depth">
         <div class="header__2depth-inner header__2depth--shop">
           <div class="header__2depth-col">
+
             <ul>
-              {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
-              {% for sorted_item in sorted_collection %}
-                <li>
-                  <a href="/collections/{{ sorted_item.handle }}">
-                    {{ sorted_item.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
+  {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
+  {% for sorted_item in sorted_collection %}
+    <li>
+      <a href="/collections/{{ sorted_item.handle }}">
+        {{ sorted_item.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
           </div>
         </div>
 
@@ -384,12 +379,10 @@
               <div class="m-nav-title">Shop</div>
               <div class="m-depth-wrap">
                 <ul class="m-depth-list">
-                  <ul>
-                  {% assign sorted_collection = collections | sort: 'updated_at' | reverse %}
-                  {% for sorted_item in sorted_collection %}
-                    <li>
-                      <a href="/collections/{{ sorted_item.handle }}">
-                        {{ sorted_item.title }}
+                  {% for collection in collections %}
+                    <li class="m-depth-item">
+                      <a href="/collections/{{ collection.handle }}">
+                        {{ collection.title }}
                       </a>
                     </li>
                   {% endfor %}
