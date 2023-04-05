@@ -223,7 +223,7 @@
           <div class="header__2depth-col">
 
             <ul>
-              {% assign collection_sort = collections | sort: "updated" %}
+              {% assign collection_sort = collections | sort_by: "updated" %}
               {% for collection in collection_sort %}
                 <li>
                   <a href="/collections/{{ collection.handle }}">
