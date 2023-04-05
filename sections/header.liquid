@@ -140,7 +140,7 @@
                   <span>
                     <ul>
                       {% for collection in collections %}
-                        {{ collection }}
+                        {{ collection.title }}
                         {% endfor %}
                         {%- assign sorted_collection = collections | sort: 'published_at' -%}
                         {% for sorted_item in sorted_collection %}
