@@ -1439,27 +1439,20 @@ button.swiper-pagination-bullet {
 }
 
 /* detail */
-.detail-page .product-wrap {
-    padding-top: 22px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    /*gap: 0 5px;*/
+.detail-page .product__media-wrapper,
+.product--large:not(.product--no-media) .product__media-wrapper {
+    width: 65.5% !important;
+    box-sizing: border-box;
+    max-width: none !important;
 }
 
-/*.detail-page ..detail-page .product-wrap {*/
-/*    width: 66.66%;*/
-/*    box-sizing: border-box;*/
-/*    max-width: none;*/
-/*}*/
-
-.detail-page .product-wrap .product__info-wrapper {
-    position: sticky;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0 4px 0 0;
+.detail-page .product__info-wrapper,
+.product--large:not(.product--no-media) .product__info-wrapper {
+    padding: 0 5px !important;
+    width: 33.33% !important;
+    padding: 0 5px;
     box-sizing: border-box;
-    max-width: none;
+    max-width: none !important;
 }
 
 .detail-page .product__media-list .product__media-item:first-child,
@@ -1474,6 +1467,12 @@ button.swiper-pagination-bullet {
 
 .product__title h1 {
     font-size: inherit;
+}
+
+.detail-page .price-item.price-item--ex {
+    margin: 0;
+    position: relative;
+    top: 22px;
 }
 
 .detail-page .product .price__container {
@@ -1544,7 +1543,15 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
+.detail-page .product-wrap {
+    padding-left: 5px;
+}
+
 @media screen and (max-width: 1024px) {
+    .detail-page .product-wrap {
+        flex-direction: column;
+    }
+
     .detail-page .product__media-wrapper,
     .product--large:not(.product--no-media) .product__media-wrapper {
         width: 100% !important;
@@ -2019,7 +2026,6 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3px;
-    padding: 0 4px;
 }
 
 .product-visual-list .product-visual {
@@ -2042,7 +2048,7 @@ button.swiper-pagination-bullet {
 }
 
 .product__text {
-    margin-top: 18px;
+    margin-top: 39px;
     margin-bottom: 18px;
 }
 
@@ -2145,6 +2151,10 @@ button.swiper-pagination-bullet {
         width: 100%;
         background: #fff;
     }
+
+    .detail-page .product-wrap {
+        padding-left: 0;
+    }
 }
 
 .product-recommendations__heading.product-recommendations-title {
@@ -2159,14 +2169,4 @@ button.swiper-pagination-bullet {
     left: 0;
     z-index: 100000;
     width: 100%;
-}
-
-.recommendations-wrap {
-    padding: 0 4px;
-}
-
-.recommendations-wrap ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
 }
