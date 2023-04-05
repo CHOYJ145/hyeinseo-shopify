@@ -139,6 +139,14 @@
                 <span>Shop 
                   <span>
                     <ul>
+                      {{ collection.sort_by }}
+                      {% if collection.sort_by == 'created-descending' or collection.sort_by == empty and collection.default_sort_by == 'created-descending' %}
+                          {% assign collection_products = collection.products | sort: 'published_at' | reverse %}	
+                      {% elsif collection.sort_by == 'created-ascending  ' or collection.sort_by == empty and collection.default_sort_by == 'created-ascending' %}
+                          {% assign collection_products = collection.products | sort: 'published_at' %}	        
+                      {% else %}
+                          {% assign collection_products = collection.products %}	        
+                      {% endif %}
                         {%- assign sorted_collection = collections | sort: 'published_at' -%}
                         {% for sorted_item in sorted_collection %}
                           <li>
