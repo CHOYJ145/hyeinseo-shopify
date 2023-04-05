@@ -686,6 +686,7 @@
                                     {%- if product.available -%}
                                     <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
                                     {%  else %}
+                                      Sold out
                                       <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
                                     {%- endif -%}
                                   {%- endfor -%}
