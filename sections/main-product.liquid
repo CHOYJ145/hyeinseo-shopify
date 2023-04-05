@@ -670,6 +670,17 @@
                 </p>
               {%- endif -%}
 
+              {% assign related_product_handle = product.metafields.custom.color_variant %}
+              {% assign related_product = collections.all.products[related_product_handle] %}
+              
+              {% if related_product %}
+                <h2>{{ related_product.title }}</h2>
+                <p>{{ related_product.description }}</p>
+                <p>Price: {{ related_product.price | money }}</p>
+              {% else %}
+                <p>No related product found.</p>
+              {% endif %}
+
               {%- when 'complementary' -%}
             {{ product.metafields.custom.color_variant }}
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
