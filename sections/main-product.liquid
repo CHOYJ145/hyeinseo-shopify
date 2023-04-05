@@ -683,12 +683,8 @@
                                   <div class="color-label">Color</div>
                                 <div class="color-list list-unstyled" role="list">
                                   {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
-                                    {%- if product.available -%}
-                                    <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
-                                    {%  else %}
-                                      Sold out
-                                      <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
-                                    {%- endif -%}
+                                    {% assign available_to_sale = product.available %}
+                                    <a href='/products/{{ product.handle }}' class="{% unless available_to_sale %} soldOut {% endunless %}">{{ product.metafields.custom.color_name }}</a>
                                   {%- endfor -%}
                                 </div>
                               </div>
