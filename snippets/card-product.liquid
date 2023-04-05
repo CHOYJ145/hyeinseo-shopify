@@ -50,7 +50,7 @@
       >
         {%- for image in card_product.images  -%}
           <div class="image-{{ forloop.index }}">
-          {{ image.src }}
+          {{ image | image_url }}
           </div>
         {%- endfor -%}
         {%- if card_product.featured_media -%}
