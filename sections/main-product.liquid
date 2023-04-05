@@ -855,6 +855,8 @@
                                   {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                     {%- if product.available -%}
                                     <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
+                                    {%  else %}
+                                      <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
                                     {%- endif -%}
                                   {%- endfor -%}
                                 </div>
