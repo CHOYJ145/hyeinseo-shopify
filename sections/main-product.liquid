@@ -627,9 +627,16 @@
                                                     checked
                                                 {% endif %}
                                         >
+                                        {%- if product.variants[forloop.index0].available  -%}
                                         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                                             {{ value }}
                                         </label>
+                                      {%- else  -%}
+                                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                            {{ value }}
+                                        </label>
+                                          {%- endif -%}
+                                          
                                     {%- endfor -%}
                                 </div>
                             </fieldset>
@@ -847,14 +854,20 @@
                       <div class="complementary-products__container">
                         <slideshow-component class="slider-mobile-gutter">
                           {%- assign number_of_slides = recommendations.products_count | plus: 0.0 | divided_by: block.settings.products_per_page | ceil -%}
-                          <div id="Slider-{{ block.id }}" class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere" role="list"{% if number_of_slides > 1 %} aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
+                          <div id="Slider-{{ block.id }}" style="padding: 0" class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere" role="list"{% if number_of_slides > 1 %} aria-label="{{ 'general.slider.name' | t }}"{% endif %}>
                             {%- for i in (1..number_of_slides) -%}
-                              <div id="Slide-{{ block.id }}-{{ forloop.index }}" class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
-                                <ul class="list-unstyled" role="list">
+                              <div style="padding: 0" id="Slide-{{ block.id }}-{{ forloop.index }}" class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
+                                <div class="list-unstyled" role="list">
+                                  <a style="pointer-events: none; margin-right: auto">Color</a>
+                                  <a href='#'>{{ product.metafields.custom.color_name }}</a>
                                   {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
-                                    <a href='{{ product.url }}'>{{ product.metafields.custom.color_name }}</a>
+                                    {%- if product.available -%}
+                                    <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
+                                    {%  else %}
+                                      <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
+                                    {%- endif -%}
                                   {%- endfor -%}
-                                </ul>
+                                </div>
                               </div>
                             {%- endfor -%}
                           </div>
