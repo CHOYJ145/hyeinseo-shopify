@@ -136,11 +136,18 @@
         <ul class="list-menu list-menu--inline" role="list">
           <li>
               <span class="header__menu-item list-menu__item link link--text focus-inset depth-btn depth-btn--shop">
-                <span>Shop ddd
+                <span>Shop 
                   <span>
-                    {% for collection in product.collections %}
-                      <span class="path-item">{{ collection.title }}</span>
-                    {% endfor %}
+                    <ul>
+                        {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
+                        {% for sorted_item in sorted_collection %}
+                          <li>
+                            <a href="/collections/{{ sorted_item.handle }}">
+                              {{ sorted_item.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
                   </span>
 
                 </span>
