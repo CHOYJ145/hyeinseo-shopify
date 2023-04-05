@@ -20,13 +20,6 @@
             "text_style": "body"
           }
         },
-        "72145d1f-8574-4be9-bba4-f3ca22e3e235": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.description.value }}",
-            "text_style": "body"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -54,7 +47,6 @@
         "title",
         "price",
         "e5ff59e7-bf98-4777-9ca2-42badb1328e4",
-        "72145d1f-8574-4be9-bba4-f3ca22e3e235",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
