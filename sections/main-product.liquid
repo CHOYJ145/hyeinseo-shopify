@@ -626,9 +626,14 @@
                                                     checked
                                                 {% endif %}
                                         >
+                                        {%- if product.variants[forloop.index0].available  -%}
                                         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                                             {{ value }}
                                         </label>
+                                      {%- else  -%}
+                                          <div>soldout</div>
+                                          {%- endif -%}
+                                          
                                     {%- endfor -%}
                                 </div>
                             </fieldset>
