@@ -225,16 +225,15 @@
         <div class="header__2depth-inner header__2depth--shop">
           <div class="header__2depth-col">
 
+            {% assign menu_handle = 'main-menu' %}
+            {% assign menu_links = linklists[menu_handle].links %}
             <ul>
-            {% assign sorted_collection = collections | sort: 'updated_at' | reverse %}
-            {% for sorted_item in sorted_collection %}
-              <li>
-                <a href="/collections/{{ sorted_item.handle }}">
-                  {{ sorted_item.title }}
-                </a>
-              </li>
-            {% endfor %}
-</ul>
+              {% for link in menu_links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
 
