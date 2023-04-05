@@ -224,17 +224,16 @@
       <div class="header__2depth">
         <div class="header__2depth-inner header__2depth--shop">
           <div class="header__2depth-col">
-
             <ul>
-  {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
-  {% for sorted_item in sorted_collection %}
-    <li>
-      <a href="/collections/{{ sorted_item.handle }}">
-        {{ sorted_item.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+              {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
+              {% for sorted_item in sorted_collection %}
+                <li>
+                  <a href="/collections/{{ sorted_item.handle }}">
+                    {{ sorted_item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
 
