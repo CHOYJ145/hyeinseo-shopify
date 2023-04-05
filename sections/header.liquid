@@ -139,6 +139,10 @@
                 <span>Shop 
                   <span>
                     <ul>
+                      {% assign collections = collections | sort: 'updated_at' | reverse %}
+                        {% for collection in collections %}
+                          <a href="{{ collection.url }}">{{ collection.title }}</a>
+                        {% endfor %}
                         {% assign sorted_collection = collection | sort: 'updated' | reverse %}
                         {% for sorted_item in sorted_collection %}
                           <li>
