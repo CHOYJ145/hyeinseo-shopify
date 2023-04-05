@@ -672,7 +672,6 @@
 
               {%- when 'complementary' -%}
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
-                  {%- if recommendations.performed -%}
                     <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}{% if block.settings.make_collapsible_row %} class="product__accordion accordion"{% endif %}>
                       <div class="complementary-products__container">
                         <slideshow-component class="slider-mobile-gutter">
@@ -693,7 +692,6 @@
                         </slideshow-component>
                       </div>
                     </aside>
-                  {%- endif -%}
                   {{ 'component-card.css' | asset_url | stylesheet_tag }}
                   {{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}
                   {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
