@@ -142,7 +142,7 @@
                       {% for collection in collections %}
                         {{ collection.title }}
                         {% endfor %}
-                        {%- assign sorted_collection = collections | sort: 'published_at' -%}
+                        {%- assign sorted_collection = collections | sort: 'updated_at' -%}
                         {% for sorted_item in sorted_collection %}
                           <li>
                             <a href="/collections/{{ sorted_item.handle }}">
