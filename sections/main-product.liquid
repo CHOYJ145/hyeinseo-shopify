@@ -844,12 +844,15 @@
                   {%- if recommendations.performed and recommendations.products_count > 0 -%}
                     <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}{% if block.settings.make_collapsible_row %} class="product__accordion accordion"{% endif %}>
                       <div class="complementary-products__container">
-                        <div class="list-unstyled" role="list">
-                          <a>{{ product.metafields.custom.color_name }}</a>
-                          {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
-                            <a href='{{ product.url }}'>{{ product.metafields.custom.color_name }}</a>
-                          {%- endfor -%}
-                        </div>
+                        <slideshow-component class="slider-mobile-gutter">
+                          {%- assign number_of_slides = recommendations.products_count | plus: 0.0 | divided_by: block.settings.products_per_page | ceil -%}
+                                <div class="list-unstyled" role="list">
+                                  <a>{{ product.metafields.custom.color_name }}</a>
+                                  {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
+                                    <a href='{{ product.url }}'>{{ product.metafields.custom.color_name }}</a>
+                                  {%- endfor -%}
+                                </div>
+                        </slideshow-component>
                       </div>
                     </aside>
                   {%- endif -%}
