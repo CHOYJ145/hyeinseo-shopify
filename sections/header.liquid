@@ -385,7 +385,7 @@
               <div class="m-depth-wrap">
                 <ul class="m-depth-list">
                   <ul>
-                  {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
+                  {% assign sorted_collection = collections | sort: 'updated_at' | reverse %}
                   {% for sorted_item in sorted_collection %}
                     <li>
                       <a href="/collections/{{ sorted_item.handle }}">
