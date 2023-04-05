@@ -48,11 +48,6 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- for image in card_product.images  -%}
-          <div class="image-{{ forloop.index }}">
-          {{ image | image_url }}
-          </div>
-        {%- endfor -%}
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent ">
