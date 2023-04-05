@@ -20,11 +20,17 @@
             "text_style": "body"
           }
         },
-        "72145d1f-8574-4be9-bba4-f3ca22e3e235": {
-          "type": "text",
+        "84679870-1825-4405-af1c-1fd51a8aa175": {
+          "type": "complementary",
           "settings": {
-            "text": "{{ product.metafields.custom.description.value }}",
-            "text_style": "body"
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
           }
         },
         "variant_picker": {
@@ -54,7 +60,7 @@
         "title",
         "price",
         "e5ff59e7-bf98-4777-9ca2-42badb1328e4",
-        "72145d1f-8574-4be9-bba4-f3ca22e3e235",
+        "84679870-1825-4405-af1c-1fd51a8aa175",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -88,10 +94,20 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "7e56189c-c8a6-42f2-8dbf-74b7def54532": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "7e56189c-c8a6-42f2-8dbf-74b7def54532"
   ]
 }
