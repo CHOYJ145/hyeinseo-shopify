@@ -223,8 +223,8 @@
           <div class="header__2depth-col">
 
             <ul>
-              {% assign collection_sort = collections | sort_by: "updated" %}
-              {% for collection in collection_sort %}
+              {% assign sorted_collection = collection | sort: 'updated_at' | reverse %}
+              {% for collection in sorted_collection %}
                 <li>
                   <a href="/collections/{{ collection.handle }}">
                     {{ collection.title }}
