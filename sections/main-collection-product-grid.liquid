@@ -133,6 +133,27 @@
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop
               {% endif %}">
+              <li class="grid__item">
+                <div class="test-item">
+                  <div class="test-img-list">
+                    <div class="img-1">
+                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0003_24_19-9687.jpg?v=1680688231" alt="">
+                    </div>
+                    <div class="img-2">
+                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0003_24_19-9687.jpg?v=1680688231" alt="">
+                    </div>
+                    <div class="img-3">
+                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0000_27_19-9718.jpg?v=1680688231" alt="">
+                    </div>
+                    <div class="img-4">
+                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0001_26_19-9709.jpg?v=1680688230" alt="">
+                    </div>
+                    <div class="img-5">
+                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0002_25_19-9702.jpg?v=1680688231" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
@@ -185,7 +206,7 @@ function sort() {
         path = window.location.pathname,
         url = host + path,
         f1 = 'https://' + url + '?sort_by=price-ascending',
-        f2 = 'https://' + url + '?sort_by=price-descending',
+        f2 = 'https://' + url + '?sort_by=price-descending';
     $('#f1').attr('href', f1);
     $('#f2').attr('href', f2);
 }
@@ -198,8 +219,21 @@ if (window.location.href.indexOf("price-ascending") > -1) {
     $('#f1').find('.check_box').addClass('on');
 } else if (window.location.href.indexOf("price-descending") > -1) {
     $('#f2').find('.check_box').addClass('on');
-}
 };
+
+
+$('.test-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
+  var l = e.offsetX;
+  var w = this.getBoundingClientRect().width;
+  var prc = l / w;
+  var imglen = $(this).children().length;
+  var sel = Math.floor(prc * imglen);
+  var selimg = $(this).children().eq(sel);
+  $(this).children().removeClass('hov');
+  $(selimg).addClass('hov');
+}).on('mouseleave', function() {
+  $(this).children().removeClass('hov');
+});
 </script>
 
 
