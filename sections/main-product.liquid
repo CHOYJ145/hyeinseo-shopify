@@ -687,7 +687,7 @@
                 {% endif %}
               {% endfor %}
 
-                        {% assign product_id = 7105123188847 %}
+                        {% assign product_id = '7105123188847' %}
             {% assign products_obj = collections.all.products | where: 'id', product_id %}
             {% assign product = products_obj[0] %}
             {{ product }}
