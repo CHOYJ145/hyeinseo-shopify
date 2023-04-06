@@ -156,7 +156,6 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div>testxx</div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -202,6 +201,11 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
+          </div>
+          <div>
+            {%- for option in product.options -%}
+              <div>option.value</div>  
+            {%- endfor -%}
           </div>
         </div>
         {%- if show_quick_add -%}
