@@ -670,7 +670,7 @@
                 </p>
               {%- endif -%}
 
-            {{ product.metafields.custom.color_variant }}dd
+            
             {% for product_id in product.metafields.custom.color_variant %}
               {{ product_id }}
 <!--               {% assign option_id = product_id | replace:"" %} -->
@@ -688,7 +688,11 @@
 
               {%- when 'complementary' -%}
             {{ product.metafields.custom.color_variant }}
-            dd
+         {% for product_id in product.metafields.custom.color_variant %}
+              {{ product_id }}
+<!--               {% assign option_id = product_id | replace:"" %} -->
+            {% endfor %}
+              
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
                     <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}{% if block.settings.make_collapsible_row %} class="product__accordion accordion"{% endif %}>
                       <div class="complementary-products__container">
