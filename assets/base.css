@@ -394,8 +394,8 @@ html.no-js .no-js-hidden {
 
 @font-face {
   font-family: 'ABC Diatype Regular';
-  src: url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular_a24e2a25-4535-442b-b835-a8d26d9d0c7b.woff2?v=1679465577") format("woff2"),
-  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular_dea3a8a0-7e69-4df7-b3bb-0034bf732ffb.woff?v=1679465577") format("woff");
+  src: url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular.woff2?v=1680769044") format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/1427/1204/files/ABCDiatype-Regular.woff?v=1680769044") format("woff");
   font-weight: normal;
   font-style: normal;
 }
