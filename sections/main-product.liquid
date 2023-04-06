@@ -725,7 +725,11 @@
     </div>
 
 
-    <div>testarea</div>
+    <div>
+      {%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
+        <div>testarea</div>
+      {%- endfor  -%}
+    </div>
 
 
 
