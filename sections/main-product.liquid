@@ -676,8 +676,15 @@
               {% assign options = product.metafields.custom.color_variant | split:"," %}
               {% for product_id in options %}
                 {% assign id = product_id | replace:'"','' | replace:']','' | replace:'[',''| split:"gid://shopify/Product/" | last %}
-                
-                {{ id }}
+                {% assign related_product = all_products | where: 'id', id | first %}
+
+                {% if related_product %}
+                  <h2>{{ related_product.title }}</h2>
+                  <p>{{ related_product.description }}</p>
+                  <p>Price: {{ related_product.price | money }}</p>
+                {% else %}
+                  <p>No related product found.</p>
+                {% endif %}
               {% endfor %}
               
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
