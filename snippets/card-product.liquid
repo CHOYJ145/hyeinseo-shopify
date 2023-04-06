@@ -203,8 +203,8 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
           <div>
-            {%- for option in card_product.variants -%}
-              <div>{{ option.selected_value }}</div>
+            {%- for variant in card_product.variants -%}
+              <div>{{ variant.option1.value }}</div>
             {%- endfor -%}
           </div>
         </div>
