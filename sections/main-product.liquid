@@ -683,7 +683,7 @@
                                   <div class="color-label">Color</div>
                                 <div class="color-list list-unstyled" role="list">
                                   <div>{{ product.metafields.custom.color_name }}</div>
-                                  {% assign variants = product.metafields.custom.color_variant %}
+                                  {% assign variants = product.metafields.color_variant %}
                                   {%- for color_variant in variants  -%}
                                     <div class='temp'>{{ color_variant.title }}</div>
                                   {%- endfor  -%}
