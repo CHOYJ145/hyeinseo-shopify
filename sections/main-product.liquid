@@ -671,15 +671,15 @@
               {%- endif -%}
 
               {% assign related_product_handle = product.metafields.custom.color_variant %}
-              {% assign related_product = collections.all.products[related_product_handle] %}
-              
-              {% if related_product %}
-                <h2>{{ related_product.title }}</h2>
-                <p>{{ related_product.description }}</p>
-                <p>Price: {{ related_product.price | money }}</p>
-              {% else %}
-                <p>No related product found.</p>
-              {% endif %}
+              {% assign related_product = all_products | where: 'id', related_product_id | first %}
+
+            {% if related_product %}
+              <h2>{{ related_product.title }}</h2>
+              <p>{{ related_product.description }}</p>
+              <p>Price: {{ related_product.price | money }}</p>
+            {% else %}
+              <p>No related product found.</p>
+            {% endif %}
 
               {%- when 'complementary' -%}
             {{ product.metafields.custom.color_variant }}
