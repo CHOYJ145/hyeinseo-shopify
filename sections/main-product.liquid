@@ -683,8 +683,8 @@
                                   <div class="color-label">Color</div>
                                 <div class="color-list list-unstyled" role="list">
                                   {% assign variants = product.metafields.custom.color_variant %}
-                                  {%- for color_variants in variants  -%}
-                                    <div class='temp'></div>
+                                  {%- for color_variant in variants  -%}
+                                    <div class='temp'>{{ color_variant.title }}</div>
                                   {%- endfor  -%}
                                   {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                       {%- if product.available -%}
