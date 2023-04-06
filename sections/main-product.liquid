@@ -728,7 +728,17 @@
     <div>
       <div>Styled with</div>
       {%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
-        <div>testarea</div>
+        {% render 'card-product',
+                      card_product: related_product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+  
+                    %}
       {%- endfor  -%}
     </div>
 
