@@ -203,9 +203,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
           <div>
-            {%- for variant in product.variants -%}
-              <div>{{ variant.id }}</div>
-              {%- endfor -%}
+            {%- for option in card_product.options_with_values -%}
+              <div>{{ option.name }}</div>
+            {%- endfor -%}
           </div>
         </div>
         {%- if show_quick_add -%}
