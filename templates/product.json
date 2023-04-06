@@ -41,19 +41,6 @@
           "type": "description",
           "settings": {
           }
-        },
-        "2abb2951-4b6f-4ad2-9024-3aa85154203d": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": false
-          }
         }
       },
       "block_order": [
@@ -63,8 +50,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "2abb2951-4b6f-4ad2-9024-3aa85154203d"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -76,6 +62,15 @@
         "enable_video_looping": false,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "24bc6837-0bdc-479f-9edb-21f0adb7892b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div>custom section<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "product-recommendations": {
@@ -94,20 +89,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "7e56189c-c8a6-42f2-8dbf-74b7def54532": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{%- for color_variant in product.metafields.custom.color_variant -%}\n<div>test<\/div>\n{%- endfor -%}",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "7e56189c-c8a6-42f2-8dbf-74b7def54532"
+    "24bc6837-0bdc-479f-9edb-21f0adb7892b",
+    "product-recommendations"
   ]
 }
