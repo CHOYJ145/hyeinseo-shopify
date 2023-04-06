@@ -2381,7 +2381,11 @@ button.swiper-pagination-bullet {
     opacity: 1;
 }
 
-.test-img-list .img-1 {
+.test-img-list .img-0 {
     position: static;
     opacity: 1;
+}
+
+.custom .card__heading a:after {
+    display: none;
 }

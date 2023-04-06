@@ -133,27 +133,6 @@
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop
               {% endif %}">
-              <li class="grid__item">
-                <div class="test-item">
-                  <div class="test-img-list">
-                    <div class="img-1">
-                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0003_24_19-9687.jpg?v=1680688231" alt="">
-                    </div>
-                    <div class="img-2">
-                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0003_24_19-9687.jpg?v=1680688231" alt="">
-                    </div>
-                    <div class="img-3">
-                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0000_27_19-9718.jpg?v=1680688231" alt="">
-                    </div>
-                    <div class="img-4">
-                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0001_26_19-9709.jpg?v=1680688230" alt="">
-                    </div>
-                    <div class="img-5">
-                      <img src="https://cdn.shopify.com/s/files/1/1427/1204/files/23ss_test_0002_25_19-9702.jpg?v=1680688231" alt="">
-                    </div>
-                  </div>
-                </div>
-              </li>
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
