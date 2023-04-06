@@ -363,6 +363,11 @@
             {%- endif -%}
             {% render 'price' %}
           </div>
+          <div>
+            {%- for option in product.options -%}
+              <div>{{ option.value }}</div>
+            {%- endfor -%}
+          </div>
         </div>
       </div>
     </div>
