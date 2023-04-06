@@ -688,7 +688,10 @@
               {% endfor %}
 
                         {% assign product_id = 7105123188847 %}
-                  {% assign product = all_products | where: 'id', product_id | first %}
+            {% assign products_obj = collections.all.products | where: 'id', product_id %}
+            {% assign product = products_obj[0] %}
+            {{ product }}
+                  ll
                   
                   {% if product %}
                     <h2>{{ product.title }}</h2>
