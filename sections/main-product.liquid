@@ -670,7 +670,11 @@
                 </p>
               {%- endif -%}
 
-              {% assign related_product_id = product.metafields.custom.color_variant %}
+            {% for product_id in product.metafields.custom.color_variant %}
+              {{ product_id }}
+<!--               {% assign option_id = product_id | replace:"" %} -->
+            {% endfor %}
+              
               {% assign related_product = all_products | where: 'id', related_product_id | first %}
 
             {% if related_product %}
