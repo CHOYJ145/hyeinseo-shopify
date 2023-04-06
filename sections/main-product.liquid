@@ -670,8 +670,6 @@
                 </p>
               {%- endif -%}
 
-
-
               {%- when 'complementary' -%}
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
                   {%- if recommendations.performed and recommendations.products_count > 0 -%}
@@ -684,7 +682,7 @@
                               <div id="Slide-{{ block.id }}-{{ forloop.index }}" class="color-wrap complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
                                   <div class="color-label">Color</div>
                                 <div class="color-list list-unstyled" role="list">
-                                    <a href="#">{{ product.metafields.custom.color_name }}</a>
+                                    <a href="#">{{ product. }}</a>
                                   {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                     {%- if product.available -%}
                                     <a href='/products/{{ product.handle }}'>{{ product.metafields.custom.color_name }}</a>
@@ -699,6 +697,7 @@
                         </slideshow-component>
                       </div>
                     </aside>
+                  {%- endif -%}
                   {{ 'component-card.css' | asset_url | stylesheet_tag }}
                   {{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}
                   {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}

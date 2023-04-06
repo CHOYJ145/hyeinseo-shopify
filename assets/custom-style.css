@@ -1755,9 +1755,9 @@ button.swiper-pagination-bullet {
     border: none;
 }
 
-.option-wrap .option-list {
-    margin-right: -5px;
-}
+/*.option-wrap .option-list {*/
+/*    margin-right: -5px;*/
+/*}*/
 
 .option-wrap .option-list label {
     display: inline-block !important;
@@ -2388,4 +2388,21 @@ button.swiper-pagination-bullet {
 
 .custom .card__heading a:after {
     display: none;
+}
+
+.overview-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    width: 100%;
+}
+
+.overview-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#list-page #product-grid li {
+    width: 100%;
 }
