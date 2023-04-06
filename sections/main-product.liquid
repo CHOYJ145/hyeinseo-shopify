@@ -675,8 +675,8 @@
               {%- when 'complementary' -%}
               {% assign options = product.metafields.custom.color_variant | split:"," %}
               {% for product_id in options %}
-                {% assign product_id = product_id | split:"gid://shopify/Product/" | last %}
-                {% assign id = product_id | replace:'"','' | replace:']','' %}
+                {% assign id = product_id | replace:'"','' | replace:']','' | replace:'[',''| split:"gid://shopify/Product/" | last %}
+                
                 {{ id }}
               {% endfor %}
               
