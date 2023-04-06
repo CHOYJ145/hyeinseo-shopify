@@ -204,7 +204,11 @@
           </div>
           <div>
             {%- for variant in card_product.variants -%}
-              <div>{{ variant.option1 }}</div>
+              {% if variant.available %}
+                  <div>{{ variant.option1 }}</div>
+                {% else %}
+                  <div>{{ variant.option1 }}</div>
+                {% endif %}
             {%- endfor -%}
           </div>
         </div>
