@@ -1773,7 +1773,7 @@ button.swiper-pagination-bullet {
 
 .custom .product-infos .color-list {
     display: block;
-    margin-right: -5px;
+    /*margin-right: -5px;*/
 }
 
 .custom .product-infos .color-list a {
