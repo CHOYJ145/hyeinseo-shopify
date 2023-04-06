@@ -688,7 +688,8 @@
 
               {%- when 'complementary' -%}
             {{ product.metafields.custom.color_variant }}
-         {% for product_id in product.metafields.custom.color_variant %}
+            {% assign options = product.metafields.custom.color_variant | split:"," %}
+            {% for product_id in product.metafields.custom.color_variant %}
               {{ product_id }}
 <!--               {% assign option_id = product_id | replace:"" %} -->
             {% endfor %}
