@@ -427,7 +427,7 @@
               {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
                   {%- for color_variant in product.metafields.custom.color_variant.value -%}
-                    <div class='test-class'>{{ color_variant.metafields.custom.color_name }}</div>
+                    <a href='{{ color_variant.url }}'>{{ color_variant.metafields.custom.color_name }}</div>
                   {%- endfor -%}
                   <variant-radios
                     class="no-js-hidden"
