@@ -423,6 +423,9 @@
                 </details>
               </share-button>
               <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+            {%- for color_variant in product.metafields.custom.color_variant.value -%}
+              <div>{{ color_variant.handle }}</div>
+            {%- endfor -%}
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
