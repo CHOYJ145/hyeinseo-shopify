@@ -2188,7 +2188,7 @@ button.swiper-pagination-bullet {
         width: 100%;
         overflow-x: hidden;
         padding: 0 4px;
-    }s
+    }
 
     .swiperTest {
         position: relative;
@@ -2222,6 +2222,10 @@ button.swiper-pagination-bullet {
     .detail-page .product-wrap {
         display: block;
         padding-left: 0;
+    }
+
+    .detail-page .product-wrap .product-imgs {
+        padding: 0 4px;
     }
 
     .m-info {
