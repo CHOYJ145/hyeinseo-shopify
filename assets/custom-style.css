@@ -1468,6 +1468,8 @@ button.swiper-pagination-bullet {
 
 .detail-page .price-item .price {
     font-size: initial;
+    line-height: normal;
+    letter-spacing: normal;
 }
 
 .detail-page .product variant-radios {
