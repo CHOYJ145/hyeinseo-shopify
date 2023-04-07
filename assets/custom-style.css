@@ -848,6 +848,7 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     padding: 3px 6px;
+    gap: 0 2px;
 }
 
 .custom .header__inline-menu {
