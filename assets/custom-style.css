@@ -750,7 +750,7 @@ button.swiper-pagination-bullet {
 
 .header-util {
     position: absolute;
-    top: 5px;
+    top: 3px;
     right: 6px;
     z-index: 2;
 }
