@@ -136,14 +136,3 @@ $('.switch-btn').on('click', function(){
         $('#product-grid').removeClass('grid--2');
     }
 });
-
-// $('.product-visual').on('click', function(){
-//     let thisImg = $(this).find('img').attr('src');
-//     console.log(thisImg);
-//     $("body").prepend(`<img class="testImg" src='${thisImg}'>`);
-// });
-//
-// $('.testImg').on('click', function(){
-//     $(this).hide();
-// });
-
