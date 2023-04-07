@@ -2232,7 +2232,7 @@ button.swiper-pagination-bullet {
         display: block;
         position: sticky;
         z-index: 1;
-        top: 21px;
+        top: 19px;
         left: 0;
         width: 100%;
         background: #fff;
@@ -2693,9 +2693,9 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    .detail-page {
-        overflow-x: hidden;
-    }
+    /*.detail-page {*/
+    /*    overflow-x: hidden;*/
+    /*}*/
 
     .custom .recommend-item .card-information .price {
         opacity: 1;
