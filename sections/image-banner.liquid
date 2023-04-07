@@ -1,9 +1,18 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-
+<style>
+  .main-sec--1 .hero-item-test {
+    background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')
+  }
+  @media screen and (max-width: 1024px) {
+    .main-sec--1 .hero-item-test {
+      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
+    }
+  }
+</style>
 <div class="main-hero">
   <div class="main-sec main-sec--1">
     <div class="hero-item hero-item--test">
-      <div class="hero-item-test" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')">
+      <div class="hero-item-test" style="">
 
       </div>
       <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
@@ -12,12 +21,21 @@
       <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
 
       </div>
-      <div class="hero-title-wrap">
+      <div class="hero-title-wrap hero-title-wrap--pc">
         <div class="hero-title-item font-bold">
           SS23&nbsp;&nbsp;&nbsp;&nbsp;Indigo Island
         </div>
         <div class="hero-title-item font-bold">
           <a class="test" href="#none">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="#none">Shop now</a>
+        </div>
+      </div>
+      <div class="hero-title-wrap hero-title-wrap--m">
+        <div class="hero-title-item font-bold">
+          SS23&nbsp;&nbsp;&nbsp;Indigo Island
+        </div>
+        <div class="hero-title-item font-bold">
+          <a class="test" href="#none">Collection</a><br>
+          <a class="test2" href="#none">Shop now</a>
         </div>
       </div>
     </div>
