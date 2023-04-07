@@ -3,20 +3,20 @@
 <div class="main-hero">
   <div class="main-sec main-sec--1">
     <div class="hero-item hero-item--test">
-      <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/main.jpg')">
+      <div class="hero-item-test" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')">
 
       </div>
-      <div class="hero-dim" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/1.jpg')">
+      <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
 
       </div>
-      <div class="hero-dim2" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/2.jpg')">
+      <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
 
       </div>
       <div class="hero-title-wrap">
-        <div class="hero-title-item font-bold hero-title--white">
+        <div class="hero-title-item font-bold">
           SS23&nbsp;&nbsp;&nbsp;&nbsp;Indigo Island
         </div>
-        <div class="hero-title-item font-bold hero-title--white">
+        <div class="hero-title-item font-bold">
           <a class="test" href="#none">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="#none">Shop now</a>
         </div>
       </div>
@@ -210,22 +210,22 @@
 
   $(document).ready(function(){
     document.querySelector('.custom').classList.add('theme-main');
-    document.querySelector('.header').classList.remove('header--black');
-    document.querySelector('.header').classList.add('header--white');
+    // document.querySelector('.header').classList.remove('header--black');
+    // document.querySelector('.header').classList.add('header--white');
   });
 
   document.querySelector('.test').addEventListener('mouseenter', () => {
     document.querySelector('.hero-dim').classList.add('on');
     document.querySelector('.hero-item--test').classList.add('test-1');
-    document.querySelector('header').classList.add('header--black');
-    document.querySelector('.header').classList.remove('header--white');
+    // document.querySelector('header').classList.add('header--black');
+    // document.querySelector('.header').classList.remove('header--white');
   });
 
   document.querySelector('.test').addEventListener('mouseleave', () => {
     document.querySelector('.hero-dim').classList.remove('on');
     document.querySelector('.hero-item--test').classList.remove('test-1');
-    document.querySelector('header').classList.remove('header--black');
-    document.querySelector('.header').classList.add('header--white');
+    // document.querySelector('header').classList.remove('header--black');
+    // document.querySelector('.header').classList.add('header--white');
   });
 
   document.querySelector('.test2').addEventListener('mouseenter', () => {
