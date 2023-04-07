@@ -142,6 +142,9 @@
                       <span class="path-item" onclick="location.href='{{ collection.url }}'">{{ collection.title }}</span>
                     {% endfor %}
                   </span>
+                  <span>
+                      <span id="list-page-title" class="path-item">{{ page.title | escape }}</span>
+                  </span>
 
                 </span>
               </span>
@@ -377,12 +380,12 @@
             <div class="m-nav-item">
               <div class="m-nav-title">Shop</div>
               <div class="m-depth-wrap">
+                {% assign menu_handle = 'main-menu' %}
+                {% assign menu_links = linklists[menu_handle].links %}
                 <ul class="m-depth-list">
-                  {% for collection in collections %}
-                    <li class="m-depth-item">
-                      <a href="/collections/{{ collection.handle }}">
-                        {{ collection.title }}
-                      </a>
+                  {% for link in menu_links %}
+                    <li>
+                      <a href="{{ link.url }}">{{ link.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>

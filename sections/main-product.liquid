@@ -1148,21 +1148,29 @@
     });
 
   $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
-  var l = e.offsetX;
-  var w = this.getBoundingClientRect().width;
-  var prc = l / w;
-  var imglen = $(this).children().length;
-  var sel = Math.floor(prc * imglen);
-  var selimg = $(this).children().eq(sel);
-  $(this).children().removeClass('hov');
-  $(selimg).addClass('hov');
-  $('.t-img-bar span').css({
-      'width' : 100 / imglen + '%',
-      'left' : 100 / imglen * sel  + '%'
-  });
-}).on('mouseleave', function() {
-  $(this).children().removeClass('hov');
-});
+      var l = e.offsetX;
+      var w = this.getBoundingClientRect().width;
+      var prc = l / w;
+      var imglen = $(this).children().length;
+      var sel = Math.floor(prc * imglen);
+      var selimg = $(this).children().eq(sel);
+      $(this).children().removeClass('hov');
+      $(selimg).addClass('hov');
+      $('.t-img-bar span').css({
+          'width' : 100 / imglen + '%',
+          'left' : 100 / imglen * sel  + '%'
+      });
+    }).on('mouseleave', function() {
+      $(this).children().removeClass('hov');
+    });
+    $('.desc-label').hover(function () {
+        $('.desc-label').addClass('off');
+        $(this).addClass('active');
+        $(this).removeClass('off');
+    }, function () {
+        $('.desc-label').removeClass('off');
+        $('.desc-label').removeClass('active');
+    });
 </script>
 
 {% schema %}

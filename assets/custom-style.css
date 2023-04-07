@@ -2181,7 +2181,7 @@ button.swiper-pagination-bullet {
 
     .product-infos-inner {
         position: static;
-        padding: 0 4px;
+        padding: 0;
     }
 
     .product-imgs {
@@ -2693,8 +2693,9 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    .detail-page {
-        width: 100%;
+    .product-infos {
+        margin: auto;
+        width: calc(100% - 10px);
     }
 
     .custom .recommend-item .card-information .price {
@@ -2714,4 +2715,17 @@ button.swiper-pagination-bullet {
         line-height: 18px;
         height: 19px;
     }
+}
+
+.desc-label.off {
+    color: #CECED0;
+}
+
+.desc-label.active,
+.desc-label.on.off {
+    color: #000;
+}
+
+#list-page-title {
+    display: none;
 }

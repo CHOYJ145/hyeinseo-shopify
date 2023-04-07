@@ -8,6 +8,10 @@
   .custom .list-menu {
     gap: 0 4px;
   }
+
+  #list-page-title {
+    display: inline-block;
+  }
 </style>
 
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -33,13 +37,12 @@
   }
 {%- endstyle -%}
 
-
 <div class="section-{{ section.id }}-padding">
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
       {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
-      
+
       {% assign overviewGrid = false %}
       {% if page_url contains "overview=true" %}
         {% assign overviewGrid = true %}
@@ -68,7 +71,7 @@
         </li>-->
       </ul>
     </div>
-    
+
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     <div id="facet-wrap" style="display:none;">
@@ -166,7 +169,7 @@
                       lazy_load: lazy_load,
                       show_quick_add: section.settings.enable_quick_add,
                       section_id: section.id
-  
+
                     %}
                     </li>
                   {% else %}
@@ -180,7 +183,7 @@
                       lazy_load: lazy_load,
                       show_quick_add: section.settings.enable_quick_add,
                       section_id: section.id
-  
+
                     %}
                     </li>
                   {% endif %}
@@ -215,7 +218,7 @@ if (window.location.href.indexOf("price-ascending") > -1) {
     $('#f1').find('.check_box').addClass('on');
 } else if (window.location.href.indexOf("price-descending") > -1) {
     $('#f2').find('.check_box').addClass('on');
-};
+}
 
 $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   var l = e.offsetX;
@@ -232,6 +235,11 @@ $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   });
 }).on('mouseleave', function() {
   $(this).children().removeClass('hov');
+});
+
+$(document).ready(function(){
+  let title = '{{ page_title }}'
+  $('#list-page-title').text(title);
 });
 </script>
 
