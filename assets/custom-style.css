@@ -2703,6 +2703,7 @@ button.swiper-pagination-bullet {
 
     .detail-page .quantity-item .quantity {
         height: 19px;
+        align-items: center;
     }
 
     .detail-page .quantity-item .quantity__input {
