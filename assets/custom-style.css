@@ -1931,7 +1931,7 @@ button.swiper-pagination-bullet {
         top: calc(var(--vh, 1vh) * 50);
         left: 0;
         padding: 0 6px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.5fr 0.5fr;
         box-sizing: border-box;
     }
 
