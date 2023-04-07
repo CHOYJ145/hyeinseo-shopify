@@ -66,6 +66,7 @@
     },
     "24bc6837-0bdc-479f-9edb-21f0adb7892b": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products -%}\n<div>{{ related_product.handle }}<\/div>\n{%- endfor -%}",
         "color_scheme": "background-1",
