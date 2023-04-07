@@ -2210,6 +2210,7 @@ button.swiper-pagination-bullet {
         display: block !important;
         background: #fff;
         border-radius: 0;
+        transition: none;
     }
 
     .detail-page .price-item.price-item--ex {
