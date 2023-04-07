@@ -1549,7 +1549,7 @@ button.swiper-pagination-bullet {
 .recommend-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 5px;
+    gap: 30px 5px;
     list-style: none;
     margin: 0;
     padding: 0 6px;
@@ -1577,7 +1577,7 @@ button.swiper-pagination-bullet {
     .recommend-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0 5px;
+        gap: 30px 5px;
         list-style: none;
         margin: 0;
         padding: 0 4px;
@@ -2696,5 +2696,9 @@ button.swiper-pagination-bullet {
     .detail-page .product-wrap,
     .detail-page .recommend-wrap {
         overflow-x: hidden;
+    }
+
+    .custom .recommend-item .card-information .price {
+        opacity: 1;
     }
 }
