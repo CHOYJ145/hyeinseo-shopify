@@ -2649,3 +2649,7 @@ button.swiper-pagination-bullet {
 .product-info-wrap a {
     font-weight: normal;
 }
+
+.product-info-wrap {
+    margin-top: 2px;
+}
