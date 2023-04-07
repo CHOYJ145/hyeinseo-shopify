@@ -2776,7 +2776,7 @@ button.swiper-pagination-bullet {
 }
 
 .custom .cart-drawer__empty {
-    padding: 0 6px;
+    padding: 0;
     height: 22px;
     background: #fff;
 }
@@ -2799,7 +2799,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .custom .cart-drawer__empty {
-        padding: 0 4px;
+        padding: 0;
         height: 19px;
     }
 
@@ -2812,8 +2812,28 @@ button.swiper-pagination-bullet {
     padding: 0 6px;
 }
 
+.custom  .drawer__header {
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+
+.drawer__heading {
+    line-height: 22px;
+}
+
 @media screen and (max-width: 1024px) {
     .custom .drawer.active .drawer__inner {
         padding: 0 4px;
+    }
+
+    .custom  .drawer__header {
+        height: 19px;
+
+        margin-bottom: 0;
+    }
+
+    .drawer__heading {
+        line-height: 19px;
     }
 }
