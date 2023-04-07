@@ -2231,7 +2231,7 @@ button.swiper-pagination-bullet {
     .m-info {
         display: block;
         position: sticky;
-        z-index: 5;
+        z-index: 1;
         top: 21px;
         left: 0;
         width: 100%;
@@ -2245,7 +2245,7 @@ button.swiper-pagination-bullet {
     .m-path {
         display: flex;
         position: sticky;
-        z-index: 20;
+        z-index: 2;
         top: 0;
         left: 0;
         padding: 0 4px;
@@ -2689,3 +2689,7 @@ button.swiper-pagination-bullet {
     margin-top: 2px;
 }
 
+.detail-page .product-wrap,
+.detail-page .recommend-wrap {
+    overflow-x: hidden;
+}
