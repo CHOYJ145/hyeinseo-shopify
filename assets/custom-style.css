@@ -2177,6 +2177,7 @@ button.swiper-pagination-bullet {
         border-radius: 0;
         transform: translateX(-50%);
         height: 1px;
+        z-index: 1;
     }
 
     .swiperTest .swiper-scrollbar-drag {
@@ -2201,7 +2202,7 @@ button.swiper-pagination-bullet {
     .m-info {
         display: block;
         position: sticky;
-        z-index: 10;
+        z-index: 5;
         top: 21px;
         left: 0;
         width: 100%;
@@ -2215,7 +2216,7 @@ button.swiper-pagination-bullet {
     .m-path {
         display: flex;
         position: sticky;
-        z-index: 10;
+        z-index: 20;
         top: 0;
         left: 0;
         padding: 0 4px;
@@ -2236,8 +2237,7 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
-.product-recommendations__heading.product-recommendations-title {
-    font-size: 14px;
+.recommend-title {
     margin-top: 28px;
     margin-bottom: 0;
     padding: 0 6px;
@@ -2390,13 +2390,13 @@ button.swiper-pagination-bullet {
     margin-top: 0;
 }
 
-.test-img-list {
+.t-img-list {
     position: relative;
     width: 100%;
     cursor: pointer;
 }
 
-.test-img-list > div {
+.t-img-list > div {
     position: absolute;
     z-index: 0;
     top: 0;
@@ -2404,18 +2404,18 @@ button.swiper-pagination-bullet {
     opacity: 0;
 }
 
-.test-img-list > div img {
+.t-img-list > div img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.test-img-list > div.hov {
+.t-img-list > div.hov {
     z-index: 1;
     opacity: 1;
 }
 
-.test-img-list .img-0 {
+.t-img-list .img-1 {
     position: static;
     opacity: 1;
 }
@@ -2476,19 +2476,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-.recommend-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-}
-
-@media screen and (max-width: 1024px) {
-    .recommend-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4px;
-    }
-}
-
 .detail-page .product-form__input input[type='radio']:checked + label {
     text-decoration: underline;
 }
@@ -2519,13 +2506,10 @@ button.swiper-pagination-bullet {
 }
 
 .custom #list-page .card-information .price,
-.custom #list-page .option-list {
+.custom .recommend-item .card-information .price,
+.custom #list-page .option-list,
+.custom .recommend-item .option-list {
     opacity: 0;
-}
-
-.custom #list-page .grid__item:hover .card-information .price,
-.custom #list-page .grid__item:hover .product-info-wrap .option-list {
-    opacity: 1;
 }
 
 .product-info-wrap--o .option-list {
@@ -2567,6 +2551,11 @@ button.swiper-pagination-bullet {
         opacity: 1;
     }
 
+    .custom #list-page #product-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .custom #list-page #product-grid.grid--2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -2575,4 +2564,84 @@ button.swiper-pagination-bullet {
 
 .overview-item {
     cursor: pointer;
+}
+
+.custom .quantity__button {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .custom .quantity__button {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    #product-grid.thumbnail.grid--2 .product-info-wrap,
+    .recommend-item .product-info-wrap {
+        display: block;
+    }
+
+    #product-grid.thumbnail.grid--2 .option-list,
+    .recommend-item .option-list {
+        display: none;
+    }
+}
+
+.product-info-wrap h3 {
+    margin: 0;
+}
+
+/*.img-0 {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.img-0 .media img {*/
+/*    position: static !important;*/
+/*}*/
+
+.t-img-wrap {
+    position: relative;
+}
+
+.t-img-bar {
+    position: absolute;
+    z-index: 5;
+    top: initial;
+    bottom: 50px;
+    left: 50%;
+    width: 80px;
+    height: 1px;
+    background: #000;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.t-img-bar-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.t-img-bar span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.custom #list-page .grid__item:hover .card-information .price,
+.custom .recommend-item:hover .card-information .price,
+.custom #list-page .grid__item:hover .option-list,
+.custom .recommend-item:hover .option-list,
+.custom #list-page .grid__item:hover .t-img-bar,
+.custom .recommend-item:hover .t-img-bar {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .t-img-bar {
+        display: none;
+    }
 }

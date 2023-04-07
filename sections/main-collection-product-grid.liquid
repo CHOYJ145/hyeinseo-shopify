@@ -140,7 +140,7 @@
               {% if overviewGrid %}
                 overview
               {% else %}
-
+                thumbnail
               {% endif %}
               list-unstyled
               ">
@@ -211,8 +211,7 @@ if (window.location.href.indexOf("price-ascending") > -1) {
     $('#f2').find('.check_box').addClass('on');
 };
 
-
-$('.test-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
+$('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   var l = e.offsetX;
   var w = this.getBoundingClientRect().width;
   var prc = l / w;
@@ -221,6 +220,10 @@ $('.test-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   var selimg = $(this).children().eq(sel);
   $(this).children().removeClass('hov');
   $(selimg).addClass('hov');
+  $('.t-img-bar span').css({
+    'width' : 100 / imglen + '%',
+    'left' : 100 / imglen * sel  + '%'
+  });
 }).on('mouseleave', function() {
   $(this).children().removeClass('hov');
 });

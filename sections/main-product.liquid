@@ -470,7 +470,7 @@
                                             {{ value }}
                                         </label>
                                           {%- endif -%}
-                                          
+
                                     {%- endfor -%}
                                 </div>
                             </fieldset>
@@ -731,21 +731,6 @@
     </div>
 
 
-    <div>
-      <div>Styled with</div>
-      {%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
-        {% render 'card-product',
-                      card_product: related_product,
-                      media_aspect_ratio: section.settings.image_ratio,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      show_vendor: section.settings.show_vendor,
-                      show_rating: section.settings.show_rating,
-                      lazy_load: lazy_load,
-                      show_quick_add: section.settings.enable_quick_add,
-                      section_id: section.id
-                    %}
-      {%- endfor  -%}
-    </div>
 
 
 
@@ -962,6 +947,26 @@
     {%- endif -%}
   </div>
 
+    <div class="recommend-wrap">
+        <div class="recommend-title">Styled with</div>
+        <div class="recommend-list">
+            {%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value -%}
+                <div class="recommend-item">
+                    {% render 'card-product',
+                            card_product: related_product,
+                            media_aspect_ratio: section.settings.image_ratio,
+                            show_secondary_image: section.settings.show_secondary_image,
+                            show_vendor: section.settings.show_vendor,
+                            show_rating: section.settings.show_rating,
+                            lazy_load: lazy_load,
+                            show_quick_add: section.settings.enable_quick_add,
+                            section_id: section.id
+                    %}
+                </div>
+            {%- endfor  -%}
+        </div>
+    </div>
+
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div
       class="product-media-modal__dialog"
@@ -1132,6 +1137,23 @@
             draggable: true,
         },
     });
+
+  $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
+  var l = e.offsetX;
+  var w = this.getBoundingClientRect().width;
+  var prc = l / w;
+  var imglen = $(this).children().length;
+  var sel = Math.floor(prc * imglen);
+  var selimg = $(this).children().eq(sel);
+  $(this).children().removeClass('hov');
+  $(selimg).addClass('hov');
+  $('.t-img-bar span').css({
+      'width' : 100 / imglen + '%',
+      'left' : 100 / imglen * sel  + '%'
+  });
+}).on('mouseleave', function() {
+  $(this).children().removeClass('hov');
+});
 </script>
 
 {% schema %}
