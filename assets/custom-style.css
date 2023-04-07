@@ -2271,8 +2271,8 @@ button.swiper-pagination-bullet {
 }
 
 .recommend-title {
-    margin-top: 28px;
-    margin-bottom: 0;
+    margin-top: 27px;
+    margin-bottom: 1px;
     padding: 0 6px;
 }
 
@@ -2308,10 +2308,9 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    .product-recommendations__heading.product-recommendations-title {
-        font-size: 14px;
-        margin-top: 28px;
-        margin-bottom: 0;
+    .recommend-title {
+        margin-top: 27px;
+        margin-bottom: 1px;
         padding: 0 4px;
     }
 }
