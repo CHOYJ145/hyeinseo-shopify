@@ -2153,7 +2153,7 @@ button.swiper-pagination-bullet {
 
 .swiperTest {
     display: none;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
