@@ -2708,6 +2708,7 @@ button.swiper-pagination-bullet {
 
 #list-page-title {
     display: none;
+    cursor: default !important;
 }
 
 .custom.theme-main .header {
@@ -2761,5 +2762,13 @@ button.swiper-pagination-bullet {
 }
 
 .header-util.off * {
+    color: #CECED0;
+}
+
+.d-name {
+    cursor: default !important;
+}
+
+.header-util a.off span {
     color: #CECED0;
 }
