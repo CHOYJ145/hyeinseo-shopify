@@ -227,7 +227,6 @@ cart-drawer-items {
 .cart-drawer .cart-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   margin-bottom: 0;
 }
 

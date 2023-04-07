@@ -175,10 +175,10 @@
                                                     <dt>Quantity</dt>
                                                     <dd class="cart-item__quantity-wrapper">
                                                         <quantity-input class="quantity">
-                                                            <button class="quantity__button no-js-hidden" name="plus"
+                                                            <button class="quantity__button no-js-hidden" name="minus"
                                                                     type="button">
-                                                                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
-                                                                {% render 'icon-plus' %}
+                                                                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                                                                {% render 'icon-minus' %}
                                                             </button>
                                                             <span class="quantity__input">{{ item.quantity }}</span>
                                                             <input class="quantity__input hidden"
@@ -190,11 +190,12 @@
                                                                    id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                                                    data-index="{{ item.index | plus: 1 }}"
                                                             >
-                                                            <button class="quantity__button no-js-hidden" name="minus"
+                                                            <button class="quantity__button no-js-hidden" name="plus"
                                                                     type="button">
-                                                                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
-                                                                {% render 'icon-minus' %}
+                                                                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                                                                {% render 'icon-plus' %}
                                                             </button>
+
 
                                                         </quantity-input>
 
