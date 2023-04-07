@@ -217,13 +217,15 @@
   document.querySelector('.test').addEventListener('mouseenter', () => {
     document.querySelector('.hero-dim').classList.add('on');
     document.querySelector('.hero-item--test').classList.add('test-1');
-    // document.querySelector('header').style.opacity = 0 ;
+    document.querySelector('header').classList.add('header--black');
+    document.querySelector('.header').classList.remove('header--white');
   });
 
   document.querySelector('.test').addEventListener('mouseleave', () => {
     document.querySelector('.hero-dim').classList.remove('on');
     document.querySelector('.hero-item--test').classList.remove('test-1');
-    // document.querySelector('header').style.opacity = 1 ;
+    document.querySelector('header').classList.remove('header--black');
+    document.querySelector('.header').classList.add('header--white');
   });
 
   document.querySelector('.test2').addEventListener('mouseenter', () => {
