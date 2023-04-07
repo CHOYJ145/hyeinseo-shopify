@@ -126,18 +126,6 @@ $('.m-nav-title').on('click', function () {
     }
 });
 
-$('.desc-label').on('click', function () {
-    if (!$(this).hasClass('on')) {
-        $('.desc-label').removeClass('on');
-        $('.desc-cont').slideUp();
-        $(this).addClass('on');
-        $(this).siblings('.desc-cont').slideDown(200);
-    } else {
-        $(this).removeClass('on');
-        $(this).siblings('.desc-cont').slideUp(200);
-    }
-});
-
 $('.switch-btn').on('click', function(){
     $(this).toggleClass('on');
     if($(this).hasClass('on')){
