@@ -47,6 +47,7 @@
       <div
         class="test-img-list card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+        onclick="location.href='{{ card_product.url }}'"
       >
           {%- if card_product.featured_media -%}
               <div class="card__media img-0">
@@ -140,7 +141,7 @@
         </div>{% endcomment %}
       </div>
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__information product-info-wrap">
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -156,6 +157,15 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
+            <div class="option-list">
+            {%- for variant in card_product.variants -%}
+                {% if variant.available %}
+                    <div>{{ variant.option1 }}</div>
+                {% else %}
+                    <div class="oos">{{ variant.option1 }}</div>
+                {% endif %}
+            {%- endfor -%}
+            </div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -202,15 +212,7 @@
 
             {% render 'price', product: card_product, price_class: '' %}
           </div>
-          <div>
-            {%- for variant in card_product.variants -%}
-              {% if variant.available %}
-                  <div>{{ variant.option1 }}</div>
-                {% else %}
-                  <div>{{ variant.option1 }}</div>
-                {% endif %}
-            {%- endfor -%}
-          </div>
+
         </div>
         {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">

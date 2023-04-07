@@ -310,7 +310,6 @@
               </div>{% endcomment %}
               {%- endif -%}
             {%- when 'custom_liquid' -%}
-            <div>custom2</div>
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
@@ -427,11 +426,17 @@
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
-                  {%- for color_variant in product.metafields.custom.color_variant.value -%}
-                    <div>
-                    <a href='{{ color_variant.url }}'>{{ color_variant.metafields.custom.color_name }}</a>
-                    </div>
-                  {%- endfor -%}
+              <div class="color-wrap">
+                  <div>Color</div>
+                  <div class="color-list">
+                      <div>{{ product.metafields.custom.color_name }}</div>
+                      {%- for color_variant in product.metafields.custom.color_variant.value -%}
+                          <div>
+                              <a href='{{ color_variant.url }}'>{{ color_variant.metafields.custom.color_name }}</a>
+                          </div>
+                      {%- endfor -%}
+                  </div>
+              </div>
                   <variant-radios
                     class="no-js-hidden"
                     data-section="{{ section.id }}"
@@ -461,7 +466,7 @@
                                             {{ value }}
                                         </label>
                                       {%- else  -%}
-                                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                        <label class="oos" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                                             {{ value }}
                                         </label>
                                           {%- endif -%}
@@ -678,6 +683,7 @@
 
               {%- when 'complementary' -%}
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
+
                   {%- if recommendations.performed and recommendations.products_count > 0 -%}
                     <aside aria-label="{{ 'accessibility.complementary_products' | t }}" {{ block.shopify_attributes }}{% if block.settings.make_collapsible_row %} class="product__accordion accordion"{% endif %}>
                       <div class="complementary-products__container">
@@ -688,7 +694,7 @@
                               <div id="Slide-{{ block.id }}-{{ forloop.index }}" class="color-wrap complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide" tabindex="-1" role="group"{% if number_of_slides > 1 %} aria-roledescription="{{ 'sections.slideshow.slide' | t }}" aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"{% endif %}>
                                   <div class="color-label">Color</div>
                                 <div class="color-list list-unstyled" role="list">
-                                  <div>{{ product.metafields.custom.color_name }}</div>
+                                  <div class="product--crt">{{ product.metafields.custom.color_name }}</div>
                                   {%- for color_variant in product.metafields.custom.color_variant.value -%}
                                     <div class='temp'>{{ color_variant.title }}</div>
                                   {%- endfor  -%}
@@ -1125,62 +1131,7 @@
             el: '.swiper-scrollbar',
             draggable: true,
         },
-        // effect: "fade",
-        // centeredSlides: true,
-        // autoplay: {
-        //     delay: 1000,
-        //     disableOnInteraction: false,
-        // },
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     type: "progressbar",
-        // },
     });
-
-    window.addEventListener('resize', function(){
-        console.log('resize event!');
-
-        if (window.innerWidth <= 800) {
-            window.onscroll = function() {myFunction()};
-
-            var header = document.querySelector(".product__info-container--sticky");
-            var sticky = header.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
-                }
-            }
-        }else{}
-    });
-
-    // window.onscroll = function() {myFunction()};
-    //
-    // var header = document.querySelector(".product__info-container--sticky");
-    // var sticky = header.offsetTop;
-    //
-    // function myFunction() {
-    //     if (window.pageYOffset > sticky) {
-    //         header.classList.add("sticky");
-    //     } else {
-    //         header.classList.remove("sticky");
-    //     }
-    // }
-  
-  $('.test-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
-  var l = e.offsetX;
-  var w = this.getBoundingClientRect().width;
-  var prc = l / w;
-  var imglen = $(this).children().length;
-  var sel = Math.floor(prc * imglen);
-  var selimg = $(this).children().eq(sel);
-  $(this).children().removeClass('hov');
-  $(selimg).addClass('hov');
-}).on('mouseleave', function() {
-  $(this).children().removeClass('hov');
-});
 </script>
 
 {% schema %}

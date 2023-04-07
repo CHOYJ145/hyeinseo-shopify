@@ -40,12 +40,22 @@
       {% endif %}
 
       <ul>
-        <li class="collection-grid-style">
+        <li class="collection-grid-style list-view--pc">
           {% if overviewGrid %}
             <span id="collection-grid-thumbnail">Thumbnail</span>
           {% else %}
             <span id="collection-grid-overview">Overview</span>
           {% endif %}
+        </li>
+        <li class="m--list-path">
+          Shop
+          <span>
+            →
+         {{ page_title }}
+          </span>
+        </li>
+        <li class="list-view--m">
+          <div class="switch-btn">2 view</div>
         </li>
         <li>
           Filter
@@ -128,11 +138,12 @@
 
             <ul id="product-grid" data-id="{{ section.id }}" class="
               {% if overviewGrid %}
-              grid product-grid grid-col
+                overview
               {% else %}
-              grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-              grid--{{ section.settings.columns_desktop }}-col-desktop
-              {% endif %}">
+
+              {% endif %}
+              list-unstyled
+              ">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}

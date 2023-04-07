@@ -89,6 +89,17 @@ $('.desc-label').on('click', function () {
     }
 });
 
+$('.switch-btn').on('click', function(){
+    $(this).toggleClass('on');
+    if($(this).hasClass('on')){
+        $(this).text('1 view');
+        $('#product-grid').addClass('grid--2');
+    }else{
+        $(this).text('2 view');
+        $('#product-grid').removeClass('grid--2');
+    }
+});
+
 // $('.product-visual').on('click', function(){
 //     let thisImg = $(this).find('img').attr('src');
 //     console.log(thisImg);

@@ -56,7 +56,7 @@
               class="card__inner card-overview {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
               style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >{% endcomment %}
-        <div class="overview-item">
+        <div class="overview-item" onclick="location.href='{{ card_product.url }}'">
 
           {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
           <img
@@ -138,7 +138,7 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div class="card-information">
+          <div class="card-information product-info-wrap--o">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -183,12 +183,12 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
-  <div>
+            <div class="option-list">
             {%- for variant in card_product.variants -%}
               {% if variant.available %}
                   <div>{{ variant.option1 }}</div>
                 {% else %}
-                  <div>{{ variant.option1 }}</div>
+                  <div class="oos">{{ variant.option1 }}</div>
                 {% endif %}
             {%- endfor -%}
           </div>
@@ -340,7 +340,7 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
+      <div class="card__content product-info-wrap--o">
         <div class="card__information">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
@@ -354,7 +354,7 @@
             {%- endif -%}
             {% render 'price' %}
           </div>
-          <div>
+          <div class="option-list">
             {%- for variant in card_product.variants -%}
               {% if variant.available %}
                   <div>{{ variant.option1 }}</div>

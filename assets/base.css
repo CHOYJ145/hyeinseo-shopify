@@ -422,7 +422,7 @@ body *{
   line-height: 29px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   body *{
     font-size : 16px;
     line-height: 21px;
