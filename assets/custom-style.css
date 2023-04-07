@@ -2645,3 +2645,7 @@ button.swiper-pagination-bullet {
         display: none;
     }
 }
+
+.product-info-wrap a {
+    font-weight: normal;
+}
