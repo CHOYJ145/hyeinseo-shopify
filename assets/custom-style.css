@@ -1453,6 +1453,7 @@ button.swiper-pagination-bullet {
 
 .product__title h1 {
     font-size: inherit;
+    font-weight: normal;
 }
 
 .detail-page .price-item.price-item--ex {
