@@ -1800,6 +1800,10 @@ button.swiper-pagination-bullet {
     margin: 0 5px;
 }
 
+.custom .product-infos .color-list > div:first-child {
+    text-decoration: underline;
+}
+
 .product__info-wrapper * {
     font-size: 14px;
     font-weight: normal;
