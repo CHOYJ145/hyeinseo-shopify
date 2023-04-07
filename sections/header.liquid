@@ -139,7 +139,7 @@
                 <span>Shop
                   <span>
                     {% for collection in product.collections %}
-                      <span class="path-item">{{ collection.title }}</span>
+                      <span class="path-item" onclick="location.href='{{ collection.url }}'">{{ collection.title }}</span>
                     {% endfor %}
                   </span>
 
