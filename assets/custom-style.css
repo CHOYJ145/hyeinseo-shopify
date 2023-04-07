@@ -787,6 +787,7 @@ button.swiper-pagination-bullet {
 
     .header-util {
         position: static;
+        margin-right: 5px;
     }
 
     .panel {
