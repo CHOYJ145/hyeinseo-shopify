@@ -2389,6 +2389,7 @@ button.swiper-pagination-bullet {
 .test-img-list {
     position: relative;
     width: 100%;
+    cursor: pointer;
 }
 
 .test-img-list > div {
