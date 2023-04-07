@@ -1791,7 +1791,7 @@ button.swiper-pagination-bullet {
 
 .option-wrap .option-list label {
     display: inline-block !important;
-    margin: 0 5px !important;
+    margin: 0 6px !important;
 }
 
 .custom .product-infos .color-wrap {
@@ -1807,7 +1807,7 @@ button.swiper-pagination-bullet {
 
 .custom .product-infos .color-list > div {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 6px;
 }
 
 .custom .product-infos .color-list > div:first-child {
