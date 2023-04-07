@@ -2244,7 +2244,7 @@ button.swiper-pagination-bullet {
 
     .m-path {
         display: flex;
-        position: sticky;
+        position: fixed;
         z-index: 2;
         top: 0;
         left: 0;
@@ -2693,10 +2693,9 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    /*.detail-page .product-wrap,*/
-    /*.detail-page .recommend-wrap {*/
-    /*    overflow-x: hidden;*/
-    /*}*/
+    .detail-page {
+        overflow-x: hidden;
+    }
 
     .custom .recommend-item .card-information .price {
         opacity: 1;
