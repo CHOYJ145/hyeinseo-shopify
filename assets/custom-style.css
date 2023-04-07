@@ -2607,7 +2607,7 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1024px) {
     .custom .quantity__button {
         font-size: 16px;
-        line-height: 21px;
+        line-height: 19px;
     }
 
     #product-grid.thumbnail.grid--2 .product-info-wrap,
