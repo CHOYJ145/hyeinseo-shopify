@@ -2689,7 +2689,7 @@ button.swiper-pagination-bullet {
     margin-top: 2px;
 }
 
-/*.detail-page .product-wrap,*/
+.detail-page .product-wrap,
 .detail-page .recommend-wrap {
     overflow-x: hidden;
 }
