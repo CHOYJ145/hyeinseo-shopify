@@ -2771,12 +2771,8 @@ button.swiper-pagination-bullet {
     color: #646464 !important;
 }
 
-.custom .drawer__inner-empty {
-    padding: 0;
-}
-
 .custom .cart-drawer__empty {
-    padding: 0;
+    padding: 0 6px;
     height: 22px;
     background: #fff;
 }
@@ -2799,7 +2795,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .custom .cart-drawer__empty {
-        padding: 0;
+        padding: 0 4px;
         height: 19px;
     }
 
@@ -2809,17 +2805,25 @@ button.swiper-pagination-bullet {
 }
 
 .custom .drawer.active .drawer__inner {
-    padding: 0 6px;
+    padding: 0;
 }
 
 .custom  .drawer__header {
     height: 22px;
-    line-height: 22px;
     margin-bottom: 0;
+    padding: 0 6px;
 }
 
 .drawer__heading {
     line-height: 22px;
+}
+
+.custom .drawer__contents {
+    padding: 0 6px;
+}
+
+.custom .drawer__footer {
+    padding: 0 6px 6px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2829,11 +2833,31 @@ button.swiper-pagination-bullet {
 
     .custom  .drawer__header {
         height: 19px;
-
+        padding: 0 4px;
         margin-bottom: 0;
     }
 
     .drawer__heading {
+        line-height: 19px;
+    }
+
+    .custom .drawer__contents {
+        padding: 0 4px;
+    }
+
+    .custom .drawer__footer {
+        padding: 0 4px 6px;
+    }
+}
+
+.custom .drawer__contents .price {
+    font-size : 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .custom .drawer__contents .price {
+        font-size : 16px;
         line-height: 19px;
     }
 }

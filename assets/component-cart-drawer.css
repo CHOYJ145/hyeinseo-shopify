@@ -126,7 +126,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   display:grid;
   gap: 5.2px;
   grid-template-columns: repeat(2,1fr);
-  margin-bottom : 4px;
 }
 
 .drawer__footer .finish__cart {
