@@ -2693,10 +2693,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    .detail-page .product-wrap,
-    .detail-page .recommend-wrap {
-        overflow-x: hidden;
-    }
+    /*.detail-page .product-wrap,*/
+    /*.detail-page .recommend-wrap {*/
+    /*    overflow-x: hidden;*/
+    /*}*/
 
     .custom .recommend-item .card-information .price {
         opacity: 1;
