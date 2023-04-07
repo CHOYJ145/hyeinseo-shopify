@@ -2187,6 +2187,7 @@ button.swiper-pagination-bullet {
     .product-imgs {
         width: 100%;
         overflow-x: hidden;
+        padding: 0 4px;
     }
 
     .swiperTest {
