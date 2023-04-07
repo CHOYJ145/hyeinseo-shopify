@@ -92,10 +92,10 @@ $('.desc-label').on('click', function () {
 $('.switch-btn').on('click', function(){
     $(this).toggleClass('on');
     if($(this).hasClass('on')){
-        $(this).text('1 view');
+        $(this).text('1');
         $('#product-grid').addClass('grid--2');
     }else{
-        $(this).text('2 view');
+        $(this).text('2');
         $('#product-grid').removeClass('grid--2');
     }
 });
