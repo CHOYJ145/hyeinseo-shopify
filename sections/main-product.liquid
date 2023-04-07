@@ -34,6 +34,7 @@
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
     <div class="m-path">
+        <div class="m-path-item">Shop&nbsp;</div>
         {% for collection in product.collections %}
             <div class="m-path-item">{{ collection.title }}</div>
         {% endfor %}

@@ -2254,7 +2254,11 @@ button.swiper-pagination-bullet {
     }
 
     .m-path-item + .m-path-item:before {
-        content: '→';
+        content: ' → ';
+    }
+
+    .m-path-item:nth-child(2) {
+        display: none;
     }
 }
 
@@ -2689,7 +2693,9 @@ button.swiper-pagination-bullet {
     margin-top: 2px;
 }
 
-.detail-page .product-wrap,
-.detail-page .recommend-wrap {
-    overflow-x: hidden;
+@media screen and (max-width: 1024px) {
+    .detail-page .product-wrap,
+    .detail-page .recommend-wrap {
+        overflow-x: hidden;
+    }
 }
