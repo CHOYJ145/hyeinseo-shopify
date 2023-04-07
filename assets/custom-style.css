@@ -1164,6 +1164,7 @@ button.swiper-pagination-bullet {
         left: 0;
         width: 100%;
         background: #fff;
+        padding: 2px 0;
     }
 }
 
@@ -2212,7 +2213,7 @@ button.swiper-pagination-bullet {
         display: block;
         position: sticky;
         z-index: 1;
-        top: 19px;
+        top: 23px;
         left: 0;
         width: 100%;
         background: #fff;
@@ -2228,7 +2229,7 @@ button.swiper-pagination-bullet {
         z-index: 2;
         top: 0;
         left: 0;
-        padding: 0 4px;
+        padding: 2px 4px;
         width: 100%;
         background: #fff;
     }
