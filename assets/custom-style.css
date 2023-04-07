@@ -1166,7 +1166,7 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1024px) {
     #list-page {
         display: block;
-        padding: 0 4px;
+        padding: 0 4px 90px;
     }
 
     #overview-value {
