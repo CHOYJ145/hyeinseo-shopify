@@ -2646,10 +2646,12 @@ button.swiper-pagination-bullet {
     }
 }
 
+.o-product-info-wrap a,
 .product-info-wrap a {
     font-weight: normal;
 }
 
+.o-product-info-wrap,
 .product-info-wrap {
     margin-top: 2px;
 }
