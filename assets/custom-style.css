@@ -1468,7 +1468,7 @@ button.swiper-pagination-bullet {
 
 .detail-page .price-item .price {
     font-size: initial;
-    line-height: normal;
+    line-height: 16px;
     letter-spacing: normal;
 }
 
@@ -1569,6 +1569,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    .detail-page .price-item .price {
+        line-height: 19px;
+    }
+
     .recommend-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
