@@ -4,3 +4,7 @@
   left: 0;
   border:none;
 }
+
+#predictive-search-results-list{
+  display: grid;
+}
