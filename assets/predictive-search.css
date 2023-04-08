@@ -9,3 +9,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr)
 }
+
+.predictive-search__item--link{
+  display: flex;
+  flex-direction: column;
+}
