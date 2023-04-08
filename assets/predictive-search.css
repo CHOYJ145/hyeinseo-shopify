@@ -1,9 +1,15 @@
 .header__search__pc{
   display:block;
 }
+.header__search__mo{
+  display: none;
+}
 @media only screen and (max-width: 1024px){
   .header__search__pc{
     display: none;
+  }
+  .header__search__mo{
+    display: block;
   }
 }
 .predictive-search {
