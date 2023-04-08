@@ -1,0 +1,6 @@
+.predictive-search {
+  position: absolute;
+  top: calc(100% + 0.1rem);
+  left: 0;
+  z-index: 11;
+}
