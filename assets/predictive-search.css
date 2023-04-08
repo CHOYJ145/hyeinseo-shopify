@@ -43,6 +43,8 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+  width: auto; 
+  height: auto;
 }
 .header__search__mo .search__input.field__input {
   text-align : left;
