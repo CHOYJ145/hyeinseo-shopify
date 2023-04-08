@@ -54,7 +54,9 @@
   width: auto; 
   height: auto;
 }
-
+.header__search__mo .predictive-search.predictive-search--header{
+  top: 2.2rem;
+}
 .header-util{
   z-index : -1;
 }
