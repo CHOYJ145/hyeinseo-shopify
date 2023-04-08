@@ -128,6 +128,7 @@
             </a>
           </h3>
             <div class="option-list">
+            {% if !card_product.available %}
             {%- for variant in card_product.variants -%}
                 {% if variant.available %}
                     <div>{{ variant.option1 }}</div>
@@ -135,6 +136,7 @@
                     <div class="oos">{{ variant.option1 }}</div>
                 {% endif %}
             {%- endfor -%}
+            {% endif %}
             </div>
           <div class="card-information">
             {%- if show_vendor -%}
