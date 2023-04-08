@@ -35,7 +35,15 @@
   flex-direction: column;
   padding: 0.5rem;
 }
-
+.header__search__pc .field{
+  position : relative;
+  
+}
+.header__search__pc .modal__close-button.link{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
 .header__search__mo .search__input.field__input {
   text-align : left;
   padding-left: 0.5rem;
