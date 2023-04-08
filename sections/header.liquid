@@ -192,8 +192,9 @@
                           >
                           <label class="field__label" for="Search-In-Modal">Search for items</label>
                           <input type="hidden" name="options[prefix]" value="last">
-                          <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-
+                          <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}"></button>
+                           <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                            Close
                           </button>
                         </div>
 
@@ -212,9 +213,7 @@
                     {%- if settings.predictive_search_enabled -%}
                     </predictive-search>
                     {%- endif -%}
-                    <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
-                      Close
-                    </button>
+                   
                   </div>
                 </div>
               </details>
