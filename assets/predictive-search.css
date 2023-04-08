@@ -1,3 +1,11 @@
+.header__search__pc{
+  display:block;
+}
+@media only screen and (max-width: 1024px){
+  .header__search__pc{
+    display: none;
+  }
+}
 .predictive-search {
   position: absolute;
   top: calc(100% + 0.1rem);
