@@ -10,6 +10,12 @@
   grid-template-columns: repeat(6, 1fr)
 }
 
+@media only screen and (max-width: 1024px){
+  #predictive-search-results-list{
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
 .predictive-search__item--link{
   display: flex;
   flex-direction: column;
