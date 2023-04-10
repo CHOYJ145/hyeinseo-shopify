@@ -2950,3 +2950,7 @@ button.swiper-pagination-bullet {
 .search-modal * {
     text-decoration: none;
 }
+
+.form__message {
+    /*display: none;*/
+}
