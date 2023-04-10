@@ -2364,7 +2364,7 @@ button.swiper-pagination-bullet {
 
 .info-nav-inner {
     position: sticky;
-    top: 0;
+    top: 22px;
     left: 0;
 }
 
@@ -2385,9 +2385,20 @@ button.swiper-pagination-bullet {
     display: block;
 }
 
+.shipping-row,
+.stockist-row,
 .contact-item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.stockist-row + .stockist-row,
+.shipping-row + .shipping-row {
+    margin-top: 18px;
+}
+
+.kr {
+    line-height: 19px;
 }
 
 #list-page #product-grid {
