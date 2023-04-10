@@ -2359,7 +2359,7 @@ button.swiper-pagination-bullet {
 .info-wrap {
     padding: 22px 6px 0;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .info-nav-inner {
@@ -2383,6 +2383,11 @@ button.swiper-pagination-bullet {
 
 .info-cont.on {
     display: block;
+}
+
+.contact-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #list-page #product-grid {
