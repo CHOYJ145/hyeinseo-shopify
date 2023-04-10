@@ -45,11 +45,12 @@
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-      <div
-        class="t-img-list card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
-        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-        onclick="location.href='{{ card_product.url }}'"
-      >
+      <div class="t-img-inner">
+        <div
+                class="t-img-list card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                onclick="location.href='{{ card_product.url }}'"
+        >
           {% comment %}{%- if card_product.featured_media -%}
               <div class="card__media img-0">
                   <div class="media media--transparent ">
@@ -99,17 +100,31 @@
                   </div>
               </div>
           {%- endif -%}{% endcomment %}
-        {%- for image in card_product.images  -%}
-          <div class="img-{{ forloop.index }}">
+          {%- for image in card_product.images  -%}
+            <div class="img-{{ forloop.index }}">
               <img src="{{ image | image_url }}" alt="">
-          </div>
-        {%- endfor -%}
-      </div>
-        <div class="t-img-bar">
-            <div class="t-img-bar-inner">
-                <span></span>
             </div>
+          {%- endfor -%}
         </div>
+        <div class="t-img-bar">
+          <div class="t-img-bar-inner">
+            <span></span>
+          </div>
+        </div>
+        <div class="color-code-list">
+          {% comment %}현재상품컬러코드{% endcomment %}
+          <div class="color-code" style="background-color: {{ card_product.metafields.custom.color_code }}">
+
+          </div>
+
+          {% comment %}컬러 variant 컬러코드{% endcomment %}
+          {% for color_variant in card_product.metafields.custom.color_variant.value %}
+            <div class="color-code" style="background-color: {{ color_variant.metafields.custom.color_code }}">
+
+            </div>
+          {% endfor  %}
+        </div>
+      </div>
       <div class="card__content">
         <div class="card__information product-info-wrap">
           <h3
@@ -128,7 +143,7 @@
             </a>
           </h3>
             <div class="option-list">
-            {% if !card_product.available %}
+            {% if card_product.available == true %}
             {%- for variant in card_product.variants -%}
                 {% if variant.available %}
                     <div>{{ variant.option1 }}</div>
@@ -136,6 +151,8 @@
                     <div class="oos">{{ variant.option1 }}</div>
                 {% endif %}
             {%- endfor -%}
+            {% else %}
+              <div>out of stock</div>
             {% endif %}
             </div>
           <div class="card-information">

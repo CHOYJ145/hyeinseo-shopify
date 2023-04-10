@@ -183,15 +183,33 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
+            <div class="color-code-list">
+              {% comment %}현재상품컬러코드{% endcomment %}
+              <div class="color-code" style="background-color: {{ card_product.metafields.custom.color_code }}">
+
+              </div>
+
+              {% comment %}컬러 variant 컬러코드{% endcomment %}
+              {% for color_variant in card_product.metafields.custom.color_variant.value %}
+                <div class="color-code" style="background-color: {{ color_variant.metafields.custom.color_code }}">
+
+                </div>
+              {% endfor  %}
+            </div>
             <div class="option-list">
-            {%- for variant in card_product.variants -%}
-              {% if variant.available %}
-                  <div>{{ variant.option1 }}</div>
-                {% else %}
-                  <div class="oos">{{ variant.option1 }}</div>
-                {% endif %}
-            {%- endfor -%}
-          </div>
+              {% if card_product.available == true %}
+                {%- for variant in card_product.variants -%}
+                  {% if variant.available %}
+                    <div>{{ variant.option1 }}</div>
+                  {% else %}
+                    <div class="oos">{{ variant.option1 }}</div>
+                  {% endif %}
+                {%- endfor -%}
+              {% else %}
+                <div>out of stock</div>
+              {% endif %}
+            </div>
+
           </div>
         </div>
         {%- if show_quick_add -%}

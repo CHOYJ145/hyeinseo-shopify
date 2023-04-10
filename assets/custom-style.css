@@ -2644,15 +2644,6 @@ button.swiper-pagination-bullet {
     background: #fff;
 }
 
-.custom #list-page .grid__item:hover .card-information .price,
-.custom .recommend-item:hover .card-information .price,
-.custom #list-page .grid__item:hover .option-list,
-.custom .recommend-item:hover .option-list,
-.custom #list-page .grid__item:hover .t-img-bar,
-.custom .recommend-item:hover .t-img-bar {
-    opacity: 1;
-}
-
 @media screen and (max-width: 1024px) {
     .t-img-bar {
         display: none;
@@ -2865,4 +2856,56 @@ button.swiper-pagination-bullet {
         font-size : 16px;
         line-height: 19px;
     }
+}
+
+.t-img-inner {
+    position: relative;
+}
+
+.color-code-list {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+}
+
+.color-code {
+    flex: 1;
+    height: 7px;
+}
+
+.product-info-wrap--o .color-code-list {
+    position: static;
+    opacity: 1;
+}
+
+.product-info-wrap--o .color-code-list .color-code {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+.custom #list-page .grid__item:hover .card-information .price,
+.custom .recommend-item:hover .card-information .price,
+.custom #list-page .grid__item:hover .option-list,
+.custom .recommend-item:hover .option-list,
+.custom #list-page .grid__item:hover .t-img-bar,
+.custom .recommend-item:hover .t-img-bar,
+.custom #list-page .grid__item:hover .color-code-list,
+.custom .recommend-item:hover .color-code-list {
+    opacity: 1;
+}
+
+#predictive-search-results-list .predictive-search__image {
+    width: 100%;
+    height: auto;
+}
+
+.search-modal * {
+    text-decoration: none;
 }

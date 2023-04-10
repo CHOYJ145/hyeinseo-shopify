@@ -91,7 +91,7 @@
                                                         {{ item.original_line_price | money }}
                                                     </div>
                                                 {%- endif -%}
-
+                                                {{ item.product.metafields.custom.color_name }}
                                                 {%- if item.variant.available and item.unit_price_measurement -%}
                                                     <div class="unit-price caption">
                                                         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
