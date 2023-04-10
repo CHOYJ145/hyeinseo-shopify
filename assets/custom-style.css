@@ -2345,6 +2345,7 @@ button.swiper-pagination-bullet {
 
 .custom .search-modal * {
     color: #000 !important;
+    font-weight: normal;
 }
 
 .custom .predictive-search {
@@ -2357,7 +2358,7 @@ button.swiper-pagination-bullet {
 
 /* info */
 .info-wrap {
-    padding: 22px 6px 0;
+    padding: 22px 6px 90px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -2366,6 +2367,30 @@ button.swiper-pagination-bullet {
     position: sticky;
     top: 22px;
     left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .info-wrap {
+        position: relative;
+        padding: 3px 5px 90px;
+        display: block;
+    }
+
+    .info-nav-inner {
+        position: static;
+    }
+    
+    .info-nav-item.on {
+        background: #fff;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 3px 5px;
+    }
 }
 
 .info-nav-item {
@@ -2699,7 +2724,7 @@ button.swiper-pagination-bullet {
         padding: 0;
         margin: -3px 0 0;
         border: 0;
-        font-size : 16px;
+        font-size: 16px;
         line-height: 18px;
         height: 19px;
     }
@@ -2816,7 +2841,7 @@ button.swiper-pagination-bullet {
     padding: 0;
 }
 
-.custom  .drawer__header {
+.custom .drawer__header {
     height: 22px;
     margin-bottom: 0;
     padding: 0 6px;
@@ -2839,7 +2864,7 @@ button.swiper-pagination-bullet {
         padding: 0 4px;
     }
 
-    .custom  .drawer__header {
+    .custom .drawer__header {
         height: 19px;
         padding: 0 4px;
         margin-bottom: 0;
@@ -2859,7 +2884,7 @@ button.swiper-pagination-bullet {
 }
 
 .custom .drawer__contents .price {
-    font-size : 14px;
+    font-size: 14px;
     line-height: 16px;
 }
 
@@ -2869,7 +2894,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .custom .drawer__contents .price {
-        font-size : 16px;
+        font-size: 16px;
         line-height: 19px;
     }
 }

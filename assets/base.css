@@ -491,7 +491,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  /*font-size: calc(var(--font-heading-scale) * 1.7rem);*/
 }
 
 @media only screen and (min-width: 750px) {
@@ -2481,7 +2481,7 @@ details[open] .modal-overlay {
 details[open] .modal-overlay::after {
   position: absolute;
   content: '';
-  background-color: rgb(var(--color-foreground), 0.5);
+  background-color: rgba(255,255,255,0.5);
   top: 100%;
   left: 0;
   right: 0;
@@ -2495,7 +2495,7 @@ details[open] .modal-overlay::after {
 
 .search-modal {
   opacity: 0;
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  /*border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);*/
   min-height: calc(100% + var(--inputs-margin-offset) + (2 * var(--inputs-border-width)));
   height: 100%;
 }
