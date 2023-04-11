@@ -2630,6 +2630,7 @@ button.swiper-pagination-bullet {
     .custom #list-page #product-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        gap: 30px 4px;
     }
 
     .custom #list-page #product-grid.grid--2 {
