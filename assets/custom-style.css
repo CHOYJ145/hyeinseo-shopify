@@ -3022,7 +3022,17 @@ button.swiper-pagination-bullet {
 
 #account-page {
     max-width: none;
-    padding: 0;
+    padding: 22px 6px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+
+.account-nav {
+    position: sticky;
+    top: 22px;
+    left: 0;
+}
+
+.account-nav-item a {
+    text-decoration: none;
 }
