@@ -3035,4 +3035,18 @@ button.swiper-pagination-bullet {
 
 .account-nav-item a {
     text-decoration: none;
+    color: #CECED0;
+}
+
+#account-page table {
+    box-shadow: none;
+}
+
+.order-list {
+    width: 50%;
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
