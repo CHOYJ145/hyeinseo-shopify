@@ -3137,6 +3137,7 @@ button.swiper-pagination-bullet {
 
 .icon-x {
     color: #000;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 1024px) {
