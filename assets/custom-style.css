@@ -3037,6 +3037,7 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
+.addresses-page,
 #account-page {
     max-width: none;
     padding: 22px 6px 0;
@@ -3070,6 +3071,11 @@ button.swiper-pagination-bullet {
 }
 
 .order-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.addresses-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
