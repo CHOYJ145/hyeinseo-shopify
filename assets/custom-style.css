@@ -3115,8 +3115,12 @@ button.swiper-pagination-bullet {
 
 /*.cart-product-option-wrap + .cart-item__quantity_box,*/
 .cart-product-option-wrap .product-option,
+.cart-item__quantity_box,
 .cart-color-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
+    grid-template-columns: 2fr 3fr;
+}
+
+.cart-item__details {
+    margin-top: -2px;
 }
