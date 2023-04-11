@@ -199,6 +199,7 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="module">
 function sort() {
     var host = window.location.host,
@@ -220,6 +221,17 @@ if (window.location.href.indexOf("price-ascending") > -1) {
     $('#f2').find('.check_box').addClass('on');
 }
 
+
+{% if template contains 'mobile' %}
+var swiper = new Swiper(".swiperTest", {
+  effect: 'fade',
+  loop: true,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
+{% else %}
 $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   var l = e.offsetX;
   var w = this.getBoundingClientRect().width;
@@ -236,6 +248,7 @@ $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
 }).on('mouseleave', function() {
   $(this).children().removeClass('hov');
 });
+{% endif %}
 
 $(document).ready(function(){
   let title = '{{ page_title }}'

@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    document.querySelector('.custom').classList.add('theme-black');
+    document.querySelector('.header').classList.remove('header--black');
+    document.querySelector('.header').classList.add('header--white');
+});
+
 $('.credit-button').on('click', function (){
     $('.credit-desc').addClass('on');
     $('body').css({
@@ -12,4 +18,12 @@ $('.credit-close-btn').on('click', function (){
         'overflow' : 'visible'
     });
     $('.credit-dim').remove();
+});
+
+$('.credit-dim').on('click', function (){
+    $('.credit-desc').removeClass('on');
+    $('body').css({
+        'overflow' : 'visible'
+    });
+    $(this).remove();
 });

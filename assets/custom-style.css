@@ -1665,7 +1665,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 50%;
     left: 6px;
-    color: #000;
+    color: #fff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1687,7 +1687,8 @@ button.swiper-pagination-bullet {
     left: 0;
     width: 100%;
     padding: 5px 6px;
-    background: #fff;
+    background: #000;
+    color: #fff;
 }
 
 .credit-dim {
@@ -1697,12 +1698,12 @@ button.swiper-pagination-bullet {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 1024px) {
     .credit-dim {
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 1);
     }
 
     .credit-desc {
@@ -1722,8 +1723,9 @@ button.swiper-pagination-bullet {
 }
 
 .credit-button {
-    margin: 22px 0;
+    margin: 22px 6px 0;
     cursor: pointer;
+    color: #fff;
 }
 
 .credit-close-btn {
@@ -1734,7 +1736,7 @@ button.swiper-pagination-bullet {
     background: none;
     border: 0;
     cursor: pointer;
-    color: #000;
+    color: #fff;
 }
 
 
@@ -2931,15 +2933,30 @@ button.swiper-pagination-bullet {
     margin-right: 2px;
 }
 
-.custom #list-page .grid__item:hover .card-information .price,
-.custom .recommend-item:hover .card-information .price,
-.custom #list-page .grid__item:hover .option-list,
-.custom .recommend-item:hover .option-list,
-.custom #list-page .grid__item:hover .t-img-bar,
-.custom .recommend-item:hover .t-img-bar,
-.custom #list-page .grid__item:hover .color-code-list,
-.custom .recommend-item:hover .color-code-list {
-    opacity: 1;
+@media (hover: hover) {
+    .custom #list-page .grid__item:hover .card-information .price,
+    .custom .recommend-item:hover .card-information .price,
+    .custom #list-page .grid__item:hover .option-list,
+    .custom .recommend-item:hover .option-list,
+    .custom #list-page .grid__item:hover .t-img-bar,
+    .custom .recommend-item:hover .t-img-bar,
+    .custom #list-page .grid__item:hover .color-code-list,
+    .custom .recommend-item:hover .color-code-list {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .custom #list-page .grid__item .card-information .price,
+    .custom .recommend-item .card-information .price,
+    .custom #list-page .grid__item .option-list,
+    .custom .recommend-item .option-list,
+    .custom #list-page .grid__item .t-img-bar,
+    .custom .recommend-item .t-img-bar,
+    .custom #list-page .grid__item .color-code-list,
+    .custom .recommend-item .color-code-list {
+        opacity: 1;
+    }
 }
 
 #predictive-search-results-list .predictive-search__image {
