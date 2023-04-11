@@ -2850,12 +2850,13 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .custom .cart-drawer__empty {
-        padding: 2px 0;
-        height: 19px;
+        padding: 0;
+        height: 23px;
+        align-items: center;
     }
 
     .cart__empty-text {
-        height: 19px;
+        height: 23px;
     }
 }
 
