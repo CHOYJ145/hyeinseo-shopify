@@ -2412,6 +2412,10 @@ button.swiper-pagination-bullet {
     display: block;
 }
 
+.info-cont p {
+    margin: 0;
+}
+
 .shipping-row,
 .stockist-row,
 .contact-item {
