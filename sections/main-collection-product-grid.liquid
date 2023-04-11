@@ -221,8 +221,6 @@ if (window.location.href.indexOf("price-ascending") > -1) {
     $('#f2').find('.check_box').addClass('on');
 }
 
-
-{% if template contains 'mobile' %}
 var swiper = new Swiper(".swiperTest", {
   effect: 'fade',
   loop: true,
@@ -231,7 +229,7 @@ var swiper = new Swiper(".swiperTest", {
     draggable: true,
   },
 });
-{% else %}
+
 $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
   var l = e.offsetX;
   var w = this.getBoundingClientRect().width;
@@ -248,7 +246,6 @@ $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
 }).on('mouseleave', function() {
   $(this).children().removeClass('hov');
 });
-{% endif %}
 
 $(document).ready(function(){
   let title = '{{ page_title }}'
