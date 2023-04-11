@@ -3140,12 +3140,6 @@ button.swiper-pagination-bullet {
 
     }
 
-    cart-remove-button button {
-        padding: 0;
-        width: 10px;
-        height: 10px;
-    }
-
     .cart-product-option-wrap .product-option,
     .cart-item__quantity_box.cart-item__quantity_box--ex,
     .cart-color-wrap {
