@@ -199,6 +199,7 @@ cart-drawer {
 @media screen and (max-width: 768px) {
   .cart-drawer tbody {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px 4px;
   }
 }
 .cart-drawer thead {
