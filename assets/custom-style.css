@@ -3057,7 +3057,7 @@ button.swiper-pagination-bullet {
 
 .grid--2 .swiperTest .swiper-scrollbar,
 .recommend-item .swiperTest .swiper-scrollbar {
-   bottom: 15px;
+   bottom: 15px !important;
 }
 
 #order-page,
