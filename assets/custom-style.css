@@ -3052,6 +3052,7 @@ button.swiper-pagination-bullet {
     .grid--2 .swiperTest,
     .recommend-item .swiperTest {
         width: calc(50vw - 6px);
+        height: calc(100% - 4px);
     }
 }
 
