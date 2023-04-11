@@ -3055,13 +3055,12 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
-.grid--2 .swiperTest .swiper-scrollbar,
-.recommend-item .swiperTest .swiper-scrollbar {
+.grid--2 .swiperTest .swiper-scrollbar {
    bottom: 15px !important;
 }
 
-.test1111 {
-
+.recommend-item .swiperTest .swiper-scrollbar {
+    bottom: 11px !important;
 }
 
 #order-page,
