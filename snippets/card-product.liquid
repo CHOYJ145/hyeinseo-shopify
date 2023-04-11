@@ -18,15 +18,6 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-{% if request.user_agent contains 'Mobile' %}
-<style>
-  @media screen and (max-width: 1024px) {
-    .t-img-list {
-      display: none;
-    }
-  }
-</style>
-{% endif %}
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -56,30 +47,33 @@
     >
         <div class="t-img-inner">
 
-          {% if request.user_agent contains 'Mobile' %}
-            <div class="swiperTest">
-              <ul class="swiper-wrapper">
-                {%- for image in card_product.images  -%}
-                  <li class="img-{{ forloop.index }} swiper-slide">
-                    <img src="{{ image | image_url }}" alt="" onclick="location.href='{{ card_product.url }}'">
-                  </li>
-                {%- endfor -%}
-              </ul>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          {% else %}
-            <div
-                    class="t-img-list card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
-                    style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-                    onclick="location.href='{{ card_product.url }}'"
-            >
-              {%- for image in card_product.images  -%}
-                <div class="img-{{ forloop.index }}">
-                  <img src="{{ image | image_url }}" alt="">
-                </div>
-              {%- endfor -%}
-            </div>
+          <div
+                  class="t-img-list card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+                  style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                  onclick="location.href='{{ card_product.url }}'"
+          >
+            {%- for image in card_product.images  -%}
+              <div class="img-{{ forloop.index }}">
+                <img src="{{ image | image_url }}" alt="">
+              </div>
+            {%- endfor -%}
+          </div>
+
+          {% if template contains 'mobile' %}
+            <!-- your mobile-specific content goes here -->
           {% endif %}
+
+          <div class="swiperTest">
+            <ul class="swiper-wrapper">
+              {%- for image in card_product.images  -%}
+                <li class="img-{{ forloop.index }} swiper-slide">
+                  <img src="{{ image | image_url }}" alt="" onclick="location.href='{{ card_product.url }}'">
+                </li>
+              {%- endfor -%}
+            </ul>
+            <div class="swiper-scrollbar"></div>
+          </div>
+
 
           <div class="t-img-bar">
             <div class="t-img-bar-inner">
