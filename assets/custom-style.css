@@ -3066,7 +3066,7 @@ button.swiper-pagination-bullet {
 }
 
 .grid--2 .swiperTest .swiper-scrollbar {
-   bottom: 15px !important;
+    bottom: 15px !important;
 }
 
 .recommend-item .swiperTest .swiper-scrollbar {
@@ -3133,4 +3133,16 @@ button.swiper-pagination-bullet {
 
 .cart-item__details {
     margin-top: -2px;
+}
+
+@media screen and (max-width: 1024px) {
+    .cart-drawer .cart-item cart-remove-button {
+
+    }
+
+    cart-remove-button button {
+        padding: 0;
+        width: inherit;
+        height: inherit;
+    }
 }
