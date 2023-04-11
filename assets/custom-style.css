@@ -3024,12 +3024,12 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 499px) {
     .t-img-inner .swiperTest {
-        width: calc(100vw - 10px);
+        width: calc(100vw - 8px);
     }
 
     .grid--2 .swiperTest,
     .recommend-item .swiperTest {
-        width: calc(50vw - 8px);
+        width: calc(50vw - 6px);
     }
 }
 
