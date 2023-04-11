@@ -3081,3 +3081,8 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+#order-page .order-detail {
+    display: block;
+    margin: 0;
+}
