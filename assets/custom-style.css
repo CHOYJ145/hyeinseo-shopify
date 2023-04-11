@@ -2984,7 +2984,7 @@ button.swiper-pagination-bullet {
 }
 
 .t-img-inner .swiperTest {
-    width: calc(100vw - 23px);
+    width: calc(100vw - 10px);
 }
 
 .t-img-inner .swiperTest .swiper-wrapper {
@@ -3012,7 +3012,7 @@ button.swiper-pagination-bullet {
 
 .grid--2 .swiperTest,
 .recommend-item .swiperTest {
-    width: calc(50vw - 14px);
+    width: calc(50vw - 5px);
 }
 
 .grid--2 .swiperTest .swiper-wrapper,
