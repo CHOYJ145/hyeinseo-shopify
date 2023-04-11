@@ -3042,8 +3042,14 @@ button.swiper-pagination-bullet {
     box-shadow: none;
 }
 
-.order-list {
+#account-page .order-wrap {
+    display: block;
     width: 50%;
+    margin-top: 0;
+}
+
+#account-page .order-list {
+    padding-right: 0;
 }
 
 .order-row {
