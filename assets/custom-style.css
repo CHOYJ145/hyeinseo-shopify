@@ -3056,9 +3056,12 @@ button.swiper-pagination-bullet {
         height: calc(100% - 4px);
     }
 
-    .grid--2 .card__content,
-    .recommend-item .card__content {
+    .grid--2 .card__content {
         margin-top: -5px;
+    }
+
+    .recommend-item .card__content {
+        margin-top: 0;
     }
 }
 
