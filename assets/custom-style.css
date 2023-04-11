@@ -3012,7 +3012,7 @@ button.swiper-pagination-bullet {
 
 .grid--2 .swiperTest,
 .recommend-item .swiperTest {
-    width: calc(50vw - 6px);
+    width: calc(50vw - 8px);
 }
 
 .grid--2 .swiperTest .swiper-wrapper,
