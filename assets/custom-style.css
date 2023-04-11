@@ -2878,7 +2878,7 @@ button.swiper-pagination-bullet {
 }
 
 .custom .drawer__footer {
-    padding: 0 6px 6px;
+    padding: 2px 6px 6px;
 }
 
 @media screen and (max-width: 1024px) {
