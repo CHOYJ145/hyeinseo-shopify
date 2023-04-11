@@ -2887,9 +2887,10 @@ button.swiper-pagination-bullet {
     }
 
     .custom .drawer__header {
-        height: 19px;
+        height: 23px;
         padding: 0 4px;
         margin-bottom: 0;
+        align-items: center;
     }
 
     .drawer__heading {
