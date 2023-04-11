@@ -2713,7 +2713,7 @@ button.swiper-pagination-bullet {
     }
 
     .custom .drawer__inner-empty {
-        padding: 0 4px;
+        padding: 0;
     }
 }
 
