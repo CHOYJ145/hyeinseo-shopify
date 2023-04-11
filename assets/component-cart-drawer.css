@@ -191,7 +191,7 @@ cart-drawer {
 
 .cart-drawer tbody {
   display: grid;
-  gap: 5.2px;
+  gap: 30px 6px;
   grid-template-columns: repeat(6, 1fr);
   width: 100%;
 }
@@ -231,7 +231,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-item:last-child {
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 
 .cart-drawer .cart-item__media {
@@ -267,7 +267,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-item:last-child {
-  margin-bottom: 1.5rem;
+  /*margin-bottom: 1.5rem;*/
 }
 
 .cart-drawer .cart-item .loading-overlay {
