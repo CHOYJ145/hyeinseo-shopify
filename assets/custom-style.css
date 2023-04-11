@@ -1123,7 +1123,6 @@ button.swiper-pagination-bullet {
 #login-page .login-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: calc(100% - 103px);
 }
 
 @media screen and (max-width: 1024px) {
