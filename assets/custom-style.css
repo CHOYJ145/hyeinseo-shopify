@@ -2855,8 +2855,16 @@ button.swiper-pagination-bullet {
         align-items: center;
     }
 
+    .theme-main.custom .cart-drawer__empty {
+        padding: 0 4px;
+    }
+
     .cart__empty-text {
         height: 23px;
+    }
+
+    .theme-main.custom .drawer.active .drawer__inner {
+        padding: 0;
     }
 }
 
