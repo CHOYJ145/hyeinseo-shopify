@@ -3086,3 +3086,9 @@ button.swiper-pagination-bullet {
     display: block;
     margin: 0;
 }
+
+.cart-color-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
