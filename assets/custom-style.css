@@ -3145,4 +3145,11 @@ button.swiper-pagination-bullet {
         width: inherit;
         height: inherit;
     }
+
+    .cart-product-option-wrap .product-option,
+    .cart-item__quantity_box.cart-item__quantity_box--ex,
+    .cart-color-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
