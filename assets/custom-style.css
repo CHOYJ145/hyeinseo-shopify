@@ -3055,6 +3055,11 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
+.grid--2 .swiperTest .swiper-scrollbar,
+.recommend-item .swiperTest .swiper-scrollbar {
+   bottom: 15px;
+}
+
 #order-page,
 #addresses-page,
 #account-page {
