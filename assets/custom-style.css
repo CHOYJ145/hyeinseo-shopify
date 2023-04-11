@@ -2265,6 +2265,7 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1024px) {
     .recommend-title {
         position: sticky;
+        z-index: 10;
         top: 23px;
         left: 0;
     }
