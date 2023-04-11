@@ -3141,14 +3141,22 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    .cart-drawer .cart-item cart-remove-button {
-
-    }
-
     .cart-product-option-wrap .product-option,
     .cart-item__quantity_box.cart-item__quantity_box--ex,
     .cart-color-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+.quantity__input {
+    font-size : 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .quantity__input {
+        font-size : 16px;
+        line-height: 19px;
     }
 }

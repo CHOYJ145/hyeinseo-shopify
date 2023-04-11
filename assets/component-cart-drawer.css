@@ -131,8 +131,9 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__footer .finish__cart {
   /*margin-top : */
 }
+
 cart-drawer-items.is-empty + .drawer__footer {
-  display: none;
+  /*display: none;*/
 }
 
 .drawer__footer > details {
@@ -314,12 +315,19 @@ cart-drawer-items {
 
 .cart-drawer .cart-item cart-remove-button {
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 6px;
 }
 
+@media screen and (max-width: 1024px) {
+  .cart-drawer .cart-item cart-remove-button {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+  }
+}
 
-cart-drawer-items::-webkit-scrollbar {
+  cart-drawer-items::-webkit-scrollbar {
   width: 3px;
 }
 
