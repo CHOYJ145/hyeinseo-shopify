@@ -18,7 +18,7 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-{% if template contains 'mobile' %}
+{% if request.user_agent contains 'Mobile' %}
 <style>
   @media screen and (max-width: 1024px) {
     .t-img-list {
@@ -56,7 +56,7 @@
     >
         <div class="t-img-inner">
 
-          {% if template contains 'mobile' %}
+          {% if request.user_agent contains 'Mobile' %}
             <div class="swiperTest">
               <ul class="swiper-wrapper">
                 {%- for image in card_product.images  -%}
