@@ -2671,7 +2671,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     z-index: 5;
     top: initial;
-    bottom: 50px;
+    bottom: 21px;
     left: 50%;
     width: 80px;
     height: 1px;
