@@ -3135,6 +3135,10 @@ button.swiper-pagination-bullet {
     margin-top: -2px;
 }
 
+.icon-x {
+    color: #000;
+}
+
 @media screen and (max-width: 1024px) {
     .cart-drawer .cart-item cart-remove-button {
 
