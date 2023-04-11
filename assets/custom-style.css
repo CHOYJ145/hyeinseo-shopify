@@ -3037,6 +3037,7 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
+#order-page,
 #addresses-page,
 #account-page {
     max-width: none;
