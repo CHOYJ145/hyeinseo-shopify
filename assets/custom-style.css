@@ -2513,8 +2513,9 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .t-img-list {
-        display: none;
+        /*display: none;*/
     }
+
     .product-infos .form__label {
         font-size: 16px;
         line-height: 19px;
