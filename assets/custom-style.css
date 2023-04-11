@@ -3118,7 +3118,7 @@ button.swiper-pagination-bullet {
 .cart-item__quantity_box.cart-item__quantity_box--ex,
 .cart-color-wrap {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1.5fr 3.5fr;
 }
 
 .cart-item__details {
