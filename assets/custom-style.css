@@ -3087,7 +3087,7 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
-.cart-product-option-wrap .cart-item__quantity_box,
+.cart-product-option-wrap + .cart-item__quantity_box,
 .cart-product-option-wrap .product-option,
 .cart-color-wrap {
     display: grid;
