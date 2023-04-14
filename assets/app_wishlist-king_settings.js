@@ -1,1 +1,1 @@
-export default {"id":"126645928047/settings","moveToCart":false,"loginRequired":false,"sharedWishlistPageHandle":"shared-wishlist","wishlistPageHandle":"wishlist","klaviyo":false,"facebookPixel":false,"googleAnalytics":false,"appmateAnalytics":true}
+export default {"facebookPixel":true,"googleAnalytics":true,"klaviyo":true,"loginRequired":false,"moveToCart":false,"sharedWishlistPageHandle":"shared-wishlist","wishlistPageHandle":"wishlist"}
