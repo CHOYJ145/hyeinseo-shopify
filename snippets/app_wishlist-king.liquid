@@ -1,10 +1,33 @@
 <link rel="stylesheet" href="{{ 'app_wishlist-king_templates.css' | asset_url }}" />
 
+{%- assign text_link = false -%}
+
 <style>
-  .wk-link {}
+  .wk-link {
+    justify-content: center;
+    color: rgb(var(--color-foreground));
+    font-size: 18px;
+  }
+
+  .wk-link:hover {
+    color: rgba(var(--color-foreground),.75);
+  }
+
+  .wk-link:hover .wk-link__icon {
+    transform: scale(1.07);
+  }
 
   .wk-link__icon {
     margin-right: 0;
+  }
+
+  {%- unless text_link -%}
+  
+  .wk-link {
+    height: 4.4rem;
+    width: 4.4rem;
+    margin: 0 2px 0 0;
+    padding: 0;
   }
 
   .wk-link__label {
@@ -13,44 +36,206 @@
 
   .wk-link__count {
     display: none;
+    /*position: absolute;
+    background-color: rgb(var(--color-button));
+    color: rgb(var(--color-button-text));
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    bottom: 8px;
+    left: 25px;
+    line-height: calc(1 + .1 / var(--font-body-scale));
+    border: 1px solid var(--gradient-background);*/
+  }
+  
+  @media only screen and (max-width: 749px) {
+    .wk-link {
+      margin: 0 -10px;
+    }
+  }
+  
+  {%- else -%}
+  
+  .wk-link {
+    margin-right: 30px;
   }
 
-  .wk-button {}
+  @media only screen and (max-width: 749px) {
+    .wk-link {
+      font-size: 12px;
+      position: relative;
+      top: -4px;
+      font-weight: 600;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
 
-  .wk-button__icon {}
+  .wk-link__icon {
+    display: none;
+  }
+
+  .wk-link__count {
+    margin-left: 2px;
+  }
+
+  .wk-link__count::before {
+    content: "("
+  }
+
+  .wk-link__count::after {
+    content: ")"
+  }
+  
+  {%- endunless -%}
+
+  .wk-button {
+    cursor: pointer;
+    margin: 15px 0 0;
+    max-width: 44rem;
+    justify-content: center;
+    width: 100%;
+    font: inherit;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+  }
+
+  .wk-button__icon {
+    top: -1px;
+    margin-right: 6px;
+  }
 
   .wk-button__label {}
 
-  .wk-button.wk-button--floating {}
+  .wk-button.wk-button--floating:hover .wk-button__icon {
+    transform: scale(1.07);
+  }
 
-  .wk-product-form__submit {}
+  .wk-product-image:empty {
+    display :block;
+  }
+
+  .wk-product-form__submit {
+    cursor: pointer;
+    padding: .9rem 0 1.1rem;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0 0 .1rem rgba(var(--color-button),var(--alpha-button-border));
+    min-height: 4.5rem;
+    transition: box-shadow var(--duration-short) ease;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    line-height: 1.2;
+    font-family: inherit;
+  }
+
+  .wk-product-form__submit:hover {
+    box-shadow: 0 0 0 .2rem rgba(var(--color-button),var(--alpha-button-border));
+  }
+
+  .wk-product-form__option__select {
+    cursor: pointer;
+    line-height: 1.6;
+    padding: 0 4rem 0 1.5rem;
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+    font-size: 1.2rem;
+    color: rgba(var(--color-foreground),.75);
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: 0 0 0 .1rem rgba(var(--color-foreground),.55);
+    height: 4.5rem;
+    box-sizing: border-box;
+    transition: box-shadow var(--duration-short) ease;
+    letter-spacing: .04rem;
+    position: relative;
+  }
+
+  .wk-product-form__option {
+    position: relative;
+  }
+
+  .wk-product-form__option::after {
+    content: "";
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg>');
+    background-repeat: no-repeat;
+    height: .6rem;
+    width: 1rem;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - .2rem);
+    right: 1.5rem;
+  }
+
+  @media (max-width: 850px) {
+    .wk-grid {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .wk-grid {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  .wk-page-title {
+    margin: 25px auto;
+    text-align: center;
+  }
+  
+  .wk-sharing {
+    margin-bottom: 50px;
+  }
+  
+  .wk-title {
+    margin-bottom: 8px;
+  }
+
+  .wk-atc {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   :root {
-    --wk-icon--stroke-width: 1px;
+    --wk-icon--stroke-width: 1.1px;
 
-    --wk-link--color: currentColor;
-    --wk-link__icon--size: 20px;
+    --wk-link--color: rgb(var(--color-foreground));
+    --wk-link__icon--size: 21px;
 
-    --wk-button--color: currentColor;
-    --wk-button__icon--color: currentColor;
-    --wk-button__icon--size: 16px;
+    --wk-button--color: rgb(var(--color-foreground));
+    --wk-button__icon--color: rgb(var(--color-foreground));
+    --wk-button__icon--size: 18px;
 
-    --wk-product-form__submit--color: currentColor;
-    --wk-product-form__submit--background: white;
+    --wk-product-form__submit--background: rgba(var(--color-button),var(--alpha-button-background));
+    --wk-product-form__submit--color: rgb(var(--color-button-text));
 
-    --wk-share-button--color: white;
-    --wk-share-button--background: #3d3d3d;
-    --wk-share-button--size: 26px;
+    --wk-share-button--color: rgb(var(--color-foreground));
+    --wk-share-button--background: transparent;
+    --wk-share-button--size: 32px;
 
     --wk-page__image--aspect-ratio: 1 / 1;
     --wk-page__grid--max-columns: 4;
   }
 </style>
 
-<script type="module" async>
+<script type="module">
   import WishlistKing from "{{ 'app_wishlist-king_sdk.js' | asset_url }}";
   import templates from "{{ 'app_wishlist-king_templates.js' | asset_url }}";
   import settings from "{{ 'app_wishlist-king_settings.js' | asset_url }}";
+
+  // Uncomment this line to use WishlistKing in third party scripts
+  // window.WishlistKing = WishlistKing;
 
   WishlistKing.toolkit.init({
     templates,
@@ -131,7 +316,6 @@
   });
 
   // Header link
-  /*
   WishlistKing.observe(
     {
       selector: "header a[href='{{ routes.cart_url }}']",
@@ -140,31 +324,27 @@
       target.insertBefore(WishlistKing.createComponent("wishlist-link"));
     }
   );
-  */
 
   // Wishlist button on product page
-  /*
   WishlistKing.observe(
     {
-      selector: "form[action='{{ routes.cart_add_url }}']",
+      selector: "form[action='{{ routes.cart_add_url }}'] .product-form__buttons",
       template: "product",
     },
     (target) => {
-      target.append(
+      target.insertAfter(
         WishlistKing.createComponent("wishlist-button", {
           id: "{{ product.id }}",
         })
       );
     }
   );
-  */
 
   // Wishlist button on collection page
-  /*
   WishlistKing.observe(
     {
-      selector: "[data-product-id]",
-      template: "collection",
+      selector: ".card-wrapper[data-product-id]",
+      // template: "collection",
     },
     (target) => {
       target.append(
@@ -174,14 +354,13 @@
       );
     }
   );
-  */
 
   // Wishlist page
-  /*
   WishlistKing.observe(
     {
       selector: "main .rte",
-      template: "wishlist",
+      template: "page",
+      handle: WishlistKing.toolkit.settings.wishlistPageHandle,
     },
     (target) => {
       target.insertAfter(WishlistKing.createComponent("wishlist-page"));
@@ -192,11 +371,12 @@
   WishlistKing.observe(
     {
       selector: "main .rte",
-      template: "shared-wishlist",
+      template: "page",
+      handle: WishlistKing.toolkit.settings.sharedWishlistPageHandle,
     },
     (target) => {
       target.insertAfter(WishlistKing.createComponent("wishlist-page-shared"));
     }
   );
-  */
 </script>
+
