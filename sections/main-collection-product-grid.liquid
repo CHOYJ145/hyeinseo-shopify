@@ -425,9 +425,9 @@ $(document).ready(function(){
   const overview = overviewParams != null ? true : false;
 
   if (overview) {
-    console.log($('.li-overview').css('display', 'inherit'));
+    $('.li-overview').css('display', 'inherit');
   } else {
-    console.log($('.li-thumbnail').css('display', 'inherit'));
+    $('.li-thumbnail').css('display', 'inherit');
   }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
