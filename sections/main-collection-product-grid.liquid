@@ -144,7 +144,7 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-
+{{ overviewGrid }}
             <ul id="product-grid" data-id="{{ section.id }}" class="
               {% if overviewGrid %}
                 overview
