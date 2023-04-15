@@ -38,14 +38,6 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-  <div>
-    {% if overviewGrid %}
-      { page_url }
-      true
-    {%  else %}
-      false
-    {% endif %}
-  </div>
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
@@ -55,7 +47,14 @@
       {% if page_url contains "overview=true" %}
         {% assign overviewGrid = true %}
       {% endif %}
-
+        <div>
+    {% if overviewGrid %}
+      { page_url }
+      true
+    {%  else %}
+      false
+    {% endif %}
+  </div>
       <ul>
         <li class="collection-grid-style list-view--pc">
           {% if overviewGrid %}
