@@ -38,6 +38,11 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
+  <div>
+  {% if overviewGrid %}
+    {%  else %}
+    {% endif %}
+  </div>
   <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}">
 
     <div id="overview-value" data-overview="{{ overview }}">
