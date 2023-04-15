@@ -144,6 +144,7 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
+
             <ul id="product-grid" data-id="{{ section.id }}" class="
               {% if overviewGrid %}
                 overview
@@ -414,15 +415,10 @@ $(document).ready(function(){
 {% assign overview = false %}
 <script type="module">
   // url 파라미터에서 overview 값 가져와 그리드 변경해주기
-  // const url = new URL(window.location.href);
-  // const urlParams = url.searchParams;
-  // const overviewParams = urlParams.get('overview');
-  // const overview = overviewParams != null ? true : false;
-  
-  // 세션 스토리지에 overview 값이 있으면 overview true로 설정해주기
-  const collectionOverview = sessionStorage.getItem('collection_overview');
-  const overview = collectionOverview === 'true' ? true : false;
-  console.log(overview)
+  const url = new URL(window.location.href);
+  const urlParams = url.searchParams;
+  const overviewParams = urlParams.get('overview');
+  const overview = overviewParams != null ? true : false;
 
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
@@ -431,35 +427,25 @@ $(document).ready(function(){
   const collectionGridOverview = document.getElementById('collection-grid-overview');
   const collectionGridThumbnail = document.getElementById('collection-grid-thumbnail');
 
-  // function updateUrlOverviewParam(value) {
-  //   if (value) {
-  //     urlParams.set('overview', 'true');
-  //   } else {
-  //     urlParams.delete('overview');
-  //   }
-  //   window.history.pushState(null, null, url.toString());
-  // }
-
-  function updateSessionStorage(value) {
+  function updateUrlOverviewParam(value) {
     if (value) {
-      sessionStorage.setItem('collection_overview', 'true');
+      urlParams.set('overview', 'true');
     } else {
-      sessionStorage.removeItem('collection_overview');
+      urlParams.delete('overview');
     }
+    window.history.pushState(null, null, url.toString());
   }
 
   if (collectionGridOverview) {
     collectionGridOverview.addEventListener('click', () => {
-      // updateUrlOverviewParam(true);
-      updateSessionStorage(true)
+      updateUrlOverviewParam(true);
       window.location.reload();
     });
   }
 
   if (collectionGridThumbnail) {
     collectionGridThumbnail.addEventListener('click', () => {
-      // updateUrlOverviewParam(false);
-      updateSessionStorage(false);
+      updateUrlOverviewParam(false);
       window.location.reload();
     });
   }
