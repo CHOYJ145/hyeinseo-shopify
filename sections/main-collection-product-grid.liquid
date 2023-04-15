@@ -422,6 +422,7 @@ $(document).ready(function(){
   // 세션 스토리지에 overview 값이 있으면 overview true로 설정해주기
   const collectionOverview = sessionStorage.getItem('collection_overview');
   const overview = collectionOverview === 'true' ? true : false;
+  console.log(overview)
 
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
