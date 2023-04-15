@@ -424,6 +424,11 @@ $(document).ready(function(){
   const overviewParams = urlParams.get('overview');
   const overview = overviewParams != null ? true : false;
 
+  if (overview) {
+    console.log($('.li-overview'));
+  } else {
+    console.log($('.li-thumbnail'));
+  }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
 
