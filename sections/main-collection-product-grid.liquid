@@ -165,7 +165,6 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                  {% if overviewGrid %}
                     <li>
                     {% render 'card-product-overview',
                       card_product: product,
@@ -179,7 +178,6 @@
 
                     %}
                     </li>
-                  {% else %}
                     <li class="grid__item">
                     {% render 'card-product',
                       card_product: product,
@@ -193,7 +191,6 @@
 
                     %}
                     </li>
-                  {% endif %}
               {%- endfor -%}
             </ul>
             {%- if paginate.pages > 1 -%}
