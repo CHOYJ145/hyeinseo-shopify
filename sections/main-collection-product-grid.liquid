@@ -136,14 +136,7 @@
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
 
-            <ul id="product-grid" data-id="{{ section.id }}" class="
-              {% if overviewGrid %}
-                overview
-              {% else %}
-                thumbnail
-              {% endif %}
-              list-unstyled
-              ">
+            <ul id="product-grid" data-id="{{ section.id }}" class="list-unstyled">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
