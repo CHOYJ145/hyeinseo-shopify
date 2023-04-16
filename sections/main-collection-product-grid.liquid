@@ -399,12 +399,16 @@ $(document).ready(function(){
     console.log(overview);
     if (overview) {
       $('.li-overview').css('display', 'inherit');
+      $('.li-thumbnail').css('display', 'none');
       $('#product-grid').removeClass('thumbnail').addClass('overview');
       $('#collection-grid-thumbnail').css('display', 'inherit');
+      $('#collection-grid-overview').css('display', 'none');
     } else {
       $('.li-thumbnail').css('display', 'inherit');
+      $('.li-overview').css('display', 'none');
       $('#product-grid').removeClass('overview').addClass('thumbnail');
       $('#collection-grid-overview').css('display', 'inherit');
+      $('#collection-grid-thumbnail').css('display', 'none');
     }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
