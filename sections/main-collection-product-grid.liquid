@@ -426,8 +426,10 @@ $(document).ready(function(){
 
   if (overview) {
     $('.li-overview').css('display', 'inherit');
+    $('#product-grid').removeClass('thumbnail').addClass('overview');
   } else {
     $('.li-thumbnail').css('display', 'inherit');
+    $('#product-grid').removeClass('overview').addClass('thumbnail');
   }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
