@@ -57,11 +57,8 @@
   </div>
       <ul>
         <li class="collection-grid-style list-view--pc">
-          {% if overviewGrid %}
             <span id="collection-grid-thumbnail">Thumbnail</span>
-          {% else %}
             <span id="collection-grid-overview">Overview</span>
-          {% endif %}
         </li>
         <li class="m--list-path">
           Shop
@@ -427,9 +424,11 @@ $(document).ready(function(){
   if (overview) {
     $('.li-overview').css('display', 'inherit');
     $('#product-grid').removeClass('thumbnail').addClass('overview');
+    $('#collection-grid-overview').css('display', 'none');
   } else {
     $('.li-thumbnail').css('display', 'inherit');
     $('#product-grid').removeClass('overview').addClass('thumbnail');
+    $('#collection-grid-thumbnail').css('display', 'none');
   }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
