@@ -396,6 +396,7 @@ $(document).ready(function(){
 <script type="module">
   const render = () => {
     const overview = sessionStorage.getItem('overview') != null ? true : false;
+    console.log(overview);
     if (overview) {
       $('.li-overview').css('display', 'inherit');
       $('#product-grid').removeClass('thumbnail').addClass('overview');
