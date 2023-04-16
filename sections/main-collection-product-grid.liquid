@@ -424,11 +424,11 @@ $(document).ready(function(){
   if (overview) {
     $('.li-overview').css('display', 'inherit');
     $('#product-grid').removeClass('thumbnail').addClass('overview');
-    $('#collection-grid-overview').css('display', 'inherit');
+    $('#collection-grid-thumbnail').css('display', 'inherit');
   } else {
     $('.li-thumbnail').css('display', 'inherit');
     $('#product-grid').removeClass('overview').addClass('thumbnail');
-    $('#collection-grid-thumbnail').css('display', 'inherit');
+    $('#collection-grid-overview').css('display', 'inherit');
   }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
