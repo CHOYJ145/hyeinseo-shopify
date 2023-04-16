@@ -394,49 +394,37 @@ $(document).ready(function(){
 {% endschema %}
 
 <script type="module">
-  // url 파라미터에서 overview 값 가져와 그리드 변경해주기
-  const url = new URL(window.location.href);
-  const urlParams = url.searchParams;
-  const overviewParams = urlParams.get('overview');
-  console.log(overviewParams);
-  const overview = overviewParams != null ? true : false;
+  const overview = sessionStorage.getItem('overview') != null ? true : false;
 
-  if (overview) {
-    $('.li-overview').css('display', 'inherit');
-    $('#product-grid').removeClass('thumbnail').addClass('overview');
-    $('#collection-grid-thumbnail').css('display', 'inherit');
-  } else {
-    $('.li-thumbnail').css('display', 'inherit');
-    $('#product-grid').removeClass('overview').addClass('thumbnail');
-    $('#collection-grid-overview').css('display', 'inherit');
-  }
+  const render = () => {
+    if (overview) {
+      $('.li-overview').css('display', 'inherit');
+      $('#product-grid').removeClass('thumbnail').addClass('overview');
+      $('#collection-grid-thumbnail').css('display', 'inherit');
+    } else {
+      $('.li-thumbnail').css('display', 'inherit');
+      $('#product-grid').removeClass('overview').addClass('thumbnail');
+      $('#collection-grid-overview').css('display', 'inherit');
+    }
   const overviewValue = document.getElementById('overview-value');
   overviewValue.setAttribute('data-overview', overview);
+  }
 
   // overview, thumbnail 버튼 이벤트
   const collectionGridOverview = document.getElementById('collection-grid-overview');
   const collectionGridThumbnail = document.getElementById('collection-grid-thumbnail');
 
-  function updateUrlOverviewParam(value) {
-    if (value) {
-      urlParams.set('overview', 'true');
-    } else {
-      urlParams.delete('overview');
-    }
-    window.history.pushState(null, null, url.toString());
-  }
-
   if (collectionGridOverview) {
     collectionGridOverview.addEventListener('click', () => {
-      updateUrlOverviewParam(true);
-      window.location.reload();
+      sessionStorage.setItem('overview', true);
+      render();
     });
   }
 
   if (collectionGridThumbnail) {
     collectionGridThumbnail.addEventListener('click', () => {
-      updateUrlOverviewParam(false);
-      window.location.reload();
+      sessionStorage.setItem('overview', false);
+      render();
     });
   }
 </script>
