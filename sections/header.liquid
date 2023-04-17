@@ -299,7 +299,13 @@
               endif
             -%}
           </span>-->
-            <span>Login</span>
+            <span>
+              {% if customer.log_in %}
+                Account
+              {% else %}
+                Login
+              {% endif %}
+            </span>
           </a>
         {%- endif -%}
         <a href="{{ routes.cart_url }}" class="header__menu-item list-menu__item link link--text focus-inset" id="cart-icon-bubble">
