@@ -1167,6 +1167,25 @@
     });
 </script>
 
+<script>
+  WishlistKing.observe(
+  {
+    // Adjust the selector to target a element
+    selector: ".card-information",
+    // Only run on product pages
+    template: "collection",
+  },
+  (target) => {
+    target.append(
+      WishlistKing.createComponent("wishlist-button", {
+        // Set product id with liquid
+        id: "{{ card_product.id }}",
+      })
+    );
+  }
+);
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
