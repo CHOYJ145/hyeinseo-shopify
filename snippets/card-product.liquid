@@ -169,6 +169,9 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
+            <button type="button" class="wk-button wk-button--add wk-button--floating" title="Add to Wishlist" data-wk-add-product="{{ card_product.id }}" style="border-bottom: solid 1px; margin: 0; padding: 3px 0 2px 0; font-size:14px;" data-appmate="">
+              <span class="wk-button__label">Add to Wishlist</span>
+            </button>
           </div>
 
         </div>
