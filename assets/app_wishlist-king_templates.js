@@ -64,7 +64,7 @@ const templates = [
       {% assign icon_name = "remove-icon" %}
       {% endif %}
 
-      <button type="button" class="wk-button wk-button--{{ btn_action }} {{ addClass }}" title="{{ btn_title }}" data-wk-{{ btn_action }}-{{ scope }}="{{ targetId }}">
+      <button type="button" class="wk-button wk-button--{{ btn_action }} {{ addClass }}" title="{{ btn_title }}" data-wk-{{ btn_action }}-{{ scope }}="{{ targetId }}" style="margin: 0">
         <span class="wk-button__label">{{ btn_text }}</span>
       </button>
     `,
