@@ -1,15 +1,15 @@
 const templates = [
-  // {
-  //   id: "wishlist-link",
-  //   data: "wishlist",
-  //   template: `
-  //     <a href="{{ wishlist.url }}" class="wk-link wk-link--{{ wishlist.state }}" title="{{ locale.view_wishlist }}">
-  //       <div class="wk-icon wk-link__icon">{% include "wishlist-icon" %}</div>
-  //       <span class="wk-link__label">{{ locale.wishlist }}</span>
-  //       <span class="wk-link__count">{{ wishlist.item_count }}</span>
-  //     </a>
-  //   `,
-  // },
+  {
+    id: "wishlist-link",
+    data: "wishlist",
+    template: `
+      <a href="{{ wishlist.url }}" class="wk-link wk-link--{{ wishlist.state }}" title="{{ locale.view_wishlist }}">
+        <div class="wk-icon wk-link__icon">{% include "wishlist-icon" %}</div>
+        <span class="wk-link__label">{{ locale.wishlist }}</span>
+        <span class="wk-link__count">{{ wishlist.item_count }}</span>
+      </a>
+    `,
+  },
   {
     id: "wishlist-button",
     data: "product",
