@@ -169,9 +169,7 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
-            <button type="button" class="wk-button wk-button--add " title="Add to Wishlist" data-wk-add-product="{{ card_product.id }}" style="border-bottom: solid 1px; margin: 0; padding: 3px 0 2px 0; font-size:14px;" data-appmate="">
-              <span class="wk-button__label">Add to Wishlist</span>
-            </button>
+            
           </div>
 
         </div>
@@ -345,3 +343,22 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  WishlistKing.observe(
+  {
+    // Adjust the selector to target a element
+    selector: ".card-information",
+    // Only run on product pages
+    template: "collection",
+  },
+  (target) => {
+    target.append(
+      WishlistKing.createComponent("wishlist-button", {
+        // Set product id with liquid
+        id: "{{ card_product.id }}",
+      })
+    );
+  }
+);
+</script>
