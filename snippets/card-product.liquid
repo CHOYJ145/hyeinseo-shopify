@@ -358,7 +358,7 @@
     target.append(
       WishlistKing.createComponent("wishlist-button", {
         // Set product id with liquid
-        id: "{{ card_product.id }}",
+        id: target.container.getAttribute("data"),
       })
     );
   }
