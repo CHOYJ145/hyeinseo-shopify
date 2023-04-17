@@ -124,7 +124,7 @@
               <div>Out of stock</div>
             {% endif %}
             </div>
-          <div class="card-information" data='{{ card_product.id }}'>
+          <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -171,6 +171,7 @@
             {% render 'price', product: card_product, price_class: '' %}
             
           </div>
+          <div class='wishlist' data='{{ card_product.id }}'></div>
 
         </div>
         {%- if show_quick_add -%}
@@ -350,7 +351,7 @@
   WishlistKing.observe(
   {
     // Adjust the selector to target a element
-    selector: ".card-information",
+    selector: ".wishlist",
     // Only run on product pages
     template: "collection",
   },
