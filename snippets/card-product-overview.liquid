@@ -387,3 +387,28 @@
   </div>
 
 {%- endif -%}
+{% render 'app_wishlist-king' %}
+
+<script type='module'>
+  WishlistKing.observe(
+  {
+    // Adjust the selector to target a element
+    selector: ".wishlist",
+    // Only run on product pages
+    template: "collection",
+  },
+  (target) => {
+    target.append(
+      WishlistKing.createComponent("wishlist-button", {
+        // Set product id with liquid
+        id: target.container.getAttribute("data"),
+      })
+    );
+  }
+);
+</script>
+<style>
+  .wk-button {
+    border: 0 !important;
+  }
+</style>
