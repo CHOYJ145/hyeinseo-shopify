@@ -109,7 +109,24 @@ const templates = [
           </div>
         {% endif %}
 
-        <div>
+        <div id="wishlist-page" class="customer">
+          <div class="account-nav">
+            <div>{{ 'customer.account.details' | t }}</div>
+            <div class="account-nav-item">
+                Orders<br>
+                <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
+            </div>
+            <div class="account-nav-item">
+                <a href="{{ routes.account_addresses_url }}">
+                    Addresses
+                </a>
+            </div>
+            <div class="account-nav-item">
+                <a href="{{ routes.account_logout_url }}">
+                    {{ 'customer.log_out' | t }}
+                </a>
+            </div>
+          </div>
           <div class="wk-grid">
             {% assign item_count = 0 %}
             {% assign products = wishlist.products | reverse %}
