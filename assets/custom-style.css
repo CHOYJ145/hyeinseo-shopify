@@ -3064,8 +3064,9 @@ button.swiper-pagination-bullet {
         width: calc(100vw - 8px);
     }
 
-    .grid--2 .swiperTest, .recommend-item .swiperTest {
-        width: calc(50vw - 14px);
+    .grid--2 .swiperTest,
+    .recommend-item .swiperTest {
+        width: calc(50vw - 8px);
     }
 }
 
