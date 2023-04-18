@@ -57,13 +57,12 @@
               </div>
           {%- endif -%}
       </div>
-      <div class="order-detail-row">
-          <table role="table" class="order-details">
-              <caption class="visually-hidden">{{ 'customer.order.title' | t: name: order.name }}</caption>
-              <tbody role="rowgroup">
-              {%- for line_item in order.line_items -%}
-                  <tr role="row">
-                      <td
+      <div class="order-detail-row order-detail-row--ex">
+          <div class="order-detail-item">
+              <div class="order-detail--img"></div>
+              <div class="order-detail--info">
+                  {%- for line_item in order.line_items -%}
+                      <div
                               id="Row{{ line_item.key }}"
                               headers="ColumnProduct"
                               role="rowheader"
@@ -137,15 +136,15 @@
                                   </div>
                               {%- endif -%}
                           </div>
-                      </td>
-                      <td
+                      </div>
+                      <div
                               headers="Row{{ line_item.key }} ColumnSku"
                               role="cell"
                               data-label="{{ 'customer.order.sku' | t }}"
                       >
                           {{ line_item.sku }}
-                      </td>
-                      <td
+                      </div>
+                      <div
                               headers="Row{{ line_item.key }} ColumnPrice"
                               role="cell"
                               data-label="{{ 'customer.order.price' | t }}"
@@ -196,15 +195,15 @@
                           {%- else -%}
                               <span>{{ line_item.final_price | money }}</span>
                           {%- endif -%}
-                      </td>
-                      <td
+                      </div>
+                      <div
                               headers="Row{{ line_item.key }} ColumnQuantity"
                               role="cell"
                               data-label="{{ 'customer.order.quantity' | t }}"
                       >
                           {{ line_item.quantity }}
-                      </td>
-                      <td
+                      </div>
+                      <div
                               headers="Row{{ line_item.key }} ColumnTotal"
                               role="cell"
                               data-label="{{ 'customer.order.total' | t }}"
@@ -227,11 +226,10 @@
                           {%- else -%}
                               {{ line_item.original_line_price | money }}
                           {%- endif -%}
-                      </td>
-                  </tr>
-              {%- endfor -%}
-              </tbody>
-          </table>
+                      </div>
+                  {%- endfor -%}
+              </div>
+          </div>
       </div>
 
       <div class="order-detail-row">
@@ -254,66 +252,63 @@
       </div>
 
       <div class="order-detail-row">
-          <table role="table" class="order-details">
-              <caption class="visually-hidden">{{ 'customer.order.title' | t: name: order.name }}</caption>
-              <tfoot role="rowgroup">
-              <tr role="row">
-                  <td id="RowSubtotal" role="rowheader" scope="row" colspan="4">
-                      {{ 'customer.order.subtotal' | t }}
-                  </td>
-                  <td headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</td>
-              </tr>
-              {%- if order.cart_level_discount_applications != blank -%}
-                  <tr role="row">
-                      {%- for discount_application in order.cart_level_discount_applications -%}
-                          <td id="RowDiscount" role="rowheader" scope="row" colspan="4">
-                              {{ 'customer.order.discount' | t }}
-                              <span class="cart-discount">
+          <div role="row">
+              <div id="RowSubtotal" role="rowheader" scope="row" colspan="4">
+                  {{ 'customer.order.subtotal' | t }}
+              </div>
+              <div headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</div>
+          </div>
+          {%- if order.cart_level_discount_applications != blank -%}
+              <div role="row">
+                  {%- for discount_application in order.cart_level_discount_applications -%}
+                      <div id="RowDiscount" role="rowheader" scope="row" colspan="4">
+                          {{ 'customer.order.discount' | t }}
+                          <span class="cart-discount">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
                       <use href="#icon-discount" />
                     </svg>
                     {{- discount_application.title -}}
                   </span>
-                          </td>
-                          <td headers="RowDiscount" role="cell" data-label="{{ 'customer.order.discount' | t }}">
-                              <div>
-                                  <span>-{{ discount_application.total_allocated_amount | money }}</span>
-                                  <span class="cart-discount">
+                      </div>
+                      <div headers="RowDiscount" role="cell" data-label="{{ 'customer.order.discount' | t }}">
+                          <div>
+                              <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                              <span class="cart-discount">
                       <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
                         <use href="#icon-discount" />
                       </svg>
                       {{- discount_application.title -}}
                     </span>
-                              </div>
-                          </td>
-                      {%- endfor -%}
-                  </tr>
-              {%- endif -%}
-              {%- for shipping_method in order.shipping_methods -%}
-                  <tr role="row">
-                      <td id="RowShipping" role="rowheader" scope="row" colspan="4">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</td>
-                      <td headers="RowShipping" role="cell" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</td>
-                  </tr>
-              {%- endfor -%}
-              {%- for tax_line in order.tax_lines -%}
-                  <tr role="row">
-                      <td id="RowTax" role="rowheader" scope="row" colspan="4">{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</td>
-                      <td headers="RowTax" role="cell" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</td>
-                  </tr>
-              {%- endfor -%}
-              {%- if order.total_duties -%}
-                  <tr role="row">
-                      <td id="RowDuties" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total_duties' | t }}</td>
-                      <td headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</td>
-                  </tr>
-              {%- endif -%}
-              <tr role="row">
-                  <td id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</td>
-                  <td headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</td>
-              </tr>
-              </tfoot>
-          </table>
+                          </div>
+                      </div>
+                  {%- endfor -%}
+              </div>
+          {%- endif -%}
+          {%- for shipping_method in order.shipping_methods -%}
+              <div role="row">
+                  <div id="RowShipping" role="rowheader" scope="row" colspan="4">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</div>
+                  <div headers="RowShipping" role="cell" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</div>
+              </div>
+          {%- endfor -%}
+          {%- for tax_line in order.tax_lines -%}
+              <div role="row">
+                  <div id="RowTax" role="rowheader" scope="row" colspan="4">{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</div>
+                  <div headers="RowTax" role="cell" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</div>
+              </div>
+          {%- endfor -%}
+          {%- if order.total_duties -%}
+              <div role="row">
+                  <div id="RowDuties" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total_duties' | t }}</div>
+                  <div headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</div>
+              </div>
+          {%- endif -%}
+          <div role="row">
+              <div id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</div>
+              <div headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</div>
+          </div>
       </div>
+
+
     <!-- <div>
 
 

@@ -3178,3 +3178,16 @@ button.swiper-pagination-bullet {
         line-height: 19px;
     }
 }
+
+.order-detail-row {
+    width: 50%;
+}
+
+.order-detail-row--ex {
+    width: 100%;
+}
+
+.order-detail-row:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
