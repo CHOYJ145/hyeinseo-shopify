@@ -3275,3 +3275,7 @@ button.swiper-pagination-bullet {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+.custom .loading-overlay__spinner {
+    display: none !important;
+}
