@@ -2585,7 +2585,9 @@ button.swiper-pagination-bullet {
 .custom #list-page .card-information .price,
 .custom .recommend-item .card-information .price,
 .custom #list-page .option-list,
-.custom .recommend-item .option-list {
+.custom .recommend-item .option-list,
+.custom #list-page .wishlist,
+.custom .recommend-item .wishlist {
     opacity: 0;
 }
 
@@ -2594,7 +2596,8 @@ button.swiper-pagination-bullet {
 }
 
 .custom #list-page .product-info-wrap--o .price,
-.custom #list-page .product-info-wrap--o .option-list {
+.custom #list-page .product-info-wrap--o .option-list,
+.custom #list-page .product-info-wrap--o + .wishlist {
     opacity: 1;
 }
 
@@ -2973,7 +2976,9 @@ button.swiper-pagination-bullet {
     .custom #list-page .grid__item:hover .t-img-bar,
     .custom .recommend-item:hover .t-img-bar,
     .custom #list-page .grid__item:hover .color-code-list,
-    .custom .recommend-item:hover .color-code-list {
+    .custom .recommend-item:hover .color-code-list,
+    .custom #list-page .grid__item:hover .wishlist,
+    .custom .recommend-item:hover .wishlist {
         opacity: 1;
     }
 }
@@ -2986,7 +2991,9 @@ button.swiper-pagination-bullet {
     .custom #list-page .grid__item .t-img-bar,
     .custom .recommend-item .t-img-bar,
     .custom #list-page .grid__item .color-code-list,
-    .custom .recommend-item .color-code-list {
+    .custom .recommend-item .color-code-list,
+    .custom #list-page .grid__item:hover .wishlist,
+    .custom .recommend-item:hover .wishlist {
         opacity: 1;
     }
 }
@@ -3161,13 +3168,13 @@ button.swiper-pagination-bullet {
 }
 
 .quantity__input {
-    font-size : 14px;
+    font-size: 14px;
     line-height: 16px;
 }
 
 @media screen and (max-width: 1024px) {
     .quantity__input {
-        font-size : 16px;
+        font-size: 16px;
         line-height: 19px;
     }
 }

@@ -123,6 +123,7 @@ cart-remove-button button {
 
 @media screen and (max-width: 1024px) {
   cart-remove-button button {
+    padding: 0;
     width: 10px;
     height: 10px;
   }
