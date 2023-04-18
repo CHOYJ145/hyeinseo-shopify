@@ -196,7 +196,7 @@
     display: grid;
     grid-template-columns:repeat(var(--wk-page__grid--max-columns), 1fr);
     grid-gap: 6px;
-    padding: 3em 1em 4em
+    padding: 22px 6px 4em
 }
 
 @media (max-width: 850px) {
