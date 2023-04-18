@@ -367,3 +367,7 @@
     appearance: none;
     border: none
 }
+
+.custom .wk-product-form {
+    display: none !important;
+}
