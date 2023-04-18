@@ -239,12 +239,12 @@ const templates = [
     `,
   },
   {
-    id: "wishlist-page-shared",
-    data: "shared_wishlist",
-    template: `
-      {% assign wishlist = shared_wishlist %}
-      {% include "wishlist-page" with wishlist %}
-    `,
+    // id: "wishlist-page-shared",
+    // data: "shared_wishlist",
+    // template: `
+    //   {% assign wishlist = shared_wishlist %}
+    //   {% include "wishlist-page" with wishlist %}
+    // `,
   },
   {
     id: "wishlist-button-bulk-add-to-cart",
