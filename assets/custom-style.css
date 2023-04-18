@@ -2156,7 +2156,7 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
     .product-visual-list {
         display: none;
     }
