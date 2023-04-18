@@ -1448,7 +1448,7 @@ button.shopify-payment-button__button--unbranded {
 .customer button:disabled,
 .customer button[aria-disabled='true'],
 .customer button.disabled {
-  cursor: not-allowed;
+  /*cursor: not-allowed;*/
   opacity: 0.5;
 }
 
@@ -1458,7 +1458,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.loading {
-  color: transparent;
+  /*color: transparent;*/
   position: relative;
 }
 
