@@ -3206,13 +3206,13 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
-#AddAddress  .field input {
+#AddAddress .field input {
     padding: 0;
     margin: 0;
     bottom: 0;
     box-shadow: none;
 }
 
-.address-default {
+.addresses .address-default {
     text-align: left;
 }
