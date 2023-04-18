@@ -238,7 +238,7 @@
 
       <div class="order-detail-row">
           <div>
-              <h2>{{ 'customer.order.billing_address' | t }}</h2>
+              <div>{{ 'customer.order.billing_address' | t }}</div>
               <p>
                   <strong>{{ 'customer.order.payment_status' | t }}:</strong>
                   {{ order.financial_status_label }}
@@ -246,7 +246,7 @@
               {{ order.billing_address | format_address }}
           </div>
           <div>
-              <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+              <div>{{ 'customer.order.shipping_address' | t }}</div>
               <p>
                   <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
                   {{ order.fulfillment_status_label }}
