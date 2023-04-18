@@ -2965,7 +2965,7 @@ button.swiper-pagination-bullet {
 .product-info-wrap--o .color-code-list {
     position: static;
     opacity: 1;
-    margin: 1px 0;
+    margin: 1px 0 !important;
 }
 
 .product-info-wrap--o .color-code-list .color-code {
