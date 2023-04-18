@@ -166,7 +166,7 @@ const templates = [
         {% endcomment %}
 
         {% unless wishlist.read_only %}
-          <div class="wk-sharing">
+          <!-- <div class="wk-sharing">
             <h4 class="wk-title">{{ locale.share_wishlist }}</h4>
             <ul class="wk-sharing__list">
               <li class="wk-sharing__list-item">{% include "wishlist-share-button-fb" %}</li>
@@ -177,7 +177,7 @@ const templates = [
               {% comment %}<li class="wk-sharing__list-item">{% include "wishlist-share-button-contact" %}</li>{% endcomment %}
             </ul>
             <div class="wk-sharing__link wk-sharing__link--hidden"><span class="wk-sharing__link-text"></span><button class="wk-sharing__link__copy-button" data-clipboard-target=".wk-sharing__link-text">{{ locale.copy_share_link }}</button></div>
-          </div>
+          </div> -->
         {% endunless %}
       {% endif %}
       </div>
@@ -239,12 +239,12 @@ const templates = [
     `,
   },
   {
-    // id: "wishlist-page-shared",
-    // data: "shared_wishlist",
-    // template: `
-    //   {% assign wishlist = shared_wishlist %}
-    //   {% include "wishlist-page" with wishlist %}
-    // `,
+    id: "wishlist-page-shared",
+    data: "shared_wishlist",
+    template: `
+      {% assign wishlist = shared_wishlist %}
+      {% include "wishlist-page" with wishlist %}
+    `,
   },
   {
     id: "wishlist-button-bulk-add-to-cart",
