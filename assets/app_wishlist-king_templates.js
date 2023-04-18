@@ -166,78 +166,78 @@ const templates = [
         {% endcomment %}
 
         {% unless wishlist.read_only %}
-<!--          <div class="wk-sharing">-->
-<!--            <h4 class="wk-title">{{ locale.share_wishlist }}</h4>-->
-<!--            <ul class="wk-sharing__list">-->
-<!--              <li class="wk-sharing__list-item">{% include "wishlist-share-button-fb" %}</li>-->
-<!--              <li class="wk-sharing__list-item">{% include "wishlist-share-button-twitter" %}</li>-->
-<!--              <li class="wk-sharing__list-item">{% include "wishlist-share-button-email" %}</li>-->
-<!--              <li class="wk-sharing__list-item">{% include "wishlist-share-button-link" %}</li>-->
-<!--              <li class="wk-sharing__list-item">{% include "wishlist-share-button-whatsapp" %}</li>-->
-<!--              {% comment %}<li class="wk-sharing__list-item">{% include "wishlist-share-button-contact" %}</li>{% endcomment %}-->
-<!--            </ul>-->
-<!--            <div class="wk-sharing__link wk-sharing__link&#45;&#45;hidden"><span class="wk-sharing__link-text"></span><button class="wk-sharing__link__copy-button" data-clipboard-target=".wk-sharing__link-text">{{ locale.copy_share_link }}</button></div>-->
-<!--          </div>-->
+          <div class="wk-sharing">
+            <h4 class="wk-title">{{ locale.share_wishlist }}</h4>
+            <ul class="wk-sharing__list">
+              <li class="wk-sharing__list-item">{% include "wishlist-share-button-fb" %}</li>
+              <li class="wk-sharing__list-item">{% include "wishlist-share-button-twitter" %}</li>
+              <li class="wk-sharing__list-item">{% include "wishlist-share-button-email" %}</li>
+              <li class="wk-sharing__list-item">{% include "wishlist-share-button-link" %}</li>
+              <li class="wk-sharing__list-item">{% include "wishlist-share-button-whatsapp" %}</li>
+              {% comment %}<li class="wk-sharing__list-item">{% include "wishlist-share-button-contact" %}</li>{% endcomment %}
+            </ul>
+            <div class="wk-sharing__link wk-sharing__link--hidden"><span class="wk-sharing__link-text"></span><button class="wk-sharing__link__copy-button" data-clipboard-target=".wk-sharing__link-text">{{ locale.copy_share_link }}</button></div>
+          </div>
         {% endunless %}
       {% endif %}
       </div>
     `,
   },
-  // {
-  //   id: "wishlist-product-form",
-  //   events: {
-  //     "render .wk-product-form": (form) => {
-  //       const container = form.closest("[data-wk-item]");
-  //       const itemId = container.getAttribute("data-wk-item");
-  //       WishlistKing.toolkit.getItem(itemId).then((product) => {
-  //         WishlistKing.toolkit.initProductForm(form, product, {
-  //           // NOTE: Uncomment to override default option change
-  //           // onOptionChange: (event) => {
-  //           //   console.log(event.dataset);
-  //           // },
-  //           // NOTE: Uncomment to override default form submit
-  //           // onFormSubmit: (event) => {
-  //           //   event.preventDefault();
-  //           //   event.stopPropagation();
-  //           // },
-  //         });
-  //       });
-  //     },
-  //   },
-  //   template: `
-  //     <form class="wk-product-form" action="/cart/add" method="post">
-  //       {% assign current_variant = product.selected_or_first_available_variant %}
-  //       <div class="wk-product-form__options">
-  //         <input name="id" value="{{ current_variant.id }}" type="hidden">
-  //         {% unless product.has_only_default_variant %}
-  //           {% for option in product.options_with_values %}
-  //             <div class="wk-product-form__option">
-  //               <label class="wk-product-form__option__label" for="Option{{ option.position }}">
-  //                 {{ option.name }}
-  //               </label>
-  //               <select class="wk-product-form__option__select" name="options[{{ option.name | escape }}]">
-  //                 {% for value in option.values %}
-  //                   <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %} {% if option.soldout_values contains value %}disabled{% endif %}>
-  //                     {{ value }}
-  //                   </option>
-  //                 {% endfor %}
-  //               </select>
-  //             </div>
-  //           {% endfor %}
-  //         {% endunless %}
-  //         {% comment %}
-  //         <div class="wk-product-form__quantity">
-  //           <label class="wk-product-form__quantity__label" for="Quantity">{{ locale.quantity }}</label>
-  //           <input class="wk-product-form__quantity__input" type="number" name="quantity" value="1" min="1">
-  //         </div>
-  //         {% endcomment %}
-  //       </div>
-  //       <button type="submit" class="wk-product-form__submit" data-wk-add-to-cart="{{ product.wishlist_item_id }}" {% unless current_variant.available %}disabled{% endunless %}>
-  //         {% if current_variant.available %}{{ locale.add_to_cart }}{% else %}{{ locale.sold_out }}{% endif %}
-  //       </button>
-  //     </form>
-  //   `,
-  // },
+  {
+    id: "wishlist-product-form",
+    events: {
+      "render .wk-product-form": (form) => {
+        const container = form.closest("[data-wk-item]");
+        const itemId = container.getAttribute("data-wk-item");
+        WishlistKing.toolkit.getItem(itemId).then((product) => {
+          WishlistKing.toolkit.initProductForm(form, product, {
+            // NOTE: Uncomment to override default option change
+            // onOptionChange: (event) => {
+            //   console.log(event.dataset);
+            // },
+            // NOTE: Uncomment to override default form submit
+            // onFormSubmit: (event) => {
+            //   event.preventDefault();
+            //   event.stopPropagation();
+            // },
+          });
+        });
+      },
+    },
+    template: `
+      <form class="wk-product-form" action="/cart/add" method="post">
+        {% assign current_variant = product.selected_or_first_available_variant %}
+        <div class="wk-product-form__options">
+          <input name="id" value="{{ current_variant.id }}" type="hidden">
+          {% unless product.has_only_default_variant %}
+            {% for option in product.options_with_values %}
+              <div class="wk-product-form__option">
+                <label class="wk-product-form__option__label" for="Option{{ option.position }}">
+                  {{ option.name }}
+                </label>
+                <select class="wk-product-form__option__select" name="options[{{ option.name | escape }}]">
+                  {% for value in option.values %}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %} {% if option.soldout_values contains value %}disabled{% endif %}>
+                      {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endfor %}
+          {% endunless %}
+          {% comment %}
+          <div class="wk-product-form__quantity">
+            <label class="wk-product-form__quantity__label" for="Quantity">{{ locale.quantity }}</label>
+            <input class="wk-product-form__quantity__input" type="number" name="quantity" value="1" min="1">
+          </div>
+          {% endcomment %}
+        </div>
+        <button type="submit" class="wk-product-form__submit" data-wk-add-to-cart="{{ product.wishlist_item_id }}" {% unless current_variant.available %}disabled{% endunless %}>
+          {% if current_variant.available %}{{ locale.add_to_cart }}{% else %}{{ locale.sold_out }}{% endif %}
+        </button>
+      </form>
+    `,
+  },
   {
     id: "wishlist-page-shared",
     data: "shared_wishlist",
