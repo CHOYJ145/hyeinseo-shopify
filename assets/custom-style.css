@@ -3250,6 +3250,6 @@ button.swiper-pagination-bullet {
     }
     .product-infos .wk-button {
         padding: 2px 0 1px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #000 !important;
     }
 }
