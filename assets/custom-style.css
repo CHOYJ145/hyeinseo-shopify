@@ -3193,8 +3193,8 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.address-default h2,
-#AddAddress #AddressNewHeading {
+.custom .address-default h2,
+.custom #AddAddress #AddressNewHeading {
     font-size: initial;
     font-weight: normal;
 }
@@ -3214,5 +3214,6 @@ button.swiper-pagination-bullet {
 }
 
 .addresses .address-default {
+    margin: 0;
     text-align: left;
 }
