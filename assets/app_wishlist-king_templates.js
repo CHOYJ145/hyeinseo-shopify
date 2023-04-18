@@ -111,9 +111,8 @@ const templates = [
 
         <div id="wishlist-page" class="customer">
           <div class="account-nav">
-            <div>{{ 'customer.account.details' | t }}</div>
+            <div>Wishlist</div>
             <div class="account-nav-item">
-                Orders<br>
                 <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
             </div>
             <div class="account-nav-item">
