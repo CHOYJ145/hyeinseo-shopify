@@ -186,7 +186,7 @@ class PredictiveSearch extends HTMLElement {
 
   open() {
     this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
-    this.setAttribute('open', true);ㅋ
+    this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
     this.isOpen = true;
   }
