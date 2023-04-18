@@ -1519,6 +1519,7 @@ button.swiper-pagination-bullet {
 
 .detail-page .product-form__buttons .button:disabled {
     opacity: 1;
+    cursor: default;
 }
 
 .detail-page .product-wrap {
