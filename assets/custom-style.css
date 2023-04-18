@@ -2207,6 +2207,7 @@ button.swiper-pagination-bullet {
     }
 
     .detail-page .product-wrap .product-imgs {
+        margin-top: 23px;
         padding: 0 4px;
     }
 
