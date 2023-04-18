@@ -36,13 +36,14 @@
 
   <div class="order-detail">
       <div class="order-detail-row">
+          {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <div>
               <div>Date</div>
               <div>{{ 'customer.order.date_html' | t: date: order_date }}</div>
           </div>
           <div>
               <div>Order</div>
-              {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
+
               <div>{{ 'customer.order.title' | t: order.name }}</div>
           </div>
           {%- if order.cancelled -%}
