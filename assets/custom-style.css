@@ -3192,3 +3192,15 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+#AddAddress #AddressNewHeading {
+    font-size: initial;
+    font-weight: normal;
+}
+
+#AddAddress .field:before,
+#AddAddress .field:after,
+#AddAddress .field:hover:before,
+#AddAddress .field:hover:after {
+    display: none;
+}

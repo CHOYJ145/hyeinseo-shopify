@@ -113,7 +113,7 @@ const templates = [
           <div class="account-nav">
             <div>Wishlist</div>
             <div class="account-nav-item">
-                <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
+                <a href="{{ routes.account_url }}">account_url</a>
             </div>
             <div class="account-nav-item">
                 <a href="{{ routes.account_addresses_url }}">
@@ -122,7 +122,7 @@ const templates = [
             </div>
             <div class="account-nav-item">
                 <a href="{{ routes.account_logout_url }}">
-                    {{ 'customer.log_out' | t }}
+                    log_out
                 </a>
             </div>
           </div>

@@ -36,14 +36,14 @@
 
     <div class="addresses-wrap">
       <div data-address>
-        <button
+        {% comment %}<button
                 type="button"
                 aria-expanded="true"
                 aria-controls="AddAddress"
                 style="width: 0; height: 0; opacity: 0; overflow: hidden"
         >
           {{ 'customer.addresses.add_new' | t }}
-        </button>
+        </button>{% endcomment %}
         <div id="AddAddress">
           <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
           {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
