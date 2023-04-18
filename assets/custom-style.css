@@ -3198,6 +3198,7 @@ button.swiper-pagination-bullet {
     font-size: initial;
     font-weight: normal;
     text-align: left;
+    margin: 0;
 }
 
 #AddAddress .field:before,
