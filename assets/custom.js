@@ -159,3 +159,15 @@ $('.switch-btn').on('click', function(){
 //     $(this).hide();
 // });
 
+$('.header__search').on('click', function (){
+    $(this).toggleClass('on');
+    if($(this).hasClass('on')){
+        $('.header-util').css({
+            'z-index' : '-1'
+        });
+    }else{
+        $('.header-util').css({
+            'z-index' : '2'
+        });
+    }
+});
