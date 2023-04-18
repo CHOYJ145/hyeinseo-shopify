@@ -85,12 +85,13 @@
 
   {% comment %}<div class="product__media media media--transparent gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">{% endcomment %}
   <div class="product__media media media--transparent gradient global-media-settings product__media--test" style="">
-    {{ media.preview_image | image_url: width: 1946 | image_tag:
+    <img src="{{ media.preview_image | image_url }}">
+    {% comment %}{{ media.preview_image | image_url: width: 1946 | image_tag:
       loading: lazy,
       sizes: sizes,
       widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
       alt: media.preview_image.alt | escape
-    }}
+    }}{% endcomment %}
   </div>
   {% comment %}<button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
     <span class="visually-hidden">

@@ -54,7 +54,12 @@
           >
             {%- for image in card_product.images  -%}
               <div class="img-{{ forloop.index }}">
-                <img src="{{ image | image_url }}" alt="">
+                {{ image | image_url: width: 1946 | image_tag:
+                loading: lazy,
+                sizes: sizes,
+                widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+                alt: media.preview_image.alt | escape
+                }}
               </div>
             {%- endfor -%}
           </div>
@@ -66,8 +71,13 @@
           <div class="swiperTest">
             <ul class="swiper-wrapper">
               {%- for image in card_product.images  -%}
-                <li class="img-{{ forloop.index }} swiper-slide">
-                  <img src="{{ image | image_url }}" alt="" onclick="location.href='{{ card_product.url }}'">
+                <li class="img-{{ forloop.index }} swiper-slide" onclick="location.href='{{ card_product.url }}'">
+                  {{ image | image_url: width: 1946 | image_tag:
+                    loading: lazy,
+                    sizes: sizes,
+                    widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+                    alt: media.preview_image.alt | escape
+                  }}
                 </li>
               {%- endfor -%}
             </ul>
