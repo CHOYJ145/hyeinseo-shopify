@@ -21,7 +21,8 @@
 
 #predictive-search-results-list{
   display: grid;
-  grid-template-columns: repeat(6, 1fr)
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 3.5px;
 }
 
 @media only screen and (max-width: 1024px){
@@ -33,7 +34,7 @@
 .predictive-search__item--link{
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 0 2.5px;
 }
 .header__search__pc .field{
   position : relative;
