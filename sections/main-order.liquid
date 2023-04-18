@@ -129,10 +129,10 @@
                                               {{ 'customer.order.track_shipment' | t }}
                                           </a>
                                       {%- endif -%}
-                                      <span>
-                          {{ line_item.fulfillment.tracking_company }}
-                                          {%- if line_item.fulfillment.tracking_number -%} #{{ line_item.fulfillment.tracking_number }} {%- endif -%}
-                        </span>
+                                    <span>
+                                    {{ line_item.fulfillment.tracking_company }}
+                                    {%- if line_item.fulfillment.tracking_number -%} #{{ line_item.fulfillment.tracking_number }} {%- endif -%}
+                                    </span>
                                   </div>
                               {%- endif -%}
                           </div>
@@ -149,6 +149,7 @@
                               role="cell"
                               data-label="{{ 'customer.order.price' | t }}"
                       >
+                          Price
                           {%- if line_item.original_price != line_item.final_price or line_item.unit_price_measurement -%}
                               <dl>
                                   {%- if line_item.original_price != line_item.final_price -%}
@@ -197,13 +198,6 @@
                           {%- endif -%}
                       </div>
                       <div
-                              headers="Row{{ line_item.key }} ColumnQuantity"
-                              role="cell"
-                              data-label="{{ 'customer.order.quantity' | t }}"
-                      >
-                          {{ line_item.quantity }}
-                      </div>
-                      <div
                               headers="Row{{ line_item.key }} ColumnTotal"
                               role="cell"
                               data-label="{{ 'customer.order.total' | t }}"
@@ -224,9 +218,19 @@
                                   </dd>
                               </dl>
                           {%- else -%}
+                              Total
                               {{ line_item.original_line_price | money }}
                           {%- endif -%}
                       </div>
+                      <div
+                              headers="Row{{ line_item.key }} ColumnQuantity"
+                              role="cell"
+                              data-label="{{ 'customer.order.quantity' | t }}"
+                      >
+                          Quantity
+                          {{ line_item.quantity }}
+                      </div>
+
                   {%- endfor -%}
               </div>
           </div>
