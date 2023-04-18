@@ -142,7 +142,7 @@ const templates = [
                         {{ product.title }}
                       </a>
                       <div class="wk-product-price">
-                        <!--<span class="wk-product-price&#45;&#45;current">{{ variant.price | money }}</span>-->
+                        <span class="wk-product-price--current">{{ variant.price | money }}</span>
                         <span class="wk-product-price--compare">{{ variant.compare_at_price | money }}</span>
                       </div>
                     </div>
