@@ -2628,7 +2628,8 @@ button.swiper-pagination-bullet {
     }
 
     .custom #list-page .card-information .price,
-    .custom #list-page .option-list {
+    .custom #list-page .option-list,
+    .custom #list-page .wishlist {
         opacity: 1;
     }
 
@@ -2641,6 +2642,10 @@ button.swiper-pagination-bullet {
     .custom #list-page #product-grid.grid--2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .custom #list-page #product-grid.grid--2 .wishlist {
+        display: none !important;
     }
 }
 
