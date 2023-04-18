@@ -3197,6 +3197,7 @@ button.swiper-pagination-bullet {
 .custom #AddAddress #AddressNewHeading {
     font-size: initial;
     font-weight: normal;
+    text-align: left;
 }
 
 #AddAddress .field:before,
@@ -3216,4 +3217,8 @@ button.swiper-pagination-bullet {
 .addresses .address-default {
     margin: 0;
     text-align: left;
+}
+
+.custom .addresses ul p {
+    margin-top: 0;
 }
