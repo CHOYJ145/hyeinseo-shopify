@@ -44,7 +44,7 @@
           <div>
               <div>Order</div>
 
-              <div>{{ 'customer.order.title' | t: order.name }}</div>
+              <div>{{ 'customer.order.title' | t: name: order.name }}</div>
           </div>
           {%- if order.cancelled -%}
               {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
