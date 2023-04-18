@@ -3059,6 +3059,10 @@ button.swiper-pagination-bullet {
     .t-img-wrap .t-img-inner .t-img-list {
         display: none;
     }
+
+    .t-img-inner .swiperTest {
+        width: calc(100vw - 8px);
+    }
 }
 
 @media screen and (max-width: 499px) {
