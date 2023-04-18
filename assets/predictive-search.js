@@ -189,6 +189,7 @@ class PredictiveSearch extends HTMLElement {
     this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
     this.isOpen = true;
+
   }
 
   close(clearSearchTerm = false) {
