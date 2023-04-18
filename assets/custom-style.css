@@ -3248,5 +3248,7 @@ button.swiper-pagination-bullet {
         font-size : 16px;
         line-height: 19px;
     }
-
+    .product-infos .wk-button {
+        padding: 2px 0 1px;
+    }
 }
