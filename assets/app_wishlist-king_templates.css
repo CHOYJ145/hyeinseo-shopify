@@ -372,3 +372,8 @@
 .custom .wk-product-form {
     display: none !important;
 }
+
+.custom .wk-product-info {
+    margin-top: 2px;
+    font-weight: normal;
+}
