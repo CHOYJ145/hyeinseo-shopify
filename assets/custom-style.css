@@ -3676,3 +3676,11 @@ button.swiper-pagination-bullet {
         line-height: 19px;
     }
 }
+
+.edit-box {
+    margin-top: 19px;
+}
+
+#addresses-page .edit-box .field label {
+    display: none;
+}
