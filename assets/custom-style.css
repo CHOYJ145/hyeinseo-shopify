@@ -3246,9 +3246,9 @@ button.swiper-pagination-bullet {
     width: 50%;
 }
 
-.order-detail-row--ex {
-    width: 100%;
-}
+/*.order-detail-row--ex {*/
+/*    width: 100%;*/
+/*}*/
 
 .order-detail-row:first-child {
     display: grid;
@@ -3422,8 +3422,8 @@ button.swiper-pagination-bullet {
 
 .order-detail-row--ex {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0 6px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 5px;
 }
 
 #wishlist-page a,
