@@ -71,7 +71,9 @@
                       >
                           <div>
                               <div>
-                                  <img src="{{ line_item.image }}" alt="">
+                                    {% assign product_image = line_item.product.featured_image %}
+                                    <img src="{{ product_image.src }}" alt="{{ line_item.title }}">
+                                    {% endfor %}
                               </div>
                               {%- if line_item.url != blank -%}
                                   <a href="{{ line_item.url }}">{{ line_item.title }}</a>
