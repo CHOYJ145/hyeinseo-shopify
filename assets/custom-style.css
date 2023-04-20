@@ -3395,4 +3395,8 @@ button.swiper-pagination-bullet {
     .order-detail-row {
         width: 100%;
     }
+
+    .account-nav {
+        top: 0;
+    }
 }
