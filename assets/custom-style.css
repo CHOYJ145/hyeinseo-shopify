@@ -3288,6 +3288,7 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
+#register-page .form__message,
 #login-page .form__message {
     font-weight: normal;
     margin: 0;
@@ -3302,6 +3303,7 @@ button.swiper-pagination-bullet {
     }
 }
 
+#register-page  .errors ul,
 #login-page .errors ul {
     list-style: none;
     margin: 0;
