@@ -79,10 +79,11 @@
                                   {{ line_item.product.featured_image }}
                               </div>
                               {%- if line_item.url != blank -%}
-                                  <a href="{{ line_item.url }}">{{ line_item.title }}</a>
+                                  <a href="{{ line_item.url }}">{{ line_item.title }} {{ line_item.size }}</a>
                               {%- else -%}
                                   <p>{{ line_item.title }}</p>
                               {%- endif -%}
+
                               {%- assign property_size = line_item.properties | size -%}
                               {%- unless line_item.selling_plan_allocation == nil and property_size == 0 -%}
                                   <div class="properties">
