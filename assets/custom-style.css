@@ -3355,3 +3355,8 @@ button.swiper-pagination-bullet {
         line-height: 19px;
     }
 }
+
+.order-adr-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

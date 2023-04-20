@@ -240,21 +240,26 @@
       </div>
 
       <div class="order-detail-row">
-          <div>
+          <div class="order-adr-wrap">
               <p>{{ 'customer.order.billing_address' | t }}</p>
-              <p>
-                  <strong>{{ 'customer.order.payment_status' | t }}:</strong>
-                  {{ order.financial_status_label }}
-              </p>
-              {{ order.billing_address | format_address }}
+              <div>
+                  <p>
+                      <strong>{{ 'customer.order.payment_status' | t }}:</strong>
+                      {{ order.financial_status_label }}
+                  </p>
+                  {{ order.billing_address | format_address }}
+              </div>
+
           </div>
-          <div>
+          <div class="order-adr-wrap">
               <p>{{ 'customer.order.shipping_address' | t }}</p>
-              <p>
-                  <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
-                  {{ order.fulfillment_status_label }}
-              </p>
-              {{ order.shipping_address | format_address }}
+              <div>
+                  <p>
+                      <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
+                      {{ order.fulfillment_status_label }}
+                  </p>
+                  {{ order.shipping_address | format_address }}
+              </div>
           </div>
       </div>
 
