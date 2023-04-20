@@ -3600,18 +3600,20 @@ button.swiper-pagination-bullet {
 
 #addresses-page .adrs-select .select {
     box-shadow: none !important;
+    border: 0;
 }
 
 #addresses-page .adrs-select .select select {
     padding: 0;
     height: auto;
     min-height: auto;
-    border-bottom: 1px solid #000;
+    border: 0;
 }
 
 #addresses-page .adrs-select .select select:focus,
 #addresses-page .adrs-select .select select:active {
-    border: 0;
+    border: 0 !important;
+    box-shadow: none !important;
 }
 
 #addresses-page .adrs-select .select:before,
@@ -3619,6 +3621,7 @@ button.swiper-pagination-bullet {
 #addresses-page .adrs-select .select select:before,
 #addresses-page .adrs-select .select select:after {
     display: none;
+    border: 0;
 }
 
 @media screen and (max-width: 1024px) {
