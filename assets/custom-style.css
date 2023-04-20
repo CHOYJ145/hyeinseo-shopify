@@ -3587,23 +3587,27 @@ button.swiper-pagination-bullet {
     }
 }
 
-#addresses-page .adrs-select {
+#addresses-page .adrs-select,
+#addresses-page #AddressProvinceContainerNew {
     margin: 0;
     width: 50%;
 }
 
-#addresses-page .adrs-select * {
+#addresses-page .adrs-select *,
+#addresses-page #AddressProvinceContainerNew * {
     margin: 0;
     font-size: 14px;
     line-height: 16px;
 }
 
-#addresses-page .adrs-select .select {
+#addresses-page .adrs-select .select,
+#addresses-page #AddressProvinceContainerNew .select {
     box-shadow: none !important;
     border: 0;
 }
 
-#addresses-page .adrs-select .select select {
+#addresses-page .adrs-select .select select,
+#addresses-page #AddressProvinceContainerNew .select select {
     padding: 0;
     height: auto;
     min-height: auto;
@@ -3611,7 +3615,9 @@ button.swiper-pagination-bullet {
 }
 
 #addresses-page .adrs-select .select select:focus,
-#addresses-page .adrs-select .select select:active {
+#addresses-page .adrs-select .select select:active,
+#addresses-page #AddressProvinceContainerNew .select select:focus,
+#addresses-page #AddressProvinceContainerNew .select select:active {
     border: 0 !important;
     box-shadow: none !important;
 }
@@ -3619,13 +3625,18 @@ button.swiper-pagination-bullet {
 #addresses-page .adrs-select .select:before,
 #addresses-page .adrs-select .select:after,
 #addresses-page .adrs-select .select select:before,
-#addresses-page .adrs-select .select select:after {
+#addresses-page .adrs-select .select select:after,
+#addresses-page #AddressProvinceContainerNew .select:before,
+#addresses-page #AddressProvinceContainerNew .select:after,
+#addresses-page #AddressProvinceContainerNew .select select:before,
+#addresses-page #AddressProvinceContainerNew .select select:after {
     display: none;
     border: 0;
 }
 
 @media screen and (max-width: 1024px) {
-    #addresses-page .adrs-select * {
+    #addresses-page .adrs-select *,
+    #addresses-page #AddressProvinceContainerNew * {
         font-size: 16px;
         line-height: 19px;
     }
