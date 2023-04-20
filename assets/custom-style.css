@@ -3337,6 +3337,8 @@ button.swiper-pagination-bullet {
 
 .order-detail--info a {
     text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .order-detail-row + .order-detail-row {
@@ -3351,6 +3353,11 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     #order-page .order-detail-row p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .order-detail--info a {
         font-size: 16px;
         line-height: 19px;
     }
@@ -3370,6 +3377,18 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .order-detail-row--ex {
+        gap: 0 4px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #wishlist-page, #order-page, #addresses-page, #account-page {
+        padding: 2px 5px 0;
+        display: block;
+    }
+
+    .order-detail-row--ex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0 4px;
     }
 }
