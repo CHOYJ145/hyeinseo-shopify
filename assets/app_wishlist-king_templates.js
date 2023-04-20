@@ -116,7 +116,7 @@ const templates = [
                 <a href="/account">Account</a>
             </div>
             <div class="account-nav-item">
-<a href="/account/addresses">
+            <a href="/account/addresses">
                 Addresses
             </a>
             </div>
