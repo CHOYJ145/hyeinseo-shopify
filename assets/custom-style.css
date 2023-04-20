@@ -3469,7 +3469,7 @@ button.swiper-pagination-bullet {
 }
 
 #wishlist-page .wk-button--floating {
-    display: none;
+    /*display: none;*/
 }
 
 #wishlist-page .wk-product-title {
