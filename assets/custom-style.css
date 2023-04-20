@@ -3411,3 +3411,11 @@ button.swiper-pagination-bullet {
         top: 0;
     }
 }
+
+#wishlist-page .wk-button--floating {
+    display: none;
+}
+
+#wishlist-page .wk-product-title {
+    text-decoration: none;
+}
