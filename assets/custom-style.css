@@ -3292,3 +3292,7 @@ button.swiper-pagination-bullet {
     font-size: initial;
     font-weight: normal;
 }
+
+#register-page #create_customer {
+    width: 33.33%;
+}
