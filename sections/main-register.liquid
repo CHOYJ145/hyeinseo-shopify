@@ -66,9 +66,6 @@
     </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
-        <svg aria-hidden="true" focusable="false" role="presentation">
-          <use href="#icon-error" />
-        </svg>
         {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
       </span>
     {%- endif -%}
@@ -94,7 +91,7 @@
       <h2 class="form__message" tabindex="-1" autofocus>
         {{ 'templates.contact.form.error_heading' | t }}
       </h2>
-      <ul>
+      <ul class="errors">
         {%- for field in form.errors -%}
           <li>
             {%- if field == 'form' -%}

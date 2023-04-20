@@ -3304,7 +3304,7 @@ button.swiper-pagination-bullet {
     }
 }
 
-#register-page .form__message + ul,
+#register-page .errors,
 #login-page .errors ul {
     list-style: none;
     margin: 0;
@@ -3314,7 +3314,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
-    #register-page .form__message + ul,
+    #register-page .errors,
     #login-page .form__message .errors ul {
         font-size: 16px;
         line-height: 19px;
