@@ -3325,3 +3325,7 @@ button.swiper-pagination-bullet {
 #register-page #create_customer {
     width: 33.33%;
 }
+
+#RegisterForm-email-error svg {
+    display: none !important;
+}
