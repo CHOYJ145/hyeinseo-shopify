@@ -3381,6 +3381,7 @@ button.swiper-pagination-bullet {
 #account-page a {
     font-size: 14px;
     line-height: 16px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {
