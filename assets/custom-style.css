@@ -3546,3 +3546,8 @@ button.swiper-pagination-bullet {
         display: none;
     }
 }
+
+.order-d-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

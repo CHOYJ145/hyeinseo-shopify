@@ -231,21 +231,21 @@
                               {{ line_item.original_line_price | money }}
                           {%- endif -%}
                       </div>
+
+
+                      <div class="order-d-row">
+                          <div>Size</div>
+                          <div>{{ line_item.properties | size }}</div>
+                      </div>
                       <div
+                              class="order-d-row"
                               headers="Row{{ line_item.key }} ColumnQuantity"
                               role="cell"
                               data-label="{{ 'customer.order.quantity' | t }}"
                       >
-                          Quantity
-                          {{ line_item.quantity }}
-                      </div>
+                          <div>Quantity</div>
+                          <div>{{ line_item.quantity }}</div>
 
-                      <div>
-                          {{ line_item.properties | size }}
-                      </div>
-
-                      <div>
-                          {{ line_item.metafields.custom.color_name }}
                       </div>
 
                   {%- endfor -%}
