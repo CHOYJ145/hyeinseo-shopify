@@ -63,10 +63,11 @@
           {%- endif -%}
       </div>
       <div class="order-detail-row order-detail-row--ex">
+          {%- for line_item in order.line_items -%}
           <div class="order-detail-item">
               <div class="order-detail--img"></div>
               <div class="order-detail--info">
-                  {%- for line_item in order.line_items -%}
+
                       <div
                               id="Row{{ line_item.key }}"
                               headers="ColumnProduct"
@@ -75,9 +76,6 @@
                               data-label="{{ 'customer.order.product' | t }}"
                       >
                           <div>
-                              <div>
-                                  {{ line_item.product.featured_image }}
-                              </div>
                               {%- if line_item.url != blank -%}
                                   <a href="{{ line_item.url }}">{{ line_item.title }}</a>
                               {%- else -%}
@@ -248,9 +246,10 @@
 
                       </div>
 
-                  {%- endfor -%}
+
               </div>
           </div>
+          {%- endfor -%}
       </div>
 
       <div class="order-detail-row">
