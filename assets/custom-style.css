@@ -3223,6 +3223,7 @@ button.swiper-pagination-bullet {
 
 .custom .address-default h2,
 .custom #AddAddress #AddressNewHeading {
+    margin: 0;
     font-size: 14px;
     line-height: 16px;
     font-weight: normal;
@@ -3581,6 +3582,19 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     #addresses-page .field input {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+#addresses-page .adrs-select * {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    #addresses-page .adrs-select * {
         font-size: 16px;
         line-height: 19px;
     }
