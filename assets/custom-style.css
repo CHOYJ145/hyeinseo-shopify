@@ -3343,14 +3343,14 @@ button.swiper-pagination-bullet {
     margin-top: 19px;
 }
 
-.order-detail-row p {
+.order-detail-row .order-detail-row p {
     margin: 0;
     font-size: 14px;
     line-height: 16px;
 }
 
 @media screen and (max-width: 1024px) {
-    .order-detail-row p {
+    .order-detail-row .order-detail-row p {
         font-size: 16px;
         line-height: 19px;
     }
