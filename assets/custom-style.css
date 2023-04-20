@@ -3665,7 +3665,7 @@ button.swiper-pagination-bullet {
 }
 
 .adrs-btn--top {
-    margin-top: 19px;
+    margin-top: 19px !important;
 }
 
 @media screen and (max-width: 1024px) {
