@@ -3556,3 +3556,16 @@ button.swiper-pagination-bullet {
     color: #bfbfbf;
     opacity: 1;
 }
+
+#addresses-page .field input {
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    #addresses-page .field input {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
