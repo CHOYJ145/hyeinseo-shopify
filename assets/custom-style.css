@@ -3419,3 +3419,7 @@ button.swiper-pagination-bullet {
 #wishlist-page .wk-product-title {
     text-decoration: none;
 }
+
+#wishlist-page .wk-grid {
+    padding: 0;
+}
