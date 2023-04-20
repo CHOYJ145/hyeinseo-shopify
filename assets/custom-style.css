@@ -3551,3 +3551,8 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+#addresses-page .field input::placeholder {
+    color: #bfbfbf;
+    opacity: 1;
+}
