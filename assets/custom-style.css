@@ -3254,6 +3254,7 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-right: 0 !important;
+
 }
 
 .custom .address-default h2,
