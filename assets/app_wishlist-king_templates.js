@@ -127,7 +127,7 @@ const templates = [
             </a>
             </div>
             <div class="account-nav-item">
-                <a href="/account/logout">Log out</a>
+                <a href="/account/logout">Logout</a>
             </div>
           </div>
           <div class="wk-grid">
