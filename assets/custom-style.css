@@ -3166,6 +3166,7 @@ button.swiper-pagination-bullet {
     top: 22px;
     left: 0;
     text-align: left;
+    height: fit-content;
 }
 
 .account-nav-item a {
