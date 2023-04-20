@@ -39,7 +39,7 @@
           {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <div>
               <div>Date</div>
-              <div>{{ 'customer.order.date_html' | t: date: order_date | date: '%m.%d.%Y'}}</div>
+              <div>{{ 'customer.order.date_html' | t: date: order_date }}</div>
           </div>
           <div>
               <div>Order</div>
@@ -70,6 +70,9 @@
                               data-label="{{ 'customer.order.product' | t }}"
                       >
                           <div>
+                              <div>
+                                  {{ line_item.image }}
+                              </div>
                               {%- if line_item.url != blank -%}
                                   <a href="{{ line_item.url }}">{{ line_item.title }}</a>
                               {%- else -%}
