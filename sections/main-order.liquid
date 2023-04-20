@@ -72,7 +72,7 @@
                           <div>
                               <div>
                                     {% assign product_image = line_item.product.featured_image %}
-                                    <img src="{{ product_image.src }}" alt="{{ line_item.title }}">
+                                    <img src="/{{ product_image.src }}" alt="{{ line_item.title }}">
                                     {% endfor %}
                               </div>
                               {%- if line_item.url != blank -%}
