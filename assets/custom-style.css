@@ -3589,12 +3589,18 @@ button.swiper-pagination-bullet {
 
 #addresses-page .adrs-select {
     margin: 0;
+    width: 50%;
 }
 
 #addresses-page .adrs-select * {
     margin: 0;
     font-size: 14px;
     line-height: 16px;
+}
+
+#addresses-page .adrs-select .select:before,
+#addresses-page .adrs-select .select:after {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {
