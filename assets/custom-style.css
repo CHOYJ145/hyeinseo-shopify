@@ -3430,10 +3430,12 @@ button.swiper-pagination-bullet {
 
 #wishlist-page a {
     color: #000;
+    font-weight: normal;
 }
 
 #wishlist-page a:hover {
     color: #000;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 1024px) {
