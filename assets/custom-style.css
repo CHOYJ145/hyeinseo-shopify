@@ -3658,6 +3658,7 @@ button.swiper-pagination-bullet {
 #addresses-page .adrs-btn-list > button:before,
 #addresses-page .adrs-btn-list > button:after {
     display: none;
+
 }
 
 @media screen and (max-width: 1024px) {
