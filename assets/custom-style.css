@@ -3361,3 +3361,15 @@ button.swiper-pagination-bullet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.order-detail-row--ex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 6px;
+}
+
+@media screen and (max-width: 1024px) {
+    .order-detail-row--ex {
+        gap: 0 4px;
+    }
+}
