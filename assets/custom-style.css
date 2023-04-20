@@ -3611,7 +3611,9 @@ button.swiper-pagination-bullet {
 }
 
 #addresses-page .adrs-select .select:before,
-#addresses-page .adrs-select .select:after {
+#addresses-page .adrs-select .select:after,
+#addresses-page .adrs-select .select select:before,
+#addresses-page .adrs-select .select select:after {
     display: none;
 }
 
