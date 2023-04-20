@@ -3474,3 +3474,7 @@ button.swiper-pagination-bullet {
         line-height: 19px;
     }
 }
+
+#CartDrawer .cart__checkout-button {
+    color: #000;
+}

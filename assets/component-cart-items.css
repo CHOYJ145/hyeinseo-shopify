@@ -116,7 +116,7 @@
 
 cart-remove-button button {
   width: 5.82px;
-  height: 5.82px;
+  height: 10px;
   border:none;
   background: transparent;
 }
@@ -125,7 +125,7 @@ cart-remove-button button {
   cart-remove-button button {
     padding: 0;
     width: 10px;
-    height: 10px;
+    height: 19px;
   }
 }
 
