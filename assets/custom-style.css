@@ -3664,6 +3664,10 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
+.adrs-btn--top {
+    margin-top: 19px;
+}
+
 @media screen and (max-width: 1024px) {
     #addresses-page .adrs-btn-list > button,
     #addresses-page .adrs-select *,
