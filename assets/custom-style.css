@@ -3649,9 +3649,10 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     line-height: 16px;
     height: auto;
-    width: auto;
+    width: fit-content;
     min-height: auto;
     min-width: auto;
+    letter-spacing: initial;
 }
 
 #addresses-page .adrs-btn-list > button:before,
