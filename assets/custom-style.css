@@ -3725,3 +3725,9 @@ button.swiper-pagination-bullet {
 #addresses-page .edit-box .field label {
     display: none;
 }
+
+@media screen and (max-width: 1024px) {
+    .login-col + .login-col {
+        margin-top: 72px;
+    }
+}
