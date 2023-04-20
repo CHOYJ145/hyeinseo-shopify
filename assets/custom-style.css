@@ -1108,7 +1108,7 @@ button.swiper-pagination-bullet {
 
 #register-page.customer button,
 #login-page.customer button {
-    margin: 22px 0 0;
+    margin: 21px 0 0;
     padding: 0;
     color: #000;
     font-size: inherit;
@@ -1119,6 +1119,13 @@ button.swiper-pagination-bullet {
     height: auto;
     min-width: auto;
     min-height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    #register-page.customer button,
+    #login-page.customer button {
+        margin: 21px 0 0;
+    }
 }
 
 #login-page .login-inner {
