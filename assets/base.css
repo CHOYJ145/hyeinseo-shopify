@@ -1704,7 +1704,8 @@ details[open] > .share-button__fallback {
   bottom: 0;
   left: 0;
   border-radius: var(--inputs-radius-outset);
-  box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-base-text), var(--inputs-shadow-opacity));
+  /*box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-base-text), var(--inputs-shadow-opacity));*/
+  box-shadow: 0;
   z-index: -1;
 }
 
@@ -1724,7 +1725,7 @@ details[open] > .share-button__fallback {
   border-radius: var(--inputs-radius);
   /*box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));*/
   box-shadow: 0;
-  transition: box-shadow var(--duration-short) ease;
+  /*transition: box-shadow var(--duration-short) ease;*/
   z-index: 1;
 }
 
