@@ -1147,14 +1147,16 @@ button.swiper-pagination-bullet {
 
 #list-page {
     display: block;
-    padding: 22px 6px 90px;
+    /*padding: 22px 6px 90px;*/
+    padding: 22px 6px 6px;
 }
 
 @media screen and (max-width: 1024px) {
     #list-page {
         display: block;
 
-        padding: 0 4px 90px;
+        /*padding: 0 4px 90px;*/
+        padding: 0 4px 4px;
     }
 
     #overview-value {
@@ -2517,6 +2519,7 @@ button.swiper-pagination-bullet {
 #list-page #product-grid li {
     width: 100%;
     max-width: none;
+    height: fit-content;
 }
 
 #list-page #product-grid.overview li + li {
@@ -3423,4 +3426,51 @@ button.swiper-pagination-bullet {
 
 #wishlist-page .wk-grid {
     padding: 0;
+}
+
+#pagination-wrap.pagination-wrapper {
+    margin-top: 90px;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__list {
+    justify-content: flex-end;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__list > li {
+    flex: none;
+    max-width: none;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__item {
+    color: #CECED0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: initial;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__item.pagination__item-arrow,
+#pagination-wrap.pagination-wrapper .pagination__item.pagination__item--current {
+    color: #000;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__item:after {
+    display: none;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__item.pagination__item--current:after {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    #pagination-wrap.pagination-wrapper .pagination__item {
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
