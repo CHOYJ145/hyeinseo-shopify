@@ -3391,4 +3391,8 @@ button.swiper-pagination-bullet {
         grid-template-columns: repeat(2, 1fr);
         gap: 0 4px;
     }
+
+    .order-detail-row {
+        width: 100%;
+    }
 }
