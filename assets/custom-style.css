@@ -3677,32 +3677,32 @@ button.swiper-pagination-bullet {
     }
 }
 
-#edit-box {
+#addresses-page .edit-box {
     margin-top: 19px;
 }
 
-#addresses-page #edit-box .field label {
+#addresses-page .edit-box .field label {
     display: none;
 }
 
-#edit-box .field:before,
-#edit-box .field:after,
-#edit-box .field:hover:before,
-#edit-box .field:hover:after {
+#addresses-page .edit-box .field:before,
+#addresses-page .edit-box .field:after,
+#addresses-page .edit-box .field:hover:before,
+#addresses-page .edit-box .field:hover:after {
     display: none;
 }
 
-#edit-box .field input {
+#addresses-page .edit-box .field input {
     padding: 0;
     margin: 0;
     bottom: 0;
     box-shadow: none;
 }
 
-#edit-box .field input::placeholder {
+#addresses-page .edit-box .field input::placeholder {
     color: #000;
 }
 
-#edit-box .field label {
+#addresses-page .edit-box .field label {
     display: none;
 }
