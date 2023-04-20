@@ -3297,13 +3297,14 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    #register-page .form__message,
     #login-page .form__message {
         font-size: 16px;
         line-height: 19px;
     }
 }
 
-#register-page  .errors ul,
+#register-page .form__message + ul,
 #login-page .errors ul {
     list-style: none;
     margin: 0;
@@ -3313,6 +3314,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    #register-page .form__message + ul,
     #login-page .form__message .errors ul {
         font-size: 16px;
         line-height: 19px;
