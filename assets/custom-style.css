@@ -3150,9 +3150,15 @@ button.swiper-pagination-bullet {
 #addresses-page,
 #account-page {
     max-width: none;
-    padding: 22px 6px 0;
+    padding: 22px 6px 90px;
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 1024px) {
+    #wishlist-page {
+        padding: 23px 4px 90px;
+    }
 }
 
 .account-nav {
