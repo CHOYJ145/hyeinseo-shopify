@@ -3223,9 +3223,17 @@ button.swiper-pagination-bullet {
 
 .custom .address-default h2,
 .custom #AddAddress #AddressNewHeading {
-    font-size: initial;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: normal;
     text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+    .custom #AddAddress #AddressNewHeading {
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 
 #AddAddress .field:before,
@@ -3537,7 +3545,7 @@ button.swiper-pagination-bullet {
     right: 0;
 }
 
-.zoom-popup .swiper-button-prev  {
+.zoom-popup .swiper-button-prev {
     left: 0;
 }
 
@@ -3550,6 +3558,10 @@ button.swiper-pagination-bullet {
 .order-d-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+#addresses-page .field {
+    margin: 0;
 }
 
 #addresses-page .field input::placeholder {
