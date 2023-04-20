@@ -1161,13 +1161,21 @@ button.swiper-pagination-bullet {
 }
 
 #login-page .notice {
-    margin: 3px 0 0;
+    margin: 0;
 }
 
 #list-page {
     display: block;
     /*padding: 22px 6px 90px;*/
     padding: 22px 6px 6px;
+}
+
+#list-page.list-page--pn {
+
+}
+
+#list-page.list-page--d {
+    /*padding: 22px 6px 90px;*/
 }
 
 @media screen and (max-width: 1024px) {
