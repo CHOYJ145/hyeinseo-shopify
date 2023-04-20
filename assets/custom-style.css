@@ -3253,6 +3253,7 @@ button.swiper-pagination-bullet {
 .order-detail-row:first-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-right: 0;
 }
 
 .custom .address-default h2,
