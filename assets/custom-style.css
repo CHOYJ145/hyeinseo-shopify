@@ -3561,6 +3561,11 @@ button.swiper-pagination-bullet {
     color: #000;
     font-size: 14px;
     line-height: 16px;
+
+    border-radius: 0;
+    height: initial;
+    min-height: auto;
+    min-width: auto;
 }
 
 @media screen and (max-width: 1024px) {
