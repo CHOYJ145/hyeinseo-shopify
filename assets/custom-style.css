@@ -1528,6 +1528,7 @@ button.swiper-pagination-bullet {
 .detail-page .product-wrap {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding-top: 22px;
 }
 
 .product-imgs {
@@ -1558,6 +1559,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    .detail-page .product-wrap {
+        padding-top: 0;
+    }
+
     .detail-page .price-item .price {
         line-height: 19px;
     }
@@ -3478,4 +3483,66 @@ button.swiper-pagination-bullet {
 #CartDrawer .cart__checkout-button {
     color: #000;
     font-weight: normal;
+}
+
+.product-visual {
+    cursor: pointer;
+}
+
+.zoom-popup {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.zoom-popup-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.zoom-close-btn {
+    position: fixed;
+    z-index: 10;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+}
+
+.zoomSwiper {
+    position: relative;
+    z-index: 1;
+}
+
+.zoom-popup .swiper-button-next,
+.zoom-popup .swiper-button-prev {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+}
+
+.zoom-popup .swiper-button-next:after,
+.zoom-popup .swiper-button-prev:after {
+    display: none;
+}
+
+.zoom-popup .swiper-button-next {
+    right: 0;
+}
+
+.zoom-popup .swiper-button-prev  {
+    left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .zoom-popup {
+        display: none;
+    }
 }
