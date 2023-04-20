@@ -1039,6 +1039,13 @@ button.swiper-pagination-bullet {
     text-align: left;
 }
 
+@media screen and (max-width: 1024px) {
+    #register-page,
+    #login-page {
+        padding: 4px 4px 0;
+    }
+}
+
 #login-page #recover,
 #login-page #login,
 #register-page .register-title {
