@@ -3334,3 +3334,24 @@ button.swiper-pagination-bullet {
 #RegisterForm-email-error svg {
     display: none !important;
 }
+
+.order-detail--info a {
+    text-decoration: none;
+}
+
+.order-detail-row + .order-detail-row {
+    margin-top: 19px;
+}
+
+.order-detail-row p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .order-detail-row p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
