@@ -3598,6 +3598,12 @@ button.swiper-pagination-bullet {
     line-height: 16px;
 }
 
+#addresses-page .adrs-select .select {
+    padding: 0;
+    min-height: auto;
+    border-bottom: 1px solid #000;
+}
+
 #addresses-page .adrs-select .select:before,
 #addresses-page .adrs-select .select:after {
     display: none;
