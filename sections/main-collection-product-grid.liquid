@@ -229,8 +229,11 @@ $('.t-img-list').unbind('mousemove mouseleave').on('mousemove', function(e) {
 });
 
 $(document).ready(function(){
-  let title = '{{ page_title }}'
-  $('#list-page-title').text(title);
+  let title = '{{ page_title }}';
+  let titleText = title.replace(/&amp;/g, '&');
+  console.log(title, titleText);
+  $('#list-page-title').text(titleText);
+
 });
 </script>
 
