@@ -3686,7 +3686,7 @@ button.swiper-pagination-bullet {
 }
 
 #edit-box .field:before,
-#edit-box.field:after,
+#edit-box .field:after,
 #edit-box .field:hover:before,
 #edit-box .field:hover:after {
     display: none;
