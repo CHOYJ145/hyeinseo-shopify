@@ -3641,3 +3641,16 @@ button.swiper-pagination-bullet {
         line-height: 19px;
     }
 }
+
+#addresses-page .adrs-btn-list > button {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: #000;
+}
+
+#addresses-page .adrs-btn-list > button:before,
+#addresses-page .adrs-btn-list > button:after {
+    display: none;
+}
