@@ -3598,7 +3598,7 @@ button.swiper-pagination-bullet {
     line-height: 16px;
 }
 
-#addresses-page .adrs-select .select {
+#addresses-page .adrs-select .select select {
     padding: 0;
     min-height: auto;
     border-bottom: 1px solid #000;
