@@ -111,9 +111,15 @@ const templates = [
 
         <div id="wishlist-page" class="customer">
           <div class="account-nav">
-            <div>Wishlist</div>
             <div class="account-nav-item">
-                <a href="/account">Account</a>
+                <a href="/account">
+                Orders
+                </a>
+            </div>
+            <div class="account-nav-item">
+                <a href="/pages/wishlist">
+                Wishlist
+                </a>
             </div>
             <div class="account-nav-item">
             <a href="/account/addresses">
