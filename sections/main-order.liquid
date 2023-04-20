@@ -144,13 +144,13 @@
                               {%- endif -%}
                           </div>
                       </div>
-                      <div
+                      {% comment %}<div
                               headers="Row{{ line_item.key }} ColumnSku"
                               role="cell"
                               data-label="{{ 'customer.order.sku' | t }}"
                       >
                           {{ line_item.sku }}
-                      </div>
+                      </div>{% endcomment %}
                       <div
                               class="order-d-row"
                               headers="Row{{ line_item.key }} ColumnPrice"
