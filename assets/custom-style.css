@@ -3428,6 +3428,14 @@ button.swiper-pagination-bullet {
     text-decoration: none;
 }
 
+#wishlist-page a {
+    color: #000;
+}
+
+#wishlist-page a:hover {
+    color: #000;
+}
+
 @media screen and (max-width: 1024px) {
     #wishlist-page a,
     #order-page a,
