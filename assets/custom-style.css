@@ -3727,7 +3727,11 @@ button.swiper-pagination-bullet {
 }
 
 #addresses-page .edit-box {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-top: 19px;
+    width: 50%;
 }
 
 #addresses-page .edit-box .field label {
