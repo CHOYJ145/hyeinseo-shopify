@@ -1090,6 +1090,7 @@ button.swiper-pagination-bullet {
     margin: 0;
     box-shadow: none;
     border-radius: 0;
+    background: transparent;
 }
 
 #register-page.customer .field input::placeholder,
@@ -1109,7 +1110,7 @@ button.swiper-pagination-bullet {
 #login-page.customer button {
     margin: 22px 0 0;
     padding: 0;
-    color: #bfbfbf;
+    color: #000;
     font-size: inherit;
     letter-spacing: inherit;
     line-height: inherit;
@@ -3279,4 +3280,15 @@ button.swiper-pagination-bullet {
 
 .custom .loading-overlay__spinner {
     display: none !important;
+}
+
+.login-title {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#login-page .form__message {
+    font-size: initial;
+    font-weight: normal;
 }
