@@ -1127,6 +1127,11 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    #register-page.customer .field input,
+    #login-page.customer .field input {
+        height: 19px;
+    }
+
     #login-page .login-inner {
         display: block;
         width: 100%;
