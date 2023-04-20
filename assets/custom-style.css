@@ -3600,6 +3600,7 @@ button.swiper-pagination-bullet {
 
 #addresses-page .adrs-select .select select {
     padding: 0;
+    height: auto;
     min-height: auto;
     border-bottom: 1px solid #000;
 }
