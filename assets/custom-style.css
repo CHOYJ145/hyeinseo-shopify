@@ -3751,6 +3751,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-#wishlist-page .wk-page:not(.wk-page--shared) .wk-button.wk-button--floating {
+.wk-page:not(.wk-page--shared) .wk-button.wk-button--floating {
     width: 6px;
 }
