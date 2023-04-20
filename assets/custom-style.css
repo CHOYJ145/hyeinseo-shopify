@@ -3477,4 +3477,5 @@ button.swiper-pagination-bullet {
 
 #CartDrawer .cart__checkout-button {
     color: #000;
+    font-weight: normal;
 }
