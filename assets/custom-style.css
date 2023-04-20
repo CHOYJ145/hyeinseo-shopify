@@ -3314,6 +3314,11 @@ button.swiper-pagination-bullet {
     line-height: 16px;
 }
 
+#register-page .errors a,
+#login-page .errors ul a {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1024px) {
     #register-page .errors,
     #login-page .form__message .errors ul {

@@ -39,7 +39,7 @@
           {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <div>
               <div>Date</div>
-              <div>{{ 'customer.order.date_html' | t: date: order_date }}</div>
+              <div>{{ 'customer.order.date_html' | t: date: order_date | date: '%m.%d.%Y'}}</div>
           </div>
           <div>
               <div>Order</div>
