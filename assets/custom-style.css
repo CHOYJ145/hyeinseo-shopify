@@ -3634,23 +3634,36 @@ button.swiper-pagination-bullet {
     border: 0;
 }
 
-@media screen and (max-width: 1024px) {
-    #addresses-page .adrs-select *,
-    #addresses-page #AddressProvinceContainerNew * {
-        font-size: 16px;
-        line-height: 19px;
-    }
+#addresses-page .adrs-btn-list {
+    display: flex;
+    flex-direction: column;
 }
 
 #addresses-page .adrs-btn-list > button {
     margin: 0;
     padding: 0;
     background: transparent;
+    display: inline-block;
     border: 0;
     color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    height: auto;
+    width: auto;
+    min-height: auto;
+    min-width: auto;
 }
 
 #addresses-page .adrs-btn-list > button:before,
 #addresses-page .adrs-btn-list > button:after {
     display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    #addresses-page .adrs-btn-list > button,
+    #addresses-page .adrs-select *,
+    #addresses-page #AddressProvinceContainerNew * {
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
