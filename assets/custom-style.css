@@ -3750,3 +3750,7 @@ button.swiper-pagination-bullet {
         margin-top: 72px;
     }
 }
+
+#wishlist-page .wk-page:not(.wk-page--shared) .wk-button.wk-button--floating {
+    width: 6px;
+}
