@@ -3423,7 +3423,7 @@ button.swiper-pagination-bullet {
 .order-detail-row--ex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0 5px;
+    gap: 30px 5px;
 }
 
 #wishlist-page a,
