@@ -3823,6 +3823,10 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
+#reset-page .field {
+    margin: 0;
+}
+
 #reset-page .field:after,
 #reset-page .field:before,
 #reset-page .field:hover:before,
