@@ -3793,6 +3793,8 @@ button.swiper-pagination-bullet {
 }
 
 #reset-page .reset-btn {
+    margin-top: 21px;
+    margin-bottom: 0;
     letter-spacing: initial;
     display: inline-block;
     border: 0;
@@ -3842,6 +3844,7 @@ button.swiper-pagination-bullet {
     height: 16px;
     box-shadow: none;
     border: 0;
+    transition: none;
 }
 
 #reset-page .field input::placeholder {
