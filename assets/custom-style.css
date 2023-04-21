@@ -1090,6 +1090,7 @@ button.swiper-pagination-bullet {
     padding: 0;
     box-shadow: none;
     background: transparent;
+    overflow: visible;
 }
 
 #register-page.customer .field input:focus,
@@ -3290,6 +3291,7 @@ button.swiper-pagination-bullet {
     margin: 0;
     bottom: 0;
     box-shadow: none;
+    overflow: visible;
 }
 
 #AddAddress .field input::placeholder {
@@ -3644,6 +3646,7 @@ button.swiper-pagination-bullet {
     height: initial;
     min-height: auto;
     min-width: auto;
+    overflow: visible;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3767,6 +3770,7 @@ button.swiper-pagination-bullet {
     margin: 0;
     bottom: 0;
     box-shadow: none;
+    overflow: visible;
 }
 
 #addresses-page .edit-box .field input::placeholder {
@@ -3845,6 +3849,7 @@ button.swiper-pagination-bullet {
     box-shadow: none;
     border: 0;
     transition: none;
+    overflow: visible;
 }
 
 #reset-page .field input::placeholder {
