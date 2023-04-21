@@ -1127,10 +1127,10 @@
                         {%- endunless -%}
                     {%- endfor -%}
                 </ul>
-                <div class="swiper-button-next">
+                <div class="swiper-button-next testNext">
 
                 </div>
-                <div class="swiper-button-prev">
+                <div class="swiper-button-prev testPrev">
 
                 </div>
             </div>
@@ -1227,11 +1227,14 @@
 
     var zoomSwiper = new Swiper(".zoomSwiper", {
         effect: 'fade',
-        allowTouchMove: false,
+        // allowTouchMove: false,
         loop: true,
+        // fadeEffect: {
+        //     crossFade: true
+        // },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".testNext",
+            prevEl: ".testPrev",
         },
     });
 
