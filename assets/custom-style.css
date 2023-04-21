@@ -3896,6 +3896,7 @@ button.swiper-pagination-bullet {
     height: 16px;
     border: 0 !important;
     box-shadow: none;
+    color: #000 !important;
 }
 
 #wishlist-page .wk-button.wk-button--floating:before {
@@ -3906,7 +3907,7 @@ button.swiper-pagination-bullet {
     margin: 0;
     border: 0;
     box-shadow: none;
-    color: #000;
+    color: #000 !important;
 }
 
 #wishlist-page .wk-button.wk-button--floating:after {
