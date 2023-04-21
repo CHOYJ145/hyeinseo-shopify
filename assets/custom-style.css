@@ -3885,3 +3885,27 @@ button.swiper-pagination-bullet {
 #wishlist-page .account-nav-item a:hover{
     color: #000;
 }
+
+#wishlist-page .wk-button.wk-button--floating {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    box-shadow: none;
+}
+
+#wishlist-page .wk-button.wk-button--floating:before {
+    content: '×';
+    font-size: 14px;
+    position: static;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+#wishlist-page .wk-button.wk-button--floating:after {
+    display: none;
+}
