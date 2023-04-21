@@ -3209,6 +3209,10 @@
     position: relative;
 }
 
+.addresses .address-default > li + li {
+    margin-top: 30px;
+}
+
 #addresses-page .edit-box {
     position: absolute;
     top: 0;
