@@ -3786,3 +3786,36 @@ button.swiper-pagination-bullet {
 #wishlist-page.wk-page:not(.wk-page--shared) .wk-button.wk-button--floating {
     width: 6px;
 }
+
+#reset-page {
+    max-width: none;
+    text-align: left;
+}
+
+#reset-page .reset-btn {
+    letter-spacing: initial;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    transition: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    min-height: auto;
+    min-width: auto;
+}
+
+#reset-page * {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    #reset-page * {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
