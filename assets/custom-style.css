@@ -3871,3 +3871,9 @@ button.swiper-pagination-bullet {
         height: 19px;
     }
 }
+
+.order-detail--img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
