@@ -3853,7 +3853,7 @@ button.swiper-pagination-bullet {
 }
 
 #reset-page .field input::placeholder {
-    color: #000 !important;
+    color: #bfbfbf !important;
 }
 
 #reset-page .field label {
