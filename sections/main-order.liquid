@@ -377,6 +377,7 @@
                 data-label="{{ 'customer.order.product' | t }}"
               >
                 <div>
+                  {{ line_item.image }}}
                   {%- if line_item.url != blank -%}
                     <a href="{{ line_item.url }}">{{ line_item.title }}</a>
                   {%- else -%}
