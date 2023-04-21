@@ -128,7 +128,7 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`)
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=20&section_id=predictive-search`)
       .then((response) => {
         if (!response.ok) {
           var error = new Error(response.status);
@@ -189,8 +189,6 @@ class PredictiveSearch extends HTMLElement {
     this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
     this.isOpen = true;
-
-
 
   }
 
