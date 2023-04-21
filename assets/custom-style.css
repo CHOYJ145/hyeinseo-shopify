@@ -3355,6 +3355,7 @@ button.swiper-pagination-bullet {
     color: #FF0000;
     border: 0;
     box-shadow: none;
+    transition: none;
 }
 
 #register-page .form__message:after,
