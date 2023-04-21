@@ -67,7 +67,7 @@
           <div class="order-detail-item">
               <div class="order-detail--img">
                 <!--             이미지 -->
-                <img src='{{ line_item.image | image_url : 400x }}' />
+                <img src='{{ line_item.image | image_url }}' />
 
                   {{ line_item.image | image_url: width: 990 | image_tag:
                   loading: lazy,
