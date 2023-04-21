@@ -64,12 +64,12 @@
         placeholder="{{ 'customer.register.email' | t }}"
       >
     </div>
-    {%- if form.errors contains 'email' -%}
+    {% comment %}{%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
 
         {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
       </span>
-    {%- endif -%}
+    {%- endif -%}{% endcomment %}
     <div class="field">     
       <input
         type="password"
@@ -83,11 +83,11 @@
         placeholder="{{ 'customer.register.password' | t }}"
       >
     </div>
-    {%- if form.errors contains 'password' -%}
+    {% comment %}{%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
-    {%- endif -%}
+    {%- endif -%}{% endcomment %}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
         {{ 'templates.contact.form.error_heading' | t }}
