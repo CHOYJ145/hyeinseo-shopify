@@ -2482,6 +2482,10 @@
     #wishlist-page {
         padding: 23px 4px 90px;
     }
+
+    .recommend-item .color-code-list {
+        display: none;
+    }
 }
 
 .account-nav {
