@@ -3877,3 +3877,11 @@ button.swiper-pagination-bullet {
     width: 100%;
     height: auto;
 }
+
+#wishlist-page .account-nav-item a {
+    color: #ceced0;
+}
+
+#wishlist-page .account-nav-item a:hover{
+    color: #000;
+}

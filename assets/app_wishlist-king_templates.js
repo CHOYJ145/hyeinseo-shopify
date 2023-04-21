@@ -117,9 +117,7 @@ const templates = [
                 </a>
             </div>
             <div class="account-nav-item">
-                <a href="/pages/wishlist">
                 Wishlist
-                </a>
             </div>
             <div class="account-nav-item">
             <a href="/account/addresses">
