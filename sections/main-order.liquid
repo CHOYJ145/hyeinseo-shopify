@@ -65,7 +65,9 @@
       <div class="order-detail-row order-detail-row--ex">
           {%- for line_item in order.line_items -%}
           <div class="order-detail-item">
-              <div class="order-detail--img"></div>
+              <div class="order-detail--img">
+                <img src='{{ line_item.product.featured_image }}'/>
+              </div>
               <div class="order-detail--info">
 
                       <div
