@@ -67,11 +67,7 @@
           <div class="order-detail-item">
               <div class="order-detail--img">
                 <!--             이미지 -->
-                <img src='{{ line_item.image | image_url }}' style='width: 100px'/>
-                <!--               사이즈 -->
-                <div>{{ line_item.variant.option1 }}</div>
-                <!--                 컬러 -->
-                <div>{{ line_item.product.metafields.custom.color_name }}</div>
+                <img src='{{ line_item.image | image_url : '400x' }}' />
               </div>
               <div class="order-detail--info">
 
@@ -245,11 +241,11 @@
 
                       <div class="order-d-row">
                           <div>Color</div>
-                          <div>{{ line_item.properties | size }}</div>
+                          <div>{{ line_item.product.metafields.custom.color_name }}</div>
                       </div>
                       <div class="order-d-row">
                           <div>Size</div>
-                          <div>{{ line_item.properties | size }}</div>
+                          <div>{{ line_item.variant.option1 }}</div>
                       </div>
                       <div
                               class="order-d-row"
