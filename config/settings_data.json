@@ -122,7 +122,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/hyeinseo_logotype_white.svg",
-    "checkout_logo_size": "large",
+    "checkout_logo_size": "small",
     "checkout_body_background_color": "#000000",
     "checkout_input_background_color_mode": "transparent",
     "checkout_sidebar_background_color": "#000000",
