@@ -3889,7 +3889,9 @@ button.swiper-pagination-bullet {
 #wishlist-page .wk-button.wk-button--floating {
     margin: 0;
     padding: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 16px;
     height: 16px;
     border: 0;
