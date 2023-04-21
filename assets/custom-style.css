@@ -3808,14 +3808,41 @@ button.swiper-pagination-bullet {
     min-width: auto;
 }
 
+#reset-page .reset-btn:before,
+#reset-page .reset-btn:after {
+    display: none;
+}
+
 #reset-page * {
     font-size: 14px;
     line-height: 16px;
+}
+
+#reset-page h1,
+#reset-page p {
+    margin: 0;
+}
+
+#reset-page .field:after,
+#reset-page .field:before {
+    display: none;
+}
+
+#reset-page .field input {
+    padding: 0;
+    margin: 0;
+    min-height: auto;
+    min-width: auto;
+    height: 16px;
 }
 
 @media screen and (max-width: 1024px) {
     #reset-page * {
         font-size: 16px;
         line-height: 19px;
+    }
+
+    #reset-page .field input {
+        height: 19px;
     }
 }
