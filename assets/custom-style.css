@@ -3824,7 +3824,9 @@ button.swiper-pagination-bullet {
 }
 
 #reset-page .field:after,
-#reset-page .field:before {
+#reset-page .field:before,
+#reset-page .field:hover:before,
+#reset-page .field:hover:after {
     display: none;
 }
 
@@ -3834,6 +3836,16 @@ button.swiper-pagination-bullet {
     min-height: auto;
     min-width: auto;
     height: 16px;
+    box-shadow: none;
+    border: 0;
+}
+
+#reset-page .field input ::placeholder {
+    color: #000;
+}
+
+#reset-page .field label {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {
