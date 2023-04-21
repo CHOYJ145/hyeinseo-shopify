@@ -66,7 +66,9 @@
           {%- for line_item in order.line_items -%}
           <div class="order-detail-item">
               <div class="order-detail--img">
+                <!--             이미지 -->
                 <img src='{{ line_item.image | image_url }}' style='width: 100px'/>
+                {{ line_item.variant.option1.value }}
               </div>
               <div class="order-detail--info">
 
