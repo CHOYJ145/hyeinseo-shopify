@@ -3854,6 +3854,7 @@ button.swiper-pagination-bullet {
 
 #reset-page .field input::placeholder {
     color: #bfbfbf !important;
+    opacity: 1 !important;
 }
 
 #reset-page .field label {
