@@ -1175,7 +1175,7 @@ button.swiper-pagination-bullet {
 }
 
 #list-page.list-page--d {
-    /*padding: 22px 6px 90px;*/
+    padding: 22px 6px 90px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1183,7 +1183,11 @@ button.swiper-pagination-bullet {
         display: block;
 
         /*padding: 0 4px 90px;*/
-        padding: 0 4px 4px;
+        padding: 0 4px 90px;
+    }
+
+    #list-page.list-page--d {
+        padding: 0 4px 90px;
     }
 
     #overview-value {

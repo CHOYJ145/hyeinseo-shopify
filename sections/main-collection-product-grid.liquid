@@ -38,7 +38,12 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-  <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %} {%- if paginate.pages > 1 -%}list-page--pn{%- else -%}list-page--d{%- endif -%}">
+  <div id="list-page" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical{% endif %}
+
+{%- paginate collection.products by section.settings.products_per_page -%}
+{%- if paginate.pages > 1 -%}list-page--pn{%- else -%}list-page--d{%- endif -%}
+{%- endpaginate -%}
+">
 
     <div id="overview-value" data-overview="{{ overview }}">
       {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
