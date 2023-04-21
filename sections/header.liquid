@@ -474,7 +474,7 @@
               {%- endif -%}
             </div>
             <div class="m-nav-item">
-              <a class="header__menu-item list-menu__item link link--text focus-inset" role="button" aria-haspopup="dialog" data-appmate="">
+              <a class="header__menu-item list-menu__item link link--text focus-inset" role="button" aria-haspopup="dialog" data-appmate="" onclick="document.querySelector('#cart-icon-bubble').click()">
                 <span>Cart&nbsp;</span>
                 {%- if cart != empty -%}
                   {%- if cart.item_count < 100 -%}
