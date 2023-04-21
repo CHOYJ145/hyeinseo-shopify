@@ -3137,8 +3137,7 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
-.grid--2 .color-code-list,
-.recommend-item .color-code-list {
+.grid--2 .color-code-list {
     display: none;
 }
 
