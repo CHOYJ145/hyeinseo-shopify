@@ -65,7 +65,11 @@
       <div class="order-detail-row order-detail-row--ex">
           {%- for line_item in order.line_items -%}
           <div class="order-detail-item">
-              <div class="order-detail--img"></div>
+              <div class="order-detail--img">
+                <!--             이미지 -->
+                <img src='{{ line_item.image | image_url }}' style='width: 100px'/>
+                {{ line_item.variant.option2 }}
+              </div>
               <div class="order-detail--info">
 
                       <div
@@ -377,6 +381,7 @@
                 data-label="{{ 'customer.order.product' | t }}"
               >
                 <div>
+                  {{ line_item.product.featured_image }}}
                   {%- if line_item.url != blank -%}
                     <a href="{{ line_item.url }}">{{ line_item.title }}</a>
                   {%- else -%}
