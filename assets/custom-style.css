@@ -3353,6 +3353,16 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     line-height: 16px;
     color: #FF0000;
+    border: 0;
+    box-shadow: none;
+}
+
+#register-page .form__message:after,
+#register-page .form__message:before,
+#login-page .form__message:after,
+#login-page .form__message:before {
+    border: 0;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 1024px) {
