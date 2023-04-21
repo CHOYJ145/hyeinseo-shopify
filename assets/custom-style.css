@@ -1031,6 +1031,7 @@ button.swiper-pagination-bullet {
     display: none !important;
 }
 
+#reset-page,
 #register-page,
 #login-page {
     margin: 0 auto;
