@@ -4040,7 +4040,7 @@ button.swiper-pagination-bullet {
     }
 
     .addresses input[type=checkbox] {
-        margin: 19px 0 0 !important;
+        margin: 0 !important;
     }
 
     .custom .address-default h2,
@@ -4098,6 +4098,10 @@ button.swiper-pagination-bullet {
 
     #addresses-page .field {
         height: 19px;
+    }
+
+    #addresses-page .adrs-btn-list {
+        margin-top: 0;
     }
 }
 
