@@ -4077,7 +4077,7 @@ button.swiper-pagination-bullet {
         width: 100%;
     }
 
-    .cart-drawer .cart-item cart-remove-button {
+    .custom .cart-drawer .cart-item cart-remove-button {
         top: -1px;
         right: 2px;
     }
