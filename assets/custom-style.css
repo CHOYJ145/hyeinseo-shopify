@@ -3996,3 +3996,9 @@ button.swiper-pagination-bullet {
 .order-detail--info {
     margin-top: 1px;
 }
+
+.o-product-info-wrap a,
+.product-info-wrap a,
+.custom #list-page .wishlist {
+    width: fit-content;
+}
