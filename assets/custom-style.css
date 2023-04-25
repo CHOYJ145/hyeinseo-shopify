@@ -3222,24 +3222,6 @@ button.swiper-pagination-bullet {
     gap: 0 4px;
 }
 
-@media screen and (max-width: 1024px) {
-    .addresses-wrap {
-        display: block;
-        padding: 27px 0;
-    }
-
-    #account-page .order-wrap {
-        padding: 27px 0;
-    }
-
-    .order-detail {
-        padding: 27px 0;
-    }
-    #wishlist-page .wk-grid {
-        padding: 27px 0;
-    }
-}
-
 #order-page .order-detail {
     display: block;
     margin: 0;
@@ -4065,5 +4047,23 @@ button.swiper-pagination-bullet {
     #addresses-page .adrs-btn {
         font-size: 16px;
         line-height: 19px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .addresses-wrap {
+        display: block;
+        padding: 27px 0;
+    }
+
+    #account-page .order-wrap {
+        padding: 27px 0;
+    }
+
+    .order-detail {
+        padding: 27px 0;
+    }
+    #wishlist-page .wk-grid {
+        padding: 27px 0;
     }
 }
