@@ -2425,6 +2425,9 @@ button.swiper-pagination-bullet {
     position: sticky;
     top: 22px;
     left: 0;
+}
+
+.info-nav-list {
     display: flex;
     flex-direction: column;
 }
