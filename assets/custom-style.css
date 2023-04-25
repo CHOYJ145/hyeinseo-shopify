@@ -4091,6 +4091,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-.stockist-list a {
+.stockist-row .stockist-list a {
     cursor: default !important;
 }
