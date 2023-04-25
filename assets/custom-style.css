@@ -3471,7 +3471,7 @@ button.swiper-pagination-bullet {
 .order-detail-row--ex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 5px;
+    gap: 16px 5px;
 }
 
 #wishlist-page a,
@@ -3511,7 +3511,7 @@ button.swiper-pagination-bullet {
     .order-detail-row--ex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px 4px;
+        gap: 19px 4px;
     }
 
     .order-detail-row {
