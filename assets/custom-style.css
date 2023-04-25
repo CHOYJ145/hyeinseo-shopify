@@ -4095,6 +4095,10 @@ button.swiper-pagination-bullet {
     .info-conts {
         padding: 27px 0;
     }
+
+    #addresses-page .field {
+        height: 19px;
+    }
 }
 
 .stockist-row .stockist-list a {
