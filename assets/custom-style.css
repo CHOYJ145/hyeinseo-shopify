@@ -4005,6 +4005,7 @@ button.swiper-pagination-bullet {
 
 #predictive-search-results-list {
     gap: 30px 0;
+    padding-bottom: 30px;
 }
 
 .custom .predictive-search {
