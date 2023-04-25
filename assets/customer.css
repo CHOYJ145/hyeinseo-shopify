@@ -53,6 +53,7 @@
 
 .customer .field {
   margin: 2rem 0 0 0;
+  overflow: visible !important;
 }
 
 .customer .field:first-of-type {
