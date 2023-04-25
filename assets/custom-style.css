@@ -4118,3 +4118,7 @@ button.swiper-pagination-bullet {
 .stockist-row .stockist-list a {
     cursor: default !important;
 }
+
+#addresses-page .edit-box .adrs-btn-list {
+    margin-top: 0;
+}
