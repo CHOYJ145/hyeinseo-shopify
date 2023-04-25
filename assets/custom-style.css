@@ -4035,7 +4035,7 @@ button.swiper-pagination-bullet {
 }
 
 .addresses input[type=checkbox] {
-    margin: 16px 0 0 !important;
+    margin: 0 !important;
 }
 
 .account-title {
