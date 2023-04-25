@@ -3953,6 +3953,10 @@ button.swiper-pagination-bullet {
     cursor: pointer;
 }
 
+.rte a {
+    color: #000;
+}
+
 @media screen and (max-width: 1024px) {
     #wishlist-page .wk-button.wk-button--floating {
         right: -2px;
