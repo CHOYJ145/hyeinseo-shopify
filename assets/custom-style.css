@@ -2960,7 +2960,7 @@ button.swiper-pagination-bullet {
 
     .custom .drawer__header {
         height: 23px;
-        padding: 0 4px;
+        padding: 0;
         margin-bottom: 0;
         align-items: center;
     }
