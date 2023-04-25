@@ -3923,6 +3923,14 @@ button.swiper-pagination-bullet {
     /*top: 0;*/
     /*right: 0;*/
     width: 50%;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    #addresses-page .edit-box {
+        width: 100%;
+        margin-top: 19px;
+    }
 }
 
 #addresses-page .edit-box .field label {
