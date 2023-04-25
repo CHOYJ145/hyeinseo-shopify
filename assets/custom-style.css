@@ -4081,4 +4081,12 @@ button.swiper-pagination-bullet {
         top: -1px;
         right: 2px;
     }
+
+    .theme-main .drawer__header {
+        padding: 0 4px;
+    }
+
+    .theme-main .drawer__footer {
+        padding: 4px;
+    }
 }
