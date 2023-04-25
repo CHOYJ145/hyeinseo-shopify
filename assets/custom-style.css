@@ -793,7 +793,8 @@ button.swiper-pagination-bullet {
         top: 100%;
         left: 0;
         width: 100%;
-        height: calc(var(--vh, 1vh) * 100);
+        /*height: calc(var(--vh, 1vh) * 100);*/
+        height: 100vh;
         background: #fff;
         transition: top 350ms ease-in-out;
     }
