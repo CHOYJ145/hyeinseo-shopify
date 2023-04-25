@@ -116,7 +116,7 @@ const templates = [
                 Orders
                 </a>
             </div>
-            <div class="account-nav-item">
+            <div class="account-nav-item on">
                 Wishlist
             </div>
             <div class="account-nav-item">
