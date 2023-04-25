@@ -3227,6 +3227,17 @@ button.swiper-pagination-bullet {
         display: block;
         padding: 27px 0;
     }
+
+    #account-page .order-wrap {
+        padding: 27px 0;
+    }
+
+    .order-detail {
+        padding: 27px 0;
+    }
+    #wishlist-page .wk-grid {
+        padding: 27px 0;
+    }
 }
 
 #order-page .order-detail {
