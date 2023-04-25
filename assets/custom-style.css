@@ -1775,6 +1775,7 @@
     cursor: pointer;
 }
 
+.info-nav-item:hover,
 .info-nav-item.on {
     color: #000;
 }
