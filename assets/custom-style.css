@@ -3276,3 +3276,13 @@
         z-index: 2;
     }
 }
+
+.order-adr-wrap + .order-adr-wrap {
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .order-adr-wrap + .order-adr-wrap {
+        margin-top: 19px;
+    }
+}
