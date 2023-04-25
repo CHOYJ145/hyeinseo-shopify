@@ -3775,6 +3775,10 @@ button.swiper-pagination-bullet {
         font-size: 16px;
         line-height: 19px;
     }
+
+    #addresses-page .adrs-btn.adrs-btn--top {
+        margin-top: 0 !important;
+    }
 }
 
 @media screen and (max-width: 1024px) {
