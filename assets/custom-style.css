@@ -2460,6 +2460,7 @@ button.swiper-pagination-bullet {
     color: #CECED0;
     cursor: pointer;
     display: inline-block;
+    width: fit-content;
 }
 
 .info-nav-item:hover,
