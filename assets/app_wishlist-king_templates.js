@@ -172,7 +172,20 @@ const templates = [
             {% endfor %}
           </div>
         </div>
-
+        <script >
+          var navbar = document.querySelector(".on");
+          var sticky = navbar.offsetTop;
+        
+          window.onscroll = function() {stickyFnc()};
+        
+          function stickyFnc() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky")
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          }
+        </script>
         {% comment %}
         {% include "wishlist-button-bulk-add-to-cart" %}
         {% endcomment %}
