@@ -4063,7 +4063,8 @@ button.swiper-pagination-bullet {
     .order-detail {
         padding: 27px 0;
     }
+
     #wishlist-page .wk-grid {
-        padding: 27px 0;
+        padding: 27px 0 !important;
     }
 }
