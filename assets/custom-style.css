@@ -4085,4 +4085,8 @@ button.swiper-pagination-bullet {
     .theme-main.custom .drawer.active .drawer__inner {
         padding: 0 4px;
     }
+
+    .info-conts {
+        padding: 27px 0;
+    }
 }
