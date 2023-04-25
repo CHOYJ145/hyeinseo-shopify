@@ -2499,6 +2499,12 @@
     height: fit-content;
 }
 
+@media screen and (max-width: 1024px) {
+    .account-nav {
+        position: static;
+    }
+}
+
 .account-nav-item a {
     text-decoration: none;
     color: #CECED0;
