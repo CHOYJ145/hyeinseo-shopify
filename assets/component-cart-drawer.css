@@ -316,7 +316,7 @@ cart-drawer-items {
 
 .cart-drawer .cart-item cart-remove-button {
   position: absolute;
-  top: 1px;
+  top: 0;
   right: 6px;
 }
 
