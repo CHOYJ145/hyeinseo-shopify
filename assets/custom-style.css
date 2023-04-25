@@ -4013,5 +4013,11 @@ button.swiper-pagination-bullet {
 }
 
 .addresses input[type=checkbox] {
-    margin: 0 !important;
+    margin: 16px 0 0 !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .addresses input[type=checkbox] {
+        margin: 19px 0 0 !important;
+    }
 }
