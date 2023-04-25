@@ -4066,6 +4066,7 @@ button.swiper-pagination-bullet {
 
     #wishlist-page .wk-grid {
         padding: 27px 0 !important;
+        gap: 30px 4px;
     }
 
     .info-nav-item {
