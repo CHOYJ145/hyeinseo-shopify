@@ -3333,6 +3333,12 @@ button.swiper-pagination-bullet {
     text-align: left;
 }
 
+@media screen and (max-width: 1024px) {
+    .addresses .address-default {
+        margin: 19px 0 0;
+    }
+}
+
 .custom .addresses ul p {
     margin-top: 0;
 }
