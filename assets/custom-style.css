@@ -4040,4 +4040,10 @@ button.swiper-pagination-bullet {
         font-size: 16px;
         line-height: 19px;
     }
+
+    #addresses-page .adrs-btn-list>button,
+    #addresses-page .adrs-btn {
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
