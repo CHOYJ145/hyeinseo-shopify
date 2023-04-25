@@ -4071,4 +4071,8 @@ button.swiper-pagination-bullet {
     .info-nav-item {
         width: 100%;
     }
+
+    #account-page .order-wrap {
+        width: 100%;
+    }
 }
