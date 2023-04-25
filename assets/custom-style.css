@@ -2817,7 +2817,7 @@
     .order-detail-row--ex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0 4px;
+        gap: 30px 4px;
     }
 
     .order-detail-row {

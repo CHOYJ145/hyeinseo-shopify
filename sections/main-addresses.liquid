@@ -297,6 +297,19 @@
   window.onload = () => {
     typeof CustomerAddresses !== 'undefined' && new CustomerAddresses();
   }
+
+  var navbar = document.querySelector(".on");
+  var sticky = navbar.offsetTop;
+
+  window.onscroll = function() {stickyFnc()};
+
+  function stickyFnc() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
 </script>
 
 {% schema %}
