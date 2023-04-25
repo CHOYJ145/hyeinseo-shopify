@@ -4030,7 +4030,15 @@ button.swiper-pagination-bullet {
     margin: 16px 0 0 !important;
 }
 
+.account-title {
+    display: none;
+}
+
 @media screen and (max-width: 1024px) {
+    .account-title {
+        display: block;
+    }
+
     .addresses input[type=checkbox] {
         margin: 19px 0 0 !important;
     }

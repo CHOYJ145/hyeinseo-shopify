@@ -110,6 +110,9 @@ const templates = [
         {% endif %}
 
         <div id="wishlist-page" class="customer">
+        <div class="account-title">
+            Account
+        </div>
           <div class="account-nav">
             <div class="account-nav-item">
                 <a href="/account">
