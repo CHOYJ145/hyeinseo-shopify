@@ -4089,8 +4089,8 @@ button.swiper-pagination-bullet {
     .info-conts {
         padding: 27px 0;
     }
+}
 
-    .stockist-list a {
-        cursor: default !important;
-    }
+.stockist-list a {
+    cursor: default !important;
 }
