@@ -3961,7 +3961,7 @@ button.swiper-pagination-bullet {
 }
 
 .rte a {
-    color: #000;
+    color: #000 !important;
 }
 
 @media screen and (max-width: 1024px) {
