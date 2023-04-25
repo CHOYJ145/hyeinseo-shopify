@@ -4068,19 +4068,19 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1024px) {
     .addresses-wrap {
         display: block;
-        padding: 27px 0 90px;
+        padding: 19px 0 90px;
     }
 
     #account-page .order-wrap {
-        padding: 27px 0 90px;
+        padding: 19px 0 90px;
     }
 
     .order-detail {
-        padding: 27px 0 90px;
+        padding: 19px 0 90px;
     }
 
     #wishlist-page .wk-grid {
-        padding: 27px 0 90px !important;
+        padding: 19px 0 90px !important;
         gap: 30px 4px;
     }
 
@@ -4102,7 +4102,7 @@ button.swiper-pagination-bullet {
     }
 
     .info-conts {
-        padding: 27px 0;
+        padding: 19px 0 90px;
     }
 
     #addresses-page .field {
