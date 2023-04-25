@@ -3926,7 +3926,7 @@ button.swiper-pagination-bullet {
 }
 
 .addresses .address-default > li + li {
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 #addresses-page .edit-box {
