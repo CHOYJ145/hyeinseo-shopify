@@ -3247,3 +3247,7 @@
 #addresses-page .edit-box .field label {
     display: none;
 }
+
+.snize-ac-results {
+    display: none !important;
+}
