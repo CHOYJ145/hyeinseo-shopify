@@ -3564,6 +3564,7 @@ button.swiper-pagination-bullet {
 #pagination-wrap.pagination-wrapper .pagination__item.pagination__item-arrow,
 #pagination-wrap.pagination-wrapper .pagination__item.pagination__item--current {
     color: #000;
+    opacity: 1;
 }
 
 #pagination-wrap.pagination-wrapper .pagination__item:after {
@@ -3572,6 +3573,10 @@ button.swiper-pagination-bullet {
 
 #pagination-wrap.pagination-wrapper .pagination__item.pagination__item--current:after {
     display: none;
+}
+
+#pagination-wrap.pagination-wrapper .pagination__item.pagination__item--current {
+    cursor: default;
 }
 
 @media screen and (max-width: 1024px) {
