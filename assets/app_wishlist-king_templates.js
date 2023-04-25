@@ -176,6 +176,8 @@ const templates = [
           </div>
         </div>
         <script >
+        document.addEventListener("DOMContentLoaded", function(){
+        
           var navbar = document.querySelector(".on");
           var sticky = navbar.offsetTop;
         
@@ -188,6 +190,9 @@ const templates = [
               navbar.classList.remove("sticky");
             }
           }
+        
+        });
+
         </script>
         {% comment %}
         {% include "wishlist-button-bulk-add-to-cart" %}
