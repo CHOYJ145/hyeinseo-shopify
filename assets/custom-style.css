@@ -1780,6 +1780,8 @@
     color: #000;
 }
 
+
+
 .info-cont {
     display: none;
 }
@@ -3251,4 +3253,8 @@
 
 .snize-ac-results {
     display: none !important;
+}
+
+.rte a {
+    cursor: pointer;
 }
