@@ -2017,18 +2017,6 @@ button.swiper-pagination-bullet {
     padding-bottom: 0 !important;
 }
 
-.main-blog .article-item:nth-child(1),
-.main-blog .article-item:nth-child(2) {
-    width: 66.66% !important;
-}
-
-@media screen and (max-width: 1024px) {
-    .main-blog .article-item:nth-child(1),
-    .main-blog .article-item:nth-child(2) {
-        width: 100% !important;
-    }
-}
-
 .info-btn {
     cursor: pointer;
 }
@@ -4209,4 +4197,16 @@ button.swiper-pagination-bullet {
 
 .theme-black .collection-title {
     color: #fff;
+}
+
+.main-blog .article-item:nth-child(1),
+.main-blog .article-item:nth-child(3) {
+    width: 66.66% !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-blog .article-item:nth-child(1),
+    .main-blog .article-item:nth-child(3) {
+        width: 100% !important;
+    }
 }
