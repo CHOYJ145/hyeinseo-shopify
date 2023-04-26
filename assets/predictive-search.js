@@ -12,7 +12,7 @@ class PredictiveSearch extends HTMLElement {
   setupEventListeners() {
     const form = this.querySelector('form.search');    
     
-    // form.addEventListener('submit', this.onFormSubmit.bind(this));
+    form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('input', debounce((event) => {
       this.onChange(event);
@@ -39,6 +39,7 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onFormSubmit(event) {
+    javascript:void(0);
     event.preventDefault();
     // if (!this.getQuery().length || this.querySelector('[aria-selected="true"] a')) event.preventDefault();
   }
