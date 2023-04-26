@@ -2970,5 +2970,5 @@ dd {
 }
 
 .snize-main-panel {
-  display: none;
+  display: none !important;
 }
