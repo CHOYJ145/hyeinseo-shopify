@@ -33,7 +33,7 @@
         {%- endif -%}{% endcomment %}
 
         {%- when 'title'-%}
-          <div class="credit-button">Credits</div>
+          {% comment %}<div class="credit-button">Credits</div>{% endcomment %}
           <div class="collection-title font-bold">{{ article.title | escape }}</div>
 
         {%- when 'content'-%}
@@ -199,7 +199,7 @@
   {%- endif -%}
 </article>
 
-<script src="{{ 'theme-article.js' | asset_url }}" defer="defer"></script>
+{% comment %}<script src="{{ 'theme-article.js' | asset_url }}" defer="defer"></script>{% endcomment %}
 
 <script type="application/ld+json">
   {

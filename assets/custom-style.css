@@ -1706,7 +1706,6 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 50%;
     left: 6px;
-    color: #fff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -4129,4 +4128,69 @@ button.swiper-pagination-bullet {
 
 .is-empty + .drawer__footer {
     display: none;
+}
+
+.c-item + .c-item {
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 1024px) {
+    .c-item + .c-item {
+        margin-top: 4px;
+    }
+}
+
+.c-item {
+    display: grid;
+    gap: 0 6px;
+}
+
+.c-item--1 {
+    grid-template-columns: 1fr;
+}
+
+.c-item--1 img {
+    width: 100%;
+    height: auto;
+}
+
+.c-item--2-1 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.c-item--2-2 {
+    grid-template-columns: 2fr 1fr;
+}
+
+.c-item--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+    .c-item {
+        display: block;
+        line-height: 0;
+    }
+
+    .c-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .c-item span {
+        display: inherit;
+        height: 0;
+    }
+
+    .c-item--3 img + img {
+        margin-top: 4px;
+    }
+}
+
+.collection-title {
+    color: #000;
+}
+
+.theme-black .collection-title {
+    color: #fff;
 }
