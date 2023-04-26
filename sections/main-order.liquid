@@ -337,10 +337,10 @@
                   <div headers="RowTax" role="cell" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</div>
               </div>
           {%- endfor -%}
-          {% if order.current_total_duties or order.total_landed_cost_additional_fees %}
+          {% if order.total_duties or order.total_landed_cost_additional_fees %}
   {% assign total_duties_line = 0 %}
-  {% if order.current_total_duties %}
-     {% assign total_duties_line = total_duties_line | plus: order.current_total_duties %}
+  {% if order.total_duties %}
+     {% assign total_duties_line = total_duties_line | plus: order.total_duties %}
   {% endif %}
   {% if order.total_landed_cost_additional_fees %}
      {% assign total_duties_line = total_duties_line | plus: order.total_landed_cost_additional_fees %}
