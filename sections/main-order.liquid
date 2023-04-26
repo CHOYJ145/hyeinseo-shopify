@@ -337,12 +337,20 @@
                   <div headers="RowTax" role="cell" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</div>
               </div>
           {%- endfor -%}
-          {%- if order.total_duties -%}
-              <div role="row" class="order-total-wrap">
+          {% if order.current_total_duties or order.total_landed_cost_additional_fees %}
+  {% assign total_duties_line = 0 %}
+  {% if order.current_total_duties %}
+     {% assign total_duties_line = total_duties_line | plus: order.current_total_duties %}
+  {% endif %}
+  {% if order.total_landed_cost_additional_fees %}
+     {% assign total_duties_line = total_duties_line | plus: order.total_landed_cost_additional_fees %}
+  {% endif %}
+   <div role="row" class="order-total-wrap">
                   <div id="RowDuties" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total_duties' | t }}</div>
-                  <div headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</div>
+                  <div headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ total_duties_line | money }}</div>
               </div>
-          {%- endif -%}
+
+  {% endif %}
           <div role="row" class="order-total-wrap">
               <div id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</div>
               <div headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</div>
