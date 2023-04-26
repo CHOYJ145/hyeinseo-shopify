@@ -11,7 +11,7 @@ class PredictiveSearch extends HTMLElement {
 
   setupEventListeners() {
     const form = this.querySelector('form.search');    
-    
+    $('form.search').attr('action', '#);
     form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('input', debounce((event) => {
