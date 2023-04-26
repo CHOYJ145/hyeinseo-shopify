@@ -4106,6 +4106,10 @@ button.swiper-pagination-bullet {
         padding: 0 4px;
     }
 
+    .theme-main.custom .drawer.is-empty .drawer__inner {
+        padding: 0;
+    }
+
     .info-conts {
         padding: 19px 0 90px;
     }
