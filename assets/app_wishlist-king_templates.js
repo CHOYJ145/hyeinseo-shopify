@@ -94,7 +94,7 @@ const templates = [
             },
         },
         template: `
-      <div class='wk-page {% if wishlist.read_only %}wk-page--shared{% endif %}'>
+      <div id="wishlist-page" class='wk-page {% if wishlist.read_only %}wk-page--shared{% endif %}'>
       {% if wishlist.item_count == 0 %}
         <div class="account-title">
             Account
@@ -129,7 +129,7 @@ const templates = [
           </div>
         {% endif %}
 
-        <div id="wishlist-page" class="customer">
+        <div class="customer">
         <div class="account-title">
             Account
         </div>
