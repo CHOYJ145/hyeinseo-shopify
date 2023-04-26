@@ -4130,11 +4130,19 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
+.collection-imgs {
+    padding: 0 6px;
+}
+
 .c-item + .c-item {
     margin-top: 6px;
 }
 
 @media screen and (max-width: 1024px) {
+    .collection-imgs {
+        padding: 0 4px;
+    }
+
     .c-item + .c-item {
         margin-top: 4px;
     }
