@@ -4122,3 +4122,7 @@ button.swiper-pagination-bullet {
 .stockist-row .stockist-list a {
     cursor: default !important;
 }
+
+.is-empty + .drawer__footer {
+    display: none;
+}
