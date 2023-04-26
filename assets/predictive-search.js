@@ -78,6 +78,7 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onKeydown(event) {
+    console.log(event);
     // Prevent the cursor from moving in the input when using the up and down arrow keys
     if (
       event.code === 'ArrowUp' ||
