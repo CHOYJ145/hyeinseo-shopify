@@ -96,7 +96,27 @@ const templates = [
         template: `
       <div class='wk-page {% if wishlist.read_only %}wk-page--shared{% endif %}'>
       {% if wishlist.item_count == 0 %}
-
+        <div class="account-title">
+            Account
+        </div>
+          <div class="account-nav">
+            <div class="account-nav-item">
+                <a href="/account">
+                Orders
+                </a>
+            </div>
+            <div class="account-nav-item on">
+                Wishlist
+            </div>
+            <div class="account-nav-item">
+            <a href="/account/addresses">
+                Addresses
+            </a>
+            </div>
+            <div class="account-nav-item">
+                <a href="/account/logout">Logout</a>
+            </div>
+          </div>
           <div class="wk-note wk-note__list-empty">
             <p>{{ locale.wishlist_empty_note }}</p>
           </div>
