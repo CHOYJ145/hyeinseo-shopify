@@ -4130,8 +4130,12 @@ button.swiper-pagination-bullet {
     display: none;
 }
 
+.custom .article-list {
+    padding: 0 5px;
+}
+
 .collection-imgs {
-    padding: 0 6px;
+    padding: 0 5px;
 }
 
 .c-item + .c-item {
@@ -4139,6 +4143,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    .custom .article-list {
+        padding: 0;
+    }
+
     .collection-imgs {
         padding: 0 4px;
     }
