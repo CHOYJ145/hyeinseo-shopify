@@ -94,8 +94,9 @@ const templates = [
             },
         },
         template: `
-      <div id="wishlist-page" class='wk-page {% if wishlist.read_only %}wk-page--shared{% endif %}'>
+      <div class='wk-page {% if wishlist.read_only %}wk-page--shared{% endif %}'>
       {% if wishlist.item_count == 0 %}
+        <div id="wishlist-page" class="customer">
         <div class="account-title">
             Account
         </div>
@@ -120,14 +121,16 @@ const templates = [
           <div class="wk-note wk-note__list-empty">
             <p>{{ locale.wishlist_empty_note }}</p>
           </div>
+          </div>
       {% else %}
+
         {% if customer_accounts_enabled and customer == null and wishlist.read_only == false %}
           <div class="wk-note wk-note__login">
             <p>{{ locale.login_or_signup_note }}</p>
           </div>
         {% endif %}
 
-        <div class="customer">
+        <div id="wishlist-page" class="customer">
         <div class="account-title">
             Account
         </div>
