@@ -4139,7 +4139,7 @@ button.swiper-pagination-bullet {
 }
 
 .c-item + .c-item {
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -4158,7 +4158,7 @@ button.swiper-pagination-bullet {
 
 .c-item {
     display: grid;
-    gap: 0 6px;
+    gap: 0 5px;
 }
 
 .c-item--1 {
