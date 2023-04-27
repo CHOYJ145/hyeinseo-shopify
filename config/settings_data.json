@@ -451,5 +451,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".step__footer__previous-link {display: none }"
+    ]
   }
 }
