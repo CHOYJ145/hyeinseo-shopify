@@ -215,8 +215,6 @@
 
     window.addEventListener('load', () => {
       setLayout();
-
-      document.querySelector('.locale-selectors__container').hide();
     });
 
     window.addEventListener('resize', () => {
@@ -229,6 +227,7 @@
 
   $(document).ready(function(){
     document.querySelector('.custom').classList.add('theme-main');
+    document.querySelector('.locale-selectors__container').hide();
   });
 
   document.querySelector('.test').addEventListener('mouseenter', () => {
