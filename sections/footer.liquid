@@ -35,6 +35,17 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .locale-selectors__selector {
+      max-width: 300px !important;
+    }
+  }
+
+  .locale-selectors__selector {
+    background-color: #fff !important;
+  }
+
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
