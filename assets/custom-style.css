@@ -4216,3 +4216,7 @@ button.swiper-pagination-bullet {
         max-width: 300px;
     }
 }
+
+.locale-selectors__selector {
+    background: #fff !important;
+}
