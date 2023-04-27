@@ -215,7 +215,9 @@
 
     window.addEventListener('load', () => {
       setLayout();
-      document.querySelector('.locale-selectors__container').style.display ='none';
+      setTimeout(function () {
+        document.querySelector('.locale-selectors__container').style.display ='none';
+      }, 2500);
     });
 
     window.addEventListener('resize', () => {
