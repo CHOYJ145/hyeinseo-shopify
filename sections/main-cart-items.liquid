@@ -5,7 +5,7 @@
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 <script>
-  $('#cart-icon-bubble').click();
+  $('cart-drawer').addClass('active');
 </script>
 {%- style -%}
   .section-{{ section.id }}-padding {
