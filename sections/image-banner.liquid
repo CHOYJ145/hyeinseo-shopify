@@ -215,6 +215,8 @@
 
     window.addEventListener('load', () => {
       setLayout();
+
+      document.querySelector('.locale-selectors__container').hide();
     });
 
     window.addEventListener('resize', () => {
@@ -268,6 +270,8 @@
     document.querySelector('.hero-dim4').classList.remove('on');
     document.querySelector('.hero-item--test2').classList.remove('test-4');
   });
+
+
 </script>
 
 {% schema %}
