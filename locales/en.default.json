@@ -454,15 +454,5 @@
       "send_to_customer_service": "Send to customer service",
       "add_all_to_cart": "Add wishlist to cart"
     }
-  },
-  "shopify": {
-    "checkout": {
-      "general": {
-        "back_to_cart": " "
-      },
-      "failed_payment": {
-        "return_to_cart_button_label": " "
-      }
-    }
   }
 }
