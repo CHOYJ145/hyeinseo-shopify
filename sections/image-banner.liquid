@@ -8,6 +8,10 @@
       background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
     }
   }
+
+  .locale-selectors__container {
+    display: none !important;
+  }
 </style>
 <div class="main-hero">
   <div class="main-sec main-sec--1">
@@ -215,9 +219,6 @@
 
     window.addEventListener('load', () => {
       setLayout();
-      setTimeout(function () {
-        document.querySelector('.locale-selectors__container').style.display ='none';
-      }, 2500);
     });
 
     window.addEventListener('resize', () => {
