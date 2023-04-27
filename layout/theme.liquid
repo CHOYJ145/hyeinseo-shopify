@@ -214,16 +214,6 @@
         font-size: 1.6rem;
         }
         }
-
-        @media screen and (max-width: 1024px) {
-        .locale-selectors__selector {
-        max-width: 300px;
-        }
-        }
-
-        .locale-selectors__selector {
-        background: #fff !important;
-        }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -252,6 +242,17 @@
             crossorigin="anonymous"></script>
 
   {% include "globale-js.liquid" %}
+    <style>
+        @media screen and (max-width: 1024px) {
+            .locale-selectors__selector {
+                max-width: 300px;
+            }
+        }
+
+        .locale-selectors__selector {
+            background: #fff !important;
+        }
+    </style>
 </head>
 
 <body class="gradient custom">
