@@ -4123,7 +4123,7 @@ button.swiper-pagination-bullet {
 }
 
 .collection-imgs {
-    padding: 0 5px;
+    padding: 22px 5px 90px;
 }
 
 .c-item + .c-item {
@@ -4136,7 +4136,7 @@ button.swiper-pagination-bullet {
     }
 
     .collection-imgs {
-        padding: 0 4px;
+        padding: 23px 4px 90px;
     }
 
     .c-item + .c-item {
