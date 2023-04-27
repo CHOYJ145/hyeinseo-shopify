@@ -36,12 +36,6 @@
     }
   }
 
-  .locale-selectors__container {
-    position: absolute;
-    bottom: 0;
-    left: 33.33%;
-  }
-
   @media screen and (max-width: 1024px) {
     .locale-selectors__selector {
       max-width: 300px !important;
@@ -50,6 +44,12 @@
 
   .locale-selectors__selector {
     background-color: #fff !important;
+  }
+
+  .locale-selectors__content {
+    display: block;
+    padding: 0 !important;
+    margin-left: 33.33%;
   }
 
 {%- endstyle -%}
