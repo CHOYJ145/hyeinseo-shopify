@@ -3572,6 +3572,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1024px) {
+    #pagination-wrap.pagination-wrapper .pagination__list {
+        justify-content: flex-start;
+    }
+
     #pagination-wrap.pagination-wrapper .pagination__item {
         font-size: 16px;
         line-height: 19px;
