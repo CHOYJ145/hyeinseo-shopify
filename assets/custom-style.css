@@ -4210,3 +4210,9 @@ button.swiper-pagination-bullet {
         width: 100% !important;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .locale-selectors__selector {
+        max-width: 300px;
+    }
+}
