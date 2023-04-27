@@ -1188,6 +1188,10 @@ button.swiper-pagination-bullet {
         padding: 0 4px 90px;
     }
 
+    #list-page.list-page--pn {
+        padding: 0 4px 0;
+    }
+
     #list-page.list-page--d {
         padding: 0 4px 90px;
     }
