@@ -2,7 +2,6 @@
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
-      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -10,16 +9,15 @@
     },
     "cart-footer": {
       "type": "main-cart-footer",
+      "disabled": true,
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "disabled": true,
           "settings": {
           }
         },
         "buttons": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
           }
         }
