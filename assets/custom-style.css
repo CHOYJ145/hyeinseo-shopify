@@ -3234,6 +3234,7 @@ button.swiper-pagination-bullet {
     width: 8px;
     height: 12px;
     padding: 0;
+    margin-right: 3px;
 }
 
 @media screen and (max-width: 1024px) {
