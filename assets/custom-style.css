@@ -4272,6 +4272,9 @@ button.swiper-pagination-bullet {
 }
 
 #FreeShippingBanner {
+    /*display: none !important;*/
+}
+.ge-free-shipping-container.ge-free-shipping-container-desktop {
     display: none !important;
 }
 
