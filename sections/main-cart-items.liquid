@@ -165,26 +165,26 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money_with_currency }}
+                              {{ item.original_line_price | money_with_currency }} test5
                             </s>
                           </dd>
                           <dt class="visually-hidden">
-                            {{ 'products.product.price.sale_price' | t }}
+                            {{ 'products.product.price.sale_price' | t }} test6
                           </dt>
                           <dd class="price price--end">
-                            {{ item.final_line_price | money_with_currency }}
+                            {{ item.final_line_price | money_with_currency }} test7
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          {{ item.original_line_price | money_with_currency }}
+                          {{ item.original_line_price | money_with_currency }} test8
                         </span>
                       {%- endif -%}
 
                       {%- if item.variant.available and item.unit_price_measurement -%}
                         <div class="unit-price caption">
                           <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                          {{ item.variant.unit_price | money_with_currency }}
+                          {{ item.variant.unit_price | money_with_currency }} test9
                           <span aria-hidden="true">/</span>
                           <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                           {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
@@ -255,26 +255,26 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money_with_currency }}
+                              {{ item.original_line_price | money_with_currency }} test10
                             </s>
                           </dd>
                           <dt class="visually-hidden">
-                            {{ 'products.product.price.sale_price' | t }}
+                            {{ 'products.product.price.sale_price' | t }} test11
                           </dt>
                           <dd class="price price--end">
-                            {{ item.final_line_price | money_with_currency }}
+                            {{ item.final_line_price | money_with_currency }} test12
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          {{ item.original_line_price | money_with_currency }}
+                          {{ item.original_line_price | money_with_currency }} test13
                         </span>
                       {%- endif -%}
 
                       {%- if item.variant.available and item.unit_price_measurement -%}
                         <div class="unit-price caption">
                           <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                          {{ item.variant.unit_price | money_with_currency }}
+                          {{ item.variant.unit_price | money_with_currency }} test14
                           <span aria-hidden="true">/</span>
                           <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                           {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
