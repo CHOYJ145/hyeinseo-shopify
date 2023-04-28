@@ -4248,3 +4248,7 @@ button.swiper-pagination-bullet {
 .custom .quantity__button {
     margin: 0 1px;
 }
+
+.cart-drawer .cart-item cart-remove-button {
+    right: -webkit-2px;
+}
