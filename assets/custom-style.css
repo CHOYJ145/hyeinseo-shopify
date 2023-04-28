@@ -4218,3 +4218,15 @@ button.swiper-pagination-bullet {
         width: 100% !important;
     }
 }
+
+.search-modal .header__search__mo .search__input.field__input {
+    padding-left: 4px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.custom .search-modal__form button.link.link--text {
+    font-size: 16px;
+    line-height: 19px;
+    padding-right: 4px;
+}
