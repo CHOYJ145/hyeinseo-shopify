@@ -4274,3 +4274,7 @@ button.swiper-pagination-bullet {
 #FreeShippingBanner {
     display: none !important;
 }
+
+#shopify-section-header {
+    height: fit-content;
+}
