@@ -184,8 +184,8 @@ const templates = [
                         {{ product.title }}
                       </a>
                       <div class="wk-product-price">
-                        <span class="wk-product-price--current">{{ variant.price | money_without_currency }} {{ cart.currency.iso_code }}</span>
-                        <span class="wk-product-price--compare">{{ variant.compare_at_price | money_without_currency }} {{ cart.currency.iso_code }}</span>
+                        <span class="wk-product-price--current">{{ variant.price | variant.money_without_currency }} {{ cart.currency.iso_code }}</span>
+                        <span class="wk-product-price--compare">{{ variant.compare_at_price | variant.money_without_currency }} {{ cart.currency.iso_code }}</span>
                       </div>
                     </div>
 
