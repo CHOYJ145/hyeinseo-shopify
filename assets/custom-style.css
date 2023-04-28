@@ -4030,7 +4030,7 @@ button.swiper-pagination-bullet {
 }
 
 .custom .predictive-search {
-    overflow-y: auto;
+    /*overflow-y: auto;*/
 }
 
 .addresses input[type=checkbox] {
