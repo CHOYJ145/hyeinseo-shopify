@@ -4271,6 +4271,14 @@ button.swiper-pagination-bullet {
     cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+    .view-all-btn {
+        padding-top: 19px;
+        padding-bottom: 90px;
+        text-align: left;
+    }
+}
+
 #FreeShippingBanner {
     /*display: none !important;*/
 }
