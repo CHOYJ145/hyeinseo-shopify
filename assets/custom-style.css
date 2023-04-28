@@ -4278,3 +4278,7 @@ button.swiper-pagination-bullet {
 #shopify-section-header {
     height: fit-content;
 }
+
+body.custom {
+     display: block;
+}
