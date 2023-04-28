@@ -4239,8 +4239,9 @@ button.swiper-pagination-bullet {
 
 .quantity__input {
     margin: 0;
+    padding: 0;
 }
 
 .custom .quantity__button {
-    margin: 0 2px;
+    margin: 0 1px;
 }
