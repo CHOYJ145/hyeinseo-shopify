@@ -4236,3 +4236,7 @@ button.swiper-pagination-bullet {
     line-height: 19px;
     padding-right: 4px;
 }
+
+.quantity__input {
+    margin: 0;
+}
