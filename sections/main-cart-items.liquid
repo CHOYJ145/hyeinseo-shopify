@@ -102,7 +102,7 @@
                       </div>
                     {%- else -%}
                       <div class="product-option">
-                        {{ item.original_price | money }}
+                        {{ item.original_price | money_with_currency }}
                       </div>
                     {%- endif -%}
 
