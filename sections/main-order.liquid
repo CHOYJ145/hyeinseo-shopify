@@ -295,9 +295,9 @@
       <div class="order-detail-row order-detail-row--fin">
           <div role="row" class="order-total-wrap">
               <div id="RowSubtotal" role="rowheader" scope="row" colspan="4">
-                  {{ 'customer.order.subtotal' | t }} test
+                  {{ 'customer.order.subtotal' | t }}
               </div>
-              <div headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</div>
+              <div headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money_without_currency }} {{ cart.currency.iso_code }}</div>
           </div>
           {%- if order.cart_level_discount_applications != blank -%}
               <div role="row" class="order-total-wrap">
@@ -313,7 +313,7 @@
                       </div>
                       <div headers="RowDiscount" role="cell" data-label="{{ 'customer.order.discount' | t }}">
                           <div>
-                              <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                              <span>-{{ discount_application.total_allocated_amount | money_without_currency }} {{ cart.currency.iso_code }}</span>
                               <span class="cart-discount">
                       <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
                         <use href="#icon-discount" />
