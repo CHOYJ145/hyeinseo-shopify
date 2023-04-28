@@ -172,12 +172,12 @@
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
                           <dd class="price price--end">
-                            {{ item.final_line_price | money_with_currency }}
+                            {{ item.final_line_price | money_with_currency }} {{ cart.currency.iso_code }}
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          {{ item.original_line_price | money_with_currency }}
+                          {{ item.original_line_price | money_with_currency }} {{ cart.currency.iso_code }}
                         </span>
                       {%- endif -%}
 
