@@ -285,7 +285,7 @@
                     </div>
                     <div class="footer_grid__box">
                         <span class="cart_footer__subtitle">{{ 'sections.cart.subtotal' | t }}</span>
-                        <span>{{ cart.total_price | money_with_currency }} test</span>
+                        <span>{{ cart.total_price | money_without_currency }} {{ cart.currency.iso_code }}</span>
                     </div>
 
                     <div>
@@ -296,7 +296,7 @@
                                     <li class="discounts__discount discounts__discount--end">
                                         {%- render 'icon-discount' -%}
                                         {{ discount.title }}
-                                        (-{{ discount.total_allocated_amount | money }}) test2
+                                        (-{{ discount.total_allocated_amount | money }})
                                     </li>
                                 {%- endfor -%}
                             </ul>
