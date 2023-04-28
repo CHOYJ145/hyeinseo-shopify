@@ -9,6 +9,7 @@
     },
     "cart-footer": {
       "type": "main-cart-footer",
+      "disabled": true,
       "blocks": {
         "subtotal": {
           "type": "subtotal",
@@ -30,6 +31,7 @@
     },
     "featured-collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h2",

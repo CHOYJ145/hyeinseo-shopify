@@ -56,7 +56,7 @@ class PredictiveSearch extends HTMLElement {
 
   onFocusOut() {
     setTimeout(() => {
-      if (!this.contains(document.activeElement)) this.close();
+      // if (!this.contains(document.activeElement)) this.close();
     })
   }
 
