@@ -4285,3 +4285,7 @@ button.swiper-pagination-bullet {
 body.custom {
      /*display: block;*/
 }
+
+.snize-instant-widget-is-open [tabindex="-1"] {
+    display: block !important;
+}
