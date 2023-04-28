@@ -22,7 +22,7 @@
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
-   assign money_price = money_without_currency | currency
+   assign money_price = price | money_without_currency | currency
   endif
 
   if target == product and product.price_varies
