@@ -78,7 +78,6 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onKeydown(event) {
-    console.log(event);
     if (event.keyCode === 13) {
       event.preventDefault();
       return false;
@@ -175,9 +174,13 @@ class PredictiveSearch extends HTMLElement {
   renderSearchResults(resultsMarkup) {
     this.predictiveSearchResults.innerHTML = resultsMarkup;
     this.setAttribute('results', true);
-
     this.setLiveRegionResults();
     this.open();
+    if ($('.predictive-search-status').eq(0).text().includes('0 results')) {
+      $('#view-all-btn').css('display', 'none');
+    } else {
+      $('#view-all-btn').css('display', 'block');
+    }
   }
 
   setLiveRegionResults() {
