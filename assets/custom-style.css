@@ -4269,3 +4269,7 @@ button.swiper-pagination-bullet {
     letter-spacing: normal;
     cursor: pointer;
 }
+
+#FreeShippingBanner {
+    display: none !important;
+}
