@@ -83,12 +83,12 @@
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                                         <div class="price price--end">
-                                                            {{ item.final_line_price | money }} test
+                                                            {{ item.final_line_price | money_without_currency }} {{ cart.currency.iso_code }}
                                                         </div>
                                                     </div>
                                                 {%- else -%}
                                                     <div class="price price--end">
-                                                        {{ item.original_line_price | money }} test2
+                                                        {{ item.original_line_price | money_without_currency }} {{ cart.currency.iso_code }}
                                                     </div>
                                                 {%- endif -%}
                                                 <div class="cart-color-wrap">
