@@ -317,14 +317,14 @@ cart-drawer-items {
 .cart-drawer .cart-item cart-remove-button {
   position: absolute;
   top: 0;
-  right: 6px;
+  right: 0;
 }
 
 @media screen and (max-width: 1024px) {
   .cart-drawer .cart-item cart-remove-button {
     position: absolute;
     top: 1px;
-    right: 6px;
+    right: 0;
   }
 }
 
