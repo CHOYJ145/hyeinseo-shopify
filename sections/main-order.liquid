@@ -328,7 +328,7 @@
           {%- for shipping_method in order.shipping_methods -%}
               <div role="row" class="order-total-wrap">
                   <div id="RowShipping" role="rowheader" scope="row" colspan="4">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</div>
-                  <div headers="RowShipping" role="cell" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</div>
+                  <div headers="RowShipping" role="cell" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money_without_currency }} {{ cart.currency.iso_code }}</div>
               </div>
           {%- endfor -%}
           {%- for tax_line in order.tax_lines -%}
@@ -347,13 +347,13 @@
   {% endif %}
    <div role="row" class="order-total-wrap">
                   <div id="RowDuties" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total_duties' | t }}</div>
-                  <div headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ total_duties_line | money }}</div>
+                  <div headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ total_duties_line | money_without_currency }} {{ cart.currency.iso_code }}</div>
               </div>
 
   {% endif %}
           <div role="row" class="order-total-wrap">
               <div id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</div>
-              <div headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</div>
+              <div headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_without_currency }} {{ cart.currency.iso_code }}</div>
           </div>
       </div>
 
