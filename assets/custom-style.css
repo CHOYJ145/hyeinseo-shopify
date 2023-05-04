@@ -4303,3 +4303,8 @@ body.custom {
 .snize-instant-widget-is-open [tabindex="-1"] {
     display: block !important;
 }
+
+.collection-imgs .c-item img {
+    width: 100%;
+    height: auto;
+}
