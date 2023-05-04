@@ -4208,17 +4208,7 @@ button.swiper-pagination-bullet {
     color: #fff;
 }
 
-.main-blog .article-item:nth-child(1),
-.main-blog .article-item:nth-child(3) {
-    width: 66.66% !important;
-}
-
 @media screen and (max-width: 1024px) {
-    .main-blog .article-item:nth-child(1),
-    .main-blog .article-item:nth-child(3) {
-        width: 100% !important;
-    }
-
     .custom .search__input.field__input {
         padding-left: 4px;
         font-size: 16px;
@@ -4289,6 +4279,7 @@ button.swiper-pagination-bullet {
 #FreeShippingBanner {
     /*display: none !important;*/
 }
+
 .ge-free-shipping-container.ge-free-shipping-container-desktop {
     display: none !important;
 }
@@ -4298,7 +4289,7 @@ button.swiper-pagination-bullet {
 }
 
 body.custom {
-     /*display: block;*/
+    /*display: block;*/
 }
 
 .snize-instant-widget-is-open [tabindex="-1"] {
@@ -4309,3 +4300,15 @@ body.custom {
     width: 100%;
     height: auto;
 }
+
+/*.main-blog .article-item:nth-child(1),*/
+/*.main-blog .article-item:nth-child(3) {*/
+/*    width: 66.66% !important;*/
+/*}*/
+
+/*@media screen and (max-width: 1024px) {*/
+/*    .main-blog .article-item:nth-child(1),*/
+/*    .main-blog .article-item:nth-child(3) {*/
+/*        width: 100% !important;*/
+/*    }*/
+/*}*/
