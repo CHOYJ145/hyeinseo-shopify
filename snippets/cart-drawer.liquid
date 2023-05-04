@@ -83,12 +83,12 @@
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                                         <div class="price price--end">
-                                                            {{ item.final_line_price | money }}
+                                                            {{ item.final_line_price | money_without_currency }} {{ cart.currency.iso_code }}
                                                         </div>
                                                     </div>
                                                 {%- else -%}
                                                     <div class="price price--end">
-                                                        {{ item.original_line_price | money }}
+                                                        {{ item.original_line_price | money_without_currency }} {{ cart.currency.iso_code }}
                                                     </div>
                                                 {%- endif -%}
                                                 <div class="cart-color-wrap">
@@ -285,7 +285,7 @@
                     </div>
                     <div class="footer_grid__box">
                         <span class="cart_footer__subtitle">{{ 'sections.cart.subtotal' | t }}</span>
-                        <span>{{ cart.total_price | money_with_currency }}</span>
+                        <span>{{ cart.total_price | money_without_currency }} {{ cart.currency.iso_code }}</span>
                     </div>
 
                     <div>
