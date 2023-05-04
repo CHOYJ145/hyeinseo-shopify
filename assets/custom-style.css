@@ -4308,7 +4308,7 @@ body.custom {
 .main-blog .article-item:nth-child(11),
 .main-blog .article-item:nth-child(13),
 .main-blog .article-item:nth-child(14),
-.main-blog .article-item:nth-child(17) {
+.main-blog .article-item:nth-child(15) {
     width: 66.66% !important;
 }
 
@@ -4320,7 +4320,7 @@ body.custom {
     .main-blog .article-item:nth-child(11),
     .main-blog .article-item:nth-child(13),
     .main-blog .article-item:nth-child(14),
-    .main-blog .article-item:nth-child(17) {
+    .main-blog .article-item:nth-child(15) {
         width: 100% !important;
     }
 }
