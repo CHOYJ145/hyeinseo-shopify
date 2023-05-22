@@ -4443,6 +4443,7 @@ body.custom {
     display: inline-block;
 }
 
+.facet-col button,
 .facet-col--last button {
     color: #000;
 }
