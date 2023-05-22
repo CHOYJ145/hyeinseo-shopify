@@ -4442,3 +4442,7 @@ body.custom {
 #overview-value ul li span {
     display: inline-block;
 }
+
+.facet-col--last button {
+    color: #000;
+}
