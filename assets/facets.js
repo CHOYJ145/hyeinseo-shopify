@@ -16,7 +16,9 @@ class FacetFiltersForm extends HTMLElement {
 
   static setListeners() {
     const onHistoryChange = (event) => {
+      console.log('xx');
       const searchParams = event.state ? event.state.searchParams : FacetFiltersForm.searchParamsInitial;
+      console.log('params', searchParams);
       if (searchParams === FacetFiltersForm.searchParamsPrev) return;
       FacetFiltersForm.renderPage(searchParams, null, false);
     }
@@ -47,8 +49,8 @@ class FacetFiltersForm extends HTMLElement {
       const filterDataUrl = element => element.url === url;
 
       FacetFiltersForm.filterData.some(filterDataUrl) ?
-        FacetFiltersForm.renderSectionFromCache(filterDataUrl, event) :
-        FacetFiltersForm.renderSectionFromFetch(url, event);
+          FacetFiltersForm.renderSectionFromCache(filterDataUrl, event) :
+          FacetFiltersForm.renderSectionFromFetch(url, event);
     });
 
     if (updateURLHash) FacetFiltersForm.updateURLHash(searchParams);
@@ -56,14 +58,14 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderSectionFromFetch(url, event) {
     fetch(url)
-      .then(response => response.text())
-      .then((responseText) => {
-        const html = responseText;
-        FacetFiltersForm.filterData = [...FacetFiltersForm.filterData, { html, url }];
-        FacetFiltersForm.renderFilters(html, event);
-        FacetFiltersForm.renderProductGridContainer(html);
-        FacetFiltersForm.renderProductCount(html);
-      });
+        .then(response => response.text())
+        .then((responseText) => {
+          const html = responseText;
+          FacetFiltersForm.filterData = [...FacetFiltersForm.filterData, { html, url }];
+          FacetFiltersForm.renderFilters(html, event);
+          FacetFiltersForm.renderProductGridContainer(html);
+          FacetFiltersForm.renderProductCount(html);
+        });
   }
 
   static renderSectionFromCache(filterDataUrl, event) {
@@ -93,7 +95,7 @@ class FacetFiltersForm extends HTMLElement {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
 
     const facetDetailsElements =
-      parsedHTML.querySelectorAll('#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter');
+        parsedHTML.querySelectorAll('#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter');
     const matchesIndex = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
       return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
@@ -168,7 +170,11 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   onSubmitForm(searchParams, event) {
-    FacetFiltersForm.renderPage(searchParams, event);
+    const prevSearchParams = new URLSearchParams(window.location.search);
+    const sortParam = prevSearchParams.get('sort_by');
+    if (sortParam) searchParams += `&sort_by=${sortParam}`;
+    window.location.href = `${window.location.origin}${window.location.pathname}?${searchParams}`;
+    // FacetFiltersForm.renderPage(searchParams, event);
   }
 
   onSubmitHandler(event) {
@@ -214,7 +220,7 @@ class PriceRange extends HTMLElement {
   constructor() {
     super();
     this.querySelectorAll('input')
-      .forEach(element => element.addEventListener('change', this.onRangeChange.bind(this)));
+        .forEach(element => element.addEventListener('change', this.onRangeChange.bind(this)));
     this.setMinAndMaxValues();
   }
 

@@ -171,3 +171,8 @@ $('.header__search').on('click', function (){
         });
     }
 });
+
+
+function facetClose(e){
+    document.querySelector('#facet-wrap').classList.add('off');
+}

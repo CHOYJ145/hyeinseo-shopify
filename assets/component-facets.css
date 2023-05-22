@@ -1,5 +1,5 @@
 .facets-container {
-  padding-top: 1rem;
+  /*padding-top: 1rem;*/
 }
 
 .active-facets-mobile {
@@ -228,7 +228,7 @@
 
 .facets__disclosure[open] .facets__display,
 .facets__disclosure-vertical[open] .facets__display-vertical  {
-  animation: animateMenuOpen var(--duration-default) ease;
+    /*animation: animateMenuOpen var(--duration-default) ease;*/
 }
 
 .facets__summary span {
@@ -970,7 +970,7 @@ input.mobile-facets__checkbox {
 
 
   .facets__disclosure-vertical {
-    border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
+    /*border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);*/
     margin-right: 0;
   }
   
@@ -995,7 +995,7 @@ input.mobile-facets__checkbox {
   }
  
   .facets-vertical .facets-wrapper {
-    padding-right: 3rem;
+    /*padding-right: 3rem;*/
   }
 
   .facets-vertical .facets-wrapper--no-filters {
