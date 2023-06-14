@@ -4461,6 +4461,6 @@ body.custom {
 }
 
 .product-info-wrap--o .price--on-sale .price__sale {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
