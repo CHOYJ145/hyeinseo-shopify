@@ -2152,9 +2152,12 @@ button.swiper-pagination-bullet {
 
 .guide-row {
     padding: 2px 0 1px;
-    display: grid;
-    grid-template-columns: 1.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+    display: flex;
     border-bottom: 1px dotted #000;
+}
+
+.guide-cell {
+    flex: 1;
 }
 
 .guide-row--ex {
