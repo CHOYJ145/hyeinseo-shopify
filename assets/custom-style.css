@@ -4460,7 +4460,7 @@ body.custom {
     display: none !important;
 }
 
-.o-product-info-wrap .price--on-sale .price__sale {
+.product-info-wrap--o .price--on-sale .price__sale {
     display: flex;
     flex-direction: column;
 }
