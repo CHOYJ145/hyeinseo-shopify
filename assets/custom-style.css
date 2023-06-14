@@ -4465,3 +4465,8 @@ body.custom {
     display: flex !important;
     flex-direction: column;
 }
+
+.custom .wk-product-price {
+    display: flex;
+    flex-direction: column-reverse;
+}
