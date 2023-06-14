@@ -4451,7 +4451,7 @@ body.custom {
     color: #000;
 }
 
-.detail-page .product .price__container {
+.detail-page .product .price--on-sale .price__sale {
     display: flex;
     flex-direction: column;
 }
