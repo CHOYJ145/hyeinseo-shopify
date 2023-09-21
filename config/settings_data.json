@@ -145,10 +145,20 @@
               "color_scheme": "background-1",
               "link": ""
             }
+          },
+          "0e633967-82a0-446e-911a-eac34a65802c": {
+            "type": "announcement",
+            "settings": {
+              "text": "FW23 Shipping Starts October 4th - FW23 배송은 10월 4일부터 재개 됩니다",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "0e633967-82a0-446e-911a-eac34a65802c"
         ],
         "settings": {
         }
