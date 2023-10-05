@@ -145,20 +145,10 @@
               "color_scheme": "background-1",
               "link": ""
             }
-          },
-          "0e633967-82a0-446e-911a-eac34a65802c": {
-            "type": "announcement",
-            "settings": {
-              "text": "Chuseok Order Deadline: Sept 24th | We'll be back on Oct 4th",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
-              "link": ""
-            }
           }
         },
         "block_order": [
-          "announcement-bar-0",
-          "0e633967-82a0-446e-911a-eac34a65802c"
+          "announcement-bar-0"
         ],
         "settings": {
         }
