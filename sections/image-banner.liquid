@@ -1,6 +1,6 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
-  .main-sec--1 .hero-item-test {
+  /* .main-sec--1 .hero-item-test {
     background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')
   }
   @media screen and (max-width: 1024px) {
@@ -8,7 +8,7 @@
       background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
     }
   }
-
+ */
   .locale-selectors__container {
     display: none !important;
   }
@@ -258,14 +258,14 @@
       playAnimation();
     }
 
-    // window.addEventListener('scroll', () => {
-    //   yOffset = window.pageYOffset;
-    //   scrollLoop();
-    // });
+    window.addEventListener('scroll', () => {
+      yOffset = window.pageYOffset;
+      scrollLoop();
+    });
 
-    // window.addEventListener('load', () => {
-    //   setLayout();
-    // });
+    window.addEventListener('load', () => {
+      setLayout();
+    });
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 1024) {
