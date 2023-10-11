@@ -12,6 +12,45 @@
   .locale-selectors__container {
     display: none !important;
   }
+
+  .hero-video {
+    position: fixed;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    /*height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+  
+  #video-m {
+      display: block;
+      margin: auto;
+      width: auto;
+      height: calc(var(--vh, 1vh) * 100);
+  }
+@media screen and (max-width: 1024px) {
+  .hero-video {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      /*height: 100vh;*/
+      height: 100%;
+      overflow: hidden;
+      transform: translate(0, 0);
+    }
+
+    #video-m {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+}
 </style>
 <div class="main-hero">
   <div class="main-sec main-sec--1">
@@ -19,28 +58,33 @@
       <div class="hero-item-test" style="">
 
       </div>
-      <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
+      <!--<div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
 
       </div>
       <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
 
+      </div>-->
+      <div class="hero-video">
+        <video id="video-m" playsinline autoplay muted loop>
+          <source src="" type="video/mp4">
+        </video>
       </div>
       <div class="hero-title-wrap hero-title-wrap--pc">
         <div class="hero-title-item font-bold">
-          SS23 Indigo Island
+          FW23
         </div>
 
         <div class="hero-title-item font-bold">
-          <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a>
+          <a class="test2" href="/collections/all-1">Shop</a>
+          <!-- <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a> -->
         </div>
       </div>
       <div class="hero-title-wrap hero-title-wrap--m">
         <div class="hero-title-item font-bold">
-          SS23<br>
-          Indigo Island
+          FW23
         </div>
         <div class="hero-title-item font-bold">
-          <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>
+          <!--<a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>-->
           <a class="test2" href="/collections/all-1">Shop</a>
         </div>
       </div>
@@ -275,7 +319,20 @@
   //   document.querySelector('.hero-item--test2').classList.remove('test-4');
   // });
 
+  window.addEventListener('load', () => {
+    setSize();
 
+    // $('.hero').css({
+    //     'height' : $(window).height()
+    // })
+
+    let video = document.getElementById('video-m');
+    if ($(window).width() <= 768) {
+      video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
+    } else {
+      video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
+    }
+  });
 </script>
 
 {% schema %}
