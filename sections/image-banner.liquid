@@ -1,332 +1,465 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
-  /* .main-sec--1 .hero-item-test {
-    background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')
-  }
-  @media screen and (max-width: 1024px) {
-    .main-sec--1 .hero-item-test {
-      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
+    /* .main-sec--1 .hero-item-test {
+      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')
     }
-  }
- */
-  .locale-selectors__container {
-    display: none !important;
-  }
+    @media screen and (max-width: 1024px) {
+      .main-sec--1 .hero-item-test {
+        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
+      }
+    }
+   */
+    .locale-selectors__container {
+        display: none !important;
+    }
 
-  .hero-video {
-    position: fixed;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    /*height: 100vh;*/
-    height: calc(var(--vh, 1vh) * 100);
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-  }
-  
-  #video-m {
-      display: block;
-      margin: auto;
-      width: 100%;
-      object-fit: cover;
-      height: calc(var(--vh, 1vh) * 100);
-  }
-@media screen and (max-width: 1024px) {
-  .hero-video {
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      /*height: 100vh;*/
-      height: 100%;
-      overflow: hidden;
-      transform: translate(0, 0);
+    .hero-video {
+        position: fixed;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100vh;
+        /*height: calc(var(--vh, 1vh) * 100);*/
+        overflow: hidden;
+        transform: translate(-50%, -50%);
     }
-}
+
+    #video-m {
+        display: block;
+        margin: auto;
+        width: 100%;
+        object-fit: cover;
+        /*height: calc(var(--vh, 1vh) * 100);*/
+        height: 100vh;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .hero-video {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*height: 100vh;*/
+            height: 100%;
+            overflow: hidden;
+            transform: translate(0, 0);
+        }
+    }
+
+    .video-dim {
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .video-dim-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-dim-inner *,
+    .video-dim-inner button {
+        color: #fff;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .video-dim-inner *,
+        .video-dim-inner button {
+            color: #fff;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .video-dim button {
+        appearance: none;
+        background: transparent;
+        border: 0;
+    }
+
+    .dim-text-pc {
+        display: block;
+    }
+
+    .dim-text-m {
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .dim-text-pc {
+            display: none;
+        }
+
+        .dim-text-m {
+            display: block;
+        }
+    }
+
+    .dim-cont {
+        position: absolute;
+        z-index: 2;
+        top: calc(var(--vh, 1vh) * 50);
+        left: 6px;
+        transform: translateY(-50%);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .dim-cont {
+            position: absolute;
+            top: calc(var(--vh, 1vh) * 50);
+            left: 0;
+            padding: 0 6px;
+            grid-template-columns: 1.5fr 0.5fr;
+            box-sizing: border-box;
+            align-items: baseline;
+        }
+    }
+
+    .sound-btn-wrap,
+    .sound-btn-list {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .sound-btn-wrap {
+            justify-content: flex-end;
+        }
+    }
+
+    .sound-btn-wrap > div:first-child {
+        margin-right: 8px;
+    }
+
+    .sound-btn-list button {
+        cursor: pointer;
+    }
+
+    main {
+        height: 100vh;
+        overflow: hidden;
+    }
 </style>
+<div class="video-dim">
+    <div class="video-dim-inner">
+        <div class="dim-cont">
+            <div>
+                <div class="dim-text-pc">
+                    FW23 Store Sound Installation By Ludwig Berger
+                </div>
+                <div class="dim-text-m">
+                    FW23 Store<br>
+                    Sound Installation<br>
+                    By Ludwig Berger
+                </div>
+            </div>
+            <div class="sound-btn-wrap">
+                <div>Sound</div>
+                <div class="sound-btn-list">
+                    <button class="sound-on">On</button>
+                    <button class="sound-off">Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="main-hero">
-  <div class="main-sec main-sec--1">
-    <div class="hero-item hero-item--test">
-      <div class="hero-item-test" style="">
+    <div class="main-sec main-sec--1">
+        <div class="hero-item hero-item--test">
+            <div class="hero-item-test" style="">
 
-      </div>
-      <!--<div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
+            </div>
+            <!--<div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
 
-      </div>
-      <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
+            </div>
+            <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
 
-      </div>-->
-      <div class="hero-video">
-        <video id="video-m" playsinline autoplay muted loop>
-          <source src="" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-title-wrap hero-title-wrap--pc">
-        <div class="hero-title-item font-bold">
-          FW23
+            </div>-->
+            <div class="hero-video">
+                <video id="video-m" playsinline autoplay muted loop>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-title-wrap hero-title-wrap--pc">
+                <div class="hero-title-item font-bold">
+                    FW23
+                </div>
+
+                <div class="hero-title-item font-bold">
+                    <a class="test2" href="/collections/all-1">Shop</a>
+                    <!-- <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a> -->
+                </div>
+            </div>
+            <div class="hero-title-wrap hero-title-wrap--m">
+                <div class="hero-title-item font-bold">
+                    FW23
+                </div>
+                <div class="hero-title-item font-bold">
+                    <!--<a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>-->
+                    <a class="test2" href="/collections/all-1">Shop</a>
+                </div>
+            </div>
         </div>
+    </div>
+    {% comment %}<div class="main-sec main-sec--2">
+      <div class="hero-item hero-item--test2">
+        <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/3.jpg')">
 
-        <div class="hero-title-item font-bold">
-          <a class="test2" href="/collections/all-1">Shop</a>
-          <!-- <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a> -->
         </div>
-      </div>
-      <div class="hero-title-wrap hero-title-wrap--m">
-        <div class="hero-title-item font-bold">
-          FW23
+        <div class="hero-dim3" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/4.jpg')">
+
         </div>
-        <div class="hero-title-item font-bold">
-          <!--<a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>-->
-          <a class="test2" href="/collections/all-1">Shop</a>
+        <div class="hero-dim4" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/5.jpg')">
+
+        </div>
+        <div class="hero-title-wrap">
+          <div class="hero-title-item font-bold">
+            SS 23 Paris Showroom
+          </div>
+          <div class="hero-title-item font-bold">
+            <a class="test3" href="#none">test</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test4" href="#none">test</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  {% comment %}<div class="main-sec main-sec--2">
-    <div class="hero-item hero-item--test2">
-      <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/3.jpg')">
-
-      </div>
-      <div class="hero-dim3" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/4.jpg')">
-
-      </div>
-      <div class="hero-dim4" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/5.jpg')">
-
-      </div>
-      <div class="hero-title-wrap">
-        <div class="hero-title-item font-bold">
-          SS 23 Paris Showroom
+    <div class="main-sec main-sec--3">
+      <div class="hero-col">
+        <div class="hero-item" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/col-1.JPG')">
+          <div class="hero-title font-bold hero-title--white">
+            Accessories
+          </div>
         </div>
-        <div class="hero-title-item font-bold">
-          <a class="test3" href="#none">test</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test4" href="#none">test</a>
+        <div class="hero-item" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/col-2.jpg')">
+          <div class="hero-title font-bold hero-title--white">
+            FW&nbsp;&nbsp;&nbsp;22 TEST TEST test test
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="main-sec main-sec--3">
-    <div class="hero-col">
-      <div class="hero-item" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/col-1.JPG')">
-        <div class="hero-title font-bold hero-title--white">
-          Accessories
-        </div>
-      </div>
-      <div class="hero-item" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/col-2.jpg')">
-        <div class="hero-title font-bold hero-title--white">
-          FW&nbsp;&nbsp;&nbsp;22 TEST TEST test test
-        </div>
-      </div>
-    </div>
-  </div>{% endcomment %}
+    </div>{% endcomment %}
 </div>
 
 <script>
-  (() => {
-    let yOffset = 0;
-    let prevScrollHeight = 0;
-    let currentScene = 0;
-    let enterNewScene = false;
+    (() => {
+        let yOffset = 0;
+        let prevScrollHeight = 0;
+        let currentScene = 0;
+        let enterNewScene = false;
 
-    const sceneInfo = [
-      {
-        type: 'normal',
-        heightNum: 5,
-        scrollHeight: 0,
-        objs: {
-          container: document.querySelector('.main-sec--1'),
-          title: document.querySelector('.main-sec--1 .hero-title-wrap'),
-        },
-        values: {
+        const sceneInfo = [
+            {
+                type: 'normal',
+                heightNum: 5,
+                scrollHeight: 0,
+                objs: {
+                    container: document.querySelector('.main-sec--1'),
+                    title: document.querySelector('.main-sec--1 .hero-title-wrap'),
+                },
+                values: {}
+            },
+            {
+                type: 'normal',
+                heightNum: 5,
+                scrollHeight: 0,
+                objs: {
+                    container: document.querySelector('.main-sec--2'),
+                    title: document.querySelector('.main-sec--2 .hero-title-wrap'),
+                },
+                values: {}
+            },
+            {
+                type: 'normal',
+                heightNum: 5,
+                scrollHeight: 0,
+                objs: {
+                    container: document.querySelector('.main-sec--3'),
+                    title: document.querySelector('.main-sec--3 .hero-title-wrap'),
+                },
+                values: {}
+            },
+        ];
 
+        function setLayout() {
+            for (let i = 0; i < sceneInfo.length; i++) {
+                sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight;
+                sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
+            }
+
+            yOffset = window.pageYOffset;
+            let totalScrollHeight = 0;
+            for (let i = 0; i < sceneInfo.length; i++) {
+                totalScrollHeight += sceneInfo[i].scrollHeight;
+                if (totalScrollHeight >= yOffset) {
+                    currentScene = i;
+                    break;
+                }
+            }
+
+            document.body.setAttribute('id', `show-scene-${currentScene}`);
         }
-      },
-      {
-        type: 'normal',
-        heightNum: 5,
-        scrollHeight: 0,
-        objs: {
-          container: document.querySelector('.main-sec--2'),
-          title: document.querySelector('.main-sec--2 .hero-title-wrap'),
-        },
-        values: {
 
+        function calcValues(values, currentYOffset) {
+            let rv;
+            const scrollHeight = sceneInfo[currentScene].scrollHeight;
+            const scrollRatio = currentYOffset / scrollHeight;
+
+            if (values.length === 3) {
+                const partScrollStart = values[2].start * scrollHeight;
+                const partScrollEnd = values[2].end * scrollHeight;
+                const partScrollHeight = partScrollEnd - partScrollStart;
+
+                if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
+                    rv = (currentYOffset - partScrollStart) / partScrollHeight * (values[1] - values[0]) + values[0];
+                } else if (currentYOffset < partScrollStart) {
+                    rv = values[0];
+                } else if (currentYOffset > partScrollEnd) {
+                    rv = values[1];
+                }
+            } else {
+                rv = scrollRatio * (values[1] - values[0]) + values[0];
+            }
+
+            return rv;
         }
-      },
-      {
-        type: 'normal',
-        heightNum: 5,
-        scrollHeight: 0,
-        objs: {
-          container: document.querySelector('.main-sec--3'),
-          title: document.querySelector('.main-sec--3 .hero-title-wrap'),
-        },
-        values: {
 
+        function playAnimation() {
+            const objs = sceneInfo[currentScene].objs;
+            const values = sceneInfo[currentScene].values;
+            const currentYOffset = yOffset - prevScrollHeight;
+            const scrollHeight = sceneInfo[currentScene].scrollHeight;
+            const scrollRatio = currentYOffset / scrollHeight;
+
+            switch (currentScene) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+            }
         }
-      },
-    ];
 
-    function setLayout() {
-      for (let i = 0; i < sceneInfo.length; i++) {
-        sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight;
-        sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
-      }
+        function scrollLoop() {
+            enterNewScene = false;
+            prevScrollHeight = 0;
 
-      yOffset = window.pageYOffset;
-      let totalScrollHeight = 0;
-      for (let i = 0; i < sceneInfo.length; i++) {
-        totalScrollHeight += sceneInfo[i].scrollHeight;
-        if (totalScrollHeight >= yOffset) {
-          currentScene = i;
-          break;
+            for (let i = 0; i < currentScene; i++) {
+                prevScrollHeight += sceneInfo[i].scrollHeight;
+            }
+
+            if (yOffset > prevScrollHeight / 2 + sceneInfo[currentScene].scrollHeight) {
+                enterNewScene = true;
+                currentScene++;
+                document.body.setAttribute('id', `show-scene-${currentScene}`);
+            }
+
+            if (yOffset < prevScrollHeight / 2) {
+                enterNewScene = true;
+                if (currentScene === 0) return;
+                currentScene--;
+                document.body.setAttribute('id', `show-scene-${currentScene}`);
+            }
+
+            if (enterNewScene) return;
+            playAnimation();
         }
-      }
 
-      document.body.setAttribute('id', `show-scene-${currentScene}`);
-    }
+        window.addEventListener('scroll', () => {
+            yOffset = window.pageYOffset;
+            scrollLoop();
+        });
 
-    function calcValues(values, currentYOffset) {
-      let rv;
-      const scrollHeight = sceneInfo[currentScene].scrollHeight;
-      const scrollRatio = currentYOffset / scrollHeight;
+        // window.addEventListener('load', () => {
+        //   setLayout();
+        // });
+        //
+        // window.addEventListener('resize', () => {
+        //   if (window.innerWidth > 1024) {
+        //     window.location.reload();
+        //   }
+        //   setLayout();
+        // });
+    })();
 
-      if (values.length === 3) {
-        const partScrollStart = values[2].start * scrollHeight;
-        const partScrollEnd = values[2].end * scrollHeight;
-        const partScrollHeight = partScrollEnd - partScrollStart;
-
-        if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
-          rv = (currentYOffset - partScrollStart) / partScrollHeight * (values[1] - values[0]) + values[0];
-        } else if (currentYOffset < partScrollStart) {
-          rv = values[0];
-        } else if (currentYOffset > partScrollEnd) {
-          rv = values[1];
-        }
-      } else {
-        rv = scrollRatio * (values[1] - values[0]) + values[0];
-      }
-
-      return rv;
-    }
-
-    function playAnimation() {
-      const objs = sceneInfo[currentScene].objs;
-      const values = sceneInfo[currentScene].values;
-      const currentYOffset = yOffset - prevScrollHeight;
-      const scrollHeight = sceneInfo[currentScene].scrollHeight;
-      const scrollRatio = currentYOffset / scrollHeight;
-
-      switch (currentScene) {
-        case 0:
-          break;
-        case 1:
-          break;
-        case 2:
-          break;
-      }
-    }
-
-    function scrollLoop() {
-      enterNewScene = false;
-      prevScrollHeight = 0;
-
-      for (let i = 0; i < currentScene; i++) {
-        prevScrollHeight += sceneInfo[i].scrollHeight;
-      }
-
-      if (yOffset > prevScrollHeight/2 + sceneInfo[currentScene].scrollHeight) {
-        enterNewScene = true;
-        currentScene++;
-        document.body.setAttribute('id', `show-scene-${currentScene}`);
-      }
-
-      if (yOffset < prevScrollHeight/2) {
-        enterNewScene = true;
-        if (currentScene === 0) return;
-        currentScene--;
-        document.body.setAttribute('id', `show-scene-${currentScene}`);
-      }
-
-      if (enterNewScene) return;
-      playAnimation();
-    }
-
-    window.addEventListener('scroll', () => {
-      yOffset = window.pageYOffset;
-      scrollLoop();
+    $(document).ready(function () {
+        document.querySelector('.custom').classList.add('theme-main');
     });
+
+    // document.querySelector('.test').addEventListener('mouseenter', () => {
+    //   document.querySelector('.hero-dim').classList.add('on');
+    //   document.querySelector('.hero-item--test').classList.add('test-1');
+    // });
+
+    // document.querySelector('.test').addEventListener('mouseleave', () => {
+    //   document.querySelector('.hero-dim').classList.remove('on');
+    //   document.querySelector('.hero-item--test').classList.remove('test-1');
+    // });
+
+    // document.querySelector('.test2').addEventListener('mouseenter', () => {
+    //   document.querySelector('.hero-dim2').classList.add('on');
+    //   document.querySelector('.hero-item--test').classList.add('test-2');
+    // });
+
+    // document.querySelector('.test2').addEventListener('mouseleave', () => {
+    //   document.querySelector('.hero-dim2').classList.remove('on');
+    //   document.querySelector('.hero-item--test').classList.remove('test-2');
+    // });
+
+    // document.querySelector('.test3').addEventListener('mouseenter', () => {
+    //   document.querySelector('.hero-dim3').classList.add('on');
+    //   document.querySelector('.hero-item--test2').classList.add('test-3');
+    // });
+    //
+    // document.querySelector('.test3').addEventListener('mouseleave', () => {
+    //   document.querySelector('.hero-dim3').classList.remove('on');
+    //   document.querySelector('.hero-item--test2').classList.remove('test-3');
+    // });
+    //
+    // document.querySelector('.test4').addEventListener('mouseenter', () => {
+    //   document.querySelector('.hero-dim4').classList.add('on');
+    //   document.querySelector('.hero-item--test2').classList.add('test-4');
+    // });
+    //
+    // document.querySelector('.test4').addEventListener('mouseleave', () => {
+    //   document.querySelector('.hero-dim4').classList.remove('on');
+    //   document.querySelector('.hero-item--test2').classList.remove('test-4');
+    // });
 
     window.addEventListener('load', () => {
-      setLayout();
+        setSize();
+
+        // $('.hero').css({
+        //     'height' : $(window).height()
+        // })
+
+        let video = document.getElementById('video-m');
+        if ($(window).width() <= 768) {
+            video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
+        } else {
+            video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
+        }
     });
 
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1024) {
-        window.location.reload();
-      }
-      setLayout();
+    document.querySelector('.sound-on').addEventListener('click', function () {
+        const video = document.getElementById('video-m');
+        video.muted = false;
+        document.querySelector('.video-dim').style.display = 'none';
     });
-  })();
 
-  $(document).ready(function(){
-    document.querySelector('.custom').classList.add('theme-main');
-  });
-
-  // document.querySelector('.test').addEventListener('mouseenter', () => {
-  //   document.querySelector('.hero-dim').classList.add('on');
-  //   document.querySelector('.hero-item--test').classList.add('test-1');
-  // });
-
-  // document.querySelector('.test').addEventListener('mouseleave', () => {
-  //   document.querySelector('.hero-dim').classList.remove('on');
-  //   document.querySelector('.hero-item--test').classList.remove('test-1');
-  // });
-
-  // document.querySelector('.test2').addEventListener('mouseenter', () => {
-  //   document.querySelector('.hero-dim2').classList.add('on');
-  //   document.querySelector('.hero-item--test').classList.add('test-2');
-  // });
-
-  // document.querySelector('.test2').addEventListener('mouseleave', () => {
-  //   document.querySelector('.hero-dim2').classList.remove('on');
-  //   document.querySelector('.hero-item--test').classList.remove('test-2');
-  // });
-
-  // document.querySelector('.test3').addEventListener('mouseenter', () => {
-  //   document.querySelector('.hero-dim3').classList.add('on');
-  //   document.querySelector('.hero-item--test2').classList.add('test-3');
-  // });
-  //
-  // document.querySelector('.test3').addEventListener('mouseleave', () => {
-  //   document.querySelector('.hero-dim3').classList.remove('on');
-  //   document.querySelector('.hero-item--test2').classList.remove('test-3');
-  // });
-  //
-  // document.querySelector('.test4').addEventListener('mouseenter', () => {
-  //   document.querySelector('.hero-dim4').classList.add('on');
-  //   document.querySelector('.hero-item--test2').classList.add('test-4');
-  // });
-  //
-  // document.querySelector('.test4').addEventListener('mouseleave', () => {
-  //   document.querySelector('.hero-dim4').classList.remove('on');
-  //   document.querySelector('.hero-item--test2').classList.remove('test-4');
-  // });
-
-  window.addEventListener('load', () => {
-    setSize();
-
-    // $('.hero').css({
-    //     'height' : $(window).height()
-    // })
-
-    let video = document.getElementById('video-m');
-    if ($(window).width() <= 768) {
-      video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
-    } else {
-      video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
-    }
-  });
+    document.querySelector('.sound-off').addEventListener('click', function () {
+        document.querySelector('.video-dim').style.display = 'none';
+    });
 </script>
 
 {% schema %}
