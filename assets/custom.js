@@ -138,15 +138,41 @@ $('.desc-label').on('click', function () {
     }
 });
 
-$('.switch-btn').on('click', function(){
-    $(this).toggleClass('on');
-    if($(this).hasClass('on')){
-        $(this).text('1');
+// $('.switch-btn').on('click', function(){
+//     $(this).toggleClass('on');
+//     if($(this).hasClass('on')){
+//         $(this).text('1');
+//         $('#product-grid').addClass('grid--2');
+//     }else{
+//         $(this).text('2');
+//         $('#product-grid').removeClass('grid--2');
+//     }
+// });
+
+$(document).ready(function(){
+    // 새로고침 후 상태 복원
+    if(localStorage.getItem('toggleState') === 'on'){
+        $('.switch-btn').addClass('on').text('1');
         $('#product-grid').addClass('grid--2');
-    }else{
-        $(this).text('2');
+    } else {
+        $('.switch-btn').removeClass('on').text('2');
         $('#product-grid').removeClass('grid--2');
     }
+
+    // 버튼 클릭 이벤트 핸들러
+    $('.switch-btn').on('click', function(){
+        $(this).toggleClass('on');
+
+        if($(this).hasClass('on')){
+            $(this).text('1');
+            $('#product-grid').addClass('grid--2');
+            localStorage.setItem('toggleState', 'on'); // 상태 저장
+        }else{
+            $(this).text('2');
+            $('#product-grid').removeClass('grid--2');
+            localStorage.setItem('toggleState', 'off'); // 상태 저장
+        }
+    });
 });
 
 // $('.product-visual').on('click', function(){
