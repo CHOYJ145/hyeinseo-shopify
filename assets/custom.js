@@ -26,6 +26,10 @@ window.addEventListener('load', () => {
     setSize();
 });
 
+window.addEventListener('resize', () => {
+    setSize();
+});
+
 function depthBtn(e) {
     if (e == 'shop') {
         document.querySelector('.header__2depth').classList.add('on');

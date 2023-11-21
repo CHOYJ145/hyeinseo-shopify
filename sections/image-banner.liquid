@@ -1,14 +1,13 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
-    /* .main-sec--1 .hero-item-test {
-      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main1.jpg?v=1680850627')
+     .main-sec--1 .hero-item-test {
+      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_desktop.jpg?v=1700542301')
     }
     @media screen and (max-width: 1024px) {
       .main-sec--1 .hero-item-test {
-        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main_mobile2.jpg?v=1680850627')
+        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_mobile.jpg?v=1700542301')
       }
     }
-   */
     .locale-selectors__container {
         display: none !important;
     }
@@ -151,8 +150,43 @@
         height: 100vh;
         overflow: hidden;
     }
+
+    .main-hero * {
+        color: #fff;
+    }
+
+    .logo-black {
+        display: none !important;
+    }
+
+    .logo-white {
+        display: block !important;
+    }
+
+     .list-menu--inline li span,
+     .header__menu-item span {
+         color: #fff;
+     }
+
+     .open .list-menu--inline li span,
+     .open .header__menu-item span {
+         color: #000;
+     }
+
+     .open .list-menu--inline li.off span,
+     .open .header__2depth-col li.off a,
+     .open .header-util.off *,
+     .open .header-util a.off span {
+         color: #CECED0;
+     }
+
+     @media screen and (max-width: 1024px) {
+         .header-util .header__menu-item span {
+             color: #fff;
+         }
+     }
 </style>
-<div class="video-dim">
+{% comment %}<div class="video-dim">
     <div class="video-dim-inner">
         <div class="dim-cont">
             <div>
@@ -174,31 +208,31 @@
             </div>
         </div>
     </div>
-</div>
+</div>{% endcomment %}
 <div class="main-hero">
     <div class="main-sec main-sec--1">
         <div class="hero-item hero-item--test">
             <div class="hero-item-test" style="">
 
             </div>
-            <!--<div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main2.jpg?v=1680850627')">
+            <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_desktop_mouseover.jpg?v=1700542301')">
 
             </div>
-            <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss23_main3.jpg?v=1680850627')">
+            {% comment %}<div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_desktop_mouseover.jpg?v=1700542301')">
 
-            </div>-->
-            <div class="hero-video">
+            </div>{% endcomment %}
+            {% comment %}<div class="hero-video">
                 <video id="video-m" playsinline autoplay muted loop>
                     <source src="" type="video/mp4">
                 </video>
-            </div>
+            </div>{% endcomment %}
             <div class="hero-title-wrap hero-title-wrap--pc">
                 <div class="hero-title-item font-bold">
                     FW23
                 </div>
 
                 <div class="hero-title-item font-bold">
-                    <a class="test2" href="/collections/all-1">Shop</a>
+                    <a class="test" href="/collections/all-1">Shop</a>
                     <!-- <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a> -->
                 </div>
             </div>
@@ -208,7 +242,7 @@
                 </div>
                 <div class="hero-title-item font-bold">
                     <!--<a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>-->
-                    <a class="test2" href="/collections/all-1">Shop</a>
+                    <a class="test" href="/collections/all-1">Shop</a>
                 </div>
             </div>
         </div>
@@ -396,21 +430,21 @@
         document.querySelector('.custom').classList.add('theme-main');
     });
 
-    // document.querySelector('.test').addEventListener('mouseenter', () => {
-    //   document.querySelector('.hero-dim').classList.add('on');
-    //   document.querySelector('.hero-item--test').classList.add('test-1');
-    // });
+    document.querySelector('.test').addEventListener('mouseenter', () => {
+      document.querySelector('.hero-dim').classList.add('on');
+      document.querySelector('.hero-item--test').classList.add('test-1');
+    });
 
-    // document.querySelector('.test').addEventListener('mouseleave', () => {
-    //   document.querySelector('.hero-dim').classList.remove('on');
-    //   document.querySelector('.hero-item--test').classList.remove('test-1');
-    // });
+    document.querySelector('.test').addEventListener('mouseleave', () => {
+      document.querySelector('.hero-dim').classList.remove('on');
+      document.querySelector('.hero-item--test').classList.remove('test-1');
+    });
 
     // document.querySelector('.test2').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim2').classList.add('on');
     //   document.querySelector('.hero-item--test').classList.add('test-2');
     // });
-
+    //
     // document.querySelector('.test2').addEventListener('mouseleave', () => {
     //   document.querySelector('.hero-dim2').classList.remove('on');
     //   document.querySelector('.hero-item--test').classList.remove('test-2');
@@ -439,27 +473,27 @@
     window.addEventListener('load', () => {
         setSize();
 
-        // $('.hero').css({
-        //     'height' : $(window).height()
-        // })
+        $('.hero').css({
+            'height' : $(window).height()
+        })
 
-        let video = document.getElementById('video-m');
-        if ($(window).width() <= 768) {
-            video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
-        } else {
-            video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
-        }
+        // let video = document.getElementById('video-m');
+        // if ($(window).width() <= 768) {
+        //     video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
+        // } else {
+        //     video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
+        // }
     });
 
-    document.querySelector('.sound-on').addEventListener('click', function () {
-        const video = document.getElementById('video-m');
-        video.muted = false;
-        document.querySelector('.video-dim').style.display = 'none';
-    });
-
-    document.querySelector('.sound-off').addEventListener('click', function () {
-        document.querySelector('.video-dim').style.display = 'none';
-    });
+    // document.querySelector('.sound-on').addEventListener('click', function () {
+    //     const video = document.getElementById('video-m');
+    //     video.muted = false;
+    //     document.querySelector('.video-dim').style.display = 'none';
+    // });
+    //
+    // document.querySelector('.sound-off').addEventListener('click', function () {
+    //     document.querySelector('.video-dim').style.display = 'none';
+    // });
 </script>
 
 {% schema %}
