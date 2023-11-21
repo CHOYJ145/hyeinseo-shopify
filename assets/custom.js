@@ -26,9 +26,9 @@ window.addEventListener('load', () => {
     setSize();
 });
 
-window.addEventListener('resize', () => {
-    setSize();
-});
+// window.addEventListener('resize', () => {
+//     setSize();
+// });
 
 function depthBtn(e) {
     if (e == 'shop') {
