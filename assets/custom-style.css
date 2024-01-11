@@ -4470,3 +4470,22 @@ body.custom {
     display: flex;
     flex-direction: column-reverse;
 }
+
+/*stockists*/
+.stockist-top {
+    width: fit-content;
+    cursor: pointer;
+}
+
+.stockist-bottom {
+    display: none;
+}
+
+.stk-in-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stk-row.off * {
+    color: #CECED0;
+}
