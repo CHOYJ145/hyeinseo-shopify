@@ -4546,6 +4546,6 @@ body.custom {
     }
 }
 
-.nstk-sec--fs .nstk-label {
+.nstk-wrap.act .nstk-sec--fs .nstk-label {
     color: #000 !important;
 }
