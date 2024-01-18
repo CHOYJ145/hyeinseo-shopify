@@ -4504,6 +4504,10 @@ body.custom {
     max-width: 470px;
 }
 
+.nstk-sec.off * {
+    color: #CECED0;
+}
+
 .nstk-label {
     cursor: pointer;
 }
