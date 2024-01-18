@@ -4520,12 +4520,14 @@ body.custom {
     display: none;
 }
 
-.nstk-label.chk + .nstk-cont {
+.nstk-label.chk + .nstk-cont,
+.nstk-item.off .nstk-label.chk + .nstk-cont {
     display: block;
     color: #000;
 }
 
-.nstk-label.chk {
+.nstk-label.chk,
+.nstk-item.off .nstk-label.chk {
     color: #000;
 }
 
