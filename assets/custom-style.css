@@ -4504,11 +4504,11 @@ body.custom {
     max-width: 470px;
 }
 
-.nstk-sec.off * {
+.nstk-item.off * {
     color: #CECED0;
 }
 
-.nstk-sec.active * {
+.nstk-item.active * {
     color: #000;
 }
 
