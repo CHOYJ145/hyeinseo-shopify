@@ -4545,3 +4545,7 @@ body.custom {
         margin-top: 19px;
     }
 }
+
+.nstk-sec--fs .nstk-label {
+    color: #000 !important;
+}
