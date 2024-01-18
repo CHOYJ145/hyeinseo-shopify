@@ -4518,6 +4518,7 @@ body.custom {
 
 .nstk-label {
     cursor: pointer;
+    width: fit-content;
 }
 
 .nstk-cont {
