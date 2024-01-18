@@ -4508,6 +4508,10 @@ body.custom {
     color: #CECED0;
 }
 
+.nstk-sec.active * {
+    color: #000;
+}
+
 .nstk-label {
     cursor: pointer;
 }
