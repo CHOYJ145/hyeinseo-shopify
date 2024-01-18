@@ -4489,3 +4489,40 @@ body.custom {
 .stk-row.off * {
     color: #CECED0;
 }
+
+.nstk-wrap * {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.nstk-sec + .nstk-sec {
+    margin-top: 16px;
+}
+
+.fs-img {
+    margin-top: 9px;
+    max-width: 470px;
+}
+
+.nstk-label {
+    cursor: pointer;
+}
+
+.nstk-cont {
+    display: none;
+}
+
+.nstk-label.chk + .nstk-cont {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .nstk-wrap * {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .nstk-sec + .nstk-sec {
+        margin-top: 19px;
+    }
+}
