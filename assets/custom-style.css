@@ -4522,6 +4522,11 @@ body.custom {
 
 .nstk-label.chk + .nstk-cont {
     display: block;
+    color: #000;
+}
+
+.nstk-label.chk {
+    color: #000;
 }
 
 @media screen and (max-width: 1024px) {
