@@ -4512,6 +4512,10 @@ body.custom {
     color: #000;
 }
 
+.nstk-wrap.act .nstk-title {
+    color: #CECED0;
+}
+
 .nstk-label {
     cursor: pointer;
 }
