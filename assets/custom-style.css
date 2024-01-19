@@ -4527,7 +4527,6 @@ body.custom {
 
 .nstk-label.chk + .nstk-cont,
 .nstk-item.off .nstk-label.chk + .nstk-cont {
-    display: block;
     color: #000;
 }
 
