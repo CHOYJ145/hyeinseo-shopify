@@ -4504,6 +4504,12 @@ body.custom {
     max-width: 32.5vw;
 }
 
+@media screen and (max-width: 1024px) {
+    .fs-img {
+        max-width: 100%;
+    }
+}
+
 .nstk-item.off * {
     color: #CECED0;
 }
