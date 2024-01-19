@@ -4541,6 +4541,10 @@ body.custom {
     color: #000;
 }
 
+.nstk-sec.over .nstk-title {
+    color: #000;
+}
+
 @media screen and (max-width: 1024px) {
     .nstk-wrap * {
         font-size: 16px;
