@@ -4541,7 +4541,8 @@ body.custom {
     color: #000;
 }
 
-.nstk-sec.over .nstk-title {
+.nstk-sec.over .nstk-titl,
+.nstk-sec.stay .nstk-title {
     color: #000;
 }
 
