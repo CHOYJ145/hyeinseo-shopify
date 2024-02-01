@@ -4314,14 +4314,14 @@ body.custom {
 }
 
 @media screen and (max-width: 1024px) {
-    .main-blog .article-item:nth-child(1),
     .main-blog .article-item:nth-child(2),
-    .main-blog .article-item:nth-child(4),
-    .main-blog .article-item:nth-child(7),
-    .main-blog .article-item:nth-child(11),
-    .main-blog .article-item:nth-child(13),
+    .main-blog .article-item:nth-child(3),
+    .main-blog .article-item:nth-child(5),
+    .main-blog .article-item:nth-child(8),
+    .main-blog .article-item:nth-child(12),
     .main-blog .article-item:nth-child(14),
-    .main-blog .article-item:nth-child(15) {
+    .main-blog .article-item:nth-child(15),
+    .main-blog .article-item:nth-child(16) {
 
         width: 100% !important;
     }
