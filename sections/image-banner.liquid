@@ -222,9 +222,9 @@
             <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_desktop_mouseover.jpg?v=1700542301')">
 
             </div>
-            {% comment %}<div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_desktop_mouseover.jpg?v=1700542301')">
+            <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw23_collection_mouseover.jpg?v=1706885887')">
 
-            </div>{% endcomment %}
+            </div>
             {% comment %}<div class="hero-video">
                 <video id="video-m" playsinline autoplay muted loop>
                     <source src="" type="video/mp4">
@@ -236,8 +236,7 @@
                 </div>
 
                 <div class="hero-title-item font-bold">
-                    <a class="test" href="/collections/all-1">Shop</a>
-                    <!-- <a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test2" href="/collections/all-1">Shop</a> -->
+                    <a class="test2" href="/blogs/collection/fw23">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test" href="/collections/all-1">Shop</a>
                 </div>
             </div>
             <div class="hero-title-wrap hero-title-wrap--m">
@@ -245,7 +244,7 @@
                     FW23 Horizon
                 </div>
                 <div class="hero-title-item font-bold">
-                    <!--<a class="test" href="/blogs/collection/ss23-indigo-island">Collection</a><br>-->
+                    <a class="test" href="/blogs/collection/fw23">Collection</a><br>
                     <a class="test" href="/collections/all-1">Shop</a>
                 </div>
             </div>
@@ -444,15 +443,15 @@
       document.querySelector('.hero-item--test').classList.remove('test-1');
     });
 
-    // document.querySelector('.test2').addEventListener('mouseenter', () => {
-    //   document.querySelector('.hero-dim2').classList.add('on');
-    //   document.querySelector('.hero-item--test').classList.add('test-2');
-    // });
-    //
-    // document.querySelector('.test2').addEventListener('mouseleave', () => {
-    //   document.querySelector('.hero-dim2').classList.remove('on');
-    //   document.querySelector('.hero-item--test').classList.remove('test-2');
-    // });
+    document.querySelector('.test2').addEventListener('mouseenter', () => {
+      document.querySelector('.hero-dim2').classList.add('on');
+      document.querySelector('.hero-item--test').classList.add('test-2');
+    });
+
+    document.querySelector('.test2').addEventListener('mouseleave', () => {
+      document.querySelector('.hero-dim2').classList.remove('on');
+      document.querySelector('.hero-item--test').classList.remove('test-2');
+    });
 
     // document.querySelector('.test3').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim3').classList.add('on');
