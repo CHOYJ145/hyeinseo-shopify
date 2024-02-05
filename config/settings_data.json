@@ -138,9 +138,8 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Welcome to our store",
+              "text": "Seollal Order Deadline: Feb 7th | We'll be back on Feb 13th",
               "text_alignment": "center",
               "color_scheme": "background-1",
               "link": ""
