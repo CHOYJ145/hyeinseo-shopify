@@ -138,6 +138,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Seollal Order Deadline: Feb 7th | We'll be back on Feb 13th",
               "text_alignment": "center",
