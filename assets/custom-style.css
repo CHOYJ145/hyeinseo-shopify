@@ -1994,21 +1994,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .main-sec {
-        height: 100dvh;
-    }
-
-    .ss24-main {
-        height: 100dvh;
-        overflow: hidden;
-    }
-
-    .hero-title-wrap {
-        top: 50dvh;
-    }
-}
-
 #show-scene-0 .main-sec--1 .hero-title-wrap {
     opacity: 1;
 }
@@ -4617,5 +4602,24 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
 
     body.custom.ss24-main .header.panel-open .logo-white {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ss24-main .main-sec {
+        height: 100dvh;
+    }
+
+    .ss24-main {
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    .ss24-main .hero-title-wrap {
+        top: 50dvh;
+    }
+
+    .ss24-main.hero-item {
+        height: 100dvh;
     }
 }
