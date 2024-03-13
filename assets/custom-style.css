@@ -1858,6 +1858,10 @@ button.swiper-pagination-bullet {
     .main-sec {
         height: calc(var(--vh, 1vh) * 100);
     }
+
+    .main-hero {
+        height: calc(var(--vh, 1vh) * 100);
+    }
 }
 
 .hero-col {
