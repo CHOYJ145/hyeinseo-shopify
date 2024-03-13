@@ -1996,16 +1996,16 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1024px) {
     .main-sec {
-        height: calc(var(--vh, 1vh) * 100);
+        height: 100dvh;
     }
 
     .ss24-main {
-        height: calc(var(--vh, 1vh) * 100);
+        height: 100dvh;
         overflow: hidden;
     }
 
     .hero-title-wrap {
-        top: calc(var(--vh, 1vh) * 50);
+        top: 50dvh;
     }
 }
 
