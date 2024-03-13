@@ -4606,13 +4606,17 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
 }
 
 @media screen and (max-width: 1024px) {
-    .ss24-main .main-sec {
-        height: 100dvh;
-    }
-
     .ss24-main {
         height: 100dvh;
         overflow: hidden;
+    }
+
+    .ss24-main .main-hero {
+        height: 100dvh;
+    }
+
+    .ss24-main .main-sec {
+        height: 100dvh;
     }
 
     .ss24-main .hero-title-wrap {
