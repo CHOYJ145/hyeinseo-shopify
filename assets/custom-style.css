@@ -1854,6 +1854,11 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1024px) {
+    .main-sec {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
 
 .hero-col {
     display: grid;
