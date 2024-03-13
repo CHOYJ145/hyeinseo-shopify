@@ -1859,7 +1859,11 @@ button.swiper-pagination-bullet {
         height: calc(var(--vh, 1vh) * 100);
     }
 
-    .main-hero {
+    /*.main-hero {*/
+    /*    height: calc(var(--vh, 1vh) * 100);*/
+    /*}*/
+
+    .ss24-main {
         height: calc(var(--vh, 1vh) * 100);
     }
 }
