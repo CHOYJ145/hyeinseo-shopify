@@ -1854,20 +1854,6 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
-@media screen and (max-width: 1024px) {
-    .main-sec {
-        height: calc(var(--vh, 1vh) * 100);
-    }
-
-    /*.main-hero {*/
-    /*    height: calc(var(--vh, 1vh) * 100);*/
-    /*}*/
-
-    .ss24-main {
-        height: calc(var(--vh, 1vh) * 100);
-    }
-}
-
 .hero-col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2005,6 +1991,21 @@ button.swiper-pagination-bullet {
     .hero-col {
         grid-template-columns: auto;
         grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-sec {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .ss24-main {
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+    }
+
+    .hero-title-wrap {
+        top: calc(var(--vh, 1vh) * 50);
     }
 }
 
