@@ -4166,12 +4166,12 @@ button.swiper-pagination-bullet {
 }
 
 .c-item--2-1 {
-    gap: 0 3px;
+    gap: 0 5px;
     grid-template-columns: 1fr 2fr;
 }
 
 .c-item--2-2 {
-    gap: 0 3px;
+    gap: 0 5px;
     grid-template-columns: 2fr 1fr;
 }
 
