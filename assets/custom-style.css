@@ -4166,13 +4166,21 @@ button.swiper-pagination-bullet {
 }
 
 .c-item--2-1 {
-    gap: 0 5px;
+    gap: 0 2px;
     grid-template-columns: 1fr 2fr;
 }
 
+.c-item--2-1 img:first-child {
+    padding-right: 3px;
+}
+
 .c-item--2-2 {
-    gap: 0 5px;
+    gap: 0 2px;
     grid-template-columns: 2fr 1fr;
+}
+
+.c-item--2-2 img:last-child {
+    padding-left: 3px;
 }
 
 .c-item--3 {
@@ -4197,6 +4205,14 @@ button.swiper-pagination-bullet {
 
     .c-item--3 img + img {
         margin-top: 4px;
+    }
+
+    .c-item--2-1 img:first-child {
+        padding-right: 0;
+    }
+
+    .c-item--2-2 img:last-child {
+        padding-left: 0;
     }
 }
 
