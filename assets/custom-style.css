@@ -4209,10 +4209,12 @@ button.swiper-pagination-bullet {
 
     .c-item--2-1 img:first-child {
         padding-right: 0;
+        margin-bottom: 4px;
     }
 
     .c-item--2-2 img:last-child {
         padding-left: 0;
+        margin-top: 4px;
     }
 }
 
@@ -4602,6 +4604,11 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
     body.custom.ss24-main .list-menu--inline li span,
     body.custom.ss24-main .header__menu-item span {
         color: #fff;
+    }
+
+    body.custom.ss24-main .list-menu--inline li a,
+    body.custom.ss24-main .header__menu-item a {
+        color: #000;
     }
 
     body.custom.ss24-main .header .logo-black {
