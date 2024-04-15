@@ -4611,7 +4611,8 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
         color: #000;
     }
 
-    body.custom.ss24-main .m-nav-item a {
+    body.custom.ss24-main .m-nav-item a,
+    body.custom.ss24-main .m-nav-item a span {
         color: #000;
     }
 
