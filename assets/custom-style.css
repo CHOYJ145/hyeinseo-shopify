@@ -4611,6 +4611,10 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
         color: #000;
     }
 
+    body.custom.ss24-main .m-nav-item a {
+        color: #000;
+    }
+
     body.custom.ss24-main .header .logo-black {
         display: none !important;
     }
