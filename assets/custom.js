@@ -14,7 +14,6 @@ function menuCloseBtn(e) {
     });
     $('.m-depth-wrap').hide();
     $('.m-nav-title').removeClass('on');
-
 }
 
 function setSize() {
@@ -206,3 +205,7 @@ $('.header__search').on('click', function (){
 function facetClose(e){
     document.querySelector('#facet-wrap').classList.add('off');
 }
+
+$('.close-btn').on('click', function (){
+    $('.video-dim').fadeOut();
+});

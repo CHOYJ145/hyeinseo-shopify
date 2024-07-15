@@ -1,11 +1,11 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
      .main-sec--1 .hero-item-test {
-      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss24_desktop.jpg?v=1710288414')
+      background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/hs_main.jpg?v=1721080192')
     }
     @media screen and (max-width: 1024px) {
       .main-sec--1 .hero-item-test {
-        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss24_mobile.jpg?v=1710288414')
+        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/hs_mobile.jpg?v=1721080192')
       }
     }
     .locale-selectors__container {
@@ -66,16 +66,16 @@
     .video-dim-inner *,
     .video-dim-inner button {
         color: #fff;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     @media screen and (max-width: 1024px) {
         .video-dim-inner *,
         .video-dim-inner button {
             color: #fff;
-            font-size: 14px;
-            line-height: 16px;
+            font-size: 16px;
+            line-height: 19px;
         }
     }
 
@@ -87,6 +87,7 @@
 
     .dim-text-pc {
         display: block;
+        max-width: 550px;
     }
 
     .dim-text-m {
@@ -123,6 +124,7 @@
             grid-template-columns: 1.5fr 0.5fr;
             box-sizing: border-box;
             align-items: baseline;
+            display: block;
         }
     }
 
@@ -145,6 +147,21 @@
     .sound-btn-list button {
         cursor: pointer;
     }
+
+    .close-btn-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+     @media screen and (max-width: 1024px) {
+         .close-btn-wrap {
+             /*justify-content: flex-end;*/
+         }
+     }
+
+     .close-btn {
+         cursor: pointer;
+     }
 
     main {
         height: 100vh;
@@ -190,39 +207,47 @@
          }
      }
 </style>
-{% comment %}<div class="video-dim">
+<div class="video-dim">
     <div class="video-dim-inner">
         <div class="dim-cont">
             <div>
                 <div class="dim-text-pc">
-                    FW23 Store Sound Installation By Ludwig Berger
+                    SS24 collection features a collaboration with the artist KOVFE, also known as Ko Daeyoung. KOVFE contributed the sculpture "nice leg!" for the collection.
+                    HYEIN SEO store has installed his artwork "nice joint!",  which was a part of his solo show «good mourning» along with "nice leg!".
+                    <br><br>
+                    Born in 1992 in Korea, Ko Daeyoung is a visual and sound artist. Director of the art space "suchi" in Seoul and a producer at "Lepsy label".
                 </div>
                 <div class="dim-text-m">
-                    FW23 Store<br>
-                    Sound Installation<br>
-                    By Ludwig Berger
+                    SS24 collection features a collaboration with the artist KOVFE, also known as Ko Daeyoung. KOVFE contributed the sculpture "nice leg!" for the collection.
+                    HYEIN SEO store has installed his artwork "nice joint!",  which was a part of his solo show «good mourning» along with "nice leg!".
+                    <br><br>
+                    Born in 1992 in Korea, Ko Daeyoung is a visual and sound artist. Director of the art space "suchi" in Seoul and a producer at "Lepsy label".
+                    <br><br>
                 </div>
             </div>
-            <div class="sound-btn-wrap">
+            {% comment %}<div class="sound-btn-wrap">
                 <div>Sound</div>
                 <div class="sound-btn-list">
                     <button class="sound-on">On</button>
                     <button class="sound-off">Off</button>
                 </div>
+            </div>{% endcomment %}
+            <div class="close-btn-wrap">
+                <div class="close-btn">Coles</div>
             </div>
         </div>
     </div>
-</div>{% endcomment %}
+</div>
 <div class="main-hero">
     <div class="main-sec main-sec--1">
         <div class="hero-item hero-item--test">
             <div class="hero-item-test" style="">
 
             </div>
-            <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss24_shop.jpg?v=1710288412')">
+            <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/hs_shop.jpg?v=1721080193')">
 
             </div>
-            <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/ss24_collection_mouseover.jpg?v=1711900882')">
+            <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/hs_collection.jpg?v=1721080192')">
 
             </div>
             {% comment %}<div class="hero-video">
@@ -431,17 +456,17 @@
 
     $(document).ready(function () {
         document.querySelector('.custom').classList.add('theme-main');
-        document.querySelector('.custom').classList.add('ss24-main');
+        // document.querySelector('.custom').classList.add('ss24-main');
     });
 
     document.querySelector('.test').addEventListener('mouseenter', () => {
-        document.querySelector('.custom').classList.remove('ss24-main');
+        // document.querySelector('.custom').classList.remove('ss24-main');
         document.querySelector('.hero-dim').classList.add('on');
         document.querySelector('.hero-item--test').classList.add('test-1');
     });
 
     document.querySelector('.test').addEventListener('mouseleave', () => {
-        document.querySelector('.custom').classList.add('ss24-main');
+        // document.querySelector('.custom').classList.add('ss24-main');
         document.querySelector('.hero-dim').classList.remove('on');
         document.querySelector('.hero-item--test').classList.remove('test-1');
     });
