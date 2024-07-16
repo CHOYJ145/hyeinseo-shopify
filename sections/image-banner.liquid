@@ -163,10 +163,17 @@
          cursor: pointer;
      }
 
-    main {
-        height: calc(var(--vh, 1vh) * 100);
-        overflow: hidden;
-    }
+     main {
+         height: 100vh;
+         overflow: hidden;
+     }
+
+     @media screen and (max-width: 1024px) {
+         main {
+             height: calc(var(--vh, 1vh) * 100);
+             overflow: hidden;
+         }
+     }
 
     .main-hero * {
         color: #fff;
