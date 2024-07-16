@@ -207,5 +207,5 @@ function facetClose(e){
 }
 
 $('.close-btn').on('click', function (){
-    $('.video-dim').fadeOut();
+    $('.video-dim').hide();
 });
