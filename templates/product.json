@@ -84,8 +84,9 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
-        "heading": "",
+        "heading": "Styled with",
         "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,
