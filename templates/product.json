@@ -78,7 +78,7 @@
       "settings": {
         "custom_liquid": "{%- for related_product in product.metafields.shopify--discovery--product_recommendation.complementary_products -%}\n<div>{{ related_product.handle }}</div>\n{%- endfor -%}",
         "color_scheme": "background-1",
-        "padding_top": 92,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
