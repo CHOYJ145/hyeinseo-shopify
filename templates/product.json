@@ -84,7 +84,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h2",
