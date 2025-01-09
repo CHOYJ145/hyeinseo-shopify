@@ -1,11 +1,12 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
     .main-sec--1 .hero-item-test {
-        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw24_dt_main.jpg?v=1726117504')
+        /*background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw24_dt_main.jpg?v=1726117504')*/
+        background: #000;
     }
     @media screen and (max-width: 1024px) {
         .main-sec--1 .hero-item-test {
-            background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw24_mobile.jpg?v=1726117504')
+            /*background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw24_mobile.jpg?v=1726117504')*/
         }
     }
     .locale-selectors__container {
@@ -142,7 +143,7 @@
 
     @media screen and (max-width: 1024px) {
         .sound-btn-wrap {
-            justify-content: flex-end;
+            /*justify-content: flex-end;*/
         }
     }
 
@@ -220,10 +221,10 @@
          }
      }
 </style>
-<!-- <div class="video-dim">
+<div class="video-dim">
     <div class="video-dim-inner">
         <div class="dim-cont">
-            <div>
+            {% comment %}<div>
                 <div class="dim-text-pc">
                     <div>Black Friday</div>
                     <div>
@@ -237,21 +238,20 @@
                     Up to 70%
                     <br><br>
                 </div>
-            </div>
-            {% comment %}<div class="sound-btn-wrap">
+            </div>{% endcomment %}
+            <div class="sound-btn-wrap">
                 <div>Sound</div>
                 <div class="sound-btn-list">
                     <button class="sound-on">On</button>
                     <button class="sound-off">Off</button>
                 </div>
-            </div>{% endcomment %}
+            </div>
             <div class="close-btn-wrap">
                 <div class="close-btn">Close</div>
             </div>
         </div>
     </div>
 </div>
--->
 <div class="main-hero">
     <div class="main-sec main-sec--1">
         <div class="hero-item hero-item--test">
@@ -264,29 +264,30 @@
             <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/fw24_dt_collection.jpg?v=1726117504')">
 
             </div>
-            {% comment %}<div class="hero-video">
+            <div class="hero-video">
                 <video id="video-m" playsinline autoplay muted loop>
                     <source src="" type="video/mp4">
                 </video>
-            </div>{% endcomment %}
+            </div>
             <div class="hero-title-wrap hero-title-wrap--pc">
                 <div class="hero-title-item font-bold">
-                    FW24
+                    FW24 Near to the Wild Heart
                 </div>
 
-                <div class="hero-title-item font-bold">
+                {% comment %}<div class="hero-title-item font-bold">
                     {% comment %}<a class="test2" href="/blogs/collection/ss24">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;{% endcomment %}
                     <a class="test" href="/collections/all-1">Shop</a>
-                </div>
+                </div>{% endcomment %}
             </div>
             <div class="hero-title-wrap hero-title-wrap--m">
                 <div class="hero-title-item font-bold">
-                    FW24
+                    FW24<br>
+                    Near to the Wild Heart
                 </div>
-                <div class="hero-title-item font-bold">
+                {% comment %}<div class="hero-title-item font-bold">
                     {% comment %}<a class="test" href="/blogs/collection/ss24">Collection</a><br>{% endcomment %}
                     <a class="test" href="/collections/all-1">Shop</a>
-                </div>
+                </div>{% endcomment %}
             </div>
         </div>
     </div>
@@ -474,17 +475,17 @@
         // document.querySelector('.custom').classList.add('ss24-main');
     });
 
-    document.querySelector('.test').addEventListener('mouseenter', () => {
-        // document.querySelector('.custom').classList.remove('ss24-main');
-        document.querySelector('.hero-dim').classList.add('on');
-        document.querySelector('.hero-item--test').classList.add('test-1');
-    });
-
-    document.querySelector('.test').addEventListener('mouseleave', () => {
-        // document.querySelector('.custom').classList.add('ss24-main');
-        document.querySelector('.hero-dim').classList.remove('on');
-        document.querySelector('.hero-item--test').classList.remove('test-1');
-    });
+    // document.querySelector('.test').addEventListener('mouseenter', () => {
+    //     // document.querySelector('.custom').classList.remove('ss24-main');
+    //     document.querySelector('.hero-dim').classList.add('on');
+    //     document.querySelector('.hero-item--test').classList.add('test-1');
+    // });
+    //
+    // document.querySelector('.test').addEventListener('mouseleave', () => {
+    //     // document.querySelector('.custom').classList.add('ss24-main');
+    //     document.querySelector('.hero-dim').classList.remove('on');
+    //     document.querySelector('.hero-item--test').classList.remove('test-1');
+    // });
 
     // document.querySelector('.test2').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim2').classList.add('on');
@@ -523,23 +524,39 @@
             'height' : $(window).height()
         })
 
-        // let video = document.getElementById('video-m');
-        // if ($(window).width() <= 768) {
-        //     video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/65c0ff5fc45f4d7fb86fdd10438930a3.mp4" type="video/mp4">`;
-        // } else {
-        //     video.innerHTML = `<source src="https://cdn.shopify.com/videos/c/o/v/762755ba272d4eda923d1e0cbee74f3d.mp4" type="video/mp4">`;
-        // }
+        let video = document.getElementById('video-m');
+        const desktopVideos = [
+            "https://cdn.shopify.com/videos/c/o/v/f4509f207f154b269953e5c4490be200.mp4",
+            "https://cdn.shopify.com/videos/c/o/v/2628ab0b4600413e854227d0c8bbe842.mp4"
+        ];
+
+        const mobileVideos = [
+            "https://cdn.shopify.com/videos/c/o/v/a182987bbc914779a4f74e6962e7c631.mp4",
+            "https://cdn.shopify.com/videos/c/o/v/53fc14d8227143a1a0ec044bb23dfa20.mp4"
+        ];
+
+        function getRandomVideo(videoArray) {
+            return videoArray[Math.floor(Math.random() * videoArray.length)];
+        }
+
+        if ($(window).width() <= 768) {
+            const randomVideo = getRandomVideo(mobileVideos);
+            video.innerHTML = `<source src="${randomVideo}" type="video/mp4">`;
+        } else {
+            const randomVideo = getRandomVideo(desktopVideos);
+            video.innerHTML = `<source src="${randomVideo}" type="video/mp4">`;
+        }
     });
 
-    // document.querySelector('.sound-on').addEventListener('click', function () {
-    //     const video = document.getElementById('video-m');
-    //     video.muted = false;
-    //     document.querySelector('.video-dim').style.display = 'none';
-    // });
-    //
-    // document.querySelector('.sound-off').addEventListener('click', function () {
-    //     document.querySelector('.video-dim').style.display = 'none';
-    // });
+    document.querySelector('.sound-on').addEventListener('click', function () {
+        const video = document.getElementById('video-m');
+        video.muted = false;
+        document.querySelector('.video-dim').style.display = 'none';
+    });
+
+    document.querySelector('.sound-off').addEventListener('click', function () {
+        document.querySelector('.video-dim').style.display = 'none';
+    });
 </script>
 
 {% schema %}
