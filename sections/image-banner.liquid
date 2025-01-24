@@ -135,15 +135,25 @@
         }
     }
 
-    .sound-btn-wrap,
+    /*.sound-btn-wrap,*/
     .sound-btn-list {
         display: flex;
         align-items: center;
     }
 
+    .sound-btn-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @media screen and (max-width: 1024px) {
         .sound-btn-wrap {
             /*justify-content: flex-end;*/
+            display: block;
+        }
+
+        .sound-btn-list {
+            margin: 19px 0;
         }
     }
 
@@ -240,8 +250,10 @@
                 </div>
             </div>{% endcomment %}
             <div class="sound-btn-wrap">
-                <div>Sound</div>
+                <div>Seollal Order Deadline: Jan. 24th, 13:00 KST<br>
+                    We’ll be back on Jan. 31st.</div>
                 <div class="sound-btn-list">
+                    <div>Sound</div>
                     <button class="sound-on">On</button>
                     <button class="sound-off">Off</button>
                 </div>
