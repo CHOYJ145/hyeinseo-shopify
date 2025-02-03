@@ -139,25 +139,28 @@
         }
     }
 
-    /*.sound-btn-wrap,*/
+    .sound-btn-wrap,
     .sound-btn-list {
         display: flex;
         align-items: center;
     }
 
-    .sound-btn-wrap {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    .sound-btn-list > button {
+        padding: 1px 0;
+    }
+
+    .sound-btn-list > button + button {
+        margin-left: 8px;
     }
 
     @media screen and (max-width: 1024px) {
         .sound-btn-wrap {
-            /*justify-content: flex-end;*/
+            justify-content: flex-end;
             display: block;
         }
 
         .sound-btn-list {
-            margin: 19px 0;
+            margin: 8px 0 0;
         }
     }
 
@@ -253,18 +256,15 @@
                     <br><br>
                 </div>
             </div>{% endcomment %}
+            <div>Sound</div>
             <div class="sound-btn-wrap">
-                <div>Seollal Order Deadline: Jan. 24th, 13:00 KST<br>
-                    We’ll be back on Jan. 31st.</div>
                 <div class="sound-btn-list">
-                    <div>Sound</div>
                     <button class="sound-on">On</button>
                     <button class="sound-off">Off</button>
                 </div>
+                {% comment %}<div class="close-btn">Close</div>{% endcomment %}
             </div>
-            <div class="close-btn-wrap">
-                <div class="close-btn">Close</div>
-            </div>
+
         </div>
     </div>
 </div>
