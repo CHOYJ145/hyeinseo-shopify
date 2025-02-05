@@ -291,7 +291,7 @@
                 </div>
 
                 <div class="hero-title-item font-bold">
-                    <a class="test2" href="/blogs/collection">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% comment %}<a class="test2" href="/blogs/collection">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;{% endcomment %}
                     <a class="test" href="/collections/all-1">Shop</a>
                 </div>
             </div>
@@ -300,7 +300,7 @@
                     PS25
                 </div>
                 <div class="hero-title-item font-bold">
-                    <a class="test" href="/blogs/collection">Collection</a><br>
+                    {% comment %}<a class="test" href="/blogs/collection">Collection</a><br>{% endcomment %}
                     <a class="test" href="/collections/all-1">Shop</a>
                 </div>
             </div>
@@ -502,15 +502,15 @@
         document.querySelector('.hero-item--test').classList.remove('test-1');
     });
 
-    document.querySelector('.test2').addEventListener('mouseenter', () => {
-      document.querySelector('.hero-dim2').classList.add('on');
-      document.querySelector('.hero-item--test').classList.add('test-2');
-    });
-
-    document.querySelector('.test2').addEventListener('mouseleave', () => {
-      document.querySelector('.hero-dim2').classList.remove('on');
-      document.querySelector('.hero-item--test').classList.remove('test-2');
-    });
+    // document.querySelector('.test2').addEventListener('mouseenter', () => {
+    //   document.querySelector('.hero-dim2').classList.add('on');
+    //   document.querySelector('.hero-item--test').classList.add('test-2');
+    // });
+    //
+    // document.querySelector('.test2').addEventListener('mouseleave', () => {
+    //   document.querySelector('.hero-dim2').classList.remove('on');
+    //   document.querySelector('.hero-item--test').classList.remove('test-2');
+    // });
 
     // document.querySelector('.test3').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim3').classList.add('on');
