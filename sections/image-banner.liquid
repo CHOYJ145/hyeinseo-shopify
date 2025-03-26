@@ -1,12 +1,12 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
     .main-sec--1 .hero-item-test {
-        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/dt_main.jpg?v=1738726539')
+        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/desktop_main.jpg?v=1742944926')
         /*background: #000;*/
     }
     @media screen and (max-width: 1024px) {
         .main-sec--1 .hero-item-test {
-            background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/mobile.jpg?v=1738726540')
+            background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/mobile_cb505cac-3f3c-48ab-abf8-991bdcd37844.jpg?v=1742944926')
         }
     }
     .locale-selectors__container {
@@ -200,20 +200,20 @@
      }
 
     .main-hero * {
-        color: #fff;
+        color: #000;
     }
 
     .logo-black {
-        display: none !important;
+        display: block !important;
     }
 
     .logo-white {
-        display: block !important;
+        display: none !important;
     }
 
      .list-menu--inline li span,
      .header__menu-item span {
-         color: #fff;
+         color: #000;
      }
 
      .open .list-menu--inline li span,
@@ -233,8 +233,37 @@
      }
 
      @media screen and (max-width: 1024px) {
+         .logo-black {
+             display: none !important;
+         }
+
+         .logo-white {
+             display: block !important;
+         }
+
+         .header.panel-open .logo-black {
+             display: block !important;
+         }
+
+         .header.panel-open .logo-white {
+             display: none !important;
+         }
+
          .header-util .header__menu-item span {
              color: #fff;
+         }
+
+         .main-hero * {
+             color: #fff;
+         }
+
+         .list-menu--inline li span,
+         .header__menu-item span {
+             color: #fff;
+         }
+
+         .hero-item--test.test-1 * {
+             color: #fff !important;
          }
      }
 </style>
@@ -274,7 +303,7 @@
             <div class="hero-item-test" style="">
 
             </div>
-            <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/dt_shop.jpg?v=1738726539')">
+            <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/shop.jpg?v=1742944926')">
 
             </div>
             <div class="hero-dim2" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/dt_collection.jpg?v=1738726539')">
@@ -287,7 +316,7 @@
             </div>{% endcomment %}
             <div class="hero-title-wrap hero-title-wrap--pc">
                 <div class="hero-title-item font-bold">
-                    PS25
+                    SS25
                 </div>
 
                 <div class="hero-title-item font-bold">
@@ -297,7 +326,7 @@
             </div>
             <div class="hero-title-wrap hero-title-wrap--m">
                 <div class="hero-title-item font-bold">
-                    PS25
+                    SS25
                 </div>
                 <div class="hero-title-item font-bold">
                     {% comment %}<a class="test" href="/blogs/collection">Collection</a><br>{% endcomment %}
