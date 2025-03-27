@@ -4655,3 +4655,7 @@ body.custom.ss24-main .hero-title-wrap--pc .hero-title-item a {
         height: 100dvh;
     }
 }
+
+.recommend-wrap {
+    padding-bottom: 21px;
+}
