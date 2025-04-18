@@ -1,11 +1,11 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
-    .main-sec--1 .hero-item-test {
+    .main-sec--1 .hero-item-hero-int {
         background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/desktop_main.jpg?v=1742944926')
         /*background: #000;*/
     }
     @media screen and (max-width: 1024px) {
-        .main-sec--1 .hero-item-test {
+        .main-sec--1 .hero-item-hero-int {
             background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/mobile_cb505cac-3f3c-48ab-abf8-991bdcd37844.jpg?v=1742944926')
         }
     }
@@ -228,7 +228,7 @@
          color: #CECED0;
      }
 
-     .hero-item--test.test-1 * {
+     .hero-item--hero-int.hero-int-1 * {
          color: #fff !important;
      }
 
@@ -254,10 +254,23 @@
              color: #fff;
          }
 
-         .hero-item--test.test-1 * {
+         .hero-item--hero-int.hero-int-1 * {
              color: #fff !important;
          }
      }
+
+    .theme-main.main-theme--wh .list-menu--inline li span,
+    .theme-main.main-theme--wh .header__menu-item span {
+        color: #fff;
+    }
+
+    .theme-main.main-theme--wh .logo-white {
+        display: block !important;
+    }
+
+    .theme-main.main-theme--wh .logo-black {
+        display: none !important;
+    }
 </style>
 {% comment %}<div class="video-dim">
     <div class="video-dim-inner">
@@ -291,8 +304,8 @@
 </div>{% endcomment %}
 <div class="main-hero">
     <div class="main-sec main-sec--1">
-        <div class="hero-item hero-item--test">
-            <div class="hero-item-test" style="">
+        <div class="hero-item hero-item--hero-int">
+            <div class="hero-item-hero-int" style="">
 
             </div>
             <div class="hero-dim" style="background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/shop.jpg?v=1742944926')">
@@ -312,8 +325,8 @@
                 </div>
 
                 <div class="hero-title-item font-bold">
-                    <a class="test2" href="/blogs/collection">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="test" href="/collections/all-1">Shop</a>
+                    <a class="hero-int2" href="/blogs/collection/ss25">Collection</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="hero-int" href="/collections/all-1">Shop</a>
                 </div>
             </div>
             <div class="hero-title-wrap hero-title-wrap--m">
@@ -321,15 +334,15 @@
                     SS25
                 </div>
                 <div class="hero-title-item font-bold">
-                    <a class="test" href="/blogs/collection">Collection</a><br>
-                    <a class="test" href="/collections/all-1">Shop</a>
+                    <a class="hero-int" href="/blogs/collection/ss25">Collection</a><br>
+                    <a class="hero-int" href="/collections/all-1">Shop</a>
                 </div>
             </div>
         </div>
     </div>
     {% comment %}<div class="main-sec main-sec--2">
-      <div class="hero-item hero-item--test2">
-        <div class="hero-item-test" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/3.jpg')">
+      <div class="hero-item hero-item--hero-int2">
+        <div class="hero-item-hero-int" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/3.jpg')">
 
         </div>
         <div class="hero-dim3" style="background-image: url('https://choyeonjeong.com/hyeinseo/assets/4.jpg')">
@@ -343,7 +356,7 @@
             SS 23 Paris Showroom
           </div>
           <div class="hero-title-item font-bold">
-            <a class="test3" href="#none">test</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="test4" href="#none">test</a>
+            <a class="hero-int3" href="#none">test</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="hero-int4" href="#none">test</a>
           </div>
         </div>
       </div>
@@ -511,46 +524,47 @@
         // document.querySelector('.custom').classList.add('ss24-main');
     });
 
-    document.querySelector('.test').addEventListener('mouseenter', () => {
+    document.querySelector('.hero-int').addEventListener('mouseenter', () => {
         // document.querySelector('.custom').classList.remove('ss24-main');
+        document.querySelector('body').classList.add('main-theme--wh');
         document.querySelector('.hero-dim').classList.add('on');
-        document.querySelector('.hero-item--test').classList.add('test-1');
+        document.querySelector('.hero-item--hero-int').classList.add('hero-int-1');
     });
 
-    document.querySelector('.test').addEventListener('mouseleave', () => {
-        // document.querySelector('.custom').classList.add('ss24-main');
+    document.querySelector('.hero-int').addEventListener('mouseleave', () => {
+        document.querySelector('body').classList.remove('main-theme--wh');
         document.querySelector('.hero-dim').classList.remove('on');
-        document.querySelector('.hero-item--test').classList.remove('test-1');
+        document.querySelector('.hero-item--hero-int').classList.remove('hero-int-1');
     });
 
-    document.querySelector('.test2').addEventListener('mouseenter', () => {
+    document.querySelector('.hero-int2').addEventListener('mouseenter', () => {
       document.querySelector('.hero-dim2').classList.add('on');
-      document.querySelector('.hero-item--test').classList.add('test-2');
+      document.querySelector('.hero-item--hero-int').classList.add('hero-int-2');
     });
 
-    document.querySelector('.test2').addEventListener('mouseleave', () => {
+    document.querySelector('.hero-int2').addEventListener('mouseleave', () => {
       document.querySelector('.hero-dim2').classList.remove('on');
-      document.querySelector('.hero-item--test').classList.remove('test-2');
+      document.querySelector('.hero-item--hero-int').classList.remove('hero-int-2');
     });
 
-    // document.querySelector('.test3').addEventListener('mouseenter', () => {
+    // document.querySelector('.hero-int3').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim3').classList.add('on');
-    //   document.querySelector('.hero-item--test2').classList.add('test-3');
+    //   document.querySelector('.hero-item--hero-int2').classList.add('hero-int-3');
     // });
     //
-    // document.querySelector('.test3').addEventListener('mouseleave', () => {
+    // document.querySelector('.hero-int3').addEventListener('mouseleave', () => {
     //   document.querySelector('.hero-dim3').classList.remove('on');
-    //   document.querySelector('.hero-item--test2').classList.remove('test-3');
+    //   document.querySelector('.hero-item--hero-int2').classList.remove('hero-int-3');
     // });
     //
-    // document.querySelector('.test4').addEventListener('mouseenter', () => {
+    // document.querySelector('.hero-int4').addEventListener('mouseenter', () => {
     //   document.querySelector('.hero-dim4').classList.add('on');
-    //   document.querySelector('.hero-item--test2').classList.add('test-4');
+    //   document.querySelector('.hero-item--hero-int2').classList.add('hero-int-4');
     // });
     //
-    // document.querySelector('.test4').addEventListener('mouseleave', () => {
+    // document.querySelector('.hero-int4').addEventListener('mouseleave', () => {
     //   document.querySelector('.hero-dim4').classList.remove('on');
-    //   document.querySelector('.hero-item--test2').classList.remove('test-4');
+    //   document.querySelector('.hero-item--hero-int2').classList.remove('hero-int-4');
     // });
 
     window.addEventListener('load', () => {

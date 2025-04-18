@@ -1868,8 +1868,8 @@ button.swiper-pagination-bullet {
     background-size: cover;
 }
 
-.hero-item-test,
-.hero-item-test2 {
+.hero-item-hero-int,
+.hero-item-hero-int2 {
     position: absolute;
     z-index: 0;
     top: 0;
@@ -1906,17 +1906,17 @@ button.swiper-pagination-bullet {
     filter: none;
 }
 
-.hero-item--test.test-1 * {
+.hero-item--hero-int.hero-int-1 * {
     color: #000 !important;
 }
 
-.hero-item--test.test-1 .test2,
-.hero-item--test.test-2 .test {
+.hero-item--hero-int.hero-int-1 .hero-int2,
+.hero-item--hero-int.hero-int-2 .hero-int {
     opacity: 0;
 }
 
-.hero-item--test2.test-3 .test4,
-.hero-item--test2.test-4 .test3 {
+.hero-item--hero-int2.hero-int-3 .hero-int4,
+.hero-item--hero-int2.hero-int-4 .hero-int3 {
     opacity: 0;
 }
 
