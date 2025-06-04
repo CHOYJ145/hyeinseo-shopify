@@ -1,12 +1,11 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 <style>
     .main-sec--1 .hero-item-hero-int {
-        background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/desktop_main.jpg?v=1742944926')
-        /*background: #000;*/
+        background: none;
     }
     @media screen and (max-width: 1024px) {
         .main-sec--1 .hero-item-hero-int {
-            background-image: url('https://cdn.shopify.com/s/files/1/1427/1204/files/mobile_cb505cac-3f3c-48ab-abf8-991bdcd37844.jpg?v=1742944926')
+            background: none;
         }
     }
     .locale-selectors__container {
@@ -574,7 +573,7 @@
             'height' : $(window).height()
         })
 
-        /*let video = document.getElementById('video-m');
+        let video = document.getElementById('video-m');
         const desktopVideos = [
             "https://cdn.shopify.com/videos/c/o/v/f4509f207f154b269953e5c4490be200.mp4",
             "https://cdn.shopify.com/videos/c/o/v/2628ab0b4600413e854227d0c8bbe842.mp4"
@@ -595,18 +594,18 @@
         } else {
             const randomVideo = getRandomVideo(desktopVideos);
             video.innerHTML = `<source src="${randomVideo}" type="video/mp4">`;
-        }*/
+        }
     });
 
-    // document.querySelector('.sound-on').addEventListener('click', function () {
-    //     const video = document.getElementById('video-m');
-    //     video.muted = false;
-    //     document.querySelector('.video-dim').style.display = 'none';
-    // });
-    //
-    // document.querySelector('.sound-off').addEventListener('click', function () {
-    //     document.querySelector('.video-dim').style.display = 'none';
-    // });
+     document.querySelector('.sound-on').addEventListener('click', function () {
+         const video = document.getElementById('video-m');
+         video.muted = false;
+         document.querySelector('.video-dim').style.display = 'none';
+     });
+    
+     document.querySelector('.sound-off').addEventListener('click', function () {
+         document.querySelector('.video-dim').style.display = 'none';
+     });
 </script>
 
 {% schema %}
